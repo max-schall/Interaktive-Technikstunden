@@ -1,0 +1,116 @@
+<!--
+title: Metall anreißen, sägen, feilen und bohren
+short: Trennen
+time: 2 Unterrichtsstunden
+q: Wie bearbeite ich Metall genau und sicher?
+facts: Anreißen mit Reißnadel und Anschlagwinkel, Körnen der Bohrstellen | Bügelsäge: Zähne zeigen nach vorn, schneidet auf Stoß, mindestens drei Zähne im Eingriff | Feilen: Hiebnummer 1 (grob) bis 4 (fein), Feile nur mit Heft | Bohren: körnen, spannen, Drehzahl n = v · 1000 : (π · d), Kühlschmierstoff | Entgraten mit Feile oder Senker
+inter: Werkzeuge zuordnen · Bügelsäge: Zähne im Eingriff · Drehzahl berechnen · Arbeitsablauf ordnen · Sicherheit richtig/falsch
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Metall</p>
+      <h1>Metall anreißen, sägen, feilen und bohren</h1>
+      <p class="lead">Metall ist härter als Holz. Die Werkzeuge sehen ähnlich aus – doch Zahnung, Schneiden und Drehzahlen sind anders. Und Metallspäne sind scharf!</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum kann man mit einem Bleistift nicht auf Metall anreißen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie bearbeite ich Metall genau und sicher?</p></div>
+      <div class="controls"><button class="btn primary" data-go="werkzeuge">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="werkzeuge" data-label="Werkzeuge" data-yr="Einstieg" data-title="Werkzeuge für Metall" data-sub="Anreißen, körnen, trennen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Werkzeuge</p>
+    <h2>Werkzeuge für die Metallbearbeitung</h2>
+  </div>
+  <div id="match-w"></div>
+</section>
+
+<section class="station" id="saegen" data-label="Bügelsäge" data-yr="Erarbeitung" data-title="Sägen mit der Bügelsäge" data-sub="Zahnung und Eingriff">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Bügelsäge</p>
+    <h2>Sägen mit der Bügelsäge</h2>
+    <p class="lead">Die Zähne der Bügelsäge zeigen <b>nach vorn</b> – sie schneidet auf <b>Stoß</b>. Damit die Zähne nicht ausbrechen, müssen immer <b>mindestens drei Zähne</b> im Werkstück sein. Für dünnes Blech braucht man deshalb ein feines Sägeblatt.</p>
+  </div>
+  <div class="cols-2">
+    <div class="tk-fig"><svg viewBox="0 0 420 200" id="bs" role="img" aria-label="Zähne im Eingriff"></svg>
+      <div class="tk-row"><label>Werkstückdicke <input type="range" min="1" max="12" value="4" id="bs-d"> <span class="tk-val" id="bs-dv"></span></label></div>
+      <div class="tk-row"><span id="bs-seg"></span></div></div>
+    <div><div class="tk-readout" id="bs-ro"></div><p class="status" id="bs-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="bohren" data-label="Drehzahl" data-yr="Übung" data-title="Drehzahl berechnen" data-sub="n = v · 1000 : (π · d)">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Bohren in Metall</p>
+    <h2>Die Drehzahl berechnen</h2>
+    <p class="lead">Jeder Werkstoff hat eine passende <b>Schnittgeschwindigkeit v</b> (in m/min) – so schnell bewegt sich die Schneide am Bohrerrand. Daraus berechnet man die Drehzahl: <b>n = v · 1000 : (π · d)</b>. Richtwerte für HSS-Bohrer: Stahl 25 m/min, Aluminium 60 m/min, Messing 50 m/min.</p>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="ablauf" data-label="Ablauf" data-yr="Werkstatt" data-title="Ein Blechteil fertigen" data-sub="Arbeitsschritte">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Werkstatt</p>
+    <h2>Ein Schlüsselanhänger aus Aluminium</h2>
+    <p class="lead">Bringe die Arbeitsschritte in die richtige Reihenfolge.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Metall trennen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Metall anreißen, sägen, feilen, bohren</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Auf Metall wird mit der <b>Reißnadel</b> angerissen. Bohrstellen werden mit dem <b>Körner</b> markiert, damit der Bohrer nicht verläuft.</li>
+        <li data-step>Die <b>Bügelsäge</b> schneidet auf Stoß. Es müssen immer mindestens drei Zähne im Eingriff sein.</li>
+        <li data-step><b>Feilen</b> gibt es von Hieb 1 (grob) bis Hieb 4 (fein). Feilen nur mit festem Heft benutzen.</li>
+        <li data-step>Drehzahl: <b>n = v · 1000 : (π · d)</b>. Beim Bohren in Stahl Kühlschmierstoff verwenden. Grate mit Feile oder Senker entfernen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Achtung</span><p>Metallspäne sind scharf und heiß. Niemals mit der Hand wegwischen oder wegpusten – Pinsel oder Handfeger benutzen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Sicher arbeiten mit Metall</h2></div>
+  <div id="tf"></div>
+</section>
+
+<script>
+matcher($('#match-w'), [['Reißnadel', 'ritzt feine Linien in Metall'], ['Körner', 'schlägt eine Vertiefung für den Bohrer'], ['Anschlagwinkel', 'rechte Winkel anreißen und prüfen'], ['Bügelsäge', 'Metallstäbe und Rohre trennen'], ['Feile', 'Kanten glätten und auf Maß bringen'], ['Kegelsenker', 'Bohrungen entgraten'], ['Blechschere', 'dünnes Blech schneiden']]);
+let teil = 1.0;
+function bs() {
+  const d = +$('#bs-d').value, n = d / teil, ok = n >= 3;
+  let s = `<rect x="20" y="40" width="380" height="${d * 10}" fill="var(--steel)" stroke="var(--edge)" stroke-width="1.5"/>`;
+  const step = teil * 10, base = 40 + d * 10;
+  let path = `M20 ${base + 26}`; for (let x = 20; x < 400; x += step) path += `L${x} ${base} L${x + step} ${base + 10}`;
+  s += `<path d="${path}V${base + 40}H20Z" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="1"/>`;
+  s += `<path d="M20 30h${Math.min(380, d * 10 * 1)}" stroke="var(--accent)" stroke-width="0"/><text x="210" y="${base + 66}" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:${ok ? 'var(--good)' : 'var(--bad)'}">${numDE(n, 1)} Zähne über die Werkstückdicke</text>`;
+  $('#bs').setAttribute('viewBox', `0 0 420 ${base + 80}`); $('#bs').innerHTML = s;
+  $('#bs-dv').textContent = d + ' mm';
+  readout($('#bs-ro'), [['Zahnteilung', numDE(teil, 1) + ' mm'], ['Werkstück', d + ' mm'], ['Zähne im Eingriff', numDE(n, 1)]]);
+  $('#bs-st').innerHTML = ok ? '<b class="good">Gut:</b> Genug Zähne im Eingriff – das Blatt läuft ruhig.' : '<b class="bad">Zu wenige Zähne!</b> Die Zähne haken ein und brechen aus. Feineres Sägeblatt wählen oder das Werkstück flacher spannen.';
+}
+$('#bs-d').oninput = bs;
+seg($('#bs-seg'), [['1.8', 'grob (1,8 mm)'], ['1.4', 'mittel (1,4 mm)'], ['1.0', 'fein (1,0 mm)'], ['0.8', 'sehr fein (0,8 mm)']], v => { teil = +v; bs(); }, '1.0');
+taskSet($('#ts'), () => {
+  const M = pick([['Stahl', 25], ['Aluminium', 60], ['Messing', 50]]), d = pick([4, 5, 6, 8, 10, 12]);
+  const n = M[1] * 1000 / (Math.PI * d);
+  return {key: M[0] + d, tag: M[0], q: `Bohrer Ø <b>${d} mm</b> in <b>${M[0]}</b> (v = ${M[1]} m/min). Berechne die Drehzahl.`, fields: [{l: 'n', a: Math.round(n), tol: Math.max(15, n * .03), unit: '1/min'}], hint: `n = ${M[1]} · 1000 : (3,14 · ${d})`};
+}, {n: 4});
+orderSteps($('#order'), ['Umriss mit Reißnadel und Schablone anreißen', 'Bohrstelle mit dem Körner ankörnen', 'Loch für den Schlüsselring bohren (Werkstück spannen)', 'Grob mit Bügelsäge oder Blechschere aussägen', 'Kanten mit der Feile auf Maß bringen', 'Grate entfernen und mit Schleifvlies glätten'], {label: 'Arbeitsschritte'});
+trueFalse($('#tf'), [
+  {t: 'Bei der Bügelsäge zeigen die Zähne zum Griff.', ok: false, why: 'Sie zeigen nach vorn – Schnitt auf Stoß.'},
+  {t: 'Eine Feile ohne Heft kann die Hand verletzen.', ok: true, why: 'Die spitze Angel kann sich in die Hand bohren.'},
+  {t: 'Ohne Körnerpunkt verläuft der Bohrer leicht.', ok: true},
+  {t: 'Ein 10-mm-Bohrer in Stahl läuft schneller als in Aluminium.', ok: false, why: 'Aluminium hat eine höhere Schnittgeschwindigkeit, also höhere Drehzahl.'},
+  {t: 'Späne werden mit dem Pinsel entfernt.', ok: true},
+  {t: 'Dünnes Blech sägt man mit grober Zahnung.', ok: false, why: 'Mit feiner Zahnung, sonst sind zu wenige Zähne im Eingriff.'}
+]);
+</script>

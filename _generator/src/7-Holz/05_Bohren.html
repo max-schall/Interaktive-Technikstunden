@@ -1,0 +1,149 @@
+<!--
+title: Sicher bohren an der Tischbohrmaschine
+short: Bohren
+time: 2 Unterrichtsstunden
+q: Wie ist die Tischbohrmaschine aufgebaut, und wie bohre ich sicher?
+facts: Bauteile: Fuß, Säule, Bohrtisch, Motor, Bohrspindel, Bohrfutter, Vorschubhebel, Tiefenanschlag, Schutzhaube, Schalter, NOT-AUS | Bohrer: Holzspiralbohrer mit Zentrierspitze, Forstnerbohrer, Senker, Metallbohrer | Kleiner Bohrer → hohe Drehzahl, großer Bohrer → kleine Drehzahl | Werkstück immer spannen, Schutzbrille, keine Handschuhe, Haare zusammen | Maschinenführerschein
+inter: Bohrmaschine erkunden und Bauteile finden · Bohrer zuordnen · Drehzahl-Regler · Sicherheitscheck · Ablauf beim Bohren ordnen
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Holz</p>
+      <h1>Sicher bohren an der Tischbohrmaschine</h1>
+      <p class="lead">Mit der Tischbohrmaschine werden Löcher genau senkrecht. Doch der Bohrer dreht sich bis zu 3000-mal in der Minute – wer unvorsichtig ist, kann sich schwer verletzen. Deshalb gibt es den <b>Maschinenführerschein</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum gelingt ein senkrechtes Loch mit der Tischbohrmaschine besser als mit dem Akkubohrer?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie ist die Tischbohrmaschine aufgebaut, und wie bohre ich sicher?</p></div>
+      <div class="controls"><button class="btn primary" data-go="aufbau">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="aufbau" data-label="Aufbau" data-yr="Erarbeitung" data-title="Die Tischbohrmaschine" data-sub="Bauteile und ihre Aufgaben">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Aufbau</p>
+    <h2>Die Tischbohrmaschine</h2>
+    <p class="lead">Tippe die Bauteile an. Im Modus „Finden“ musst du das genannte Bauteil antippen.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 360 420" id="tbm" role="img" aria-label="Tischbohrmaschine">
+      <g data-part="fuss"><rect x="50" y="370" width="230" height="30" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="saeule"><rect x="225" y="90" width="24" height="280" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="tisch"><rect x="60" y="270" width="200" height="16" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><rect x="215" y="262" width="44" height="32" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="schraubstock"><rect x="90" y="246" width="110" height="24" fill="var(--accent)" opacity=".8" stroke="var(--edge)" stroke-width="2"/><rect x="132" y="232" width="30" height="14" fill="var(--wood)" stroke="var(--edge)"/></g>
+      <g data-part="motor"><rect x="150" y="20" width="120" height="70" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><path d="M160 35h100M160 50h100M160 65h100" stroke="var(--steel)" stroke-width="3"/></g>
+      <g data-part="kopf"><rect x="80" y="90" width="190" height="60" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="schalter"><rect x="88" y="100" width="34" height="40" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><circle cx="105" cy="112" r="6" fill="var(--good)"/><circle cx="105" cy="130" r="6" fill="#222"/></g>
+      <g data-part="notaus"><circle cx="60" cy="120" r="18" fill="var(--warn)" stroke="var(--edge)" stroke-width="2"/><circle cx="60" cy="120" r="11" fill="var(--verbot)"/></g>
+      <g data-part="spindel"><rect x="138" y="150" width="20" height="34" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="futter"><path d="M132 184h32l-6 26h-20z" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="bohrer"><path d="M144 210h8v26l-4 6-4-6z" fill="#B8C2CC" stroke="var(--edge)" stroke-width="1.5"/><path d="M144 216l8 4M144 224l8 4M144 232l8 4" stroke="var(--edge)"/></g>
+      <g data-part="haube"><path d="M120 170h56v50h-56z" fill="rgba(140,200,240,.25)" stroke="var(--e)" stroke-width="2" stroke-dasharray="4 3"/></g>
+      <g data-part="hebel"><path d="M270 120l50 40M270 120l40 -40M270 120l60 0" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"/><circle cx="270" cy="120" r="9" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="anschlag"><path d="M186 150v40" stroke="var(--ink)" stroke-width="4"/><rect x="180" y="168" width="14" height="8" fill="var(--accent)"/></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="tbm-mode"></span></div><div class="box" id="tbm-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="bohrer" data-label="Bohrer" data-yr="Erarbeitung" data-title="Bohrerarten" data-sub="Für jedes Loch der richtige Bohrer">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Bohrerarten</p>
+    <h2>Für jedes Loch der richtige Bohrer</h2>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 260" role="img" aria-label="Bohrerarten"><g style="font-family:var(--f-mono);font-weight:700;font-size:16px;fill:var(--ink)">
+      <rect x="30" y="20" width="22" height="120" fill="#B8C2CC" stroke="var(--edge)" stroke-width="1.5"/><path d="M30 140l11 20 11-20M41 160v14" fill="#B8C2CC" stroke="var(--edge)" stroke-width="1.5"/><path d="M30 60l22 14M30 90l22 14M30 120l22 14" stroke="var(--edge)"/><text x="28" y="200">A</text>
+      <rect x="130" y="20" width="22" height="120" fill="#B8C2CC" stroke="var(--edge)" stroke-width="1.5"/><path d="M130 140l11 22 11-22" fill="#B8C2CC" stroke="var(--edge)" stroke-width="1.5"/><path d="M130 60l22 14M130 90l22 14M130 120l22 14" stroke="var(--edge)"/><text x="128" y="200">B</text>
+      <rect x="236" y="20" width="12" height="90" fill="#B8C2CC" stroke="var(--edge)" stroke-width="1.5"/><rect x="214" y="110" width="56" height="30" fill="#C9A227" stroke="var(--edge)" stroke-width="1.5"/><path d="M242 140v14" stroke="var(--edge)" stroke-width="3"/><text x="234" y="200">C</text>
+      <rect x="336" y="20" width="14" height="100" fill="#B8C2CC" stroke="var(--edge)" stroke-width="1.5"/><path d="M322 120h42l-21 36z" fill="#B8C2CC" stroke="var(--edge)" stroke-width="1.5"/><text x="336" y="200">D</text></g>
+      <text x="210" y="240" text-anchor="middle" style="font-family:var(--f-mono);fill:var(--ink-2);font-size:13px">A Holzspiralbohrer · B Metallbohrer · C Forstnerbohrer · D Kegelsenker</text>
+    </svg></div>
+    <div id="match-b"></div>
+  </div>
+</section>
+
+<section class="station" id="drehzahl" data-label="Drehzahl" data-yr="Erarbeitung" data-title="Die richtige Drehzahl" data-sub="Groß ↔ langsam">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Drehzahl</p>
+    <h2>Je größer der Bohrer, desto langsamer</h2>
+    <p class="lead">Am Rand eines großen Bohrers legt die Schneide bei jeder Umdrehung einen weiten Weg zurück. Damit sie nicht zu heiß wird, wählt man eine <b>kleinere Drehzahl</b>. Harte Werkstoffe brauchen ebenfalls eine kleinere Drehzahl.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-row"><label>Bohrer-Ø <input type="range" min="2" max="30" value="8" id="d"> <span class="tk-val" id="d-v"></span></label><span id="mat-seg"></span></div><div class="tk-readout" id="d-ro"></div><p class="status" id="d-st"></p></div>
+    <div id="d-plot"></div>
+  </div>
+</section>
+
+<section class="station" id="sicher" data-label="Sicher bohren" data-yr="Werkstatt" data-title="Sicher bohren" data-sub="Der Maschinenführerschein">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Werkstatt</p>
+    <h2>Der Maschinenführerschein</h2>
+    <p class="lead">Bringe die Schritte beim Bohren in die richtige Reihenfolge.</p>
+  </div>
+  <div id="order-s"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Bohren</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Sicher bohren an der Tischbohrmaschine</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Bauteile: Fuß, Säule, Bohrtisch, Motor, Bohrspindel, <b>Bohrfutter</b>, Vorschubhebel, Tiefenanschlag, Schutzhaube, Schalter und <b>NOT-AUS</b>.</li>
+        <li data-step>Holzspiralbohrer haben eine <b>Zentrierspitze</b>, Metallbohrer eine kegelförmige Spitze. Forstnerbohrer bohren große, flache Löcher; Senker entgraten.</li>
+        <li data-step>Kleiner Bohrer → <b>hohe Drehzahl</b>, großer Bohrer und harter Werkstoff → <b>kleine Drehzahl</b>.</li>
+        <li data-step>Sicherheit: Schutzbrille, Haare zusammen, <b>keine Handschuhe</b>, Werkstück immer spannen, Bohrfutterschlüssel abziehen, Späne erst nach dem Stillstand mit dem Pinsel entfernen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Wichtig</span><p>Die Tischbohrmaschine darfst du erst nach der praktischen Einweisung durch deine Lehrkraft benutzen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Sicherheitscheck</h2></div>
+  <div id="tf"></div>
+</section>
+
+<script>
+explorer($('#tbm'), $('#tbm-panel'), [
+  {id: 'fuss', n: 'Fuß', t: 'Schwere Grundplatte. Sie wird am Boden oder Tisch festgeschraubt, damit die Maschine nicht kippt.'},
+  {id: 'saeule', n: 'Säule', t: 'Trägt Bohrkopf und Bohrtisch.'},
+  {id: 'tisch', n: 'Bohrtisch', t: 'Auf ihm liegt das Werkstück. Er lässt sich in der Höhe verstellen.'},
+  {id: 'schraubstock', n: 'Maschinenschraubstock', t: 'Spannt das Werkstück. Nie mit der Hand festhalten – der Bohrer kann es herumreißen!'},
+  {id: 'motor', n: 'Motor', t: 'Treibt über Keilriemen die Bohrspindel an. Durch Umlegen des Riemens ändert sich die Drehzahl.'},
+  {id: 'kopf', n: 'Bohrkopf', t: 'Gehäuse mit Riemenantrieb und Spindellagerung.'},
+  {id: 'schalter', n: 'Ein-/Aus-Schalter', t: 'Grün: Ein. Schwarz: Aus.'},
+  {id: 'notaus', n: 'NOT-AUS', t: 'Roter Pilzschalter auf gelbem Grund. Stoppt die Maschine im Notfall sofort.'},
+  {id: 'spindel', n: 'Bohrspindel (Pinole)', t: 'Dreht sich und wird mit dem Vorschubhebel nach unten bewegt.'},
+  {id: 'futter', n: 'Bohrfutter', t: 'Hält den Bohrer. Wird mit dem Bohrfutterschlüssel geschlossen – Schlüssel immer abziehen!'},
+  {id: 'bohrer', n: 'Bohrer', t: 'Das Werkzeug, das die Späne abhebt.'},
+  {id: 'haube', n: 'Schutzhaube', t: 'Durchsichtiger Schutz um das Bohrfutter gegen Späne und Berührung.'},
+  {id: 'hebel', n: 'Vorschubhebel', t: 'Damit wird der Bohrer langsam und gleichmäßig ins Werkstück gedrückt.'},
+  {id: 'anschlag', n: 'Tiefenanschlag', t: 'Begrenzt, wie tief gebohrt wird – wichtig für Sacklöcher.'}
+], {modeRoot: $('#tbm-mode'), label: 'Tischbohrmaschine'});
+matcher($('#match-b'), [['A · Holzspiralbohrer', 'Zentrierspitze: Der Bohrer verläuft nicht im Holz.'], ['B · Metallbohrer', 'Kegelspitze, auch für Kunststoff; Metall vorher körnen'], ['C · Forstnerbohrer', 'große, flache Löcher mit glattem Grund'], ['D · Kegelsenker', 'Bohrlöcher entgraten, Platz für Senkkopfschrauben']]);
+let mat = 'holz';
+const F = {holz: 25, kunststoff: 18, stahl: 6};
+const dp = plot($('#d-plot'), {x: [0, 30], y: [0, 4000], xs: 5, ys: 1000, xl: 'Bohrer-Ø in mm', yl: 'Drehzahl in 1/min', series: []});
+function dz() {
+  const d = +$('#d').value, v = F[mat], n = Math.min(3000, v * 1000 / (Math.PI * d)), r = Math.round(n / 50) * 50;
+  dp.set({series: Object.entries(F).map(([k, vv]) => ({pts: [...Array(29)].map((_, i) => [i + 2, Math.min(3000, vv * 1000 / (Math.PI * (i + 2)))]), cls: k === mat ? 's0' : 's3', name: k === mat ? {holz: 'Holz', kunststoff: 'Kunststoff', stahl: 'Stahl'}[k] : ''})), marks: [{x: d, y: n, t: r + ' 1/min'}]});
+  $('#d-v').textContent = d + ' mm';
+  readout($('#d-ro'), [['Bohrer-Ø', d + ' mm'], ['Werkstoff', {holz: 'Holz', kunststoff: 'Kunststoff', stahl: 'Stahl'}[mat]], ['Drehzahl ≈', r + ' 1/min']]);
+  $('#d-st').innerHTML = n >= 3000 ? 'Die Maschine läuft schon mit ihrer höchsten Drehzahl.' : d > 15 ? 'Großer Bohrer: <b>langsam</b> bohren, sonst wird die Schneide heiß und stumpf.' : 'Kleiner Bohrer: <b>schnell</b> drehen lassen, aber gefühlvoll vorschieben.';
+}
+$('#d').oninput = dz;
+seg($('#mat-seg'), [['holz', 'Holz'], ['kunststoff', 'Kunststoff'], ['stahl', 'Stahl']], v => { mat = v; dz(); });
+orderSteps($('#order-s'), ['Schutzbrille aufsetzen, Haare zusammenbinden, Ärmel eng', 'Bohrstelle anreißen und vorstechen (Holz) bzw. körnen (Metall)', 'Bohrer einspannen, Bohrfutterschlüssel abziehen', 'Werkstück mit Unterlage im Maschinenschraubstock spannen', 'Drehzahl einstellen, Schutzhaube schließen, Maschine einschalten', 'Mit dem Vorschubhebel gleichmäßig bohren, Maschine ausschalten', 'Nach dem Stillstand Späne mit dem Pinsel entfernen'], {label: 'Ablauf'});
+trueFalse($('#tf'), [
+  {t: 'Kleine Werkstücke darf man beim Bohren mit der Hand festhalten.', ok: false, why: 'Werkstücke werden immer gespannt.'},
+  {t: 'An der Bohrmaschine trägt man Arbeitshandschuhe.', ok: false, why: 'Handschuhe können vom Bohrer erfasst werden – verboten.'},
+  {t: 'Der Bohrfutterschlüssel muss abgezogen werden, bevor man einschaltet.', ok: true, why: 'Sonst wird er weggeschleudert.'},
+  {t: 'Ein 25-mm-Forstnerbohrer läuft mit kleinerer Drehzahl als ein 3-mm-Bohrer.', ok: true},
+  {t: 'Unter das Werkstück legt man ein Restholz.', ok: true, why: 'So reißt das Loch beim Austritt nicht aus und der Tisch bleibt heil.'},
+  {t: 'Späne entfernt man bei laufender Maschine mit der Hand.', ok: false, why: 'Erst ausschalten, Stillstand abwarten, dann mit dem Pinsel.'}
+]);
+</script>

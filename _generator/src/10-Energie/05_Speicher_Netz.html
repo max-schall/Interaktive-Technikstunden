@@ -1,0 +1,101 @@
+<!--
+title: Speicher und intelligentes Stromnetz
+short: Speicher & Netz
+time: 2 Unterrichtsstunden
+q: Wie bringt man schwankende Erzeugung und Verbrauch zusammen?
+facts: Im Stromnetz müssen Erzeugung und Verbrauch in jedem Moment gleich groß sein | Wind und Sonne schwanken: Überschuss mittags, Lücken abends | Speicher: Akku, Pumpspeicher, Druckluft, Wasserstoff (Power-to-Gas), Wärmespeicher | Smart Grid: Erzeuger, Speicher und Verbraucher sind digital vernetzt; Geräte laufen, wenn viel Strom da ist | Netzausbau transportiert Windstrom von Nord nach Süd
+inter: Stromnetz an einem Tag simulieren · Speicher zuordnen · Smart-Grid-Maßnahmen sortieren · Nachhaltigkeit bewerten · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Energieversorgung</p>
+      <h1>Speicher und intelligentes Stromnetz</h1>
+      <p class="lead">Mittags liefern Solaranlagen mehr Strom, als gebraucht wird – abends, wenn alle kochen und fernsehen, scheint keine Sonne mehr. Im Stromnetz müssen Erzeugung und Verbrauch aber in jeder Sekunde <b>gleich groß</b> sein.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wann am Tag wird in eurer Familie am meisten Strom gebraucht?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie bringt man schwankende Erzeugung und Verbrauch zusammen?</p></div>
+      <div class="controls"><button class="btn primary" data-go="tag">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="tag" data-label="Ein Tag im Netz" data-yr="Erarbeitung" data-title="Ein Tag im Stromnetz" data-sub="Erzeugung und Verbrauch">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Ein Tag im Netz</p>
+    <h2>Ein sonniger Tag im Stromnetz</h2>
+    <p class="lead">Baue Solar- und Windanlagen aus und schalte einen Speicher zu. Wie viel müssen Kraftwerke noch liefern?</p>
+  </div>
+  <div id="grid"></div>
+</section>
+
+<section class="station" id="speicher" data-label="Speicher" data-yr="Erarbeitung" data-title="Energiespeicher" data-sub="Vom Akku bis zum Wasserstoff">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Speicher</p>
+    <h2>Energie für später</h2>
+    <p class="lead">Ordne die Speicher zu.</p>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="smart" data-label="Smart Grid" data-yr="Übung" data-title="Das intelligente Netz" data-sub="Verbrauch verschieben">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Smart Grid</p>
+    <h2>Das intelligente Stromnetz</h2>
+    <p class="lead">Im <b>Smart Grid</b> tauschen Erzeuger, Speicher und Geräte Daten aus. Waschmaschine, Wärmepumpe und E-Auto laufen dann, wenn viel Wind- und Sonnenstrom da ist. Sortiere: Passt die Maßnahme in die sonnige Mittagszeit oder in die dunkle Abendzeit?</p>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Bewerten" data-yr="Material M1" data-title="Energiewende bewerten" data-sub="Chancen und Herausforderungen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Die Energiewende bewerten</h2>
+  </div>
+  <div id="tf"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Speicher und Netz</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Speicher und intelligentes Stromnetz</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Im Stromnetz müssen <b>Erzeugung und Verbrauch</b> in jedem Moment gleich groß sein.</li>
+        <li data-step>Wind und Sonne schwanken. <b>Speicher</b> nehmen Überschüsse auf: Akkus, Pumpspeicher, Druckluft, Wasserstoff (Power-to-Gas), Wärmespeicher.</li>
+        <li data-step>Im <b>Smart Grid</b> sind Erzeuger, Speicher und Verbraucher digital vernetzt. Geräte laufen bevorzugt, wenn viel erneuerbarer Strom verfügbar ist.</li>
+        <li data-step>Neue <b>Stromleitungen</b> bringen Windstrom aus dem Norden in den Süden.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Diskussion</span><p>Sollte in eurem Ort ein großer Batteriespeicher oder ein neues Windrad gebaut werden? Sammelt Argumente für und gegen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Netz-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+gridSim($('#grid'));
+matcher($('#match'), [['Akku (Batteriespeicher)', 'speichert Strom chemisch, schnell, für Stunden'], ['Pumpspeicherkraftwerk', 'pumpt Wasser nach oben, gibt es bei Bedarf zurück'], ['Druckluftspeicher', 'presst Luft in unterirdische Hohlräume'], ['Wasserstoff (Power-to-Gas)', 'Strom spaltet Wasser, Wasserstoff kann monatelang lagern'], ['Wärmespeicher', 'speichert Wärme in großen Wassertanks']]);
+sorter($('#sort'), [{id: 'm', name: 'mittags (viel Sonnenstrom)'}, {id: 'a', name: 'abends (wenig Sonnenstrom)'}], [
+  {t: 'E-Auto laden', c: 'm'}, {t: 'Waschmaschine starten', c: 'm'}, {t: 'Wärmepumpe heizt den Speicher auf', c: 'm'}, {t: 'Batteriespeicher entladen', c: 'a'},
+  {t: 'Pumpspeicher gibt Wasser ab', c: 'a'}, {t: 'Batteriespeicher laden', c: 'm'}, {t: 'Gaskraftwerk springt ein', c: 'a'}
+]);
+trueFalse($('#tf'), [
+  {t: 'Ohne Speicher muss überschüssiger Solarstrom manchmal abgeregelt werden.', ok: true},
+  {t: 'Wasserstoff lässt sich ohne Verluste herstellen und zurückverwandeln.', ok: false, why: 'Von 100 % Strom kommen am Ende nur etwa 30–40 % zurück.'},
+  {t: 'Ein E-Auto kann in Zukunft als Speicher für das Netz dienen.', ok: true},
+  {t: 'Die Netzfrequenz in Europa liegt bei 50 Hz und muss stabil gehalten werden.', ok: true},
+  {t: 'Neue Stromleitungen sind überflüssig, weil Strom überall gleich erzeugt wird.', ok: false, why: 'Viel Windstrom entsteht im Norden, viel Verbrauch im Süden.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was muss im Stromnetz immer gleich groß sein?', a: ['Erzeugung und Verbrauch', 'Spannung und Strom', 'Wind und Sonne', 'Tag und Nacht'], ok: 0},
+  {q: 'Welcher Speicher kann Energie monatelang speichern?', a: ['Wasserstoff', 'Kondensator', 'Handy-Akku', 'Schwungrad'], ok: 0},
+  {q: 'Was ist ein Smart Grid?', a: ['ein digital vernetztes Stromnetz', 'ein besonders dickes Kabel', 'ein Solarmodul', 'ein Kohlekraftwerk'], ok: 0},
+  {q: 'Wann sollte man ein E-Auto am besten laden?', a: ['wenn viel Wind- und Sonnenstrom da ist', 'immer abends um 19 Uhr', 'nur nachts bei Windstille', 'egal'], ok: 0},
+  {q: 'Warum werden neue Stromtrassen gebaut?', a: ['um Windstrom von Nord nach Süd zu bringen', 'um Kohle zu transportieren', 'um Gas zu speichern', 'um das Internet schneller zu machen'], ok: 0}
+]);
+</script>

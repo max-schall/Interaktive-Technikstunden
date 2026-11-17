@@ -1,0 +1,263 @@
+/* =====================================================================
+   TECHNIK · Gestaltungsprinzip „Werkstattzeichnung“
+   – Hell: ruhiges Zeichenpapier · Dunkel: Blaupause (beide ohne Raster)
+   – Kopfleiste als Schriftfeld (DIN EN ISO 7200): Zellen mit Kleinbeschriftung
+   – Stationen als Positionsnummern (Kreise mit Bezugslinie), Überschriften mit Maßlinie
+   – Normschrift-Charakter (Barlow Semi Condensed, an DIN 1451 angelehnt) für Beschriftungen
+   – keine Rundungen, keine Schatten: dünne Linien, Fasen (45°) an gefüllten Flächen
+   Dieses Blatt überschreibt base.css (Bausteine aus den IT-Präsentationen).
+   ===================================================================== */
+body{background-color:var(--bg);background-image:none}
+code,pre,.codeview,kbd{font-family:var(--f-code)}
+code{border-radius:0}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--f-mono);font-weight:700;letter-spacing:.005em;line-height:1.1}
+h1{font-size:clamp(2.2rem,4.6vw,3.6rem)}
+h2{font-size:clamp(1.6rem,2.8vw,2.4rem)}
+h3{font-size:1.2rem;font-weight:600}
+.lead{font-size:1.12rem}
+
+/* ---------- Schriftfeld (Kopfleiste) ---------- */
+.top{background:var(--bar);color:var(--bar-ink);border-bottom:2px solid var(--edge);padding:0 .6rem 0 0;gap:0;align-items:stretch;min-height:3.6rem;
+  box-shadow:0 5px 0 -2px var(--accent)}
+.brand{border-right:1.5px solid var(--edge);padding:.35rem .9rem .35rem 1rem;justify-content:center;gap:.05rem;position:relative}
+.brand::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent)}
+.brand small{font-family:var(--f-mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--bar-ink-2);line-height:1}
+.brand b{font-family:var(--f-mono);font-weight:700;font-size:1.15rem;letter-spacing:.01em}
+.brand b::before{content:none}
+.brand span{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.04em;color:var(--bar-ink-2);text-transform:uppercase}
+.tl-scroll{display:flex;align-items:center;padding:0 .4rem;scrollbar-color:var(--line) transparent}
+.icon-btn{align-self:center;margin-left:.3rem;background:var(--bar);border:1.5px solid var(--edge);color:var(--bar-ink);border-radius:0;font-family:var(--f-mono);font-weight:600;
+  font-size:.76rem;text-transform:uppercase;letter-spacing:.04em;padding:.28rem .5rem}
+
+.icon-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--bar)}
+/* Arbeitsschritte als Positionsnummern */
+.tl li.m::before{top:1.15rem;height:1px;background:var(--bar-ink-2)}
+.tl li.m.done::before{background:var(--accent);height:2px}
+.tl li.m.half::before{background:linear-gradient(90deg,var(--accent) 50%,var(--bar-ink-2) 50%);height:1px}
+.tl li.m.first.half::before{background:var(--bar-ink-2)}
+.tl-stop{color:var(--bar-ink-2);min-width:4.3rem;gap:.05rem}
+.tl-stop .dot{width:1.75rem;height:1.75rem;border-radius:50%;border:1.5px solid var(--bar-ink);background:var(--bar)}
+.tl-stop .dot .num{font-family:var(--f-mono);font-size:.95rem;font-weight:700;color:var(--bar-ink)}
+.tl li.m.done .tl-stop .dot{border-color:var(--accent)}
+.tl li.m.done .tl-stop .dot .num{color:var(--accent)}
+.tl-stop .yr{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.1em;font-weight:600}
+.tl-stop .nm{font-family:var(--f-mono);font-size:.85rem;font-weight:500;color:var(--bar-ink)}
+.tl-stop:hover .dot{border-color:var(--accent)}
+.tl-stop[aria-current="step"] .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 3px var(--bar),0 0 0 4.5px var(--accent)}
+.tl-stop[aria-current="step"] .dot .num{color:var(--accent-ink)}
+.tl-stop[aria-current="step"] .nm{font-weight:700}
+.tl li.sep{background:var(--line);height:2.4rem}
+.tl-pill{border:1.5px solid var(--bar-ink-2);border-radius:0;font-family:var(--f-mono);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--bar-ink)}
+.tl-pill::before,.tl-pill::after{content:none}
+.tl-pill:hover{border-color:var(--accent);color:var(--accent)}
+.tl-pill[aria-current="step"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+/* ---------- Bühne ---------- */
+.eyebrow{font-family:var(--f-mono);font-size:.88rem;font-weight:600;letter-spacing:.12em}
+.eyebrow::before{content:"";display:inline-block;width:1.5em;height:2px;background:currentColor;vertical-align:.3em;margin-right:.5em;opacity:1}
+/* Maßlinie unter jeder Stationsüberschrift */
+.section-head::after{content:"";display:block;height:12px;max-width:min(26rem,70%);margin-top:.7rem;background:var(--ink-2);
+  -webkit-mask:var(--arr-l) left center/11px 9px no-repeat,var(--arr-r) right center/11px 9px no-repeat,linear-gradient(#000,#000) center/100% 1.2px no-repeat,linear-gradient(#000,#000) left/1.2px 100% no-repeat,linear-gradient(#000,#000) right/1.2px 100% no-repeat;
+  mask:var(--arr-l) left center/11px 9px no-repeat,var(--arr-r) right center/11px 9px no-repeat,linear-gradient(#000,#000) center/100% 1.2px no-repeat,linear-gradient(#000,#000) left/1.2px 100% no-repeat,linear-gradient(#000,#000) right/1.2px 100% no-repeat}
+:root{--arr-l:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 9'%3E%3Cpath d='M1.2 4.5 11 0.8V8.2Z'/%3E%3C/svg%3E");
+  --arr-r:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 9'%3E%3Cpath d='M9.8 4.5 0 0.8V8.2Z'/%3E%3C/svg%3E")}
+
+/* Karten: dünne Linie, eckig, Eckmarke in Kapitelfarbe */
+.card,.box,.vis,.teaser,.heft,.merke,.task-card,.sort-col,.pipe-stage,.zl-detail,.phone-panel,.ideas-col,.puzzle,.next-lesson,.lesson,.meter,
+.task,.cloze-text,.sort-card,.match-card,.preview button,.tf-list li,.flip,.mc-opt,.pz-card{border-radius:0;box-shadow:none}
+.box,.teaser,.vis,.task-card,.next-lesson{background-image:linear-gradient(225deg,var(--accent) 0 8px,transparent 8.5px)}
+.merke{border-left-width:6px}
+.status{border-radius:0;border-left:3px solid var(--accent)}
+.status::before{content:"▸ ";font-family:var(--f-mono)}
+.tag{border-radius:0;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;padding:.12rem .55rem}
+.tag.info{clip-path:polygon(6px 0,100% 0,100% 100%,0 100%,0 6px)}
+.mini-sign svg{width:2.4rem;height:2.4rem;vertical-align:middle;margin-right:.4rem}
+.facts li::before{content:"";top:.85rem;width:.55rem;height:.55rem;border:1.5px solid var(--accent);border-radius:50%;left:.2rem}
+
+/* Knöpfe: eckig, gefüllte Knöpfe mit Fase */
+.btn{border-radius:0;box-shadow:none;font-family:var(--f-mono);font-weight:600;font-size:.98rem;letter-spacing:.03em;padding:.45rem .95rem}
+.btn:active{transform:translateY(1px);box-shadow:none}
+.btn:disabled{box-shadow:none}
+.btn.primary{border-color:var(--accent);clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);padding-right:1.25rem}
+.btn.ok,.btn.err{clip-path:none}
+.seg{border-radius:0}
+.seg button{font-family:var(--f-mono);font-weight:600;font-size:.92rem;letter-spacing:.02em}
+
+/* ---------- Startfolie ---------- */
+.start h1{font-size:clamp(2.3rem,4vw,3.5rem)}
+.preview button{grid-template-columns:2.3rem 6.6rem 1fr;border:1.5px solid var(--edge)}
+.preview .num{width:2rem;height:2rem;display:grid;place-items:center;border-radius:50%;background:var(--surface);color:var(--accent);border:1.5px solid var(--edge);padding:0;font-size:1rem;font-weight:700}
+.preview .y{font-family:var(--f-mono);font-size:.78rem;font-weight:600;letter-spacing:.1em}
+.preview .n b{font-family:var(--f-mono);font-size:1.08rem;font-weight:600}
+.teaser .tag{margin-top:.15rem}
+
+/* ---------- Hefteintrag als Zeichnungsblatt ---------- */
+.heft{border:1.5px solid var(--edge);background-image:repeating-linear-gradient(transparent 0 1.95rem,var(--heft-line) 1.95rem 2rem);position:relative}
+.heft-title{background:transparent;color:var(--ink);padding:0;border-bottom:1.5px solid var(--edge);align-items:stretch;gap:0}
+.heft-title h3{padding:.65rem 1.1rem;font-size:1.35rem}
+.heft-title span{flex:none;display:flex;align-items:center;padding:.4rem .9rem;border-left:1.5px solid var(--edge);font-family:var(--f-mono);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;opacity:1;color:var(--ink-2)}
+.heft ol{counter-reset:h;list-style:none;padding:0 1.2rem 0 1.2rem}
+.heft ol>li{counter-increment:h;position:relative;padding-left:2.4rem}
+.heft ol>li::before{content:counter(h);position:absolute;left:0;top:.05rem;width:1.6rem;height:1.6rem;display:grid;place-items:center;border:1.5px solid var(--edge);border-radius:50%;
+  font-family:var(--f-mono);font-weight:700;font-size:.92rem;color:var(--accent);background:var(--surface)}
+.heft ul{margin:.3rem 0;padding-left:1.2rem}
+
+/* ---------- Blätter-Leiste ---------- */
+.pager{background:var(--bar);color:var(--bar-ink);border-top:2px solid var(--edge)}
+.pager .btn{background:var(--bar);color:var(--bar-ink);border-color:var(--edge)}
+.pager .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.pager .mid{font-family:var(--f-mono);font-size:.92rem;letter-spacing:.04em;color:var(--bar-ink-2)}
+
+/* ---------- Übersicht ---------- */
+.meter{border:1.5px solid var(--edge)}
+.meter span{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em}
+.meter b{font-family:var(--f-mono);font-weight:700;font-size:1.9rem}
+.lesson{border:1.5px solid var(--edge)}
+.l-num{width:3.2rem;height:3.2rem;display:grid;place-items:center;border:1.5px solid var(--edge);border-radius:50%;font-family:var(--f-mono);font-size:1.7rem;font-weight:700;background:var(--surface)}
+.l-body h2{font-size:1.5rem}
+
+/* Bausteine aus base.css: kleine Angleichungen */
+.task header,.sort-fb,.score,.mc-head{font-family:var(--f-mono);letter-spacing:.03em}
+.task header{font-size:.88rem;letter-spacing:.03em;text-transform:none}
+.sort-col{border-top-width:6px}
+.sort-col h3{font-size:1.05rem}
+.mc-q{font-family:var(--f-body);font-weight:700}
+.flip .f{font-family:var(--f-mono);font-weight:700}
+.cloze select,.fields input,input,select{border-radius:0}
+.table-wrap table,table.cmp{border-radius:0}
+@media (max-width:900px){
+  .top{padding:0 .4rem .2rem 0;flex-wrap:wrap}
+  .brand{border-right:1.5px solid var(--edge)}
+  .icon-btn{margin:.3rem 0 .3rem .3rem}
+  .tl-scroll{border-top:1.5px solid var(--edge)}
+}
+@media (max-width:600px){.icon-btn[title^="Zur Übersicht"]{display:none}}
+
+/* =====================================================================
+   TECHNIK-BAUSTEINE (tech.js)
+   ===================================================================== */
+.tk-fig{background:var(--surface);border:1.5px solid var(--edge);padding:.8rem;position:relative}
+.tk-fig svg{display:block;width:100%;height:auto;max-height:58vh;margin:0 auto}
+.tk-circ .tk-fig svg{max-height:42vh}
+.tk-cap{font-family:var(--f-mono);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:.4rem 0 0}
+.tk-row{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;margin:.6rem 0}
+.tk-row label{display:flex;align-items:center;gap:.5rem;font-family:var(--f-mono);font-weight:600;font-size:.95rem}
+.tk-row input[type=range]{width:min(14rem,48vw);accent-color:var(--accent)}
+.tk-val{font-family:var(--f-mono);font-weight:700;font-size:1.05rem;min-width:4.5rem;display:inline-block}
+.tk-readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(7.5rem,1fr));gap:0;border:1.5px solid var(--edge);margin:.7rem 0 0;background:var(--surface)}
+.tk-readout div{padding:.4rem .7rem;border-right:1.5px solid var(--edge);display:flex;flex-direction:column}
+.tk-readout div:last-child{border-right:0}
+.tk-readout small{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.03em;color:var(--ink-2)}
+.tk-readout b{font-family:var(--f-mono);font-size:1.45rem;font-weight:700;color:var(--accent)}
+/* Schaltpläne */
+.sch{color:var(--wire)}
+.sch .w{fill:none;stroke:var(--wire);stroke-width:2.2;stroke-linecap:square}
+.sch .sym{fill:var(--surface);stroke:var(--wire);stroke-width:2.2}
+.sch .thin{fill:none;stroke:var(--wire);stroke-width:1.4}
+.sch .fillw{fill:var(--wire)}
+.sch text{font-family:var(--f-mono);font-size:15px;font-weight:600;fill:var(--ink)}
+.sch text.sm{font-size:12px;fill:var(--ink-2)}
+.sch .glow{fill:var(--lamp);transition:opacity .25s}
+.sch .click{cursor:pointer}
+.sch .click:hover .sym,.sch .click:focus .sym{stroke:var(--accent)}
+.sch .flow{stroke:var(--accent);stroke-width:3;fill:none;stroke-dasharray:3 14;animation:flow 1s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-17}}
+@media (prefers-reduced-motion: reduce){.sch .flow{animation:none}}
+.sch .hot{stroke:var(--bad)}
+/* Zahnräder */
+.gear-svg .g{fill:var(--steel);stroke:var(--edge);stroke-width:1.5}
+.gear-svg .g2{fill:color-mix(in srgb,var(--accent) 45%,var(--steel))}
+.gear-svg .hub{fill:var(--surface);stroke:var(--edge);stroke-width:1.5}
+.gear-svg .mark{fill:var(--bad)}
+.gear-svg .belt{fill:none;stroke:var(--ink);stroke-width:5;stroke-dasharray:10 5}
+.gear-svg text{font-family:var(--f-mono);font-size:15px;font-weight:700;fill:var(--ink)}
+/* Würfel-Körper und Ansichten */
+.vox{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:1rem;align-items:start}
+.vox-views{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.vox-views figure{margin:0;background:var(--surface);border:1.5px solid var(--edge);padding:.4rem}
+.vox-views figcaption{font-family:var(--f-mono);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2)}
+.vox-views .empty{border-style:dashed;opacity:.5}
+.vox svg .f-top{fill:color-mix(in srgb,var(--accent) 30%,var(--surface))}
+.vox svg .f-front{fill:color-mix(in srgb,var(--accent) 55%,var(--surface))}
+.vox svg .f-side{fill:color-mix(in srgb,var(--accent) 80%,var(--ink))}
+.vox svg polygon{stroke:var(--edge);stroke-width:1.2;stroke-linejoin:round}
+.vox svg .vw rect{fill:color-mix(in srgb,var(--accent) 16%,var(--surface));stroke:color-mix(in srgb,var(--accent) 30%,var(--surface));stroke-width:.6;stroke-dasharray:2 2}
+.vox svg .vw .ol{fill:none;stroke:var(--edge);stroke-width:2.6;stroke-linecap:square}
+.vx-body svg,.vq-body svg{max-height:50vh;margin:auto}
+.vox-views svg{display:block}
+.vox-opts svg{display:block;margin:auto}
+.vox svg .axis{stroke:var(--ink-2);stroke-width:1;stroke-dasharray:6 3 1 3}
+.vox-opts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}
+.vox-opts button{background:var(--surface);border:1.5px solid var(--edge);padding:.3rem;cursor:pointer}
+.vox-opts button.ok{border-color:var(--good);outline:3px solid var(--good)}
+.vox-opts button.err{border-color:var(--bad);outline:3px solid var(--bad)}
+@media (max-width:900px){.vox{grid-template-columns:minmax(0,1fr)}.vox-opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Messschieber */
+.ms-svg .body{fill:var(--steel);stroke:var(--edge);stroke-width:1.2}
+.ms-svg .slide{fill:color-mix(in srgb,var(--steel) 70%,var(--surface));stroke:var(--edge);stroke-width:1.2;cursor:grab}
+.ms-svg .tick{stroke:var(--ink);stroke-width:1}
+.ms-svg .vtick{stroke:var(--bad);stroke-width:1.2}
+.ms-svg text{font-family:var(--f-mono);font-size:11px;font-weight:600;fill:var(--ink)}
+.ms-svg .vt{fill:var(--bad)}
+.ms-svg .work{fill:var(--wood);stroke:var(--edge);stroke-width:1.2}
+.ms-svg .hit{stroke:var(--good);stroke-width:3}
+/* Widerstand */
+.res-svg .body{fill:#E8D3A8;stroke:var(--edge);stroke-width:1.5}
+.res-svg .lead{stroke:var(--steel-2);stroke-width:4}
+/* Sicherheitszeichen */
+.signs{display:grid;grid-template-columns:repeat(auto-fill,minmax(8.6rem,1fr));gap:.7rem}
+.sign{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-align:center;font-size:.9rem;background:var(--surface);border:1.5px solid var(--edge);padding:.6rem .4rem}
+.sign svg{width:4.6rem;height:4.6rem}
+.sign b{font-family:var(--f-mono);font-size:.95rem}
+/* Diagramm mit Linien (plot) */
+.plot svg{display:block;width:100%;height:auto}
+.plot .ax{stroke:var(--ink);stroke-width:1.4}
+.plot .gl{stroke:var(--line);stroke-width:1}
+.plot text{font-family:var(--f-mono);font-size:13px;fill:var(--ink-2)}
+.plot .lab{fill:var(--ink);font-weight:600}
+.plot path.s0{stroke:var(--accent);stroke-width:3;fill:none}
+.plot path.s1{stroke:var(--bad);stroke-width:2;fill:none;stroke-dasharray:7 5}
+.plot path.s2{stroke:var(--good);stroke-width:2.5;fill:none}
+.plot path.s3{stroke:var(--ink-2);stroke-width:2;fill:none;stroke-dasharray:2 4}
+.plot .lg rect{stroke:none}
+.plot .area{fill:color-mix(in srgb,var(--accent) 18%,transparent);stroke:none}
+/* Logikgatter */
+.gate-svg .g{fill:var(--surface);stroke:var(--wire);stroke-width:2.2}
+.gate-svg .w{stroke:var(--wire);stroke-width:2.2;fill:none}
+.gate-svg .w.on{stroke:var(--bad);stroke-width:3.2}
+.gate-svg text{font-family:var(--f-mono);font-size:22px;font-weight:700;fill:var(--ink)}
+.gate-svg .in{cursor:pointer}
+.gate-svg .in rect{fill:var(--surface);stroke:var(--wire);stroke-width:2}
+.gate-svg .in.on rect{fill:var(--bad)}
+.gate-svg .lamp{fill:var(--surface);stroke:var(--wire);stroke-width:2}
+.gate-svg .lamp.on{fill:var(--lamp)}
+table.tt{border-collapse:collapse;font-family:var(--f-mono);font-size:1.05rem;background:var(--surface)}
+table.tt th,table.tt td{border:1.5px solid var(--edge);padding:.25rem .8rem;text-align:center}
+table.tt th{background:var(--surface-2)}
+table.tt tr.cur td{background:color-mix(in srgb,var(--accent) 25%,var(--surface));font-weight:700}
+/* Energieflussbild (Sankey) */
+.sankey text{font-family:var(--f-mono);font-size:14px;font-weight:600;fill:var(--ink)}
+.sankey .in{fill:var(--accent)}
+.sankey .loss{fill:var(--bad);opacity:.75}
+.sankey .use{fill:var(--good)}
+/* Profile / Biegung */
+.beam-svg .sup{fill:var(--ink-2)}
+.beam-svg .beam{fill:var(--wood);stroke:var(--edge);stroke-width:1.5}
+.beam-svg .load{fill:var(--steel-2);stroke:var(--edge)}
+.beam-svg text{font-family:var(--f-mono);font-size:14px;font-weight:600;fill:var(--ink)}
+.beam-svg .prof{fill:var(--steel);stroke:var(--edge);stroke-width:1.5}
+.beam-svg .zug{stroke:var(--e);stroke-width:5}
+.beam-svg .druck{stroke:var(--bad);stroke-width:5}
+.beam-svg .bar{stroke:var(--ink);stroke-width:5;stroke-linecap:round}
+.beam-svg .node{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+/* Blockprogramm (Mikrocontroller) */
+.blk{font-family:var(--f-mono);font-size:1rem;display:flex;flex-direction:column;gap:2px}
+.blk div{padding:.25rem .6rem;color:#fff;font-weight:600;width:max-content;max-width:100%;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,0 100%)}
+.blk .st{background:#B45309}.blk .ko{background:#B8860B}.blk .ak{background:#1D4ED8}.blk .se{background:#0F766E}.blk .lo{background:#047857}.blk .va{background:#9D174D}
+.blk .on{outline:3px solid var(--lamp);outline-offset:1px}
+/* Schaltfläche „Gerät“ */
+.dev{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center}
+.lampbig{width:5.5rem;height:5.5rem;border-radius:50%;border:2px solid var(--edge);background:var(--surface-2);display:grid;place-items:center;font-family:var(--f-mono);font-weight:700;transition:background .2s,box-shadow .2s}
+.lampbig.on{background:var(--lamp);box-shadow:0 0 28px var(--lamp);color:#3a2a00}
+@media print{.section-head::after{display:none}}

@@ -1,0 +1,112 @@
+<!--
+title: Sensoren, Aktoren und Signale
+short: Signale
+time: 2 Unterrichtsstunden
+q: Wie werden Messwerte zu Daten, die ein Computer verarbeiten kann?
+facts: EVA: Sensoren (Eingabe) → Steuergerät (Verarbeitung) → Aktoren (Ausgabe) | Analoge Signale: stufenlos, beliebig viele Werte | Digitale Signale: wenige feste Stufen, im Computer 0 und 1 | A/D-Wandler: tastet das analoge Signal ab und rundet auf Stufen; mit n Bit gibt es 2ⁿ Stufen | Binärzahlen und Speicher
+inter: Sensoren und Aktoren sortieren · A/D-Wandler mit Bits und Abtastrate · Analog oder digital · Binärzahlen umrechnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Steuerung und Regelung</p>
+      <h1>Sensoren, Aktoren und Signale</h1>
+      <p class="lead">Ein Thermometer mit Quecksilbersäule zeigt jede noch so kleine Temperaturänderung – ein Digitalthermometer springt in Zehntelschritten. Wie wird aus der Welt um uns herum eine Zahl, mit der ein Mikrocontroller rechnen kann?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Vergleicht eine Analoguhr und eine Digitaluhr. Was ist der Unterschied?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie werden Messwerte zu Daten, die ein Computer verarbeiten kann?</p></div>
+      <div class="controls"><button class="btn primary" data-go="eva">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="eva" data-label="Sensoren & Aktoren" data-yr="Einstieg" data-title="Sensoren und Aktoren" data-sub="Eingabe, Verarbeitung, Ausgabe">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · EVA</p>
+    <h2>Sensoren und Aktoren</h2>
+    <p class="lead"><b>Sensoren</b> messen Größen der Umwelt (Eingabe). Das <b>Steuergerät</b> verarbeitet die Daten. <b>Aktoren</b> setzen die Befehle in Bewegung, Licht oder Ton um (Ausgabe). Sortiere die Bauteile einer Alarmanlage und einer Ampel.</p>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="ad" data-label="A/D-Wandler" data-yr="Erarbeitung" data-title="Vom analogen zum digitalen Signal" data-sub="Abtasten und runden">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · A/D-Wandler</p>
+    <h2>Vom analogen zum digitalen Signal</h2>
+    <p class="lead">Ein <b>analoges</b> Signal kann jeden Wert annehmen. Ein <b>A/D-Wandler</b> misst es in festen Zeitabständen (<b>Abtastrate</b>) und rundet auf eine von 2ⁿ Stufen (<b>Auflösung</b> in Bit). Erhöhe Bits und Abtastrate – wann ist das digitale Signal gut genug?</p>
+  </div>
+  <div class="cols-2"><div id="ad-pl"></div><div><div class="tk-row"><label>Auflösung <input type="range" min="1" max="8" value="2" id="ad-b"> <span class="tk-val" id="ad-bv"></span></label></div><div class="tk-row"><label>Abtastungen <input type="range" min="4" max="64" step="2" value="10" id="ad-s"> <span class="tk-val" id="ad-sv"></span></label></div><div class="tk-readout" id="ad-ro"></div><p class="status" id="ad-st"></p></div></div>
+</section>
+
+<section class="station" id="vergleich" data-label="Analog/digital" data-yr="Übung" data-title="Analog oder digital?" data-sub="Sortieren">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Analog oder digital?</p>
+    <h2>Analog oder digital?</h2>
+  </div>
+  <div id="sort-a"></div>
+</section>
+
+<section class="station" id="binaer" data-label="M1 Binär" data-yr="Material M1" data-title="Nullen und Einsen" data-sub="Binärzahlen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Nullen und Einsen</h2>
+    <p class="lead">Ein Mikrocontroller speichert jeden Messwert als <b>Binärzahl</b>. Jede Stelle (Bit) hat einen Stellenwert: 128, 64, 32, 16, 8, 4, 2, 1. Ein 8-Bit-Wandler kennt 256 Stufen (0 bis 255).</p>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Signale</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Sensoren, Aktoren und Signale</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>EVA-Prinzip:</b> Sensoren (Eingabe) → Steuergerät (Verarbeitung) → Aktoren (Ausgabe).</li>
+        <li data-step><b>Analoge</b> Signale sind stufenlos. <b>Digitale</b> Signale haben feste Stufen; im Computer werden sie als 0 und 1 gespeichert.</li>
+        <li data-step>Ein <b>A/D-Wandler</b> tastet das analoge Signal in festen Abständen ab und rundet auf Stufen. Mit <b>n Bit</b> gibt es <b>2ⁿ Stufen</b>.</li>
+        <li data-step>Je höher Auflösung und Abtastrate, desto genauer das digitale Abbild – aber desto mehr Daten.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Beispiel</span><p>Der Lichtsensor eines Mikrocontrollers liefert 10 Bit: 2¹⁰ = 1024 Stufen von 0 (dunkel) bis 1023 (hell).</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Signal-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort'), [{id: 's', name: 'Sensor (Eingabe)'}, {id: 'v', name: 'Verarbeitung'}, {id: 'a', name: 'Aktor (Ausgabe)'}], [
+  {t: 'Bewegungsmelder', c: 's'}, {t: 'Fensterkontakt', c: 's'}, {t: 'Mikrocontroller', c: 'v'}, {t: 'Sirene', c: 'a'}, {t: 'Induktionsschleife in der Straße', c: 's'},
+  {t: 'Ampellampen', c: 'a'}, {t: 'Ampelsteuergerät', c: 'v'}, {t: 'Elektromotor einer Schranke', c: 'a'}, {t: 'Taster für Fußgänger', c: 's'}
+]);
+const sig = t => 0.5 + 0.35 * Math.sin(2 * Math.PI * t) + 0.12 * Math.sin(6 * Math.PI * t + 1);
+const ap = plot($('#ad-pl'), {x: [0, 1], y: [0, 1], xs: .25, ys: .25, xl: 'Zeit', yl: 'Signal (0 bis 1)', series: []});
+function ad() {
+  const b = +$('#ad-b').value, n = +$('#ad-s').value, L = 2 ** b, q = v => Math.round(v * (L - 1)) / (L - 1);
+  const an = [...Array(201)].map((_, i) => [i / 200, sig(i / 200)]);
+  const dg = []; for (let k = 0; k < n; k++) { const t0 = k / n, t1 = (k + 1) / n, v = q(sig(t0)); dg.push([t0, v], [t1, v]); }
+  let err = 0; an.forEach(([t, v]) => { const k = Math.min(n - 1, Math.floor(t * n)); err += Math.abs(v - q(sig(k / n))); }); err /= an.length;
+  ap.set({series: [{pts: an, cls: 's3', name: 'analog'}, {pts: dg, cls: 's0', name: 'digital'}], hl: [...Array(Math.min(L, 17))].map((_, i) => ({y: i / (Math.min(L, 17) - 1), t: ''}))});
+  $('#ad-bv').textContent = b + ' Bit'; $('#ad-sv').textContent = n + ' pro Sekunde';
+  readout($('#ad-ro'), [['Stufen', L], ['Daten pro Sekunde', b * n + ' Bit'], ['mittlerer Fehler', numDE(err * 100, 1) + ' %']]);
+  $('#ad-st').innerHTML = err < .02 ? '<b class="good">Sehr genau:</b> Das digitale Signal folgt dem analogen fast perfekt.' : err < .06 ? 'Ganz ordentlich – aber Stufen sind noch sichtbar.' : 'Grob: Zu wenige Stufen oder Abtastungen – das Signal wird verfälscht.';
+}
+$('#ad-b').oninput = ad; $('#ad-s').oninput = ad; ad();
+sorter($('#sort-a'), [{id: 'a', name: 'analog'}, {id: 'd', name: 'digital'}], [
+  {t: 'Zeigeruhr', c: 'a'}, {t: 'Schallplatte', c: 'a'}, {t: 'Quecksilberthermometer', c: 'a'}, {t: 'Digitaluhr', c: 'd'}, {t: 'Musik-Streaming', c: 'd'}, {t: 'Taster: gedrückt oder nicht', c: 'd'}, {t: 'Tachonadel', c: 'a'}
+]);
+taskSet($('#ts'), () => {
+  if (Math.random() < .5) { const v = randInt(1, 255); return {key: 'd' + v, tag: 'Dezimal → binär', q: `<span class="big">${v}</span> als 8-Bit-Binärzahl`, fields: [{l: 'binär', a: [v.toString(2).padStart(8, '0'), v.toString(2)]}], hint: 'Stellenwerte 128, 64, 32, 16, 8, 4, 2, 1'}; }
+  const v = randInt(1, 255); return {key: 'b' + v, tag: 'Binär → dezimal', q: `<span class="big" style="font-family:var(--f-code)">${v.toString(2).padStart(8, '0')}</span>`, fields: [{l: 'dezimal', a: v}], hint: 'Stellenwerte der Einsen addieren'};
+}, {n: 4});
+mcQuiz($('#quiz'), [
+  {q: 'Was ist ein Aktor?', a: ['ein Bauteil, das etwas bewirkt, z. B. Motor', 'ein Messfühler', 'ein Programm', 'ein Kabel'], ok: 0},
+  {q: 'Wie viele Stufen hat ein 4-Bit-Wandler?', a: ['16', '4', '8', '256'], ok: 0},
+  {q: 'Was bedeutet „analog“?', a: ['stufenlos, beliebig viele Werte', 'nur 0 und 1', 'nur ganze Zahlen', 'besonders schnell'], ok: 0},
+  {q: 'Welche Dezimalzahl ist 00001010?', a: ['10', '2', '1010', '8'], ok: 0},
+  {q: 'Was passiert bei zu wenigen Abtastungen?', a: ['Das digitale Signal wird ungenau.', 'Das Signal wird lauter.', 'Nichts.', 'Der Sensor geht kaputt.'], ok: 0}
+]);
+</script>

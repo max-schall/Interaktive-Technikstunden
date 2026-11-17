@@ -1,0 +1,95 @@
+<!--
+title: Industrie 4.0 und Berufe im Wandel
+short: Arbeitswelt
+time: 2 Unterrichtsstunden
+q: Wie verändert die Digitalisierung die Produktion und die Berufe?
+facts: Industrielle Revolutionen: 1.0 Dampfmaschine, 2.0 Fließband und Elektrizität, 3.0 Computer und Roboter, 4.0 Vernetzung | Smart Factory: Maschinen, Werkstücke und Menschen tauschen Daten aus | Digitaler Zwilling: virtuelles Abbild einer Maschine oder Fabrik | Berufe verändern sich: neue Aufgaben, lebenslanges Lernen | Technische Ausbildungsberufe
+inter: Revolutionen ordnen · Smart-Factory-Begriffe zuordnen · Chancen und Risiken sortieren · Technische Berufe kennenlernen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Von der Idee zum Serienprodukt</p>
+      <h1>Industrie 4.0 und Berufe im Wandel</h1>
+      <p class="lead">In einer modernen Fabrik „sagt“ ein Werkstück der Maschine, wie es bearbeitet werden soll. Roboter arbeiten neben Menschen, Ersatzteile werden bestellt, bevor etwas kaputtgeht. Was bedeutet das für die Arbeit von morgen?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Welchen technischen Beruf könntest du dir vorstellen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie verändert die Digitalisierung die Produktion und die Berufe?</p></div>
+      <div class="controls"><button class="btn primary" data-go="revolution">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="revolution" data-label="Revolutionen" data-yr="Einstieg" data-title="Vier industrielle Revolutionen" data-sub="Von Dampf zu Daten">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Revolutionen</p>
+    <h2>Von Dampf zu Daten</h2>
+    <p class="lead">Viermal hat neue Technik die Arbeit grundlegend verändert. Ordne die industriellen Revolutionen.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="smart" data-label="Smart Factory" data-yr="Erarbeitung" data-title="Die Smart Factory" data-sub="Alles ist vernetzt">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Smart Factory</p>
+    <h2>Die intelligente Fabrik</h2>
+    <p class="lead">In der <b>Smart Factory</b> sind Maschinen, Werkstücke, Lager und Menschen über das Netz verbunden. Sensoren liefern ständig Daten. Ordne die Begriffe zu.</p>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="chancen" data-label="Chancen & Risiken" data-yr="Übung" data-title="Chancen und Risiken" data-sub="Bewerten">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Bewerten</p>
+    <h2>Chancen und Risiken</h2>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="berufe" data-label="M1 Berufe" data-yr="Material M1" data-title="Technische Berufe" data-sub="Wer macht was?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Technische Berufe</h2>
+    <p class="lead">Viele technische Berufe lernt man in einer dualen Ausbildung (Betrieb und Berufsschule). Tippe auf eine Karte.</p>
+  </div>
+  <div id="flip"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Arbeitswelt</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Industrie 4.0 und Berufe im Wandel</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Industrielle Revolutionen: <b>1.0</b> Dampfmaschine · <b>2.0</b> Elektrizität und Fließband · <b>3.0</b> Computer und Roboter · <b>4.0</b> Vernetzung von Maschinen, Produkten und Menschen.</li>
+        <li data-step>In der <b>Smart Factory</b> steuern Daten die Produktion. Ein <b>digitaler Zwilling</b> ist das virtuelle Abbild einer Maschine oder Fabrik zum Planen und Testen.</li>
+        <li data-step>Chancen: individuelle Produkte, weniger körperlich schwere Arbeit, vorausschauende Wartung. Risiken: Wegfall einfacher Tätigkeiten, Datensicherheit.</li>
+        <li data-step>Berufe verändern sich – <b>lebenslanges Lernen</b> wird wichtig.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Berufsorientierung</span><p>Recherchiere einen technischen Ausbildungsberuf: Tätigkeiten, Dauer, Schulabschluss, Verdienst in der Ausbildung. Stelle ihn in zwei Minuten vor.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Arbeitswelt-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+orderSteps($('#order'), ['1.0 · um 1780: Dampfmaschine, mechanische Webstühle', '2.0 · um 1870: Elektrizität, Fließband, Massenproduktion', '3.0 · um 1970: Computer, Elektronik, Industrieroboter', '4.0 · seit etwa 2010: Vernetzung, künstliche Intelligenz, Smart Factory'], {label: 'Zeitleiste'});
+matcher($('#match'), [['Sensor', 'liefert Daten über Temperatur, Vibration, Position'], ['Digitaler Zwilling', 'virtuelles Abbild einer echten Maschine'], ['Cobot', 'Roboter, der sicher neben Menschen arbeitet'], ['RFID-Chip', 'Werkstück „sagt“, wie es bearbeitet werden soll'], ['Vorausschauende Wartung', 'Teile werden getauscht, bevor sie kaputtgehen'], ['Fahrerloses Transportsystem', 'bringt Material selbstständig zur Maschine']]);
+sorter($('#sort'), [{id: 'c', name: 'Chance'}, {id: 'r', name: 'Risiko'}], [
+  {t: 'Roboter übernehmen schwere und gefährliche Arbeit', c: 'c'}, {t: 'Produkte nach Kundenwunsch in Serie', c: 'c'}, {t: 'Weniger Ausfälle durch Wartung zur richtigen Zeit', c: 'c'},
+  {t: 'Einfache Tätigkeiten fallen weg', c: 'r'}, {t: 'Hackerangriffe auf vernetzte Fabriken', c: 'r'}, {t: 'Ständige Überwachung durch Daten', c: 'r'}, {t: 'Neue Berufe entstehen', c: 'c'}
+]);
+flipCards($('#flip'), [['Mechatroniker/-in', 'baut und wartet Anlagen aus Mechanik, Elektronik und Software'], ['Elektroniker/-in', 'installiert Elektrotechnik in Gebäuden und Anlagen'], ['Technische/r Produktdesigner/-in', 'konstruiert Bauteile mit CAD'], ['Industriemechaniker/-in', 'richtet Maschinen ein und hält sie instand'], ['Zerspanungsmechaniker/-in', 'programmiert CNC-Maschinen und fertigt Präzisionsteile'], ['Fachinformatiker/-in', 'entwickelt Software und vernetzt Systeme']]);
+mcQuiz($('#quiz'), [
+  {q: 'Was kennzeichnet Industrie 4.0?', a: ['Vernetzung von Maschinen und Produkten', 'die Erfindung der Dampfmaschine', 'das erste Fließband', 'Handarbeit'], ok: 0},
+  {q: 'Was ist ein digitaler Zwilling?', a: ['virtuelles Abbild einer Maschine', 'zwei gleiche Roboter', 'ein Zwillingspaar in der Fabrik', 'eine Sicherungskopie'], ok: 0},
+  {q: 'Womit begann die erste industrielle Revolution?', a: ['Dampfmaschine', 'Computer', 'Elektrizität', 'Internet'], ok: 0},
+  {q: 'Was ist ein Cobot?', a: ['ein Roboter, der mit Menschen zusammenarbeitet', 'ein Computervirus', 'ein Kabel', 'eine App'], ok: 0},
+  {q: 'Warum wird lebenslanges Lernen wichtiger?', a: ['Berufe verändern sich durch neue Technik.', 'Man muss länger zur Schule.', 'Maschinen lernen nicht.', 'Es gibt keine Ausbildung mehr.'], ok: 0}
+]);
+</script>

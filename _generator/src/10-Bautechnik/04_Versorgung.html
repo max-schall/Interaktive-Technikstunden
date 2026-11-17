@@ -1,0 +1,124 @@
+<!--
+title: Versorgung und Entsorgung im Haus
+short: Haustechnik
+time: 2 Unterrichtsstunden
+q: Wie kommen Strom und Wasser ins Haus – und wie verlässt das Abwasser es?
+facts: Hausanschluss: Strom, Wasser, Abwasser, Gas/Fernwärme, Telekommunikation | Strom: Hausanschlusskasten, Zähler, Sicherungskasten mit Leitungsschutzschaltern und FI-Schalter, getrennte Stromkreise | Wasser: Hauswasseranschluss mit Zähler, Kalt- und Warmwasserleitungen | Abwasser: Geruchsverschluss (Siphon), Fallrohr, Kanal, Kläranlage | Regenwasser kann genutzt oder versickert werden
+inter: Hausquerschnitt erkunden · Weg des Stroms ordnen · Weg des Abwassers ordnen · Siphon erklären · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Bauen und Wohnen</p>
+      <h1>Versorgung und Entsorgung im Haus</h1>
+      <p class="lead">Hahn auf – Wasser kommt. Schalter an – Licht geht an. Spülung drücken – alles weg. Hinter den Wänden eines Hauses steckt ein ausgeklügeltes System aus Leitungen, Zählern und Sicherungen.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wo im Haus findest du Zähler für Strom und Wasser?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie kommen Strom und Wasser ins Haus – und wie verlässt das Abwasser es?</p></div>
+      <div class="controls"><button class="btn primary" data-go="haus">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="haus" data-label="Hausanschluss" data-yr="Einstieg" data-title="Das Haus im Schnitt" data-sub="Leitungen erkunden">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Haus im Schnitt</p>
+    <h2>Das Haus im Schnitt</h2>
+    <p class="lead">Tippe die Teile der Haustechnik an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 460 360" id="hs" role="img" aria-label="Haus im Schnitt" style="font-family:var(--f-mono)">
+      <path d="M60 140L230 40L400 140V300H60z" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><path d="M60 300h340v50H60z" fill="var(--surface-2)" stroke="var(--edge)" stroke-width="2"/><path d="M0 300h60M400 300h60" stroke="#6B4A2E" stroke-width="4"/><path d="M60 220h340" stroke="var(--edge)" stroke-width="2"/>
+      <g data-part="hak"><rect x="70" y="310" width="30" height="30" fill="var(--warn)" stroke="var(--edge)" stroke-width="1.5"/><path d="M0 330h70" stroke="var(--bad)" stroke-width="4"/></g>
+      <g data-part="zaehler"><rect x="108" y="310" width="28" height="30" fill="var(--surface)" stroke="var(--edge)" stroke-width="1.5"/><text x="122" y="330" text-anchor="middle" style="font-size:10px">kWh</text></g>
+      <g data-part="verteiler"><rect x="80" y="236" width="36" height="50" fill="var(--surface-2)" stroke="var(--edge)" stroke-width="1.5"/><path d="M86 246h24M86 256h24M86 266h24" stroke="var(--ink)" stroke-width="3"/><path d="M98 286v24" stroke="var(--bad)" stroke-width="3"/></g>
+      <g data-part="leitung"><path d="M116 250H300M116 260v-110h150" stroke="var(--bad)" stroke-width="2.5" fill="none"/><circle cx="300" cy="250" r="6" fill="var(--surface)" stroke="var(--edge)"/><circle cx="266" cy="150" r="10" fill="var(--lamp)" stroke="var(--edge)"/></g>
+      <g data-part="wasser"><path d="M460 330h-110V170h-40" stroke="var(--e)" stroke-width="4" fill="none"/><rect x="336" y="300" width="28" height="18" fill="var(--e)"/><path d="M310 170v12" stroke="var(--e)" stroke-width="4"/></g>
+      <g data-part="warm"><rect x="300" y="240" width="40" height="55" rx="6" fill="var(--bad)" opacity=".6" stroke="var(--edge)"/><path d="M320 240V180h-8" stroke="var(--bad)" stroke-width="3" fill="none"/></g>
+      <g data-part="siphon"><path d="M200 196v14q0 10 10 10t10 -10v-6" stroke="var(--ink-2)" stroke-width="5" fill="none"/><rect x="186" y="186" width="30" height="10" fill="var(--surface-2)" stroke="var(--edge)"/></g>
+      <g data-part="abwasser"><path d="M220 204h20V340h220" stroke="#7A5C3A" stroke-width="7" fill="none"/></g>
+      <g data-part="regen"><path d="M400 140v160" stroke="var(--steel-2)" stroke-width="6"/><path d="M390 140h20" stroke="var(--steel-2)" stroke-width="6"/></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="hs-mode"></span></div><div class="box" id="hs-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="strom" data-label="Strom" data-yr="Erarbeitung" data-title="Der Weg des Stroms" data-sub="Vom Netz zur Steckdose">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Strom</p>
+    <h2>Der Weg des Stroms</h2>
+    <p class="lead">Ordne den Weg des Stroms vom Ortsnetz bis zur Steckdose im Kinderzimmer.</p>
+  </div>
+  <div id="order-s"></div>
+  <div class="merke mt"><p>Jeder Raum oder jede Gerätegruppe hat einen eigenen <b>Stromkreis</b> mit eigenem Leitungsschutzschalter. So fällt bei einer Störung nicht das ganze Haus aus.</p></div>
+</section>
+
+<section class="station" id="abwasser" data-label="Abwasser" data-yr="Erarbeitung" data-title="Der Weg des Abwassers" data-sub="Vom Waschbecken zur Kläranlage">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Abwasser</p>
+    <h2>Vom Waschbecken zur Kläranlage</h2>
+    <p class="lead">Unter jedem Waschbecken sitzt ein gebogenes Rohr: der <b>Geruchsverschluss</b> (Siphon). Das stehende Wasser darin sperrt die Kanalgase aus. Ordne den Weg des Abwassers.</p>
+  </div>
+  <div id="order-a"></div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Verbrauch" data-yr="Material M1" data-title="Wasser im Alltag" data-sub="Wie viel brauchen wir?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Wie viel Wasser brauchen wir?</h2>
+    <p class="lead">In Deutschland verbraucht jeder Mensch etwa 125 Liter Trinkwasser am Tag – nur 4 Liter davon zum Trinken und Kochen.</p>
+  </div>
+  <div class="cols-2"><div id="ch"></div><div id="tf"></div></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Haustechnik</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Versorgung und Entsorgung im Haus</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Strom:</b> Hausanschlusskasten → Stromzähler → Sicherungskasten (Leitungsschutzschalter, FI-Schutzschalter) → getrennte Stromkreise → Steckdosen und Lampen.</li>
+        <li data-step><b>Wasser:</b> Hauswasseranschluss mit Wasserzähler → Kaltwasserleitungen; ein Speicher oder Durchlauferhitzer erwärmt Warmwasser.</li>
+        <li data-step><b>Abwasser:</b> Geruchsverschluss (Siphon) → Fallrohr → Grundleitung → öffentlicher Kanal → Kläranlage.</li>
+        <li data-step>Arbeiten an der Elektro-, Gas- und Wasserinstallation dürfen nur Fachbetriebe ausführen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Erkundung</span><p>Lest zu Hause eine Woche lang täglich den Wasserzähler ab. Berechnet den Verbrauch pro Person und Tag.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Haustechnik-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+explorer($('#hs'), $('#hs-panel'), [
+  {id: 'hak', n: 'Hausanschlusskasten', t: 'Hier endet das Kabel des Netzbetreibers. Er enthält die Hauptsicherungen und ist verplombt.'},
+  {id: 'zaehler', n: 'Stromzähler', t: 'Misst die verbrauchte elektrische Energie in Kilowattstunden (kWh). Moderne Zähler senden die Daten digital.'},
+  {id: 'verteiler', n: 'Sicherungskasten (Verteiler)', t: 'Enthält Leitungsschutzschalter für jeden Stromkreis und den FI-Schutzschalter.'},
+  {id: 'leitung', n: 'Stromkreise', t: 'Leitungen in der Wand führen zu Steckdosen, Schaltern und Lampen. Jeder Raum hat eigene Stromkreise.'},
+  {id: 'wasser', n: 'Kaltwasserleitung mit Wasserzähler', t: 'Trinkwasser kommt mit Druck aus dem Netz. Der Wasserzähler misst den Verbrauch in m³.'},
+  {id: 'warm', n: 'Warmwasserspeicher', t: 'Erwärmt das Wasser für Dusche und Küche – mit Heizung, Strom oder Sonnenwärme.'},
+  {id: 'siphon', n: 'Geruchsverschluss (Siphon)', t: 'Das stehende Wasser im gebogenen Rohr sperrt Gerüche aus dem Kanal ab.'},
+  {id: 'abwasser', n: 'Abwasserleitung', t: 'Fallrohr und Grundleitung führen das Abwasser mit Gefälle zum öffentlichen Kanal.'},
+  {id: 'regen', n: 'Regenfallrohr', t: 'Regenwasser vom Dach wird gesammelt, versickert oder in den Kanal geleitet.'}
+], {modeRoot: $('#hs-mode'), label: 'Haustechnik'});
+orderSteps($('#order-s'), ['Ortsnetz (Erdkabel in der Straße)', 'Hausanschlusskasten mit Hauptsicherung', 'Stromzähler', 'Sicherungskasten mit FI-Schalter und Leitungsschutzschaltern', 'Leitung des Stromkreises „Kinderzimmer“', 'Steckdose'], {label: 'Weg des Stroms'});
+orderSteps($('#order-a'), ['Waschbecken', 'Geruchsverschluss (Siphon)', 'Fallrohr im Haus', 'Grundleitung unter dem Keller', 'Öffentlicher Kanal in der Straße', 'Kläranlage', 'Gereinigtes Wasser fließt in einen Fluss'], {label: 'Weg des Abwassers'});
+chart($('#ch'), {type: 'hbar', title: 'Wasser pro Person und Tag (gerundet)', unit: ' l', data: [['Körperpflege', 45], ['Toilette', 34], ['Wäsche', 15], ['Geschirr', 7], ['Putzen, Garten', 7], ['Essen, Trinken', 4]]});
+trueFalse($('#tf'), [
+  {t: 'Eine Spartaste an der Toilettenspülung spart viel Wasser.', ok: true},
+  {t: 'Duschen verbraucht meist weniger Wasser als Baden.', ok: true},
+  {t: 'Regenwasser darf man nicht für die Toilettenspülung nutzen.', ok: false, why: 'Mit einer eigenen Leitung ist das möglich und spart Trinkwasser.'},
+  {t: 'Speisereste gehören nicht in die Toilette.', ok: true, why: 'Sie locken Ratten an und belasten die Kläranlage.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was misst der Stromzähler?', a: ['elektrische Energie in kWh', 'Spannung in V', 'Wasser in m³', 'Temperatur'], ok: 0},
+  {q: 'Wozu dient der Siphon?', a: ['Er sperrt Kanalgerüche aus.', 'Er erwärmt Wasser.', 'Er misst den Verbrauch.', 'Er filtert Trinkwasser.'], ok: 0},
+  {q: 'Warum hat jeder Raum eigene Stromkreise?', a: ['Bei einer Störung fällt nicht das ganze Haus aus.', 'Damit Strom gespart wird.', 'Damit es billiger ist.', 'Wegen der Optik.'], ok: 0},
+  {q: 'Wohin fließt das Abwasser aus dem Kanal?', a: ['zur Kläranlage', 'direkt ins Meer', 'zurück ins Haus', 'ins Trinkwassernetz'], ok: 0},
+  {q: 'Wer darf an der Elektroinstallation arbeiten?', a: ['nur Elektrofachkräfte', 'jeder Erwachsene', 'alle mit Werkzeug', 'Schülerinnen und Schüler im Unterricht'], ok: 0}
+]);
+</script>

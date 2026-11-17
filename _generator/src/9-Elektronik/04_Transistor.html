@@ -1,0 +1,99 @@
+<!--
+title: Der Transistor als Schalter
+short: Transistor
+time: 2–3 Unterrichtsstunden
+q: Wie schaltet ein Transistor eine LED abhängig von Licht oder Wärme?
+facts: Der NPN-Transistor hat drei Anschlüsse: Basis (B), Kollektor (C), Emitter (E) | Ein kleiner Basisstrom steuert einen großen Kollektorstrom | Ab etwa 0,7 V zwischen Basis und Emitter schaltet der Transistor durch | Dunkelschaltung: LDR zwischen B und E | Hellschaltung: LDR zwischen + und B | Wärmeschaltung: NTC zwischen + und B | Mit dem Poti wird die Schaltschwelle eingestellt
+inter: Transistor-Anschlüsse zuordnen · Simulator mit Dunkel-, Hell- und Wärmeschaltung · Schaltschwelle mit Poti einstellen · Schaltungen Anwendungen zuordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Schalter, Sensoren und Schaltungen</p>
+      <h1>Der Transistor als Schalter</h1>
+      <p class="lead">Ein LDR allein kann keine Lampe schalten – der Strom wäre viel zu klein. Ein <b>Transistor</b> verstärkt: Ein winziger Steuerstrom schaltet einen großen Strom. Ohne Transistoren gäbe es keine Computer und keine Smartphones.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Ein Smartphone-Chip enthält über 10 Milliarden Transistoren. Was könnten sie dort tun?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie schaltet ein Transistor eine LED abhängig von Licht oder Wärme?</p></div>
+      <div class="controls"><button class="btn primary" data-go="aufbau">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="aufbau" data-label="Anschlüsse" data-yr="Einstieg" data-title="Basis, Kollektor, Emitter" data-sub="Der NPN-Transistor">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Anschlüsse</p>
+    <h2>Basis, Kollektor, Emitter</h2>
+    <p class="lead">Der <b>NPN-Transistor</b> (z. B. BC547) hat drei Anschlüsse. Der Strom von der <b>Basis</b> zum <b>Emitter</b> steuert den viel größeren Strom vom <b>Kollektor</b> zum <b>Emitter</b> – wie ein kleiner Hahn, der ein großes Ventil öffnet.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 300 260" role="img" aria-label="Transistor-Schaltzeichen"><circle cx="160" cy="130" r="56" fill="var(--surface)" stroke="var(--wire)" stroke-width="2.2"/><path class="w" d="M135 95V165M60 130H135M135 113L190 80V20M135 147L190 180V240"/><path d="M190 180l-18 -2 8 -13z" class="fillw"/><text x="60" y="118" style="font-size:22px">B</text><text x="200" y="40" style="font-size:22px">C</text><text x="200" y="236" style="font-size:22px">E</text><text x="40" y="150" class="sm">Basis</text><text x="200" y="60" class="sm">Kollektor</text><text x="200" y="215" class="sm">Emitter</text></svg></div>
+    <div id="match-t"></div>
+  </div>
+</section>
+
+<section class="station" id="dunkel" data-label="Simulator" data-yr="Erarbeitung" data-title="Transistor-Schaltungen" data-sub="Dunkel, hell, warm">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Simulator</p>
+    <h2>Dunkel-, Hell- und Wärmeschaltung</h2>
+    <p class="lead">Der Sensor bildet mit dem Poti R₁ einen Spannungsteiler. Erreicht die Spannung zwischen Basis und Emitter etwa <b>0,7 V</b>, schaltet der Transistor durch. Wähle eine Schaltung und verändere Helligkeit oder Temperatur.</p>
+  </div>
+  <div id="tr"></div>
+</section>
+
+<section class="station" id="schwelle" data-label="Schaltschwelle" data-yr="Übung" data-title="Die Schaltschwelle" data-sub="Mit dem Poti einstellen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Schaltschwelle</p>
+    <h2>Wann soll das Nachtlicht angehen?</h2>
+    <p class="lead">Stelle in der Dunkelschaltung das Poti so ein, dass die LED erst bei weniger als <b>50 lx</b> (Dämmerung) angeht. Beobachte, wie sich die Schaltschwelle mit R₁ verschiebt.</p>
+  </div>
+  <div id="tr2"></div>
+</section>
+
+<section class="station" id="anwendung" data-label="M1 Anwendungen" data-yr="Material M1" data-title="Anwendungen" data-sub="Welche Schaltung passt?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Welche Schaltung passt?</h2>
+  </div>
+  <div id="sort-a"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Transistor</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Der Transistor als Schalter</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Der NPN-Transistor hat drei Anschlüsse: <b>Basis (B)</b>, <b>Kollektor (C)</b>, <b>Emitter (E)</b>.</li>
+        <li data-step>Ein kleiner <b>Basisstrom</b> steuert einen großen <b>Kollektorstrom</b>. Ab etwa <b>0,7 V</b> zwischen B und E schaltet der Transistor durch.</li>
+        <li data-step>Die Basisspannung liefert ein <b>Spannungsteiler</b> aus Sensor und Poti. <b>Dunkelschaltung:</b> LDR zwischen B und E. <b>Hellschaltung:</b> LDR zwischen + und B. <b>Wärmeschaltung:</b> NTC zwischen + und B.</li>
+        <li data-step>Mit dem <b>Poti</b> stellt man ein, bei welcher Helligkeit oder Temperatur geschaltet wird.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Praxis</span><p>Baue die Dunkelschaltung auf dem Steckbrett: 9 V, BC547, LDR, Poti 10 kΩ, R_B 1 kΩ, LED mit 470 Ω. Stelle das Poti ein.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Transistor-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match-t'), [['Basis (B)', 'Steueranschluss für den kleinen Strom'], ['Kollektor (C)', 'hier fließt der große Laststrom hinein'], ['Emitter (E)', 'gemeinsamer Ausgang, Pfeil im Schaltzeichen'], ['0,7 V', 'Schaltschwelle zwischen B und E']]);
+transistorSim($('#tr'), {mode: 'dunkel'});
+transistorSim($('#tr2'), {mode: 'dunkel', modes: false, Rf: 33000});
+sorter($('#sort-a'), [{id: 'd', name: 'Dunkelschaltung'}, {id: 'h', name: 'Hellschaltung'}, {id: 'w', name: 'Wärmeschaltung'}], [
+  {t: 'Nachtlicht im Kinderzimmer', c: 'd'}, {t: 'Straßenbeleuchtung', c: 'd'}, {t: 'Ventilator schaltet bei Hitze ein', c: 'w'}, {t: 'Feuermelder (Temperatur)', c: 'w'},
+  {t: 'Rollladen fährt bei Sonne herunter', c: 'h'}, {t: 'Warnsignal, wenn ein Kühlschrank geöffnet wird (Licht innen)', c: 'h'}, {t: 'Lüfter im Computer', c: 'w'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Wie heißen die Anschlüsse eines Transistors?', a: ['Basis, Kollektor, Emitter', 'Anode, Kathode, Gitter', 'Plus, Minus, Erde', 'Eingang, Ausgang, Masse'], ok: 0},
+  {q: 'Ab welcher Spannung zwischen B und E schaltet ein Silizium-Transistor?', a: ['etwa 0,7 V', 'etwa 9 V', 'etwa 0,01 V', 'etwa 230 V'], ok: 0},
+  {q: 'Wo sitzt der LDR in der Dunkelschaltung?', a: ['zwischen Basis und Emitter', 'zwischen Plus und Basis', 'am Kollektor', 'in der LED'], ok: 0},
+  {q: 'Warum steigt in der Dunkelschaltung bei Dunkelheit die Basisspannung?', a: ['Der LDR-Widerstand wird groß.', 'Die Batterie wird stärker.', 'Die LED leuchtet.', 'Der Transistor wird warm.'], ok: 0},
+  {q: 'Welcher Sensor gehört in die Wärmeschaltung?', a: ['NTC', 'LDR', 'Taster', 'Relais'], ok: 0},
+  {q: 'Wozu dient das Poti?', a: ['Es stellt die Schaltschwelle ein.', 'Es ersetzt den Transistor.', 'Es misst die Temperatur.', 'Es macht die LED farbig.'], ok: 0}
+]);
+</script>

@@ -1,0 +1,120 @@
+<!--
+title: Lasercutter und 3D-Drucker
+short: Laser & 3D-Druck
+time: 2–3 Unterrichtsstunden
+q: Wie arbeiten Lasercutter und 3D-Drucker, und worauf muss man achten?
+facts: Lasercutter: Ein Laserstrahl schneidet (Vektor) oder graviert (Raster) Holz, Acrylglas, Pappe | Verboten: PVC und Kunststoffe mit Chlor (giftiges Gas), Metall spiegelt | Sicherheit: Abdeckung zu, Absaugung an, nie unbeaufsichtigt | 3D-Druck (FDM): Kunststofffaden (PLA) wird geschmolzen und Schicht für Schicht aufgetragen | Slicer: Schichthöhe, Füllung (Infill), Stützstrukturen | Kleinere Schichthöhe: feiner, aber langsamer
+inter: Materialien für den Laser sortieren · Schneiden oder gravieren · Slicer-Simulator mit Schichthöhe und Infill · Ablauf 3D-Druck ordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Von der Idee zum Serienprodukt</p>
+      <h1>Lasercutter und 3D-Drucker</h1>
+      <p class="lead">Der Lasercutter <b>trennt</b> Material mit Licht – der 3D-Drucker <b>baut</b> Werkstücke Schicht für Schicht <b>auf</b>. Beide arbeiten direkt mit den Daten aus dem CAD-Programm.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Zu welcher Hauptgruppe der Fertigungsverfahren gehört der Lasercutter, zu welcher der 3D-Drucker?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie arbeiten Lasercutter und 3D-Drucker, und worauf muss man achten?</p></div>
+      <div class="controls"><button class="btn primary" data-go="laser">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="laser" data-label="Lasercutter" data-yr="Erarbeitung" data-title="Der Lasercutter" data-sub="Schneiden und gravieren">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Lasercutter</p>
+    <h2>Schneiden und Gravieren mit Licht</h2>
+    <p class="lead">Ein gebündelter Laserstrahl verdampft das Material an einer winzigen Stelle. Fährt er <b>Linien</b> (Vektoren) mit hoher Leistung ab, <b>schneidet</b> er. Fährt er <b>Zeile für Zeile</b> (Raster) mit geringer Leistung, <b>graviert</b> er.</p>
+  </div>
+  <div class="cols-2"><div id="sort-m"></div><div id="tf-l"></div></div>
+</section>
+
+<section class="station" id="druck" data-label="3D-Druck" data-yr="Erarbeitung" data-title="Der 3D-Drucker" data-sub="Schicht für Schicht">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · 3D-Druck</p>
+    <h2>Schicht für Schicht – der Slicer</h2>
+    <p class="lead">Beim <b>FDM-Druck</b> wird ein Kunststofffaden (meist <b>PLA</b>) in einer Düse bei etwa 200 °C geschmolzen und Schicht für Schicht aufgetragen. Der <b>Slicer</b> zerlegt das 3D-Modell in Schichten. Probiere Schichthöhe und Füllung aus.</p>
+  </div>
+  <div class="cols-2">
+    <div class="tk-fig"><svg viewBox="0 0 400 300" id="sl" role="img" aria-label="Slicer-Vorschau"></svg></div>
+    <div><div class="tk-row"><label>Schichthöhe <input type="range" min="0.1" max="0.4" step="0.05" value="0.2" id="sl-h"> <span class="tk-val" id="sl-hv"></span></label></div><div class="tk-row"><label>Füllung (Infill) <input type="range" min="0" max="100" step="5" value="20" id="sl-i"> <span class="tk-val" id="sl-iv"></span></label></div><div class="tk-readout" id="sl-ro"></div><p class="status" id="sl-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="ablauf" data-label="Ablauf" data-yr="Werkstatt" data-title="Ein Druckauftrag" data-sub="Vom Modell zum Teil">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Werkstatt</p>
+    <h2>Ein Druckauftrag</h2>
+    <p class="lead">Ordne die Schritte vom fertigen CAD-Modell bis zum gedruckten Teil.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="vergleich" data-label="M1 Vergleich" data-yr="Material M1" data-title="Laser oder 3D-Druck?" data-sub="Was passt zum Projekt?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Laser oder 3D-Druck?</h2>
+    <p class="lead">Entscheide, welche Maschine für das Projekt besser geeignet ist.</p>
+  </div>
+  <div id="sort-v"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Laser und 3D-Druck</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Lasercutter und 3D-Drucker</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Lasercutter</b> (Trennen): Linien (Vektoren) werden geschnitten, Flächen (Raster) graviert. Geeignet: Holz, MDF, Pappe, Acrylglas.</li>
+        <li data-step><b>Verboten:</b> PVC und chlorhaltige Kunststoffe (giftiges Gas), Polycarbonat (brennt), Metall (spiegelt den Laser). Laser nie unbeaufsichtigt lassen.</li>
+        <li data-step><b>3D-Drucker</b> (Urformen): Kunststoff wird geschmolzen und Schicht für Schicht aufgetragen. Der <b>Slicer</b> legt Schichthöhe, Füllung und Stützen fest.</li>
+        <li data-step>Kleinere Schichthöhe = feinere Oberfläche, aber längere Druckzeit. Mehr Füllung = stabiler, aber mehr Material und Zeit.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Sicherheit</span><p>Am Lasercutter: Abdeckung geschlossen halten, Absaugung einschalten, Feuerlöscher bereit, Maschine nie allein lassen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Laser- und Druck-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-m'), [{id: 'j', name: 'für den Laser geeignet'}, {id: 'n', name: 'verboten / ungeeignet'}], [
+  {t: 'Sperrholz', c: 'j'}, {t: 'MDF', c: 'j'}, {t: 'Acrylglas (PMMA)', c: 'j'}, {t: 'Pappe', c: 'j'}, {t: 'PVC', c: 'n', why: 'Beim Schneiden entsteht giftiges, ätzendes Chlorgas.'},
+  {t: 'Polycarbonat', c: 'n', why: 'Fängt Feuer und verfärbt sich.'}, {t: 'Aluminiumblech', c: 'n', why: 'Metall spiegelt den Laserstrahl.'}, {t: 'Kunstleder (unbekannt)', c: 'n', why: 'Enthält oft PVC.'}
+]);
+trueFalse($('#tf-l'), [
+  {t: 'Zum Gravieren braucht man mehr Leistung als zum Schneiden.', ok: false, why: 'Gravieren: wenig Leistung, Schneiden: viel Leistung.'},
+  {t: 'Schnittlinien werden im Programm meist als dünne Linien (Vektoren) gezeichnet.', ok: true},
+  {t: 'Der Lasercutter darf laufen, während man kurz den Raum verlässt.', ok: false, why: 'Brandgefahr – nie unbeaufsichtigt.'},
+  {t: 'Der Laser verdampft das Material an einer winzigen Stelle.', ok: true}
+]);
+function sl() {
+  const h = +$('#sl-h').value, inf = +$('#sl-i').value, H = 30, n = Math.round(H / h), px = 220 / n;
+  let s = '';
+  for (let k = 0; k < n; k++) { const y = 260 - (k + 1) * px, frac = (k + .5) / n, w = 200 * (1 - frac * .85); s += `<rect x="${200 - w / 2}" y="${y.toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(px - .3, .4).toFixed(1)}" fill="color-mix(in srgb,var(--accent) ${40 + 30 * (k % 2)}%,var(--surface))" stroke="${px > 4 ? 'var(--edge)' : 'none'}" stroke-width=".5"/>`; }
+  s += `<path d="M100 260L200 40L300 260" fill="none" stroke="var(--bad)" stroke-width="1.5" stroke-dasharray="5 4"/><rect x="60" y="260" width="280" height="8" fill="var(--steel-2)"/><text x="200" y="290" text-anchor="middle" style="font-family:var(--f-mono);font-size:13px;fill:var(--ink-2)">rot gestrichelt: CAD-Modell · Treppenstufen: Schichten</text>`;
+  $('#sl').innerHTML = s;
+  const t = Math.round(n * (6 + 0.18 * inf) / 60 * 3), g = Math.round(8 + .22 * inf);
+  $('#sl-hv').textContent = numDE(h, 2) + ' mm'; $('#sl-iv').textContent = inf + ' %';
+  readout($('#sl-ro'), [['Schichten', n], ['Druckzeit ≈', t + ' min'], ['Material ≈', g + ' g PLA'], ['Oberfläche', h <= .15 ? 'sehr fein' : h <= .25 ? 'gut' : 'grob']]);
+  $('#sl-st').innerHTML = h > .3 ? 'Grobe Schichten: schneller Druck, aber deutliche <b>Treppenstufen</b> an schrägen Flächen.' : h < .15 ? 'Sehr feine Schichten: glatte Oberfläche, aber der Druck dauert <b>sehr lange</b>.' : 'Ein guter Kompromiss aus Qualität und Zeit.';
+}
+$('#sl-h').oninput = sl; $('#sl-i').oninput = sl; sl();
+orderSteps($('#order'), ['STL-Datei im Slicer öffnen', 'Bauteil flach auf die Druckplatte legen und skalieren', 'Schichthöhe, Füllung und Stützstrukturen einstellen', 'G-Code erzeugen und an den Drucker senden', 'Druckplatte prüfen, Filament einlegen, Druck starten', 'Erste Schicht beobachten', 'Teil abkühlen lassen, abnehmen, Stützen entfernen'], {label: 'Ablauf'});
+sorter($('#sort-v'), [{id: 'l', name: 'Lasercutter'}, {id: 'd', name: '3D-Drucker'}], [
+  {t: 'Namensschild aus Holz mit Gravur', c: 'l'}, {t: 'Ersatz-Zahnrad für ein Spielzeug', c: 'd'}, {t: 'Steckbox aus Sperrholzplatten', c: 'l'}, {t: 'Handyhülle mit Rundungen', c: 'd'},
+  {t: '30 gleiche Pappschablonen', c: 'l', why: 'Der Laser schneidet flache Teile in Minuten.'}, {t: 'Hohler Figurenkopf', c: 'd'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Warum darf PVC nicht gelasert werden?', a: ['Es entsteht giftiges Chlorgas.', 'Es ist zu hart.', 'Es ist zu teuer.', 'Es leuchtet.'], ok: 0},
+  {q: 'Wie heißt das Programm, das ein 3D-Modell in Schichten zerlegt?', a: ['Slicer', 'Browser', 'Compiler', 'Editor'], ok: 0},
+  {q: 'Was bewirkt eine kleinere Schichthöhe?', a: ['feinere Oberfläche, längere Druckzeit', 'gröbere Oberfläche, kürzere Zeit', 'mehr Farbe', 'nichts'], ok: 0},
+  {q: 'Welcher Kunststoff wird im Schul-3D-Druck am häufigsten verwendet?', a: ['PLA', 'PVC', 'Gummi', 'Acrylglas'], ok: 0},
+  {q: 'Wozu dienen Stützstrukturen?', a: ['Sie tragen überhängende Teile beim Druck.', 'Sie kühlen die Düse.', 'Sie machen das Teil bunt.', 'Sie ersetzen die Füllung.'], ok: 0},
+  {q: 'Zu welcher Hauptgruppe gehört der 3D-Druck?', a: ['Urformen', 'Trennen', 'Fügen', 'Beschichten'], ok: 0}
+]);
+</script>

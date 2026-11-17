@@ -1,0 +1,113 @@
+<!--
+title: Werkstoffe prüfen und auswählen
+short: Werkstoffprüfung
+time: 2 Unterrichtsstunden
+q: Wie findet man mit technischen Experimenten den passenden Werkstoff?
+facts: Werkstoffeigenschaften: Härte, Festigkeit, Elastizität, Dichte, elektrische und Wärmeleitfähigkeit, Korrosionsbeständigkeit | Technisches Experiment: Frage, Vermutung, Planung (nur eine Größe ändern), Durchführung, Beobachtung, Auswertung | Biegeversuch und Ritzprobe | Werkstoffauswahl mit einer Bewertungstabelle
+inter: Biegeversuch mit sechs Werkstoffen · Ritzprobe: Härte ordnen · Experiment-Schritte ordnen · Eigenschaften zuordnen · Werkstoffwahl bewerten
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Kunststoffe und Fertigungsverfahren</p>
+      <h1>Werkstoffe prüfen und auswählen</h1>
+      <p class="lead">Ein Lineal soll sich biegen, aber nicht brechen. Ein Kochlöffel darf nicht schmelzen. Ein Kabel muss Strom leiten. Für jedes Produkt braucht man den Werkstoff mit den <b>passenden Eigenschaften</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum ist ein Kochlöffel aus Holz und nicht aus Metall?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie findet man mit technischen Experimenten den passenden Werkstoff?</p></div>
+      <div class="controls"><button class="btn primary" data-go="eigenschaften">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="eigenschaften" data-label="Eigenschaften" data-yr="Einstieg" data-title="Werkstoffeigenschaften" data-sub="Was bedeutet was?">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Eigenschaften</p>
+    <h2>Werkstoffeigenschaften</h2>
+  </div>
+  <div id="match-e"></div>
+</section>
+
+<section class="station" id="experiment" data-label="Experiment" data-yr="Erarbeitung" data-title="Das technische Experiment" data-sub="Fair testen">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Technisches Experiment</p>
+    <h2>So wird fair getestet</h2>
+    <p class="lead">Bei einem technischen Experiment wird immer <b>nur eine Größe verändert</b> – alles andere bleibt gleich. Sonst weiß man nicht, woran das Ergebnis liegt. Ordne die Schritte.</p>
+  </div>
+  <div id="order-e"></div>
+</section>
+
+<section class="station" id="biege" data-label="Biegeversuch" data-yr="Werkstatt" data-title="Der Biegeversuch" data-sub="Sechs Werkstoffe im Test">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Werkstatt</p>
+    <h2>Der Biegeversuch</h2>
+    <p class="lead">Alle Streifen sind 200 mm lang, 20 mm breit und 3 mm dick und liegen auf zwei Auflagen. In der Mitte wird ein Gewicht angehängt. Teste die Werkstoffe und vergleiche.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-fig"><svg viewBox="0 0 440 220" id="bv" role="img" aria-label="Biegeversuch"></svg></div><div class="tk-row"><span id="bv-seg"></span></div><div class="tk-row"><label>Gewicht <input type="range" min="0" max="2000" step="100" value="0" id="bv-f"> <span class="tk-val" id="bv-v"></span></label></div></div>
+    <div><div class="tk-readout" id="bv-ro"></div><p class="status" id="bv-st"></p><div class="table-wrap"><table class="cmp" id="bv-tab"><thead><tr><th>Werkstoff</th><th>Durchbiegung bei 500 g</th><th>Ergebnis</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+</section>
+
+<section class="station" id="ritz" data-label="Ritzprobe" data-yr="Übung" data-title="Die Ritzprobe" data-sub="Härte vergleichen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Ritzprobe</p>
+    <h2>Wer ritzt wen?</h2>
+    <p class="lead">Ein härterer Werkstoff ritzt einen weicheren – umgekehrt nicht. Ordne nach der Härte: vom weichsten zum härtesten.</p>
+  </div>
+  <div id="order-r"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Werkstoffprüfung</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Werkstoffe prüfen und auswählen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Wichtige Eigenschaften: <b>Härte</b>, <b>Festigkeit</b>, <b>Elastizität</b>, <b>Dichte</b>, elektrische und Wärme<b>leitfähigkeit</b>, Korrosionsbeständigkeit.</li>
+        <li data-step><b>Technisches Experiment:</b> Frage → Vermutung → Planung → Durchführung → Beobachtung → Auswertung. Es wird nur <b>eine Größe</b> verändert.</li>
+        <li data-step>Im <b>Biegeversuch</b> zeigt sich die Steifigkeit, in der <b>Ritzprobe</b> die Härte.</li>
+        <li data-step>Den passenden Werkstoff wählt man mit einer <b>Bewertungstabelle</b> nach den Anforderungen aus.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuchsprotokoll</span><p>Führt den Biegeversuch mit echten Streifen durch. Notiert Frage, Vermutung, Aufbau (Skizze), Messwerte und Ergebnis.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Welcher Werkstoff passt?</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match-e'), [['Härte', 'Widerstand gegen das Eindringen eines anderen Körpers'], ['Festigkeit', 'Widerstand gegen Zerreißen oder Brechen'], ['Elastizität', 'geht nach dem Verformen in die alte Form zurück'], ['Dichte', 'Masse pro Volumen (leicht oder schwer)'], ['elektrische Leitfähigkeit', 'lässt Strom fließen'], ['Korrosionsbeständigkeit', 'rostet oder verwittert nicht']]);
+orderSteps($('#order-e'), ['Frage: Welcher Werkstoff biegt sich am wenigsten?', 'Vermutung: Stahl biegt sich am wenigsten.', 'Planung: gleich große Streifen, gleiche Auflagen, nur der Werkstoff ändert sich', 'Durchführung: Gewichte anhängen und Durchbiegung messen', 'Beobachtung: Messwerte in einer Tabelle notieren', 'Auswertung: Vermutung bestätigen oder widerlegen'], {label: 'Schritte'});
+const BW = {fichte: {n: 'Fichte', k: 11, max: 1800}, buche: {n: 'Buche', k: 14, max: 2000}, alu: {n: 'Aluminium', k: 70, max: 2000}, stahl: {n: 'Stahl', k: 210, max: 2000}, acryl: {n: 'Acrylglas', k: 3.2, max: 700}, pe: {n: 'PE (Polyethylen)', k: 1, max: 9999}};
+let bw = 'fichte'; const done = {};
+function bv() {
+  const m = BW[bw], F = +$('#bv-f').value, broken = F > m.max, f = broken ? 60 : Math.min(55, F / m.k * .9);
+  let s = `<path d="M50 120l-18 30h36zM390 120l-18 30h36z" fill="var(--ink-2)"/>`;
+  s += broken ? `<path d="M30 110L215 ${110 + 30}L210 122L30 122zM410 110L225 ${110 + 30}L230 122L410 122z" fill="color-mix(in srgb,var(--accent) 40%,var(--surface))" stroke="var(--edge)" stroke-width="1.5"/>`
+    : `<path d="M30 110Q220 ${110 + 2 * f} 410 110v8Q220 ${118 + 2 * f} 30 118z" fill="color-mix(in srgb,var(--accent) 40%,var(--surface))" stroke="var(--edge)" stroke-width="1.5"/>`;
+  if (F) s += `<path d="M220 ${118 + f}v20" stroke="var(--ink)" stroke-width="2"/><rect x="200" y="${138 + f}" width="40" height="${10 + F / 80}" fill="var(--steel-2)" stroke="var(--edge)"/>`;
+  $('#bv').innerHTML = s;
+  $('#bv-v').textContent = F + ' g';
+  readout($('#bv-ro'), [['Werkstoff', m.n], ['Durchbiegung', broken ? 'gebrochen' : numDE(f / 3, 1) + ' mm'], ['Last', F + ' g']]);
+  $('#bv-st').innerHTML = broken ? `<b class="bad">${m.n} ist gebrochen!</b> Der Werkstoff ist spröde.` : F ? (f / 3 > 10 ? `${m.n} biegt sich stark – sehr elastisch.` : `${m.n} biegt sich wenig – steif.`) : 'Hänge ein Gewicht an.';
+  if (F === 500) done[bw] = true;
+  $('#bv-tab tbody').innerHTML = Object.entries(BW).filter(([k]) => done[k]).map(([k, v]) => `<tr><td>${v.n}</td><td>${500 > v.max ? '–' : numDE(Math.min(55, 500 / v.k * .9) / 3, 1) + ' mm'}</td><td>${500 > v.max ? 'gebrochen' : 'hält'}</td></tr>`).join('') || '<tr><td colspan="3">Stelle 500 g ein, um Werte einzutragen.</td></tr>';
+}
+seg($('#bv-seg'), Object.entries(BW).map(([k, v]) => [k, v.n]), v => { bw = v; bv(); });
+$('#bv-f').oninput = bv;
+orderSteps($('#order-r'), ['Wachs', 'PE-Kunststoff', 'Fichtenholz', 'Kupfer', 'Stahlnagel', 'Glas'], {label: 'weich → hart'});
+mcQuiz($('#quiz'), [
+  {q: 'Ein Kochlöffel soll Wärme schlecht leiten. Welcher Werkstoff passt?', a: ['Buchenholz', 'Kupfer', 'Aluminium', 'Stahl'], ok: 0},
+  {q: 'Ein Kabel braucht …', a: ['gute elektrische Leitfähigkeit', 'hohe Härte', 'geringe Dichte', 'Elastizität'], ok: 0},
+  {q: 'Eine Fahrradfelge soll leicht und fest sein:', a: ['Aluminium', 'Blei', 'Glas', 'Fichte'], ok: 0},
+  {q: 'Was ist bei einem fairen Experiment wichtig?', a: ['Nur eine Größe wird verändert.', 'Alles wird gleichzeitig verändert.', 'Man misst nur einmal.', 'Man verzichtet auf eine Vermutung.'], ok: 0},
+  {q: 'Welcher Werkstoff ritzt Kupfer?', a: ['Stahl', 'Wachs', 'Holz', 'PE'], ok: 0},
+  {q: 'Ein Gartenstuhl soll nicht rosten und leicht sein:', a: ['Kunststoff (PP)', 'Baustahl unlackiert', 'Gusseisen', 'Fichte unbehandelt'], ok: 0}
+]);
+bv();
+</script>

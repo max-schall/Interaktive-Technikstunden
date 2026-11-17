@@ -1,0 +1,122 @@
+<!--
+title: Sicher arbeiten am Arbeitsplatz
+short: Arbeitsplatz
+time: 1 Unterrichtsstunde
+q: Wie richte ich meinen Arbeitsplatz ein, damit ich sicher und ordentlich arbeite?
+facts: Die Werkbank mit Schraubstock, Bankzange und Werkzeugablage | Werkstück kurz über den Backen einspannen, Schutzbacken verwenden | Nur benötigte Werkzeuge bereitlegen, nichts ragt über die Tischkante | Technikraumdienste verteilen die Arbeit | Am Stundenende: reinigen, aufräumen, absaugen
+inter: Werkbank erkunden und Teile finden · Spannen richtig oder falsch · Technikraumdienste zuordnen · Stundenende ordnen · Fehler am Arbeitsplatz finden
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Arbeiten im Technikraum</p>
+      <h1>Sicher arbeiten am Arbeitsplatz</h1>
+      <p class="lead">Am liebsten würdest du sofort sägen oder feilen. Doch zuerst wird der Arbeitsplatz <b>eingerichtet</b>: Wer ordentlich anfängt, arbeitet schneller und sicherer.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Was brauchst du, bevor du ein Holzstück auf Länge sägen kannst?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie richte ich meinen Arbeitsplatz ein, damit ich sicher und ordentlich arbeite?</p></div>
+      <div class="controls"><button class="btn primary" data-go="werkbank">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="werkbank" data-label="Werkbank" data-yr="Einstieg" data-title="Die Werkbank" data-sub="Helfer am Arbeitsplatz">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Die Werkbank</p>
+    <h2>Helfer an der Werkbank</h2>
+    <p class="lead">Tippe die Teile der Werkbank an. Im Modus „Finden“ wird ein Begriff genannt – tippe das passende Teil an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig">
+      <svg viewBox="0 0 560 330" id="wb" role="img" aria-label="Werkbank">
+        <g data-part="platte"><rect x="30" y="120" width="500" height="34" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/></g>
+        <g data-part="gestell"><path d="M60 154v150M500 154v150M60 270h440" stroke="var(--steel-2)" stroke-width="12" fill="none"/></g>
+        <g data-part="ablage"><rect x="180" y="96" width="250" height="24" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="2"/><path d="M200 96v-36M230 96v-46M262 96v-30M300 96v-40" stroke="var(--steel-2)" stroke-width="6"/><circle cx="350" cy="80" r="14" fill="none" stroke="var(--steel-2)" stroke-width="6"/></g>
+        <g data-part="schraubstock"><rect x="440" y="70" width="70" height="50" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/><rect x="430" y="40" width="20" height="40" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><rect x="500" y="40" width="20" height="40" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><path d="M520 95h30M550 80v30" stroke="var(--ink)" stroke-width="5"/></g>
+        <g data-part="backen"><rect x="450" y="40" width="6" height="40" fill="var(--good)"/><rect x="494" y="40" width="6" height="40" fill="var(--good)"/></g>
+        <g data-part="zange"><rect x="34" y="104" width="70" height="16" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="2"/><path d="M40 112h-30M14 100v24" stroke="var(--ink)" stroke-width="5"/></g>
+        <g data-part="werkstueck"><rect x="456" y="22" width="38" height="70" fill="var(--wood)" stroke="var(--edge)" stroke-width="2" opacity=".9"/></g>
+      </svg>
+    </div>
+    <div><div class="tk-row"><span id="wb-mode"></span></div><div class="box" id="wb-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="spannen" data-label="Spannen" data-yr="Erarbeitung" data-title="Werkstücke spannen" data-sub="Schraubstock oder Bankzange?">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Werkstücke spannen</p>
+    <h2>Fest eingespannt ist halb gearbeitet</h2>
+    <p class="lead">Ein Werkstück, das wackelt, verrutscht beim Sägen – das ist ungenau und gefährlich. In die <b>Bankzange</b> kommt nur Holz. Im <b>Schraubstock</b> schützen <b>Schutzbacken</b> das Werkstück vor Abdrücken.</p>
+  </div>
+  <div id="tf-sp"></div>
+</section>
+
+<section class="station" id="dienste" data-label="Dienste" data-yr="Erarbeitung" data-title="Technikraumdienste" data-sub="Alle helfen mit">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Technikraumdienste</p>
+    <h2>Alle helfen mit</h2>
+    <p class="lead">Damit es am Werkzeugschrank kein Gedränge gibt und am Ende alles sauber ist, übernimmt jede Tischgruppe Dienste. Welcher Dienst hat welche Aufgabe?</p>
+  </div>
+  <div id="match-d"></div>
+</section>
+
+<section class="station" id="ende" data-label="Stundenende" data-yr="Material M1" data-title="Die Stunde geht zu Ende" data-sub="Aufräumen in der richtigen Reihenfolge">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Die Technikstunde geht zu Ende</h2>
+    <p class="lead">Zehn Minuten vor dem Gong wird aufgeräumt. In welcher Reihenfolge ist es sinnvoll?</p>
+  </div>
+  <div id="order-e"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Arbeitsplatz</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Sicher arbeiten am Arbeitsplatz</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Bevor du beginnst, legst du Zeichnung, Stückliste und nur die <b>benötigten Werkzeuge</b> ordentlich bereit. Nichts ragt über die Tischkante.</li>
+        <li data-step>Werkstücke werden <b>fest und kurz</b> über den Backen eingespannt: Holz in die Bankzange oder in den Schraubstock mit <b>Schutzbacken</b>.</li>
+        <li data-step>Werkzeuge benutzt du nur für ihren Zweck. Beschädigte Werkzeuge meldest du sofort.</li>
+        <li data-step>Am Stundenende werden Werkzeuge gereinigt und zurückgebracht, das Werkstück beschriftet abgelegt und der Arbeitsplatz <b>abgesaugt</b>.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Praxis</span><p>Richte deinen Arbeitsplatz ein und spanne ein Holzstück zum Sägen ein. Deine Partnerin oder dein Partner prüft mit der Checkliste.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Ordnung am Arbeitsplatz</h2></div>
+  <div id="sort-f"></div>
+</section>
+
+<script>
+explorer($('#wb'), $('#wb-panel'), [
+  {id: 'platte', n: 'Arbeitsplatte', t: 'Stabile Holzplatte. Sie muss frei und aufgeräumt sein.'},
+  {id: 'gestell', n: 'Gestell', t: 'Trägt die Werkbank. Sie steht fest und wackelt nicht.'},
+  {id: 'ablage', n: 'Werkzeugablage', t: 'Hier liegen die Werkzeuge ordentlich nebeneinander – nur die, die du brauchst.'},
+  {id: 'schraubstock', n: 'Schraubstock', t: 'Spannt Werkstücke aus Holz, Metall und Kunststoff fest. Mit der Spindel wird er geöffnet und geschlossen.'},
+  {id: 'backen', n: 'Schutzbacken', t: 'Weiche Auflagen aus Kunststoff, Holz oder Aluminium. Sie schützen das Werkstück vor Abdrücken.'},
+  {id: 'zange', n: 'Bankzange', t: 'Spannvorrichtung aus Holz an der Werkbank. Hier wird nur Holz eingespannt.'},
+  {id: 'werkstueck', n: 'Werkstück', t: 'Es wird kurz über den Backen eingespannt, damit es beim Sägen nicht federt.'}
+], {modeRoot: $('#wb-mode'), label: 'Werkbank'});
+trueFalse($('#tf-sp'), [
+  {t: 'Ein Werkstück wird möglichst kurz über den Spannbacken eingespannt.', ok: true, why: 'Sonst federt es beim Sägen und Feilen.'},
+  {t: 'Ein Metallstab gehört in die Bankzange.', ok: false, why: 'In die Bankzange kommt nur Holz, Metall in den Schraubstock.'},
+  {t: 'Schutzbacken schützen das Werkstück vor Druckstellen.', ok: true},
+  {t: 'Wenn der Schraubstock nicht fest genug ist, schlägt man mit dem Hammer auf den Hebel.', ok: false, why: 'Das beschädigt die Spindel. Von Hand fest anziehen reicht.'},
+  {t: 'Werkzeuge, die gerade nicht gebraucht werden, bleiben im Werkzeugschrank.', ok: true},
+  {t: 'Eine Feile darf auch als Hebel benutzt werden.', ok: false, why: 'Feilen sind hart und spröde und können brechen. Werkzeug nur für seinen Zweck benutzen.'}
+]);
+matcher($('#match-d'), [['Werkzeugdienst', 'gibt Werkzeuge aus und kontrolliert, ob alle zurück sind'], ['Saugdienst', 'saugt Tische und Boden ab'], ['Mülldienst', 'trennt Holzreste, Metall, Kunststoff und Restmüll'], ['Maschinendienst', 'prüft, ob alle Maschinen ausgeschaltet und sauber sind'], ['Ordnungsdienst', 'kontrolliert, ob alle Werkstücke beschriftet im Regal liegen']]);
+orderSteps($('#order-e'), ['Arbeit beenden, Maschinen ausschalten', 'Werkzeuge reinigen und auf Schäden prüfen', 'Werkzeuge zurück an ihren Platz bringen', 'Werkstück beschriften und ins Regal legen', 'Tisch und Boden absaugen, Müll trennen'], {label: 'Ablauf am Stundenende'});
+sorter($('#sort-f'), [{id: 'r', name: 'so ist es richtig'}, {id: 'f', name: 'das ist ein Fehler'}], [
+  {t: 'Die Säge liegt halb über der Tischkante.', c: 'f', why: 'Sie kann herunterfallen und jemanden verletzen.'},
+  {t: 'Die Werkzeuge liegen geordnet nebeneinander.', c: 'r'},
+  {t: 'Auf dem Tisch liegen zehn Werkzeuge, gebraucht werden zwei.', c: 'f', why: 'Nur die benötigten Werkzeuge holen.'},
+  {t: 'Zeichnung und Stückliste liegen bereit.', c: 'r'},
+  {t: 'Die Trinkflasche steht neben dem Leimtopf.', c: 'f', why: 'Essen und Trinken gehören nicht an den Arbeitsplatz.'},
+  {t: 'Das Werkstück ist mit Schutzbacken eingespannt.', c: 'r'}
+]);
+</script>

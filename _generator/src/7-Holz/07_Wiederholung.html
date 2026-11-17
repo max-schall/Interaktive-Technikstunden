@@ -1,0 +1,93 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T4: Holz und Holzwerkstoffe, Werkzeuge, Messen, Bohren und Fügen | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Holzarten und Werkstoffe sortieren · Messschieber-Trainer · Bohren richtig/falsch · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Holz</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Baum und Holz, Handelsformen, Sägen und Feilen, Messen, Bohren, Fügen und Beschichten: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Holz" data-yr="Trainer" data-title="T1 Holz und Holzwerkstoffe" data-sub="Sortieren">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Holz und Holzwerkstoffe</h2></div>
+  <div id="t1-sort"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Messen" data-yr="Trainer" data-title="T2 Messschieber" data-sub="Ablesen auf 0,1 mm">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Messschieber ablesen</h2></div>
+  <div id="t2-cal"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Bohren" data-yr="Trainer" data-title="T3 Bohren und Fügen" data-sub="Richtig oder falsch">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Bohren und Fügen</h2></div>
+  <div id="t3-tf"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Kambium', 'Wachstumsschicht unter der Rinde'], ['Jahresring', 'Frühholz und Spätholz eines Jahres'], ['Quellen', 'Holz wird bei Feuchtigkeit größer'], ['Sperrholz', 'kreuzweise verleimte Furniere'],
+  ['MDF', 'Platte aus feinen Holzfasern'], ['Keil', 'Grundform jeder Schneide'], ['Laubsäge', 'schneidet auf Zug, Zähne zum Griff'], ['Körnung', 'kleine Zahl = grobes Schleifpapier'],
+  ['Nonius', 'Zusatzskala am Messschieber für Zehntelmillimeter'], ['Bohrfutter', 'hält den Bohrer in der Bohrmaschine'], ['Zentrierspitze', 'führt den Holzspiralbohrer'], ['lösbare Verbindung', 'z. B. Schraube']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1-sort'), [{id: 'l', name: 'Laubholz'}, {id: 'n', name: 'Nadelholz'}, {id: 'w', name: 'Holzwerkstoff'}], [
+  {t: 'Buche', c: 'l'}, {t: 'Eiche', c: 'l'}, {t: 'Fichte', c: 'n'}, {t: 'Kiefer', c: 'n'}, {t: 'Sperrholz', c: 'w'}, {t: 'MDF', c: 'w'}, {t: 'OSB', c: 'w'}, {t: 'Ahorn', c: 'l'}, {t: 'Lärche', c: 'n'}, {t: 'Spanplatte', c: 'w'}
+]);
+caliper($('#t2-cal'), {quiz: true});
+trueFalse($('#t3-tf'), [
+  {t: 'Große Bohrer laufen mit hoher Drehzahl.', ok: false, why: 'Großer Bohrer → kleine Drehzahl.'}, {t: 'Metall wird vor dem Bohren gekörnt.', ok: true},
+  {t: 'Das Werkstück wird im Maschinenschraubstock gespannt.', ok: true}, {t: 'Leim trägt man möglichst dick auf.', ok: false, why: 'Dünn und gleichmäßig.'},
+  {t: 'Ein Nagel ist eine lösbare Verbindung.', ok: false, why: 'Beim Lösen werden Teile beschädigt.'}, {t: 'Lasur färbt das Holz, die Maserung bleibt sichtbar.', ok: true}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Welche Schicht leitet im Stamm Wasser nach oben?', a: ['Splintholz', 'Rinde', 'Mark', 'Kernholz'], ok: 0},
+  {q: 'Wie heißt ein dicker, breiter Holzquerschnitt über 40 mm?', a: ['Bohle', 'Leiste', 'Latte', 'Rundstab'], ok: 0},
+  {q: 'Warum verzieht sich Sperrholz kaum?', a: ['Die Lagen sind kreuzweise verleimt.', 'Es ist lackiert.', 'Es besteht aus Kunststoff.', 'Es ist besonders dick.'], ok: 0},
+  {q: 'In welche Richtung zeigen die Zähne des Laubsägeblatts?', a: ['zum Griff', 'vom Griff weg', 'nach oben', 'abwechselnd'], ok: 0},
+  {q: 'Welches Schleifpapier ist am feinsten?', a: ['K 240', 'K 120', 'K 80', 'K 40'], ok: 0},
+  {q: 'Was misst man mit dem Messschieber?', a: ['Außen-, Innen- und Tiefenmaße', 'nur Winkel', 'nur Gewichte', 'Temperaturen'], ok: 0},
+  {q: 'Wie viele Millimeter sind 1,2 m?', a: ['1200 mm', '120 mm', '12 mm', '12 000 mm'], ok: 0},
+  {q: 'Was ist an der Bohrmaschine verboten?', a: ['Handschuhe tragen', 'Schutzbrille tragen', 'Werkstück spannen', 'Haare zusammenbinden'], ok: 0},
+  {q: 'Wozu dient ein Forstnerbohrer?', a: ['große, flache Löcher', 'Gewinde schneiden', 'Metall entgraten', 'Löcher in Fliesen'], ok: 0},
+  {q: 'Was tut man vor dem Schrauben in Holz?', a: ['vorbohren', 'ölen', 'leimen', 'schleifen'], ok: 0},
+  {q: 'Was schützt Holz am stärksten vor Feuchtigkeit?', a: ['Lack', 'Beize', 'nichts', 'Schleifen'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann den Aufbau eines Baumstamms beschreiben.', href: '01_Baum_Holz.html#stamm'},
+  {t: 'Ich kann Laub- und Nadelhölzer unterscheiden und erklären, warum Holz arbeitet.', href: '01_Baum_Holz.html#arbeiten'},
+  {t: 'Ich kenne Handelsformen von Vollholz und Holzwerkstoffe.', href: '02_Handelsformen.html#werkstoffe'},
+  {t: 'Ich kann mit Laubsäge, Feile und Schleifpapier richtig arbeiten.', href: '03_Saegen_Feilen.html#laubsaege'},
+  {t: 'Ich kann mit dem Messschieber auf 0,1 mm genau messen.', href: '04_Messen_Anreissen.html#messschieber'},
+  {t: 'Ich kann Maße von einer Bezugskante aus anreißen.', href: '04_Messen_Anreissen.html#anreissen'},
+  {t: 'Ich kenne die Bauteile der Tischbohrmaschine und bohre sicher.', href: '05_Bohren.html#aufbau'},
+  {t: 'Ich kann lösbare und unlösbare Verbindungen nennen und Holz beschichten.', href: '06_Fuegen_Beschichten.html#arten'}
+]);
+</script>

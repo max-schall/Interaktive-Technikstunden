@@ -1,0 +1,138 @@
+<!--
+title: Diode und Leuchtdiode
+short: Diode & LED
+time: 2 Unterrichtsstunden
+q: Wie funktioniert eine Diode, und warum braucht eine LED einen Vorwiderstand?
+facts: Eine Diode lässt Strom nur in eine Richtung durch: Durchlassrichtung und Sperrrichtung | Anode (+) und Kathode (−, Ring bzw. kurzes Bein) | LED leuchtet ab ihrer Durchlassspannung (rot ca. 2 V, blau/weiß ca. 3 V) | Vorwiderstand begrenzt den Strom: R_V = (U_B − U_LED) : I_LED | LEDs sind sehr effizient
+inter: Diode umdrehen im Stromkreis · LED-Bauteil erkunden · Vorwiderstand-Rechner · Rechentrainer · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Schalter, Sensoren und Schaltungen</p>
+      <h1>Diode und Leuchtdiode</h1>
+      <p class="lead">Steckt man eine LED falsch herum ein, bleibt sie dunkel. Steckt man sie ohne Widerstand an eine 9-V-Batterie, leuchtet sie kurz hell – und ist dann kaputt. Was steckt dahinter?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Schau dir eine LED genau an. Worin unterscheiden sich die beiden Beinchen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie funktioniert eine Diode, und warum braucht eine LED einen Vorwiderstand?</p></div>
+      <div class="controls"><button class="btn primary" data-go="diode">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="diode" data-label="Diode" data-yr="Einstieg" data-title="Die Diode" data-sub="Ein Ventil für Strom">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Diode</p>
+    <h2>Die Diode – ein Ventil für Strom</h2>
+    <p class="lead">Eine Diode lässt den Strom nur in <b>eine Richtung</b> durch – wie ein Rückschlagventil. Drehe die Diode um und beobachte die Lampe.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 440 260" id="dd" role="img" aria-label="Diode im Stromkreis"></svg><div class="controls"><button class="btn primary" id="dd-f">Diode umdrehen</button></div></div>
+    <div class="box" id="dd-t"></div>
+  </div>
+</section>
+
+<section class="station" id="led" data-label="LED" data-yr="Erarbeitung" data-title="Die Leuchtdiode" data-sub="Anode und Kathode">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · LED</p>
+    <h2>Die Leuchtdiode (LED)</h2>
+    <p class="lead">Eine LED ist eine Diode, die in Durchlassrichtung leuchtet. Tippe die Teile an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 300 330" id="ledsvg" role="img" aria-label="LED" style="font-family:var(--f-mono)">
+      <g data-part="kuppel"><path d="M95 150V80a55 55 0 0 1 110 0v70z" fill="rgba(239,68,68,.35)" stroke="var(--edge)" stroke-width="2"/><rect x="85" y="150" width="130" height="14" fill="rgba(239,68,68,.45)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="flach"><path d="M215 150v14" stroke="var(--bad)" stroke-width="6"/><path d="M205 140l20 0" stroke="transparent" stroke-width="20"/></g>
+      <g data-part="chip"><path d="M165 120h20v12h-20z" fill="#333"/><path d="M130 104h22l10 16" stroke="#666" stroke-width="2" fill="none"/></g>
+      <g data-part="anode"><path d="M130 164V300" stroke="var(--steel-2)" stroke-width="7"/><text x="112" y="320" text-anchor="middle" style="font-weight:700;fill:var(--ink)">+</text></g>
+      <g data-part="kathode"><path d="M175 164V270" stroke="var(--steel-2)" stroke-width="7"/><text x="190" y="290" style="font-weight:700;fill:var(--ink)">−</text></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="led-mode"></span></div><div class="box" id="led-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="vorwiderstand" data-label="Vorwiderstand" data-yr="Erarbeitung" data-title="Der Vorwiderstand" data-sub="R_V = (U_B − U_LED) : I">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Vorwiderstand</p>
+    <h2>Der Vorwiderstand schützt die LED</h2>
+    <p class="lead">Eine LED verträgt nur etwa <b>20 mA</b>. Der <b>Vorwiderstand</b> in Reihe nimmt die überschüssige Spannung auf: <b>R<sub>V</sub> = (U<sub>B</sub> − U<sub>LED</sub>) : I<sub>LED</sub></b>.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-row"><span id="vw-led"></span></div><div class="tk-row"><label>Batterie U_B <input type="range" min="3" max="12" step="0.5" value="9" id="vw-u"> <span class="tk-val" id="vw-uv"></span></label></div><div class="tk-row"><label>Vorwiderstand <input type="range" min="0" max="1000" step="10" value="330" id="vw-r"> <span class="tk-val" id="vw-rv"></span></label></div></div>
+    <div><div class="tk-readout" id="vw-ro"></div><p class="status" id="vw-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="rechnen" data-label="Rechnen" data-yr="Übung" data-title="Vorwiderstände berechnen" data-sub="Rechentrainer">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Rechentrainer</p>
+    <h2>Vorwiderstände berechnen</h2>
+    <p class="lead">Rechne mit I = 20 mA = 0,02 A, wenn nichts anderes angegeben ist. Runde auf ganze Ohm.</p>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Diode und LED</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Diode und Leuchtdiode</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Eine <b>Diode</b> lässt Strom nur in <b>Durchlassrichtung</b> durch (Anode an +). In <b>Sperrrichtung</b> fließt kein Strom.</li>
+        <li data-step>Eine <b>LED</b> leuchtet in Durchlassrichtung. Anode: langes Bein (+). Kathode: kurzes Bein, abgeflachte Seite (−).</li>
+        <li data-step>Die LED braucht ihre <b>Durchlassspannung</b> (rot ca. 2 V, blau/weiß ca. 3 V) und verträgt etwa 20 mA.</li>
+        <li data-step>Der <b>Vorwiderstand</b> begrenzt den Strom: <b>R<sub>V</sub> = (U<sub>B</sub> − U<sub>LED</sub>) : I<sub>LED</sub></b>. Beispiel: (9 V − 2 V) : 0,02 A = 350 Ω → gewählt 390 Ω.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Praxis</span><p>Baue auf dem Steckbrett eine LED mit Vorwiderstand an 9 V. Miss die Spannung an LED und Widerstand.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>LED-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+let fwd = true;
+const diodeSym = (x, y, f) => `<rect x="${x - 16}" y="${y - 16}" width="32" height="32" fill="var(--surface)"/><path class="sym" d="M${f ? x - 12 : x + 12} ${y - 13}L${f ? x + 12 : x - 12} ${y}L${f ? x - 12 : x + 12} ${y + 13}Z"/><path class="w" d="M${f ? x + 12 : x - 12} ${y - 13}V${y + 13}"/>`;
+function dd() {
+  let s = SY.wire([[60, 140], [60, 40], [380, 40], [380, 220], [60, 220], [60, 160]]) + SY.bat(60, 150) + diodeSym(180, 40, fwd) + SY.lamp(300, 40, fwd ? 1 : 0);
+  if (fwd) s += `<path class="flow" d="M60 140V40H380V220H60V160"/>`;
+  s += `<text x="180" y="82" text-anchor="middle" class="sm">${fwd ? 'Durchlassrichtung' : 'Sperrrichtung'}</text>`;
+  $('#dd').innerHTML = s;
+  $('#dd-t').innerHTML = fwd ? '<span class="tag info">Durchlassrichtung</span><p>Die Anode (Dreieck) zeigt zum Pluspol, die Pfeilspitze in Stromrichtung. Die Diode <b>leitet</b>, die Lampe leuchtet.</p>' : '<span class="tag info">Sperrrichtung</span><p>Der Strich (Kathode) zeigt zum Pluspol. Die Diode <b>sperrt</b>, es fließt kein Strom.</p>';
+}
+$('#dd-f').onclick = () => { fwd = !fwd; dd(); }; dd();
+explorer($('#ledsvg'), $('#led-panel'), [
+  {id: 'kuppel', n: 'Linse (Gehäuse)', t: 'Durchsichtiger Kunststoff, bündelt das Licht.'},
+  {id: 'chip', n: 'LED-Chip', t: 'Winziger Halbleiterkristall. Hier entsteht das Licht.'},
+  {id: 'anode', n: 'Anode (+)', t: 'Das längere Bein. Wird mit dem Pluspol verbunden.'},
+  {id: 'kathode', n: 'Kathode (−)', t: 'Das kürzere Bein. Wird mit dem Minuspol verbunden.'},
+  {id: 'flach', n: 'Abflachung', t: 'Der Rand ist auf der Seite der Kathode abgeflacht – auch dann erkennbar, wenn die Beine gekürzt sind.'}
+], {modeRoot: $('#led-mode'), label: 'LED'});
+const LEDS = {rot: ['rot', 2, '#EF4444'], gelb: ['gelb', 2.1, '#EAB308'], gruen: ['grün', 2.2, '#22C55E'], blau: ['blau', 3, '#3B82F6'], weiss: ['weiß', 3.1, '#F8FAFC']};
+let lc = 'rot';
+function vw() {
+  const [n, UL, col] = LEDS[lc], U = +$('#vw-u').value, R = +$('#vw-r').value;
+  const I = U <= UL ? 0 : R === 0 ? Infinity : (U - UL) / R, need = Math.round((U - UL) / 0.02);
+  $('#vw-uv').textContent = numDE(U, 1) + ' V'; $('#vw-rv').textContent = R + ' Ω';
+  readout($('#vw-ro'), [['Durchlassspannung', numDE(UL, 1) + ' V'], ['Strom durch die LED', isFinite(I) ? fmtI(I) : 'sehr groß!'], ['nötiger R_V für 20 mA', need > 0 ? need + ' Ω' : '–']]);
+  $('#vw-st').innerHTML = !isFinite(I) || I > 0.03 ? '<b class="bad">Zu viel Strom!</b> Die LED wird zerstört. Größeren Vorwiderstand wählen.' : I < 0.002 ? 'Die LED leuchtet kaum oder gar nicht.' : I <= 0.022 ? `<b class="good">Gut:</b> Die ${n}e LED leuchtet hell und sicher.` : 'Etwas zu viel Strom – die LED altert schneller.';
+  $('#vw-st').style.borderLeftColor = col;
+}
+seg($('#vw-led'), Object.entries(LEDS).map(([k, v]) => [k, v[0]]), v => { lc = v; vw(); });
+$('#vw-u').oninput = vw; $('#vw-r').oninput = vw;
+taskSet($('#ts'), () => {
+  const [n, UL] = pick(Object.values(LEDS)), U = pick([4.5, 5, 6, 9, 12]);
+  return {key: n + U, tag: `${n}e LED (${numDE(UL, 1)} V)`, q: `Batterie <b>${numDE(U, 1)} V</b>, LED-Strom 20 mA. Wie groß muss der Vorwiderstand sein?`, fields: [{l: 'R_V', a: Math.round((U - UL) / 0.02), tol: 2, unit: 'Ω'}], hint: `(${numDE(U, 1)} V − ${numDE(UL, 1)} V) : 0,02 A`};
+}, {n: 4});
+mcQuiz($('#quiz'), [
+  {q: 'Wie erkennt man die Kathode einer LED?', a: ['kürzeres Bein, abgeflachte Seite', 'längeres Bein', 'rote Farbe', 'gar nicht'], ok: 0},
+  {q: 'Was passiert in Sperrrichtung?', a: ['Es fließt kein Strom.', 'Die LED leuchtet heller.', 'Die Spannung verdoppelt sich.', 'Die LED wird warm und leuchtet.'], ok: 0},
+  {q: 'Wozu braucht die LED einen Vorwiderstand?', a: ['Er begrenzt den Strom.', 'Er erhöht die Spannung.', 'Er färbt das Licht.', 'Er macht sie lauter.'], ok: 0},
+  {q: 'U_B = 5 V, rote LED (2 V), 20 mA. R_V = ?', a: ['150 Ω', '250 Ω', '100 Ω', '350 Ω'], ok: 0},
+  {q: 'Wie wird der Vorwiderstand geschaltet?', a: ['in Reihe zur LED', 'parallel zur LED', 'gar nicht', 'zwischen Plus und Minus'], ok: 0},
+  {q: 'Welche LED braucht die größte Durchlassspannung?', a: ['blau', 'rot', 'gelb', 'alle gleich'], ok: 0}
+]);
+</script>

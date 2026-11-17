@@ -1,0 +1,124 @@
+<!--
+title: Der Werkstoff Metall
+short: Metalle
+time: 1–2 Unterrichtsstunden
+q: Welche Eigenschaften haben Metalle, und wie unterscheidet man sie?
+facts: Eigenschaften: Glanz, elektrische und Wärmeleitfähigkeit, Festigkeit, Verformbarkeit | Eisenmetalle (Stahl, Gusseisen) und Nichteisenmetalle (Aluminium, Kupfer, Zink, Zinn) | Legierungen: Messing, Bronze, Edelstahl | Unterscheiden mit Magnet, Farbe und Dichte | Handelsformen: Blech, Flachstahl, Rundstab, Vierkant, Rohr, Profile, Draht
+inter: Prüfstand: Proben mit Magnet, Farbe und Dichte untersuchen · Eisen- und Nichteisenmetalle sortieren · Handelsformen zuordnen · Metall im Alltag · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Metall</p>
+      <h1>Der Werkstoff Metall</h1>
+      <p class="lead">Ein Fahrrad besteht aus Stahl, Aluminium, Kupfer, Messing und Zink – oft ohne dass man es merkt. Jedes Metall wurde wegen seiner <b>Eigenschaften</b> ausgewählt.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Sammelt Gegenstände aus Metall in eurem Raum. Woran erkennt ihr, dass sie aus Metall sind?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Welche Eigenschaften haben Metalle, und wie unterscheidet man sie?</p></div>
+      <div class="controls"><button class="btn primary" data-go="pruefstand">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="pruefstand" data-label="Prüfstand" data-yr="Einstieg" data-title="Metalle untersuchen" data-sub="Magnet, Farbe, Dichte">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Prüfstand</p>
+    <h2>Fünf Proben – welches Metall ist es?</h2>
+    <p class="lead">Alle Proben sind gleich große Würfel (1 cm³). Wähle eine Probe und führe die Prüfungen durch.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 220" id="ps" role="img" aria-label="Prüfstand"></svg><div class="tk-row"><span id="ps-seg"></span></div></div>
+    <div><div class="tk-row"><button class="btn" data-t="mag">Magnettest</button><button class="btn" data-t="dichte">wiegen</button><button class="btn" data-t="farbe">Farbe ansehen</button></div><div class="tk-readout" id="ps-ro"></div><p class="status" id="ps-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="gruppen" data-label="Metallgruppen" data-yr="Erarbeitung" data-title="Eisen und Nichteisen" data-sub="Metalle ordnen">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Metallgruppen</p>
+    <h2>Eisenmetalle und Nichteisenmetalle</h2>
+    <p class="lead"><b>Eisenmetalle</b> bestehen hauptsächlich aus Eisen: Stahl und Gusseisen. Fast alle werden vom Magneten angezogen. Alle anderen sind <b>Nichteisenmetalle</b> (NE-Metalle). Mischungen aus Metallen heißen <b>Legierungen</b>.</p>
+  </div>
+  <div id="sort-g"></div>
+</section>
+
+<section class="station" id="formen" data-label="Handelsformen" data-yr="Erarbeitung" data-title="Handelsformen" data-sub="Blech, Rohr, Profil …">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Handelsformen</p>
+    <h2>So kauft man Metall</h2>
+    <p class="lead">Metalle werden als Halbzeuge geliefert. Ordne die Querschnitte zu.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 440 210" role="img" aria-label="Querschnitte von Metall-Halbzeugen"><g fill="var(--steel)" stroke="var(--edge)" stroke-width="1.5" style="font-family:var(--f-mono);font-weight:700;font-size:15px">
+      <rect x="20" y="40" width="110" height="6"/><text x="20" y="30" fill="var(--ink)" stroke="none">A</text>
+      <rect x="160" y="34" width="70" height="18"/><text x="160" y="26" fill="var(--ink)" stroke="none">B</text>
+      <circle cx="285" cy="43" r="16"/><text x="265" y="20" fill="var(--ink)" stroke="none">C</text>
+      <rect x="350" y="27" width="32" height="32"/><text x="350" y="20" fill="var(--ink)" stroke="none">D</text>
+      <path d="M40 110a30 30 0 1 0 0.1 0zM40 118a22 22 0 1 1 -0.1 0z" fill-rule="evenodd"/><text x="10" y="102" fill="var(--ink)" stroke="none">E</text>
+      <path d="M130 100h10v54h46v10h-56z"/><text x="128" y="94" fill="var(--ink)" stroke="none">F</text>
+      <path d="M230 100h54v10h-44v44h44v10h-54z"/><text x="228" y="94" fill="var(--ink)" stroke="none">G</text>
+      <path d="M360 120q20 -30 40 0t40 0" fill="none" stroke-width="3"/><text x="355" y="104" fill="var(--ink)" stroke="none">H</text></g>
+    </svg></div>
+    <div id="match-f"></div>
+  </div>
+</section>
+
+<section class="station" id="alltag" data-label="M1 Alltag" data-yr="Material M1" data-title="Das richtige Metall" data-sub="Eigenschaft passt zum Zweck">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Das richtige Metall für den Zweck</h2>
+    <p class="lead">Warum wird gerade dieses Metall verwendet? Ordne Gegenstand und Begründung zu.</p>
+  </div>
+  <div id="match-a"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Metalle</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Der Werkstoff Metall</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Metalle glänzen, leiten Strom und Wärme gut, sind fest und lassen sich verformen.</li>
+        <li data-step><b>Eisenmetalle:</b> Stahl, Gusseisen – meist magnetisch. <b>Nichteisenmetalle:</b> Aluminium, Kupfer, Zink, Zinn u. a.</li>
+        <li data-step><b>Legierungen</b> sind Mischungen aus Metallen: Messing (Kupfer + Zink), Bronze (Kupfer + Zinn), Edelstahl (Stahl + Chrom + Nickel).</li>
+        <li data-step>Handelsformen: Blech, Flachstahl, Rundstab, Vierkantstab, Rohr, Winkel- und U-Profil, Draht.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Prüft Metallproben aus der Werkstatt mit Magnet und Waage. Legt eine Tabelle mit Farbe, Magnet und Masse an.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Metall-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+const PROBEN = {stahl: {n: 'Stahl', c: '#8A96A3', mag: true, rho: 7.9, f: 'silbergrau'}, alu: {n: 'Aluminium', c: '#C9D1D9', mag: false, rho: 2.7, f: 'hell silbern, matt'}, kupfer: {n: 'Kupfer', c: '#C46A2B', mag: false, rho: 8.9, f: 'rotbraun'}, messing: {n: 'Messing', c: '#D4AF37', mag: false, rho: 8.5, f: 'goldgelb'}, zink: {n: 'Zink', c: '#A7B2B8', mag: false, rho: 7.1, f: 'bläulich grau'}};
+let probe = 'stahl', done = {};
+function ps(test) {
+  const p = PROBEN[probe]; let s = `<rect x="40" y="170" width="340" height="12" fill="var(--steel-2)"/><rect x="170" y="110" width="60" height="60" fill="${p.c}" stroke="var(--edge)" stroke-width="2"/>`;
+  if (test === 'mag') s += `<path d="M${p.mag ? 240 : 300} 80h40v60h-14v-46h-12v46h-14z" fill="var(--verbot)" stroke="var(--edge)"/><text x="${p.mag ? 250 : 310}" y="70" style="font-family:var(--f-mono);font-weight:700;fill:var(--ink)">${p.mag ? 'haftet!' : 'nichts'}</text>`;
+  if (test === 'dichte') s += `<rect x="150" y="170" width="100" height="10" fill="var(--ink-2)"/><text x="200" y="205" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:var(--ink)">${numDE(p.rho, 1)} g</text>`;
+  $('#ps').innerHTML = s;
+  if (test) done[probe + test] = true;
+  readout($('#ps-ro'), [['Probe', p.n], ['Magnet', done[probe + 'mag'] ? (p.mag ? 'wird angezogen' : 'nein') : '?'], ['Masse (1 cm³)', done[probe + 'dichte'] ? numDE(p.rho, 1) + ' g' : '?'], ['Farbe', done[probe + 'farbe'] ? p.f : '?']]);
+  $('#ps-st').innerHTML = test === 'mag' ? (p.mag ? 'Der Magnet zieht die Probe an – ein <b>Eisenmetall</b>.' : 'Kein Magnetismus – ein <b>Nichteisenmetall</b>.') : test === 'dichte' ? (p.rho < 4 ? 'Sehr leicht: ein <b>Leichtmetall</b> (Dichte unter 5 g/cm³).' : 'Schwer: ein <b>Schwermetall</b> (Dichte über 5 g/cm³).') : test === 'farbe' ? `Die Farbe ist ${p.f}.` : 'Wähle eine Prüfung.';
+}
+seg($('#ps-seg'), Object.entries(PROBEN).map(([k, v]) => [k, v.n]), v => { probe = v; ps(); });
+document.querySelectorAll('[data-t]').forEach(b => b.onclick = () => ps(b.dataset.t));
+sorter($('#sort-g'), [{id: 'fe', name: 'Eisenmetall'}, {id: 'ne', name: 'Nichteisenmetall'}, {id: 'leg', name: 'Legierung aus NE-Metallen'}], [
+  {t: 'Baustahl', c: 'fe'}, {t: 'Gusseisen', c: 'fe'}, {t: 'Werkzeugstahl', c: 'fe'}, {t: 'Aluminium', c: 'ne'}, {t: 'Kupfer', c: 'ne'}, {t: 'Zink', c: 'ne'}, {t: 'Zinn', c: 'ne'},
+  {t: 'Messing', c: 'leg', why: 'Kupfer + Zink'}, {t: 'Bronze', c: 'leg', why: 'Kupfer + Zinn'}
+]);
+matcher($('#match-f'), [['A · Blech', 'dünne, flache Tafel'], ['B · Flachstahl', 'rechteckiger, flacher Stab'], ['C · Rundstab', 'runder, voller Querschnitt'], ['D · Vierkantstab', 'quadratischer, voller Querschnitt'], ['E · Rohr', 'runder, hohler Querschnitt'], ['F · Winkelprofil', 'L-förmiger Querschnitt'], ['G · U-Profil', 'U-förmiger Querschnitt'], ['H · Draht', 'sehr dünn und biegsam']]);
+matcher($('#match-a'), [['Stromkabel', 'Kupfer leitet Strom sehr gut.'], ['Fahrradrahmen', 'Aluminium ist leicht und rostet nicht.'], ['Hammerkopf', 'Werkzeugstahl ist hart und zäh.'], ['Wasserhahn', 'Messing lässt sich gut gießen und rostet nicht.'], ['Kochtopf', 'Edelstahl leitet Wärme und rostet nicht.'], ['Dachrinne', 'Zink ist witterungsbeständig.']]);
+mcQuiz($('#quiz'), [
+  {q: 'Woraus besteht Messing?', a: ['Kupfer und Zink', 'Eisen und Kohlenstoff', 'Kupfer und Zinn', 'Aluminium und Zink'], ok: 0},
+  {q: 'Welches Metall wird vom Magneten angezogen?', a: ['Stahl', 'Aluminium', 'Kupfer', 'Messing'], ok: 0},
+  {q: 'Welches Metall ist ein Leichtmetall?', a: ['Aluminium', 'Kupfer', 'Blei', 'Stahl'], ok: 0},
+  {q: 'Wie nennt man ein Metall mit rundem, hohlem Querschnitt?', a: ['Rohr', 'Rundstab', 'Draht', 'Blech'], ok: 0},
+  {q: 'Warum bestehen Kabel aus Kupfer?', a: ['Es leitet Strom sehr gut.', 'Es ist magnetisch.', 'Es ist besonders billig.', 'Es ist sehr hart.'], ok: 0},
+  {q: 'Was ist eine Legierung?', a: ['eine Mischung aus Metallen', 'ein Metall aus dem Erz', 'eine Schutzschicht', 'ein Werkzeug'], ok: 0}
+]);
+</script>

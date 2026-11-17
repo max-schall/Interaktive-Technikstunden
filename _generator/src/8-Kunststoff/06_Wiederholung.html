@@ -1,0 +1,90 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Kunststoffgruppen, Fertigungsverfahren, Werkstoffwahl | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Kunststoffe sortieren · Verfahren sortieren · Recycling-Codes · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Kunststoffe und Fertigungsverfahren</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Kunststoffgruppen, Bearbeitung, Recycling, Fertigungsverfahren und Werkstoffprüfung: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Kunststoffe" data-yr="Trainer" data-title="T1 Kunststoffgruppen" data-sub="Thermo, Duro, Elasto">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Kunststoffgruppen</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Verfahren" data-yr="Trainer" data-title="T2 Fertigungsverfahren" data-sub="Sechs Hauptgruppen">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Fertigungsverfahren</h2></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Recycling" data-yr="Trainer" data-title="T3 Recycling" data-sub="Codes und Wege">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Recycling</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Monomer', 'kleiner Baustein eines Kunststoffs'], ['Polymer', 'lange Kette aus Monomeren'], ['Thermoplast', 'wird beim Erwärmen weich, recycelbar'], ['Duroplast', 'eng vernetzt, bleibt hart'],
+  ['Elastomer', 'weitmaschig vernetzt, gummielastisch'], ['Spritzgießen', 'Schmelze wird in eine Form gedrückt'], ['Extrudieren', 'Endlosprofile wie Rohre'], ['werkstoffliches Recycling', 'neues Granulat aus altem Kunststoff'],
+  ['Urformen', 'aus formlosem Stoff ein Körper'], ['Umformen', 'Form ändert sich, Masse bleibt'], ['Härte', 'Widerstand gegen Eindringen'], ['faires Experiment', 'nur eine Größe wird verändert']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1'), [{id: 't', name: 'Thermoplast'}, {id: 'd', name: 'Duroplast'}, {id: 'e', name: 'Elastomer'}], [
+  {t: 'PET-Flasche', c: 't'}, {t: 'Acrylglas', c: 't'}, {t: 'Steckdose', c: 'd'}, {t: 'Pfannengriff', c: 'd'}, {t: 'Fahrradschlauch', c: 'e'}, {t: 'Dichtung', c: 'e'}, {t: 'PP-Brotdose', c: 't'}
+]);
+sorter($('#t2'), [{id: 'ur', name: 'Urformen'}, {id: 'um', name: 'Umformen'}, {id: 'tr', name: 'Trennen'}, {id: 'fu', name: 'Fügen'}, {id: 'be', name: 'Beschichten'}, {id: 'st', name: 'Stoffeigensch. ändern'}], [
+  {t: 'Gießen', c: 'ur'}, {t: 'Biegen', c: 'um'}, {t: 'Sägen', c: 'tr'}, {t: 'Kleben', c: 'fu'}, {t: 'Lackieren', c: 'be'}, {t: 'Härten', c: 'st'}, {t: 'Extrudieren', c: 'ur'}, {t: 'Bohren', c: 'tr'}
+]);
+matcher($('#t3'), [['1 · PET', 'Getränkeflasche'], ['5 · PP', 'Brotdose'], ['6 · PS', 'Joghurtbecher, Styropor'], ['werkstofflich', 'neues Granulat'], ['energetisch', 'Verbrennung mit Wärmenutzung']]);
+mcQuiz($('#quiz'), [
+  {q: 'Was ist der wichtigste Rohstoff für Kunststoffe?', a: ['Erdöl', 'Eisenerz', 'Holz', 'Sand'], ok: 0},
+  {q: 'Welche Kunststoffgruppe lässt sich warm biegen?', a: ['Thermoplaste', 'Duroplaste', 'Elastomere', 'alle'], ok: 0},
+  {q: 'Wie bohrt man Acrylglas?', a: ['Metallbohrer, geringe Drehzahl', 'Holzbohrer, hohe Drehzahl', 'gar nicht', 'mit Schlagbohrer'], ok: 0},
+  {q: 'Wie werden Flaschen aus Kunststoff hergestellt?', a: ['Blasformen', 'Extrudieren', 'Feilen', 'Walzen'], ok: 0},
+  {q: 'Was zeigt der Recycling-Code?', a: ['die Kunststoffsorte', 'den Preis', 'das Alter', 'die Farbe'], ok: 0},
+  {q: 'Was passiert mit dem größten Teil des Kunststoffabfalls in Deutschland?', a: ['Er wird verbrannt.', 'Er wird zu neuen Flaschen.', 'Er kommt auf die Deponie.', 'Er wird zu Öl.'], ok: 0},
+  {q: 'Zu welcher Hauptgruppe gehört Schweißen?', a: ['Fügen', 'Trennen', 'Urformen', 'Beschichten'], ok: 0},
+  {q: 'Was misst der Biegeversuch?', a: ['wie stark sich ein Werkstoff biegt', 'wie hart er ist', 'wie schwer er ist', 'ob er Strom leitet'], ok: 0},
+  {q: 'Welcher Werkstoff ist am härtesten?', a: ['Glas', 'Kupfer', 'Holz', 'Wachs'], ok: 0},
+  {q: 'Wie viele Hauptgruppen der Fertigungsverfahren gibt es?', a: ['6', '3', '4', '10'], ok: 0},
+  {q: 'Was ist Mikroplastik?', a: ['Kunststoffteilchen kleiner als 5 mm', 'ein neuer Kunststoff', 'ein Recycling-Code', 'ein Werkzeug'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann erklären, wie Kunststoffe aufgebaut sind.', href: '01_Kunststoffe.html#herkunft'},
+  {t: 'Ich kann Thermoplaste, Duroplaste und Elastomere unterscheiden.', href: '01_Kunststoffe.html#modell'},
+  {t: 'Ich kann Acrylglas sägen, bohren und warm biegen.', href: '02_Bearbeiten.html#biegen'},
+  {t: 'Ich kenne industrielle Verfahren wie Spritzgießen und Extrudieren.', href: '02_Bearbeiten.html#industrie'},
+  {t: 'Ich kenne Recycling-Codes und Verwertungswege.', href: '03_Recycling.html#wege'},
+  {t: 'Ich kann Fertigungsverfahren den sechs Hauptgruppen zuordnen.', href: '04_Fertigungsverfahren.html#sortieren'},
+  {t: 'Ich kann ein technisches Experiment planen und auswerten.', href: '05_Werkstoffpruefung.html#experiment'}
+]);
+</script>

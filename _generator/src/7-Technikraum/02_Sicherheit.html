@@ -1,0 +1,116 @@
+<!--
+title: Sicherheit im Technikraum
+short: Sicherheit
+time: 1–2 Unterrichtsstunden
+q: Welche Regeln und Zeichen schützen uns im Technikraum?
+facts: Regeln im Technikraum: nur mit Lehrkraft, Taschen an die Garderobe, eng anliegende Kleidung, Haare zusammenbinden, nicht rennen | Späne nicht wegpusten, sondern saugen | NOT-AUS bei Störungen | Sicherheitszeichen: Verbot (rot, Kreis), Gebot (blau, Kreis), Warnung (gelb, Dreieck), Rettung (grün, Rechteck), Brandschutz (rot, Rechteck) | Verhalten bei Unfällen
+inter: Richtiges und falsches Verhalten sortieren · Sicherheitszeichen aufdecken · Zeichen nach Form und Farbe sortieren · Ablauf bei einem Unfall ordnen · Quiz zu den Zeichen
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Arbeiten im Technikraum</p>
+      <h1>Sicherheit im Technikraum</h1>
+      <p class="lead">Im Technikraum gibt es Sägen, Bohrmaschinen, scharfe Feilen und heiße Klebepistolen. Damit niemand verletzt wird, gelten hier <b>besondere Regeln</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum ist es im Technikraum gefährlicher, herumzurennen, als im Klassenzimmer?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Welche Regeln und Zeichen schützen uns im Technikraum?</p></div>
+      <div class="controls"><button class="btn primary" data-go="regeln">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="regeln" data-label="Regeln" data-yr="Einstieg" data-title="Regeln im Technikraum" data-sub="Richtig oder falsch verhalten?">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Regeln</p>
+    <h2>Richtig oder falsch verhalten?</h2>
+    <p class="lead">Sortiere die Verhaltensweisen. Nach dem Prüfen steht unter jeder Karte die Begründung.</p>
+  </div>
+  <div id="sort-r"></div>
+</section>
+
+<section class="station" id="zeichen" data-label="Zeichen" data-yr="Erarbeitung" data-title="Sicherheitszeichen" data-sub="Form und Farbe verraten die Bedeutung">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Sicherheitszeichen</p>
+    <h2>Form und Farbe verraten die Bedeutung</h2>
+    <p class="lead">Sicherheitszeichen verstehen alle Menschen – ohne Worte. Tippe auf ein Zeichen, um seine Bedeutung aufzudecken.</p>
+  </div>
+  <div class="model">
+    <div id="signs"></div>
+    <div class="table-wrap"><table class="cmp">
+      <thead><tr><th>Art</th><th>Form</th><th>Farbe</th><th>Bedeutung</th></tr></thead>
+      <tbody>
+        <tr><td><b>Verbot</b></td><td>Kreis, Schrägbalken</td><td>rot / weiß</td><td>Das darfst du nicht.</td></tr>
+        <tr><td><b>Gebot</b></td><td>Kreis</td><td>blau / weiß</td><td>Das musst du tun.</td></tr>
+        <tr><td><b>Warnung</b></td><td>Dreieck</td><td>gelb / schwarz</td><td>Achtung, Gefahr!</td></tr>
+        <tr><td><b>Rettung</b></td><td>Rechteck</td><td>grün / weiß</td><td>Hier gibt es Hilfe.</td></tr>
+        <tr><td><b>Brandschutz</b></td><td>Rechteck</td><td>rot / weiß</td><td>Hier ist Löschgerät.</td></tr>
+      </tbody></table></div>
+  </div>
+</section>
+
+<section class="station" id="sortieren" data-label="Zeichen sortieren" data-yr="Übung" data-title="Zeichen einordnen" data-sub="Verbot, Gebot, Warnung, Rettung">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Zeichen einordnen</p>
+    <h2>Zu welcher Gruppe gehört das Zeichen?</h2>
+  </div>
+  <div id="sort-z"></div>
+</section>
+
+<section class="station" id="notfall" data-label="Wenn etwas passiert" data-yr="Material M1" data-title="Wenn etwas passiert" data-sub="Richtig handeln bei Unfällen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Wenn doch etwas passiert</h2>
+    <p class="lead">Lina hat sich beim Sägen in den Finger geschnitten. Bringe die Schritte in die richtige Reihenfolge.</p>
+  </div>
+  <div id="order-n"></div>
+  <div class="merke mt"><p><b>NOT-AUS:</b> Bei einer Störung an einer Maschine oder einem Unfall drückst du sofort den roten NOT-AUS-Schalter. Er schaltet alle Maschinen im Raum ab.</p></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Sicherheit</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Sicherheit im Technikraum</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Sicherheitsregeln schützen dich und andere vor Unfällen. Den Technikraum betrittst du nur mit der Lehrkraft.</li>
+        <li data-step>Jacke und Tasche bleiben an der Garderobe, Kleidung liegt eng an, lange Haare werden zusammengebunden. Im Technikraum wird nicht gerannt.</li>
+        <li data-step>Werkzeuge und Maschinen benutzt du nur nach Einweisung. Späne werden gesaugt, nie weggepustet. Bei Störungen: <b>NOT-AUS</b>.</li>
+        <li data-step>Sicherheitszeichen: <b>Verbot</b> (roter Kreis), <b>Gebot</b> (blauer Kreis), <b>Warnung</b> (gelbes Dreieck), <b>Rettung</b> (grünes Rechteck), <b>Brandschutz</b> (rotes Rechteck).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Kreativauftrag</span><p>Gestaltet in Gruppen ein Plakat „Sicher arbeiten im Technikraum“ mit den fünf wichtigsten Regeln und passenden Zeichen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Zeichen-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-r'), [{id: 'r', name: 'richtig'}, {id: 'f', name: 'falsch'}], [
+  {t: 'Die Jacke hängt an der Garderobe.', c: 'r', why: 'Nichts kann hängen bleiben, niemand stolpert über Taschen.'},
+  {t: 'Tim rennt zum Werkzeugschrank.', c: 'f', why: 'Mit Werkzeug in der Hand kann man sich und andere schwer verletzen.'},
+  {t: 'Mia bindet ihre langen Haare zum Zopf.', c: 'r', why: 'Offene Haare können sich in der Bohrmaschine verfangen.'},
+  {t: 'Ben pustet die Späne vom Tisch.', c: 'f', why: 'Späne und Staub fliegen in die Augen. Späne werden gesaugt.'},
+  {t: 'Ayla trägt beim Bohren eine Schutzbrille.', c: 'r', why: 'Die Augen sind vor wegfliegenden Spänen geschützt.'},
+  {t: 'Jonas probiert die Bandsäge ohne Einweisung aus.', c: 'f', why: 'Maschinen nur nach Einweisung und mit Erlaubnis der Lehrkraft benutzen.'},
+  {t: 'Bei einer Störung drückt Emil den NOT-AUS-Schalter.', c: 'r', why: 'Der NOT-AUS schaltet sofort alle Maschinen ab.'},
+  {t: 'Lea isst in der Pause am Werktisch ihr Brot.', c: 'f', why: 'Im Technikraum wird nicht gegessen und getrunken (Staub, Leim, Lacke).'}
+]);
+const SIGNS = [
+  {k: 'gebot', p: 'brille', n: 'Augenschutz benutzen', t: 'beim Bohren, Schleifen und Sägen'}, {k: 'gebot', p: 'ohr', n: 'Gehörschutz benutzen', t: 'bei lauten Maschinen'},
+  {k: 'gebot', p: 'haar', n: 'Haarschutz benutzen', t: 'lange Haare zusammenbinden'}, {k: 'verbot', p: 'hand', n: 'Handschuhe verboten', t: 'an der Bohrmaschine: Handschuhe können erfasst werden'},
+  {k: 'verbot', p: 'becher', n: 'Essen und Trinken verboten', t: 'im ganzen Technikraum'}, {k: 'verbot', p: 'flamme', n: 'Keine offene Flamme', t: 'Feuer, offenes Licht und Rauchen verboten'},
+  {k: 'warn', p: 'blitz', n: 'Warnung vor elektrischer Spannung', t: 'z. B. am Schaltschrank'}, {k: 'warn', p: 'heiss', n: 'Warnung vor heißer Oberfläche', t: 'z. B. Heißklebepistole, Lötkolben'},
+  {k: 'rettung', p: 'kreuz', n: 'Erste Hilfe', t: 'Verbandkasten'}, {k: 'rettung', p: 'tuer', n: 'Notausgang', t: 'Fluchtweg ins Freie'},
+  {k: 'brand', p: 'loescher', n: 'Feuerlöscher', t: 'Brandschutzzeichen'}
+];
+signs($('#signs'), SIGNS, {hide: true});
+sorter($('#sort-z'), [{id: 'verbot', name: 'Verbot'}, {id: 'gebot', name: 'Gebot'}, {id: 'warn', name: 'Warnung'}, {id: 'rettung', name: 'Rettung / Brandschutz'}],
+  SIGNS.map(s => ({t: `<span class="mini-sign">${signSVG(s.k, s.p)}</span>${s.n}`, c: s.k === 'brand' ? 'rettung' : s.k})));
+orderSteps($('#order-n'), ['Ruhe bewahren und die Arbeit sofort beenden', 'Lehrkraft informieren', 'Erste Hilfe leisten: Wunde mit Pflaster oder Verband versorgen', 'Bei schweren Verletzungen den Notruf 112 wählen lassen', 'Unfall im Verbandbuch eintragen'], {label: 'Ablauf'});
+mcQuiz($('#quiz'), SIGNS.map(s => ({q: `<span class="mini-sign" style="display:inline-block">${signSVG(s.k, s.p)}</span> Was bedeutet dieses Zeichen?`, a: [s.n, ...shuffle(SIGNS.filter(x => x !== s)).slice(0, 3).map(x => x.n)], ok: 0, why: s.t})), {pick: 8});
+</script>

@@ -1,0 +1,114 @@
+<!--
+title: Leistung, Energie und Sicherheit
+short: Leistung & Sicherheit
+time: 2 Unterrichtsstunden
+q: Wie viel Energie brauchen Geräte – und wie schützt man sich vor den Gefahren des Stroms?
+facts: Elektrische Leistung P = U · I in Watt (W) | Elektrische Energie E = P · t in Kilowattstunden (kWh), Kosten = Energie · Preis | Strom durch den Körper ist ab etwa 50 V Wechselspannung lebensgefährlich | Schutz: Isolierung, Schutzleiter, Sicherung, Fehlerstromschutzschalter (FI) | Verhaltensregeln im Umgang mit Elektrogeräten
+inter: Geräte-Leistungen vergleichen · Leistung berechnen · Stromkosten-Rechner · Schutzmaßnahmen zuordnen · Verhalten richtig/falsch
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der elektrische Stromkreis</p>
+      <h1>Leistung, Energie und Sicherheit</h1>
+      <p class="lead">Ein Wasserkocher hat 2000 W, eine LED-Lampe 7 W. Was kostet es, wenn sie eine Stunde laufen? Und warum ist die Steckdose gefährlich, die Flachbatterie aber nicht?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Sucht auf Geräten das Typenschild. Welche Angaben findet ihr?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie viel Energie brauchen Geräte – und wie schützt man sich vor den Gefahren des Stroms?</p></div>
+      <div class="controls"><button class="btn primary" data-go="leistung">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="leistung" data-label="Leistung" data-yr="Erarbeitung" data-title="Elektrische Leistung" data-sub="P = U · I">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Leistung</p>
+    <h2>Elektrische Leistung: P = U · I</h2>
+    <p class="lead">Die <b>Leistung P</b> gibt an, wie viel Energie ein Gerät pro Sekunde umwandelt. Einheit: <b>Watt (W)</b>. Bei 230 V nimmt ein Gerät mit 2300 W also 10 A auf.</p>
+  </div>
+  <div class="cols-2"><div id="ch"></div><div id="ts-p"></div></div>
+</section>
+
+<section class="station" id="kosten" data-label="Energiekosten" data-yr="Erarbeitung" data-title="Energie und Kosten" data-sub="E = P · t">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Energie und Kosten</p>
+    <h2>Was kostet der Strom?</h2>
+    <p class="lead">Die <b>Energie</b> hängt von Leistung und Zeit ab: <b>E = P · t</b>. Abgerechnet wird in <b>Kilowattstunden (kWh)</b>: Ein Gerät mit 1000 W braucht in einer Stunde 1 kWh. Wähle ein Gerät und die Nutzungsdauer.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-row"><span id="k-seg"></span></div><div class="tk-row"><label>Stunden pro Tag <input type="range" min="0.25" max="24" step="0.25" value="1" id="k-h"> <span class="tk-val" id="k-hv"></span></label></div><div class="tk-row"><label>Preis je kWh <input type="range" min="20" max="50" step="1" value="35" id="k-p"> <span class="tk-val" id="k-pv"></span></label></div></div>
+    <div><div class="tk-readout" id="k-ro"></div><p class="status" id="k-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="gefahr" data-label="Gefahren" data-yr="Erarbeitung" data-title="Strom und Körper" data-sub="Wann wird es gefährlich?">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Gefahren</p>
+    <h2>Wenn Strom durch den Körper fließt</h2>
+    <p class="lead">Der menschliche Körper leitet Strom. Schon ab etwa <b>50 mA</b> durch den Körper kann das Herz aus dem Takt geraten. Bei Netzspannung (230 V) wird dieser Wert leicht überschritten – bei Batterien bis 24 V nicht. Ordne die Schutzmaßnahmen zu.</p>
+  </div>
+  <div id="match-s"></div>
+</section>
+
+<section class="station" id="verhalten" data-label="M1 Verhalten" data-yr="Material M1" data-title="Sicher mit Elektrogeräten" data-sub="Regeln für den Alltag">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Sicher mit Elektrogeräten</h2>
+  </div>
+  <div id="sort-v"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Leistung und Sicherheit</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Leistung, Energie und Sicherheit</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Leistung:</b> P = U · I, Einheit Watt (W). <b>Energie:</b> E = P · t, Einheit Kilowattstunde (kWh).</li>
+        <li data-step>Stromkosten = Energie in kWh · Preis pro kWh.</li>
+        <li data-step>Strom durch den Körper ist lebensgefährlich. Spannungen über 50 V Wechselspannung gelten als gefährlich.</li>
+        <li data-step>Schutz: Isolierung, <b>Schutzleiter</b> (grün-gelb), <b>Sicherung</b> (bei Überlast und Kurzschluss), <b>FI-Schutzschalter</b> (bei Fehlerstrom über den Körper).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Merke</span><p>Arbeiten an Netzspannung dürfen nur Elektrofachkräfte durchführen. Defekte Geräte und Kabel sofort aus dem Verkehr ziehen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Leistung und Sicherheit</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+const GER = [['LED-Lampe', 7], ['Laptop', 60], ['Fernseher', 100], ['Kühlschrank', 120], ['Föhn', 1800], ['Wasserkocher', 2000]];
+chart($('#ch'), {type: 'hbar', title: 'Leistung von Haushaltsgeräten', unit: ' W', data: GER});
+taskSet($('#ts-p'), () => {
+  if (Math.random() < .5) { const [n, P] = pick(GER.slice(2)); return {key: 'i' + n, tag: n, q: `${n}: <b>${P} W</b> an 230 V. Welche Stromstärke?`, fields: [{l: 'I', a: P / 230, tol: .02, unit: 'A'}], hint: 'I = P : U'}; }
+  const U = pick([4.5, 9, 12]), I = pick([0.2, 0.3, 0.5, 2]); return {key: `p${U}${I}`, tag: 'Leistung', q: `U = ${numDE(U, 1)} V, I = ${numDE(I, 1)} A`, fields: [{l: 'P', a: U * I, tol: .01, unit: 'W'}], hint: 'P = U · I'};
+}, {n: 3});
+let gk = 0;
+function kost() {
+  const [n, P] = GER[gk], h = +$('#k-h').value, pr = +$('#k-p').value / 100, E = P / 1000 * h * 365;
+  $('#k-hv').textContent = numDE(h, 2) + ' h'; $('#k-pv').textContent = Math.round(pr * 100) + ' ct';
+  readout($('#k-ro'), [['Leistung', P + ' W'], ['Energie pro Tag', numDE(P / 1000 * h, 3) + ' kWh'], ['Energie pro Jahr', numDE(E, 1) + ' kWh'], ['Kosten pro Jahr', numDE(E * pr, 2) + ' €']]);
+  $('#k-st').innerHTML = `${n}: ${P} W · ${numDE(h, 2)} h = <b>${numDE(P * h, 0)} Wh = ${numDE(P / 1000 * h, 3)} kWh</b> pro Tag.`;
+}
+seg($('#k-seg'), GER.map((g, i) => [i, g[0]]), v => { gk = +v; kost(); });
+$('#k-h').oninput = kost; $('#k-p').oninput = kost;
+matcher($('#match-s'), [['Isolierung', 'Kunststoff um die Leiter verhindert Berührung'], ['Schutzleiter (grün-gelb)', 'leitet Fehlerströme vom Metallgehäuse zur Erde'], ['Sicherung', 'unterbricht bei zu großer Stromstärke, z. B. Kurzschluss'], ['FI-Schutzschalter', 'schaltet ab, wenn Strom über den Körper abfließt'], ['Schutzkleinspannung', 'Spielzeug und Schulversuche mit höchstens 24 V']]);
+sorter($('#sort-v'), [{id: 'r', name: 'richtig'}, {id: 'f', name: 'gefährlich'}], [
+  {t: 'Stecker am Stecker ziehen, nicht am Kabel', c: 'r'}, {t: 'Föhn in der Nähe der vollen Badewanne benutzen', c: 'f'}, {t: 'Defektes Kabel mit Klebeband flicken', c: 'f'},
+  {t: 'Kindersicherung in Steckdosen', c: 'r'}, {t: 'Mehrfachsteckdosen hintereinanderstecken', c: 'f', why: 'Überlastung und Brandgefahr.'}, {t: 'Vor dem Lampenwechsel die Sicherung ausschalten', c: 'r'},
+  {t: 'Drachen in der Nähe von Hochspannungsleitungen steigen lassen', c: 'f'}, {t: 'Geräte mit Prüfzeichen (CE, GS) kaufen', c: 'r'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Wie berechnet man die elektrische Leistung?', a: ['P = U · I', 'P = U : I', 'P = R · I', 'P = E · t'], ok: 0},
+  {q: 'Ein Gerät hat 1500 W und läuft 2 Stunden. Wie viel Energie?', a: ['3 kWh', '750 Wh', '1,5 kWh', '3000 kWh'], ok: 0},
+  {q: 'Welche Farbe hat der Schutzleiter?', a: ['grün-gelb', 'blau', 'braun', 'rot'], ok: 0},
+  {q: 'Was macht ein FI-Schutzschalter?', a: ['Er schaltet ab, wenn Strom über den Körper fließt.', 'Er spart Energie.', 'Er misst die Spannung.', 'Er erhöht die Leistung.'], ok: 0},
+  {q: 'Ab welcher Wechselspannung gilt es als gefährlich?', a: ['etwa 50 V', '1,5 V', '4,5 V', 'erst ab 1000 V'], ok: 0},
+  {q: 'Was kostet 1 kWh bei 35 ct und 10 kWh?', a: ['3,50 €', '0,35 €', '35 €', '350 €'], ok: 0}
+]);
+kost();
+</script>

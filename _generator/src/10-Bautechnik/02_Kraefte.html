@@ -1,0 +1,115 @@
+<!--
+title: Lasten und Kräfte an Bauwerken
+short: Kräfte
+time: 2 Unterrichtsstunden
+q: Welche Kräfte wirken auf Bauteile, und wie macht man sie tragfähig?
+facts: Lasten: Eigenlast, Nutzlast, Schnee, Wind | Beanspruchungen: Zug, Druck, Biegung, Verdrehung (Torsion), Abscherung | Ein gebogener Balken wird oben gestaucht (Druck) und unten gedehnt (Zug) | Die Profilform bestimmt die Steifigkeit: hochkant viel steifer als flach, I-Profil sehr steif bei wenig Material | Bewehrung im Stahlbeton liegt in der Zugzone
+inter: Beanspruchungen zuordnen · Biegebalken mit Zug- und Druckzone · Profile im Biegeversuch · Lasten sortieren · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Bauen und Wohnen</p>
+      <h1>Lasten und Kräfte an Bauwerken</h1>
+      <p class="lead">Ein Lineal flach über zwei Bücher gelegt biegt sich schon unter einem Radiergummi durch. Hochkant gestellt trägt es ein ganzes Mäppchen. Warum macht die <b>Form</b> so einen Unterschied?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Probiere es aus: Lineal flach und hochkant belasten.</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Welche Kräfte wirken auf Bauteile, und wie macht man sie tragfähig?</p></div>
+      <div class="controls"><button class="btn primary" data-go="lasten">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="lasten" data-label="Lasten" data-yr="Einstieg" data-title="Lasten am Gebäude" data-sub="Was drückt auf das Haus?">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Lasten</p>
+    <h2>Was drückt auf das Haus?</h2>
+    <p class="lead"><b>Eigenlast:</b> das Gewicht des Gebäudes selbst. <b>Nutzlast:</b> Menschen, Möbel. Dazu kommen <b>Schnee</b> und <b>Wind</b>. Alle Lasten werden über Decken, Wände und Stützen ins <b>Fundament</b> geleitet. Sortiere.</p>
+  </div>
+  <div id="sort-l"></div>
+</section>
+
+<section class="station" id="beanspruchung" data-label="Beanspruchungen" data-yr="Erarbeitung" data-title="Fünf Beanspruchungen" data-sub="Zug, Druck, Biegung …">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Beanspruchungen</p>
+    <h2>Zug, Druck, Biegung, Verdrehung, Abscherung</h2>
+    <p class="lead">Ordne jedem Beispiel die Beanspruchung zu.</p>
+  </div>
+  <div id="match-b"></div>
+</section>
+
+<section class="station" id="biegung" data-label="Biegebalken" data-yr="Erarbeitung" data-title="Der Biegebalken" data-sub="Druck oben, Zug unten">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Biegebalken</p>
+    <h2>Oben Druck, unten Zug</h2>
+    <p class="lead">Ein belasteter Balken biegt sich durch: Die <b>Oberseite</b> wird gestaucht (<b>Druck</b>), die <b>Unterseite</b> gedehnt (<b>Zug</b>). Die Mitte bleibt fast unbelastet. Deshalb liegt die Stahlbewehrung im Beton unten – und deshalb ist Material in der Mitte fast überflüssig. Wähle ein Profil und vergleiche die Durchbiegung bei gleicher Materialmenge.</p>
+  </div>
+  <div class="cols-2">
+    <div class="tk-fig"><svg viewBox="0 0 440 200" id="bb" role="img" aria-label="Biegebalken"></svg><div class="tk-row"><label>Last <input type="range" min="0" max="100" value="60" id="bb-f"> <span class="tk-val" id="bb-fv"></span></label></div></div>
+    <div id="beam"></div>
+  </div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Profile" data-yr="Material M1" data-title="Profile im Alltag" data-sub="Wo stecken I, U und T?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Profile im Alltag</h2>
+    <p class="lead">Prüfe die Aussagen.</p>
+  </div>
+  <div id="tf"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Kräfte</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Lasten und Kräfte an Bauwerken</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Lasten: <b>Eigenlast</b>, <b>Nutzlast</b>, <b>Schnee</b>, <b>Wind</b>. Sie werden über Decken, Wände und Stützen ins Fundament geleitet.</li>
+        <li data-step>Beanspruchungen: <b>Zug</b>, <b>Druck</b>, <b>Biegung</b>, <b>Verdrehung</b> (Torsion), <b>Abscherung</b>.</li>
+        <li data-step>Bei <b>Biegung</b> wird die Oberseite gestaucht (Druck) und die Unterseite gedehnt (Zug). Im Stahlbeton liegt die Bewehrung deshalb unten.</li>
+        <li data-step>Die <b>Profilform</b> bestimmt die Steifigkeit: Material weit oben und unten (I-Profil, Rohr, hochkant) macht ein Bauteil sehr biegesteif.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Faltet aus je einem Blatt Papier ein flaches Brett, ein U-Profil, ein Rohr und ein Dreiecksprofil. Wie viele Münzen trägt jedes zwischen zwei Büchern?</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Kräfte-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-l'), [{id: 'e', name: 'Eigenlast'}, {id: 'n', name: 'Nutzlast'}, {id: 'u', name: 'Umweltlast (Schnee, Wind)'}], [
+  {t: 'Betondecke', c: 'e'}, {t: 'Dachziegel', c: 'e'}, {t: 'Bücherregal', c: 'n'}, {t: 'Partygäste', c: 'n'}, {t: '30 cm Neuschnee', c: 'u'}, {t: 'Sturmböe', c: 'u'}, {t: 'Badewanne mit Wasser', c: 'n'}
+]);
+matcher($('#match-b'), [['Zug', 'Seil einer Hängebrücke, Kette einer Schaukel'], ['Druck', 'Säule, Stütze, Tischbein'], ['Biegung', 'Sprungbrett, Regalboden'], ['Verdrehung (Torsion)', 'Schraubendreher, Antriebswelle'], ['Abscherung', 'Niet, Schere, Bolzen im Scharnier']]);
+function bb() {
+  const F = +$('#bb-f').value, f = F * .35;
+  $('#bb').innerHTML = `<path d="M40 110l-16 26h32zM400 110l-16 26h32z" fill="var(--ink-2)"/>` +
+    `<path d="M30 70Q220 ${70 + 2 * f} 410 70v40Q220 ${110 + 2 * f} 30 110z" fill="var(--surface-2)" stroke="var(--edge)" stroke-width="2"/>` +
+    `<path d="M40 70Q220 ${70 + 2 * f} 400 70" stroke="var(--bad)" stroke-width="${2 + F / 15}" fill="none" opacity=".8"/><path d="M40 110Q220 ${110 + 2 * f} 400 110" stroke="var(--e)" stroke-width="${2 + F / 15}" fill="none" opacity=".8"/>` +
+    `<path d="M30 90Q220 ${90 + 2 * f} 410 90" stroke="var(--ink-2)" stroke-dasharray="6 4" fill="none"/>` +
+    `<text x="220" y="${58 + f}" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:var(--bad)">Druck (gestaucht)</text><text x="220" y="${135 + f}" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:var(--e)">Zug (gedehnt)</text>` +
+    `<path d="M220 ${10}v${40 + f * .3}" stroke="var(--accent)" stroke-width="5"/><path d="M212 ${48 + f * .3}l8 12 8 -12z" fill="var(--accent)"/>`;
+  $('#bb-fv').textContent = F + ' %';
+}
+$('#bb-f').oninput = bb; bb();
+beam($('#beam'), {F: 50});
+trueFalse($('#tf'), [
+  {t: 'Stahlträger im Hochbau haben oft ein I-Profil.', ok: true, why: 'Viel Material oben und unten, wenig in der Mitte – steif und leicht.'},
+  {t: 'Ein Regalboden hält mehr, wenn man ihn hochkant stellt.', ok: true},
+  {t: 'Im Stahlbetonbalken liegt der Stahl in der Mitte.', ok: false, why: 'Unten in der Zugzone.'},
+  {t: 'Fahrradrahmen bestehen aus Rohren, weil Rohre leicht und biegesteif sind.', ok: true},
+  {t: 'Ein Seil kann gut Druckkräfte aufnehmen.', ok: false, why: 'Ein Seil kann nur Zug aufnehmen.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Welche Last ist eine Nutzlast?', a: ['Möbel', 'Schnee', 'Wind', 'Dachziegel'], ok: 0},
+  {q: 'Welche Beanspruchung wirkt auf eine Säule?', a: ['Druck', 'Zug', 'Torsion', 'Abscherung'], ok: 0},
+  {q: 'Wo liegt die Zugzone eines durchgebogenen Balkens?', a: ['unten', 'oben', 'in der Mitte', 'nirgends'], ok: 0},
+  {q: 'Welches Profil ist bei gleicher Materialmenge am biegesteifsten?', a: ['I-Profil', 'Flachstab liegend', 'Rundstab', 'Draht'], ok: 0},
+  {q: 'Welche Beanspruchung wirkt auf einen Schraubendreher?', a: ['Verdrehung', 'Druck', 'Biegung', 'Abscherung'], ok: 0}
+]);
+</script>

@@ -1,0 +1,103 @@
+<!--
+title: Mobilität, Antriebe und Sicherheit
+short: Mobilität
+time: 2 Unterrichtsstunden
+q: Welche Antriebe und Verkehrsmittel sind sinnvoll, und wie schützen Fahrzeuge ihre Insassen?
+facts: Antriebsarten: Benzin, Diesel, Hybrid, batterieelektrisch, Brennstoffzelle | Verkehrsmittel im Vergleich: CO₂ pro Personenkilometer | Verkehr verursacht Lärm, Abgase, Flächenverbrauch | Aktive Sicherheit (Unfall vermeiden): ABS, ESP, Notbremsassistent | Passive Sicherheit (Folgen mindern): Gurt, Airbag, Knautschzone, Kopfstütze
+inter: Antriebe zuordnen · CO₂-Vergleich als Diagramm · Wegrechner Schulweg · Sicherheitssysteme sortieren · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Maschinen und Mobilität</p>
+      <h1>Mobilität, Antriebe und Sicherheit</h1>
+      <p class="lead">Zur Schule, zum Training, in den Urlaub: Wir sind ständig unterwegs. Der Verkehr verursacht in Deutschland etwa ein Fünftel aller Treibhausgase. Welche Antriebe und Verkehrsmittel sind zukunftsfähig?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wie kommst du zur Schule? Wie viele Kilometer sind das pro Woche?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Welche Antriebe und Verkehrsmittel sind sinnvoll, und wie schützen Fahrzeuge ihre Insassen?</p></div>
+      <div class="controls"><button class="btn primary" data-go="antriebe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="antriebe" data-label="Antriebe" data-yr="Erarbeitung" data-title="Antriebsarten" data-sub="Benzin, Hybrid, Elektro …">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Antriebsarten</p>
+    <h2>Antriebsarten im Überblick</h2>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="vergleich" data-label="Verkehrsmittel" data-yr="Erarbeitung" data-title="Verkehrsmittel im Vergleich" data-sub="CO₂ pro Person und Kilometer">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Verkehrsmittel</p>
+    <h2>Verkehrsmittel im Vergleich</h2>
+    <p class="lead">Wie viel CO₂ entsteht, wenn eine Person einen Kilometer fährt? Gib deinen Schulweg ein und vergleiche.</p>
+  </div>
+  <div class="cols-2"><div id="ch"></div><div><div class="tk-row"><label>Schulweg (einfach) <input type="range" min="1" max="30" value="5" id="sw-k"> <span class="tk-val" id="sw-kv"></span></label></div><div class="tk-readout" id="sw-ro"></div><p class="status">Werte gerundet; Pkw mit durchschnittlich 1,4 Personen besetzt.</p></div></div>
+</section>
+
+<section class="station" id="sicherheit" data-label="Sicherheit" data-yr="Erarbeitung" data-title="Sicherheitssysteme" data-sub="Aktiv oder passiv?">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Sicherheitssysteme</p>
+    <h2>Aktive und passive Sicherheit</h2>
+    <p class="lead"><b>Aktive Sicherheit</b> hilft, einen Unfall zu <b>vermeiden</b>. <b>Passive Sicherheit</b> <b>mindert die Folgen</b>, wenn es doch kracht. Sortiere.</p>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Zukunft" data-yr="Material M1" data-title="Mobilität der Zukunft" data-sub="Was ist sinnvoll?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Mobilität der Zukunft</h2>
+    <p class="lead">Prüfe die Aussagen und diskutiert: Was wäre für euren Ort die beste Lösung?</p>
+  </div>
+  <div id="tf"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Mobilität</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Mobilität, Antriebe und Sicherheit</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Antriebe: <b>Verbrennungsmotor</b> (Benzin, Diesel), <b>Hybrid</b> (Verbrenner + Elektromotor), <b>Elektroauto</b> (Akku), <b>Brennstoffzelle</b> (Wasserstoff → Strom).</li>
+        <li data-step>Pro Person und Kilometer verursachen Fahrrad und Fußweg kein CO₂, Bahn und Bus wenig, Pkw und Flugzeug viel.</li>
+        <li data-step><b>Aktive Sicherheit</b> vermeidet Unfälle (ABS, ESP, Notbremsassistent). <b>Passive Sicherheit</b> mindert Unfallfolgen (Gurt, Airbag, Knautschzone).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Umfrage</span><p>Wie kommt eure Klasse zur Schule? Erstellt ein Diagramm und berechnet das CO₂ pro Woche.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Mobilitäts-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match'), [['Benzinmotor', 'verbrennt Benzin, Zündung durch Zündkerze'], ['Dieselmotor', 'Selbstzündung durch starke Verdichtung'], ['Hybridantrieb', 'Verbrennungsmotor und Elektromotor kombiniert'], ['Elektroauto', 'Elektromotor mit Akku, lädt an der Steckdose'], ['Brennstoffzelle', 'erzeugt aus Wasserstoff Strom, Abgas ist Wasserdampf']]);
+const VM = [['Fahrrad, zu Fuß', 0], ['Fernzug', 30], ['Linienbus', 80], ['S-Bahn, Straßenbahn', 55], ['Elektroauto', 75], ['Pkw (Benzin)', 165], ['Flugzeug (Inland)', 250]];
+chart($('#ch'), {type: 'hbar', title: 'g CO₂ pro Personenkilometer (gerundet)', unit: ' g', data: VM});
+function sw() { const k = +$('#sw-k').value, w = k * 2 * 5; $('#sw-kv').textContent = k + ' km'; readout($('#sw-ro'), VM.filter((v, i) => [0, 2, 4, 5].includes(i)).map(([n, g]) => [n, numDE(w * g / 1000, 1) + ' kg/Woche'])); }
+$('#sw-k').oninput = sw; sw();
+sorter($('#sort'), [{id: 'a', name: 'aktive Sicherheit'}, {id: 'p', name: 'passive Sicherheit'}], [
+  {t: 'ABS (Antiblockiersystem)', c: 'a', why: 'Räder blockieren nicht, das Auto bleibt lenkbar.'}, {t: 'ESP (Schleuderschutz)', c: 'a'}, {t: 'Notbremsassistent', c: 'a'}, {t: 'gute Bremsen und Reifen', c: 'a'},
+  {t: 'Sicherheitsgurt', c: 'p'}, {t: 'Airbag', c: 'p'}, {t: 'Knautschzone', c: 'p', why: 'Sie verformt sich und nimmt Aufprallenergie auf.'}, {t: 'Fahrradhelm', c: 'p'}
+]);
+trueFalse($('#tf'), [
+  {t: 'Ein Elektroauto fährt umso klimafreundlicher, je mehr Ökostrom im Netz ist.', ok: true},
+  {t: 'Ein voll besetzter Bus verursacht pro Person weniger CO₂ als ein Auto mit einer Person.', ok: true},
+  {t: 'Wasserstoff für Brennstoffzellen ist immer klimaneutral.', ok: false, why: 'Nur wenn er mit Strom aus erneuerbaren Energien hergestellt wird.'},
+  {t: 'Carsharing kann die Zahl der Autos in Städten verringern.', ok: true},
+  {t: 'Der Akku eines Elektroautos verursacht bei der Herstellung keine Umweltbelastung.', ok: false, why: 'Rohstoffe und Herstellung verbrauchen viel Energie.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was ist ein Hybridantrieb?', a: ['Verbrenner und Elektromotor kombiniert', 'zwei Benzinmotoren', 'ein Fahrrad mit Motor', 'ein Wasserstoffmotor'], ok: 0},
+  {q: 'Welches Abgas hat eine Brennstoffzelle?', a: ['Wasserdampf', 'CO₂', 'Ruß', 'Stickoxide'], ok: 0},
+  {q: 'Welches System gehört zur passiven Sicherheit?', a: ['Airbag', 'ABS', 'ESP', 'Notbremsassistent'], ok: 0},
+  {q: 'Welches Verkehrsmittel verursacht pro Personenkilometer am meisten CO₂?', a: ['Flugzeug', 'Fernzug', 'Fahrrad', 'Bus'], ok: 0},
+  {q: 'Wozu dient ABS?', a: ['Das Auto bleibt beim Bremsen lenkbar.', 'Es bläst Airbags auf.', 'Es spart Benzin.', 'Es parkt das Auto ein.'], ok: 0}
+]);
+</script>

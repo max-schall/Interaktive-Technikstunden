@@ -1,0 +1,113 @@
+<!--
+title: Riemen- und Kettengetriebe
+short: Riemen & Kette
+time: 1–2 Unterrichtsstunden
+q: Wie übertragen Riemen und Ketten Bewegungen über größere Abstände?
+facts: Riemen- und Kettengetriebe überbrücken große Abstände | Beide Räder drehen gleichsinnig (beim gekreuzten Riemen gegensinnig) | Riemen: Übersetzung i = d₂ : d₁, leise, kann rutschen | Kette: i = z₂ : z₁, rutschfest, braucht Schmierung | Fahrradschaltung: Kettenblatt vorne, Ritzel hinten | Strecke pro Kurbelumdrehung = Radumfang · (z vorne : z hinten)
+inter: Riemen- und Kettengetriebe im Simulator · Vor- und Nachteile sortieren · Fahrrad-Gangrechner · Rechentrainer · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Maschinen und Mobilität</p>
+      <h1>Riemen- und Kettengetriebe</h1>
+      <p class="lead">Beim Fahrrad liegen Pedale und Hinterrad weit auseinander – Zahnräder müssten riesig sein. Eine <b>Kette</b> überbrückt den Abstand. In Waschmaschinen und Motoren übernimmt das ein <b>Riemen</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum fährt man im ersten Gang bergauf leichter, aber langsamer?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie übertragen Riemen und Ketten Bewegungen über größere Abstände?</p></div>
+      <div class="controls"><button class="btn primary" data-go="riemen">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="riemen" data-label="Riemen" data-yr="Erarbeitung" data-title="Das Riemengetriebe" data-sub="Gleiche Drehrichtung">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Riemengetriebe</p>
+    <h2>Das Riemengetriebe</h2>
+    <p class="lead">Beim Riemengetriebe zählt der <b>Durchmesser</b> der Riemenscheiben: <b>i = d₂ : d₁</b>. Beide Scheiben drehen in <b>dieselbe Richtung</b>.</p>
+  </div>
+  <div id="g1"></div>
+</section>
+
+<section class="station" id="kette" data-label="Kette" data-yr="Erarbeitung" data-title="Das Kettengetriebe" data-sub="Rutschfest">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Kettengetriebe</p>
+    <h2>Das Kettengetriebe</h2>
+    <p class="lead">Die Kette greift in die Zähne der <b>Kettenräder</b> – sie kann nicht rutschen. Die Übersetzung ergibt sich wieder aus den Zähnen: <b>i = z₂ : z₁</b>.</p>
+  </div>
+  <div id="g2"></div>
+  <h3 class="mt">Riemen oder Kette?</h3>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="fahrrad" data-label="Fahrradschaltung" data-yr="Übung" data-title="Die Fahrradschaltung" data-sub="Welcher Gang wofür?">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Fahrradschaltung</p>
+    <h2>Welcher Gang wofür?</h2>
+    <p class="lead">Beim Fahrrad treibt das <b>Kettenblatt</b> (vorne) das <b>Ritzel</b> (hinten). Pro Kurbelumdrehung dreht sich das Hinterrad z<sub>vorne</sub> : z<sub>hinten</sub> Mal. Wähle Kettenblatt und Ritzel.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-row"><span id="fr-v"></span></div><div class="tk-row"><span id="fr-h"></span></div><div class="tk-row"><label>Trittfrequenz <input type="range" min="40" max="100" step="5" value="70" id="fr-n"> <span class="tk-val" id="fr-nv"></span></label></div></div>
+    <div><div class="tk-readout" id="fr-ro"></div><p class="status" id="fr-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="rechnen" data-label="Rechnen" data-yr="Übung" data-title="Rechentrainer" data-sub="Riemen, Kette, Fahrrad">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Rechentrainer</p>
+    <h2>Rechnen mit Riemen und Ketten</h2>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Riemen und Kette</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Riemen- und Kettengetriebe</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Riemen- und Kettengetriebe übertragen Drehbewegungen über <b>größere Abstände</b>. Beide Räder drehen <b>gleichsinnig</b>.</li>
+        <li data-step><b>Riemen:</b> i = d₂ : d₁. Leise, dämpft Stöße, kann aber rutschen (Zahnriemen nicht).</li>
+        <li data-step><b>Kette:</b> i = z₂ : z₁. Rutschfest und robust, braucht Schmierung, lauter.</li>
+        <li data-step>Fahrrad: großes Kettenblatt und kleines Ritzel = schneller Gang (schwer treten). Kleines Kettenblatt und großes Ritzel = leichter Berggang.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Untersuchung</span><p>Zählt an einem Fahrrad die Zähne von Kettenblatt und Ritzeln. Berechnet für jeden Gang, wie weit das Rad pro Kurbelumdrehung fährt.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Getriebe-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+gears($('#g1'), {type: 'riemen', z1: 40, z2: 100, n1: 60});
+gears($('#g2'), {type: 'kette', z1: 32, z2: 16, n1: 60});
+sorter($('#sort'), [{id: 'r', name: 'Riemen'}, {id: 'k', name: 'Kette'}], [
+  {t: 'kann durchrutschen', c: 'r'}, {t: 'leise', c: 'r'}, {t: 'braucht Öl', c: 'k'}, {t: 'überträgt große Kräfte ohne Schlupf', c: 'k'}, {t: 'i aus den Durchmessern', c: 'r'}, {t: 'Fahrrad, Motorrad', c: 'k'}, {t: 'Waschmaschine, Ständerbohrmaschine', c: 'r'}
+]);
+const U_RAD = 2.1; let zv = 44, zh = 16;
+function fr() {
+  const n = +$('#fr-n').value, i = zv / zh, s = U_RAD * i, v = s * n * 60 / 1000;
+  $('#fr-nv').textContent = n + ' 1/min';
+  readout($('#fr-ro'), [['Hinterrad-Umdrehungen pro Kurbel', numDE(i, 2)], ['Strecke pro Kurbelumdrehung', numDE(s, 2) + ' m'], ['Geschwindigkeit', numDE(v, 1) + ' km/h']]);
+  $('#fr-st').innerHTML = i < 1.6 ? '<b>Berggang:</b> leicht zu treten, aber langsam.' : i > 3 ? '<b>Schneller Gang:</b> pro Umdrehung weit, aber schwer zu treten – gut bergab.' : '<b>Mittlerer Gang</b> für die Ebene.';
+}
+seg($('#fr-v'), [[34, 'vorne 34'], [44, 'vorne 44'], [50, 'vorne 50']], v => { zv = +v; fr(); }, 44);
+seg($('#fr-h'), [[11, 'hinten 11'], [16, 'hinten 16'], [21, 'hinten 21'], [28, 'hinten 28'], [34, 'hinten 34']], v => { zh = +v; fr(); }, 16);
+$('#fr-n').oninput = fr; fr();
+taskSet($('#ts'), () => {
+  const t = randInt(0, 1);
+  if (t === 0) { const d1 = pick([40, 50, 60, 80]), d2 = pick([120, 160, 200, 240]), n1 = pick([1400, 2800]); return {key: `${d1}${d2}${n1}`, tag: 'Riemengetriebe', q: `d₁ = ${d1} mm, d₂ = ${d2} mm, n₁ = ${n1} 1/min`, fields: [{l: 'i', a: +(d2 / d1).toFixed(2), tol: .011}, {l: 'n₂', a: Math.round(n1 * d1 / d2), tol: 1, unit: '1/min'}], hint: 'i = d₂ : d₁, n₂ = n₁ : i'}; }
+  const v = pick([34, 44, 50]), h = pick([11, 14, 17, 22, 34]); return {key: `f${v}${h}`, tag: 'Fahrrad (Umfang 2,1 m)', q: `Kettenblatt ${v}, Ritzel ${h}. Wie weit fährt das Rad pro Kurbelumdrehung?`, fields: [{l: 'Strecke', a: +(2.1 * v / h).toFixed(2), tol: .02, unit: 'm'}], hint: '2,1 m · (z vorne : z hinten)'};
+}, {n: 4});
+mcQuiz($('#quiz'), [
+  {q: 'Wie drehen die Räder beim offenen Riemengetriebe?', a: ['gleichsinnig', 'gegensinnig', 'gar nicht', 'abwechselnd'], ok: 0},
+  {q: 'Was ist ein Nachteil des Riemens?', a: ['Er kann rutschen.', 'Er ist laut.', 'Er braucht Öl.', 'Er ist schwer.'], ok: 0},
+  {q: 'Welcher Gang ist am leichtesten zu treten?', a: ['kleines Kettenblatt, großes Ritzel', 'großes Kettenblatt, kleines Ritzel', 'beide groß', 'beide klein'], ok: 0},
+  {q: 'Kettenblatt 48, Ritzel 12: Umdrehungen des Hinterrads je Kurbel?', a: ['4', '0,25', '36', '60'], ok: 0},
+  {q: 'Wie berechnet man i beim Riemen?', a: ['d₂ : d₁', 'd₁ : d₂', 'd₁ · d₂', 'z₁ : z₂'], ok: 0}
+]);
+</script>

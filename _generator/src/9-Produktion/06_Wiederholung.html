@@ -1,0 +1,88 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: CAD/CAM und Maschinen, Fertigungsarten und Kosten, Nachhaltigkeit und Arbeitswelt | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Laser oder 3D-Druck · Kostenrechner · Lebenszyklus · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Von der Idee zum Serienprodukt</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">CAD und CAM, Lasercutter und 3D-Druck, Serienfertigung, Nachhaltigkeit und Industrie 4.0: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Maschinen" data-yr="Trainer" data-title="T1 Laser und 3D-Druck" data-sub="Was passt?">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Laser oder 3D-Druck?</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Kosten" data-yr="Trainer" data-title="T2 Kosten" data-sub="Ab wann lohnt sich die Serie?">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Ab wann lohnt sich die Serie?</h2><p class="lead">Eine Bohrschablone kostet 40 € (Material und Arbeitszeit). Ohne Schablone kostet ein Brett 5 €, mit Schablone 3 €.</p></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Nachhaltigkeit" data-yr="Trainer" data-title="T3 Nachhaltigkeit" data-sub="Lebenszyklus">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Lebenszyklus</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['CAD', 'Konstruieren am Computer'], ['CAM', 'Maschinen fertigen mit CAD-Daten'], ['STL', 'Dateiformat für 3D-Modelle'], ['Slicer', 'zerlegt das Modell in Schichten'],
+  ['Infill', 'Füllung im Inneren eines 3D-Drucks'], ['Gravieren', 'Laser fährt Zeile für Zeile mit wenig Leistung'], ['Serienfertigung', 'begrenzte Stückzahl gleicher Teile'], ['Lehre', 'prüft schnell ein Maß'],
+  ['Fixkosten', 'einmalige Kosten, z. B. für eine Vorrichtung'], ['Produktlebenszyklus', 'von der Rohstoffgewinnung bis zum Recycling'], ['Smart Factory', 'vernetzte Fabrik'], ['Digitaler Zwilling', 'virtuelles Abbild einer Maschine']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1'), [{id: 'l', name: 'Lasercutter'}, {id: 'd', name: '3D-Drucker'}, {id: 'n', name: 'gar nicht'}], [
+  {t: 'Schild aus Sperrholz gravieren', c: 'l'}, {t: 'Ersatzteil mit Hohlraum', c: 'd'}, {t: 'PVC-Folie schneiden', c: 'n', why: 'Giftiges Chlorgas!'}, {t: 'Box aus MDF-Platten', c: 'l'}, {t: 'Figur aus PLA', c: 'd'}, {t: 'Aluminiumblech schneiden', c: 'n', why: 'Metall spiegelt den Laser.'}
+]);
+costSim($('#t2'), {a: {name: 'ohne Schablone', fix: 0, var: 5}, b: {name: 'mit Schablone', fix: 40, var: 3}, nMax: 50, n: 10});
+orderSteps($('#t3'), ['Rohstoffgewinnung', 'Herstellung', 'Transport', 'Nutzung', 'Recycling'], {label: 'Lebenszyklus'});
+mcQuiz($('#quiz'), [
+  {q: 'Wie entsteht im CAD eine Bohrung?', a: ['Zylinder abziehen', 'Zylinder vereinigen', 'Quader drehen', 'Text einfügen'], ok: 0},
+  {q: 'Welches Format nutzt der Lasercutter meist?', a: ['SVG', 'STL', 'MP4', 'JPG-Foto'], ok: 0},
+  {q: 'Welcher Werkstoff ist am Lasercutter verboten?', a: ['PVC', 'Sperrholz', 'MDF', 'Pappe'], ok: 0},
+  {q: 'Was bewirkt mehr Infill?', a: ['stabileres Teil, mehr Zeit', 'schnellerer Druck', 'glattere Oberfläche', 'weniger Material'], ok: 0},
+  {q: 'Wann sinken die Stückkosten?', a: ['bei großer Stückzahl', 'bei kleiner Stückzahl', 'nie', 'bei Einzelfertigung'], ok: 0},
+  {q: 'Was ist ein Beispiel für Massenfertigung?', a: ['Getränkedosen', 'Brücke', 'Maßanzug', 'Prototyp'], ok: 0},
+  {q: 'In welcher Phase entsteht beim Smartphone das meiste CO₂?', a: ['Herstellung', 'Nutzung', 'Transport', 'Entsorgung'], ok: 0},
+  {q: 'Was ist die nachhaltigste Lösung für ein altes Handy?', a: ['weiter nutzen oder reparieren', 'Hausmüll', 'Schublade', 'verbrennen'], ok: 0},
+  {q: 'Was kennzeichnet Industrie 4.0?', a: ['Vernetzung', 'Dampfmaschine', 'Fließband', 'Wasserkraft'], ok: 0},
+  {q: 'Wozu dient eine Vorrichtung?', a: ['Werkstücke immer gleich positionieren', 'Maschinen kühlen', 'Rechnungen schreiben', 'Werkzeug schärfen'], ok: 0},
+  {q: 'Was bedeutet CAM?', a: ['computerunterstützte Fertigung', 'computerunterstütztes Zeichnen', 'Kameramodul', 'Kostenrechnung'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann Bauteile im CAD aus Grundkörpern konstruieren.', href: '01_CAD_CAM.html#boolesch'},
+  {t: 'Ich kann den Weg von CAD zu CAM beschreiben.', href: '01_CAD_CAM.html#ablauf'},
+  {t: 'Ich kenne die Arbeitsweise und Sicherheitsregeln des Lasercutters.', href: '02_Laser_3D.html#laser'},
+  {t: 'Ich kann einen 3D-Druck im Slicer vorbereiten.', href: '02_Laser_3D.html#druck'},
+  {t: 'Ich kann Einzel-, Serien- und Massenfertigung unterscheiden und Stückkosten vergleichen.', href: '03_Serienfertigung.html#kosten'},
+  {t: 'Ich kann Produkte mit dem Lebenszyklus und einer Bewertungstabelle beurteilen.', href: '04_Nachhaltigkeit.html#bewertung'},
+  {t: 'Ich kann Industrie 4.0 erklären und technische Berufe nennen.', href: '05_Arbeitswelt.html#smart'}
+]);
+</script>

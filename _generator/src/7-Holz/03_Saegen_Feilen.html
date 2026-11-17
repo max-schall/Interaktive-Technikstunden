@@ -1,0 +1,130 @@
+<!--
+title: Sägen, Raspeln, Feilen, Schleifen
+short: Werkzeuge
+time: 2 Unterrichtsstunden
+q: Wie trennt man Holz mit Säge, Raspel, Feile und Schleifpapier?
+facts: Jede Schneide ist ein Keil – Spanen heißt Trennen | Feinsäge schneidet auf Stoß, Laubsäge auf Zug (Zähne zeigen zum Griff) | Laubsägeblatt richtig einspannen, senkrecht sägen, Innenschnitte über eine Bohrung | Raspel grob, Feile fein, Schleifpapier sehr fein; Körnung: kleine Zahl = grob | Immer in Faserrichtung schleifen
+inter: Säge-Zahnung animiert · Werkzeuge und Einsatz zuordnen · Laubsägearbeit ordnen · Körnungs-Trainer · Lückentext zum Keil
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Holz</p>
+      <h1>Sägen, Raspeln, Feilen, Schleifen</h1>
+      <p class="lead">Um aus einem Brett ein Werkstück zu machen, müssen Teile <b>abgetrennt</b> werden: grob mit der Säge, genauer mit Raspel und Feile, ganz fein mit Schleifpapier. Alle diese Werkzeuge haben etwas gemeinsam.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Schau dir Sägezähne, Raspel und Messer unter der Lupe an. Welche Form haben alle Schneiden?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie trennt man Holz mit Säge, Raspel, Feile und Schleifpapier?</p></div>
+      <div class="controls"><button class="btn primary" data-go="keil">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="keil" data-label="Keil" data-yr="Einstieg" data-title="Jede Schneide ist ein Keil" data-sub="Zerspanen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Der Keil</p>
+    <h2>Jede Schneide ist ein Keil</h2>
+    <p class="lead">Ein Keil dringt in den Werkstoff ein und hebt einen <b>Span</b> ab. Ein spitzer Keil schneidet leicht, bricht aber schneller. Ein stumpfer Keil ist stabil, braucht aber mehr Kraft.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 240" id="keilsvg" role="img" aria-label="Keil beim Spanen"></svg>
+      <div class="tk-row"><label>Keilwinkel β <input type="range" min="15" max="70" value="35" id="beta"> <span class="tk-val" id="beta-v"></span></label></div></div>
+    <div><div class="tk-readout" id="keil-ro"></div><div id="cloze-k" style="margin-top:1rem"></div></div>
+  </div>
+</section>
+
+<section class="station" id="saegen" data-label="Sägen" data-yr="Erarbeitung" data-title="Sägen" data-sub="Auf Stoß oder auf Zug?">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Sägen</p>
+    <h2>Auf Stoß oder auf Zug?</h2>
+    <p class="lead">Die Richtung der Zähne entscheidet, wann die Säge schneidet. Das dünne Blatt der Laubsäge würde beim Drücken knicken – deshalb schneidet sie auf <b>Zug</b>: Die Zähne zeigen zum <b>Griff</b>.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 440 200" id="zsvg" role="img" aria-label="Sägezahnung"></svg><div class="tk-row"><span id="z-seg"></span><button class="btn primary" id="z-go">Säge bewegen</button></div></div>
+    <div id="match-s"></div>
+  </div>
+</section>
+
+<section class="station" id="laubsaege" data-label="Laubsäge" data-yr="Werkstatt" data-title="Mit der Laubsäge arbeiten" data-sub="Schritt für Schritt">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Werkstatt</p>
+    <h2>Mit der Laubsäge arbeiten</h2>
+    <p class="lead">Bringe die Arbeitsschritte für einen Anhänger mit Innenausschnitt in die richtige Reihenfolge.</p>
+  </div>
+  <div id="order-l"></div>
+  <div class="merke mt"><p><b>Tipp:</b> Säge senkrecht und mit gleichmäßigen, langen Zügen. In Kurven das Werkstück drehen, nicht die Säge. Säge immer etwas <b>neben</b> der Linie – im Abfall.</p></div>
+</section>
+
+<section class="station" id="feilen" data-label="Raspeln & Feilen" data-yr="Erarbeitung" data-title="Raspeln, Feilen, Schleifen" data-sub="Von grob nach fein">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Raspeln, Feilen, Schleifen</p>
+    <h2>Von grob nach fein</h2>
+    <p class="lead">Die <b>Raspel</b> hat einzelne Zähne und nimmt viel Holz ab. Die <b>Feile</b> hat feine Rillen (Hiebe) und glättet. <b>Schleifpapier</b> macht die Oberfläche glatt. Die <b>Körnung</b> gibt an, wie viele Körner auf einen Zoll passen: <b>kleine Zahl = grob</b>, große Zahl = fein.</p>
+  </div>
+  <div id="ts-k"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Trennen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Sägen, Raspeln, Feilen, Schleifen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Beim <b>Spanen</b> dringt eine keilförmige Schneide in den Werkstoff ein und hebt Späne ab.</li>
+        <li data-step>Die <b>Feinsäge</b> schneidet auf Stoß. Die <b>Laubsäge</b> schneidet auf Zug: Die Zähne zeigen zum Griff.</li>
+        <li data-step>Laubsäge: Blatt straff einspannen, senkrecht sägen, im Abfall neben der Linie sägen, Innenschnitte über eine Bohrung beginnen.</li>
+        <li data-step>Nacharbeiten von grob nach fein: Raspel → Feile → Schleifpapier (z. B. Körnung 80 → 120 → 240). Geschliffen wird in Faserrichtung.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Praxis</span><p>Übe auf einem Reststück: eine gerade Linie, eine Kurve und einen Innenschnitt. Vergleicht eure Ergebnisse.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Werkzeug-Check</h2></div>
+  <div id="tf"></div>
+</section>
+
+<script>
+const kv = $('#beta');
+function keil() {
+  /* Freiwinkel α + Keilwinkel β + Spanwinkel γ = 90°; Werkzeug bewegt sich nach links */
+  const b = +kv.value, a = 8, g = 90 - a - b, r = Math.PI / 180;
+  const tx = 150, ty = 160, L = 150;
+  const fx = tx + L * Math.cos(a * r), fy = ty - L * Math.sin(a * r);
+  const sx = tx + L * Math.sin(g * r), sy = ty - L * Math.cos(g * r);
+  let s = `<rect x="20" y="160" width="390" height="60" fill="var(--wood)" stroke="var(--edge)" stroke-width="1.5"/><path d="M${tx} 172H400M${tx} 190H400M${tx} 206H400" stroke="var(--wood-2)"/><rect x="${tx}" y="150" width="${400 - tx}" height="10" fill="var(--bg)"/>`;
+  s += `<path d="M${tx} ${ty} L${fx} ${fy} L${sx} ${sy}Z" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/>`;
+  s += `<path d="M${tx - 2} ${ty - 4}q-30 -6 -40 -50q-6 -26 14 -34" fill="none" stroke="var(--wood-2)" stroke-width="9" stroke-linecap="round"/>`;
+  s += `<path d="M${tx + 46 * Math.sin(g * r)} ${ty - 46 * Math.cos(g * r)} A46 46 0 0 1 ${tx + 46 * Math.cos(a * r)} ${ty - 46 * Math.sin(a * r)}" fill="none" stroke="var(--accent)" stroke-width="3"/>`;
+  s += `<text x="${tx + 52}" y="${ty - 28}" style="font-family:var(--f-mono);font-weight:700;fill:var(--accent)">β = ${b}°</text><path d="M120 30h-70" stroke="var(--accent)" stroke-width="4"/><path d="M42 30l12-8v16z" fill="var(--accent)"/><text x="60" y="56" style="font-family:var(--f-mono);fill:var(--ink-2)">Schnittrichtung</text><text x="70" y="110" style="font-family:var(--f-mono);fill:var(--ink-2)">Span</text><text x="300" y="${fy - 6}" style="font-family:var(--f-mono);fill:var(--ink-2)">Schneide</text>`;
+  $('#keilsvg').innerHTML = s;
+  $('#beta-v').textContent = b + '°';
+  readout($('#keil-ro'), [['Keilwinkel', b + '°'], ['Schneiden', b < 30 ? 'sehr leicht' : b < 50 ? 'mittel' : 'schwer'], ['Haltbarkeit', b < 30 ? 'bricht leicht' : b < 50 ? 'gut' : 'sehr stabil'], ['geeignet für', b < 30 ? 'Messer, Stechbeitel' : b < 50 ? 'Holzsägen' : 'Metallsägen, Meißel']]);
+}
+kv.oninput = keil; keil();
+cloze($('#cloze-k'), 'Je {kleiner|größer} der Keilwinkel, desto leichter dringt die Schneide ein. Für harte Werkstoffe wie Metall braucht man einen {großen|kleinen} Keilwinkel, damit die Schneide nicht {ausbricht|rostet|glüht}.');
+let zmode = 'stoss', zx = 0, zrun = false;
+function zahn() {
+  const n = 14; let teeth = '';
+  for (let i = 0; i < n; i++) { const x = 40 + zx + i * 24; teeth += zmode === 'stoss' ? `L${x + 24} 110 L${x + 24} 128` : `L${x} 128 L${x + 24} 110`; }
+  const s = `<rect x="20" y="128" width="400" height="60" fill="var(--wood)" stroke="var(--edge)" stroke-width="1.5"/><path d="M${40 + zx} 60H${376 + zx}V110 ${teeth.replace(/^L/, 'L')}V60" fill="var(--steel)" stroke="var(--edge)" stroke-width="1.5"/>` +
+    `<rect x="${zmode === 'stoss' ? -10 + zx : 370 + zx}" y="50" width="70" height="40" rx="10" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="1.5"/><text x="${zmode === 'stoss' ? 25 + zx : 405 + zx}" y="76" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:#fff;font-size:13px">Griff</text>` +
+    `<text x="220" y="30" text-anchor="middle" style="font-family:var(--f-mono);font-weight:600;fill:var(--ink)">${zmode === 'stoss' ? 'Feinsäge: Zähne zeigen vom Griff weg → schneidet beim Drücken (Stoß)' : 'Laubsäge: Zähne zeigen zum Griff → schneidet beim Ziehen (Zug)'}</text>`;
+  $('#zsvg').innerHTML = s;
+}
+seg($('#z-seg'), [['stoss', 'Feinsäge'], ['zug', 'Laubsäge']], v => { zmode = v; zx = 0; zahn(); });
+$('#z-go').onclick = () => { if (zrun) return; zrun = true; let t = 0; const id = setInterval(() => { t++; zx = 30 * Math.sin(t / 6); zahn(); if (t > 76) { clearInterval(id); zrun = false; zx = 0; zahn(); } }, 30); };
+matcher($('#match-s'), [['Feinsäge', 'gerade, saubere Schnitte in Leisten und Brettern'], ['Laubsäge', 'Kurven und Innenausschnitte in dünnem Sperrholz'], ['Gestellsäge', 'lange Schnitte in dicken Brettern'], ['Raspel', 'viel Holz grob abtragen'], ['Feile', 'Kanten glätten und genau nacharbeiten'], ['Schleifpapier', 'Oberfläche glatt machen']]);
+orderSteps($('#order-l'), ['Vorlage aufkleben oder Umriss anzeichnen', 'Für den Innenausschnitt ein Loch bohren', 'Sägeblatt mit den Zähnen nach unten (zum Griff) einspannen, durch das Loch führen', 'Innenausschnitt sägen, dann die Außenform sägen', 'Kanten mit Feile und Schleifpapier glätten'], {label: 'Arbeitsschritte'});
+taskSet($('#ts-k'), () => { const ks = [40, 60, 80, 120, 180, 240, 320], a = pick(ks), b = pick(ks.filter(x => x !== a)); return {key: a + '-' + b, tag: 'Körnung', q: `Schleifpapier <b>K ${a}</b> oder <b>K ${b}</b>: Welches ist <b>feiner</b>?`, fields: [{l: 'Körnung', a: Math.max(a, b)}], hint: 'Große Zahl = viele kleine Körner = fein.'}; }, {n: 4});
+trueFalse($('#tf'), [
+  {t: 'Bei der Laubsäge zeigen die Zähne zum Griff.', ok: true, why: 'Sie schneidet auf Zug.'},
+  {t: 'Man sägt genau auf der Linie.', ok: false, why: 'Neben der Linie im Abfall – dann bleibt das Maß erhalten.'},
+  {t: 'Schleifpapier K 60 ist feiner als K 240.', ok: false, why: 'Kleine Zahl = grob.'},
+  {t: 'Eine Raspel nimmt mehr Holz ab als eine Feile.', ok: true},
+  {t: 'Geschliffen wird quer zur Faser.', ok: false, why: 'In Faserrichtung – sonst entstehen Kratzer.'},
+  {t: 'Alle Schneiden haben die Form eines Keils.', ok: true}
+]);
+</script>

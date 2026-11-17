@@ -1,0 +1,84 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Planung, Linien und Maße, Ansichten | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Phasen ordnen · Linien zuordnen · Ansichten-Quiz · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Skizzen und technische Zeichnungen</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Von der Idee zum Produkt, Linien und Bemaßung, Dreitafelbild und räumliche Darstellung: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Planung" data-yr="Trainer" data-title="T1 Planung" data-sub="Phasen der Produktentwicklung">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Von der Idee zum Produkt</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Linien" data-yr="Trainer" data-title="T2 Linien und Maße" data-sub="Linienarten zuordnen">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Linien und Maße</h2></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Ansichten" data-yr="Trainer" data-title="T3 Ansichten" data-sub="Welche Zeichnung passt?">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Ansichten erkennen</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="8 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Anforderungsliste', 'Muss- und Wunsch-Anforderungen an ein Produkt'], ['Stückliste', 'alle Teile mit Anzahl, Werkstoff und Maßen'], ['Arbeitsablaufplan', 'Arbeitsschritte mit Werkzeugen'], ['Skizze', 'Freihandzeichnung einer Idee'],
+  ['Strichlinie', 'verdeckte Kante'], ['Strichpunktlinie', 'Mittellinie'], ['Maßhilfslinie', 'verlängert die Kante für das Maß'], ['Maßstab 1 : 2', 'halb so groß gezeichnet'],
+  ['Draufsicht', 'Ansicht von oben, unter der Vorderansicht'], ['Seitenansicht', 'Ansicht von links, rechts neben der Vorderansicht'], ['Kabinettprojektion', 'Tiefe unter 45° halbiert'], ['Isometrie', 'alle Kanten wahr, 30°']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+orderSteps($('#t1'), ['Problem erkennen', 'Anforderungen festlegen', 'Ideen skizzieren', 'Lösung auswählen', 'Planen', 'Fertigen', 'Bewerten'], {label: 'Phasen'});
+matcher($('#t2'), [['breite Volllinie', 'sichtbare Kanten'], ['schmale Volllinie', 'Maßlinien und Maßhilfslinien'], ['Strichlinie', 'verdeckte Kanten'], ['Strichpunktlinie', 'Mittellinien'], ['Ø', 'Durchmesser']]);
+voxQuiz($('#t3'), VOX_BODIES);
+mcQuiz($('#quiz'), [
+  {q: 'Was steht in der Stückliste?', a: ['alle Teile mit Werkstoff und Maßen', 'die Reihenfolge der Arbeitsschritte', 'die Preise im Baumarkt', 'die Ideenskizzen'], ok: 0},
+  {q: 'In welcher Einheit stehen Maße in technischen Zeichnungen?', a: ['mm (ohne Einheit)', 'cm', 'm', 'Zoll'], ok: 0},
+  {q: 'Von wo sind senkrechte Maßzahlen lesbar?', a: ['von rechts', 'von links', 'von oben', 'gar nicht'], ok: 0},
+  {q: 'Wo steht die Draufsicht?', a: ['unter der Vorderansicht', 'rechts neben der Vorderansicht', 'über der Vorderansicht', 'links neben der Seitenansicht'], ok: 0},
+  {q: 'Welche Maße zeigt die Seitenansicht?', a: ['Tiefe und Höhe', 'Breite und Höhe', 'Breite und Tiefe', 'nur die Höhe'], ok: 0},
+  {q: 'Ein Teil ist 80 mm tief. Länge der Tiefenkante in Kabinettprojektion?', a: ['40 mm', '80 mm', '160 mm', '20 mm'], ok: 0},
+  {q: 'Welche Linie zeigt eine verdeckte Kante?', a: ['Strichlinie', 'breite Volllinie', 'Strichpunktlinie', 'Maßlinie'], ok: 0},
+  {q: 'Was bedeutet der Maßstab 2 : 1?', a: ['doppelt so groß gezeichnet', 'halb so groß gezeichnet', 'in Originalgröße', 'zwei Ansichten'], ok: 0},
+  {q: 'Womit vergleicht man mehrere Ideen?', a: ['mit einer Bewertungstabelle', 'mit der Stückliste', 'mit dem Messschieber', 'mit dem Maßstab'], ok: 0}
+], {pick: 8});
+selfCheck($('#sc'), [
+  {t: 'Ich kann die Phasen von der Idee zum Produkt nennen.', href: '01_Idee_Planung.html#phasen'},
+  {t: 'Ich kann eine Anforderungsliste erstellen und Ideen bewerten.', href: '01_Idee_Planung.html#bewerten'},
+  {t: 'Ich kann Stückliste und Arbeitsablaufplan lesen.', href: '01_Idee_Planung.html#unterlagen'},
+  {t: 'Ich kenne die Linienarten und ihre Bedeutung.', href: '02_Linien_Bemassung.html#linien'},
+  {t: 'Ich kann ein Werkstück normgerecht bemaßen.', href: '02_Linien_Bemassung.html#regeln'},
+  {t: 'Ich kann ein Dreitafelbild lesen und zeichnen.', href: '03_Dreitafelbild.html#ansichten'},
+  {t: 'Ich kann Werkstücke in Kabinettprojektion und Isometrie zeichnen.', href: '04_Raeumlich.html#vergleich'}
+]);
+</script>

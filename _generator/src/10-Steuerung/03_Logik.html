@@ -1,0 +1,92 @@
+<!--
+title: Logische Grundschaltungen
+short: Logik
+time: 2 Unterrichtsstunden
+q: Wie trifft eine Schaltung Entscheidungen?
+facts: Logische Schaltungen verarbeiten Signale 0 und 1 | UND: Ausgang 1 nur, wenn alle Eingänge 1 sind (Reihenschaltung von Schaltern) | ODER: Ausgang 1, wenn mindestens ein Eingang 1 ist (Parallelschaltung) | NICHT: kehrt das Signal um (Öffner) | Wahrheitstabelle | Logikbausteine (ICs) enthalten viele Gatter | Anwendungen: Zweihandbedienung, Alarmanlage, Garagentor
+inter: UND-, ODER- und NICHT-Gatter mit Schalter-Schaltung und Wahrheitstabelle · Anwendungen zuordnen · Schaltung vorhersagen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Steuerung und Regelung</p>
+      <h1>Logische Grundschaltungen</h1>
+      <p class="lead">Eine Stanzmaschine darf nur laufen, wenn der Arbeiter <b>beide</b> Hände auf den Tastern hat. Die Alarmanlage heult, wenn Tür <b>oder</b> Fenster geöffnet werden. Solche Entscheidungen treffen <b>Logikschaltungen</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wann geht im Auto die Warnleuchte „Tür offen“ an?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie trifft eine Schaltung Entscheidungen?</p></div>
+      <div class="controls"><button class="btn primary" data-go="und">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="und" data-label="UND" data-yr="Erarbeitung" data-title="Die UND-Schaltung" data-sub="Alle müssen 1 sein">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · UND</p>
+    <h2>UND: nur wenn alle Eingänge 1 sind</h2>
+    <p class="lead">Tippe auf die Eingänge A und B. Mit Schaltern entspricht UND einer <b>Reihenschaltung</b>.</p>
+  </div>
+  <div id="lg-und"></div>
+</section>
+
+<section class="station" id="oder" data-label="ODER" data-yr="Erarbeitung" data-title="Die ODER-Schaltung" data-sub="Einer reicht">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · ODER</p>
+    <h2>ODER: wenn mindestens ein Eingang 1 ist</h2>
+    <p class="lead">Mit Schaltern entspricht ODER einer <b>Parallelschaltung</b>.</p>
+  </div>
+  <div id="lg-oder"></div>
+</section>
+
+<section class="station" id="nicht" data-label="NICHT" data-yr="Erarbeitung" data-title="Die NICHT-Schaltung" data-sub="Umkehren">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · NICHT</p>
+    <h2>NICHT: kehrt das Signal um</h2>
+    <p class="lead">Aus 0 wird 1, aus 1 wird 0. Mit Schaltern entspricht das einem <b>Öffner</b>. Im Schaltzeichen zeigt ein kleiner Kreis am Ausgang die Umkehrung.</p>
+  </div>
+  <div id="lg-nicht"></div>
+</section>
+
+<section class="station" id="anwendung" data-label="M1 Anwendungen" data-yr="Material M1" data-title="Logik im Alltag" data-sub="Welche Verknüpfung?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Welche Verknüpfung steckt dahinter?</h2>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Logik</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Logische Grundschaltungen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Logikschaltungen verarbeiten <b>digitale Signale</b>: 0 (aus, keine Spannung) und 1 (an, Spannung).</li>
+        <li data-step><b>UND (&amp;):</b> Y = 1 nur, wenn A = 1 <b>und</b> B = 1. Mit Schaltern: Reihenschaltung.</li>
+        <li data-step><b>ODER (≥1):</b> Y = 1, wenn A = 1 <b>oder</b> B = 1 (oder beide). Mit Schaltern: Parallelschaltung.</li>
+        <li data-step><b>NICHT (1 mit Kreis):</b> Y ist das Gegenteil von A. Mit Schaltern: Öffner. Die Wahrheitstabelle zeigt alle Kombinationen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Praxis</span><p>Baut auf dem Steckbrett eine UND- und eine ODER-Schaltung mit zwei Tastern und einer LED auf.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Was zeigt die Lampe?</h2></div>
+  <div id="ts"></div>
+</section>
+
+<script>
+logic($('#lg-und'), {type: 'UND'});
+logic($('#lg-oder'), {type: 'ODER'});
+logic($('#lg-nicht'), {type: 'NICHT'});
+sorter($('#sort'), [{id: 'u', name: 'UND'}, {id: 'o', name: 'ODER'}, {id: 'n', name: 'NICHT'}], [
+  {t: 'Presse läuft nur, wenn beide Hände auf den Tastern sind', c: 'u'}, {t: 'Alarm, wenn Tür oder Fenster offen ist', c: 'o'}, {t: 'Innenlicht im Auto an, wenn irgendeine Tür offen ist', c: 'o'},
+  {t: 'Nachtlicht an, wenn es NICHT hell ist', c: 'n'}, {t: 'Waschmaschine startet nur bei geschlossener Tür und gedrückter Starttaste', c: 'u'}, {t: 'Klingel an Vorder- oder Hintertür', c: 'o'}
+]);
+taskSet($('#ts'), () => {
+  const T = pick(['UND', 'ODER', 'NICHT']), A = randInt(0, 1), B = randInt(0, 1), Y = T === 'UND' ? A & B : T === 'ODER' ? A | B : 1 - A;
+  return {key: T + A + B, tag: T, q: T === 'NICHT' ? `NICHT-Gatter, A = <b>${A}</b>` : `${T}-Gatter, A = <b>${A}</b>, B = <b>${B}</b>`, fields: [{l: 'Y', a: Y}]};
+}, {n: 6});
+</script>

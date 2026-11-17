@@ -1,0 +1,119 @@
+<!--
+title: Wind- und Wasserkraft
+short: Wind & Wasser
+time: 2 Unterrichtsstunden
+q: Wie nutzen Windräder und Wasserkraftwerke die Energie der Natur?
+facts: Windenergieanlage: Rotor, Gondel mit Getriebe und Generator, Turm, Fundament | Die Leistung wächst mit der dritten Potenz der Windgeschwindigkeit: doppelter Wind = achtfache Leistung | Anlaufgeschwindigkeit ca. 3 m/s, Abschaltung bei Sturm ca. 25 m/s | Wasserkraft: Laufwasserkraftwerk, Speicherkraftwerk, Pumpspeicherkraftwerk | Vor- und Nachteile abwägen
+inter: Windrad erkunden · Leistungskurve mit Windgeschwindigkeit · Wasserkraftwerke zuordnen · Vor- und Nachteile sortieren · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Energieversorgung</p>
+      <h1>Wind- und Wasserkraft</h1>
+      <p class="lead">Ein modernes Windrad ist höher als der Kölner Dom, ein Rotorblatt so lang wie ein Fußballfeld breit. Eine einzige Anlage versorgt Tausende Haushalte mit Strom – wenn der Wind weht.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum stehen die meisten Windräder an der Küste oder auf Hügeln?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie nutzen Windräder und Wasserkraftwerke die Energie der Natur?</p></div>
+      <div class="controls"><button class="btn primary" data-go="windrad">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="windrad" data-label="Windrad" data-yr="Erarbeitung" data-title="Die Windenergieanlage" data-sub="Aufbau">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Windrad</p>
+    <h2>Aufbau einer Windenergieanlage</h2>
+    <p class="lead">Tippe die Bauteile an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 360 400" id="wr" role="img" aria-label="Windenergieanlage">
+      <g data-part="turm"><path d="M165 120h30l12 250h-54z" fill="var(--surface-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="fundament"><rect x="120" y="370" width="120" height="22" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="gondel"><rect x="150" y="96" width="110" height="34" rx="8" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><rect x="195" y="104" width="24" height="18" fill="var(--steel)"/><rect x="225" y="104" width="26" height="18" fill="var(--good)"/></g>
+      <g data-part="rotor"><circle cx="146" cy="113" r="12" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><path d="M146 101L132 10l20 5zM146 125L70 185l-6-18zM146 125l70 60-16 10z" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="anemometer"><path d="M245 96v-14M238 82h14" stroke="var(--ink)" stroke-width="3"/></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="wr-mode"></span></div><div class="box" id="wr-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="leistung" data-label="Leistungskurve" data-yr="Erarbeitung" data-title="Die Leistungskurve" data-sub="Wind hoch drei">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Leistungskurve</p>
+    <h2>Doppelter Wind – achtfache Leistung</h2>
+    <p class="lead">Die Leistung des Windes wächst mit der <b>dritten Potenz</b> der Windgeschwindigkeit. Ab etwa 3 m/s dreht die Anlage, ab etwa 12 m/s erreicht sie ihre Nennleistung, bei Sturm (25 m/s) schaltet sie zum Schutz ab.</p>
+  </div>
+  <div class="cols-2"><div><div class="tk-row"><label>Windgeschwindigkeit <input type="range" min="0" max="30" step="0.5" value="8" id="wl-v"> <span class="tk-val" id="wl-vv"></span></label></div><div class="tk-readout" id="wl-ro"></div><p class="status" id="wl-st"></p></div><div id="wl-pl"></div></div>
+</section>
+
+<section class="station" id="wasser" data-label="Wasserkraft" data-yr="Erarbeitung" data-title="Wasserkraftwerke" data-sub="Lauf, Speicher, Pumpspeicher">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Wasserkraft</p>
+    <h2>Drei Arten von Wasserkraftwerken</h2>
+    <p class="lead">Fließendes oder fallendes Wasser treibt eine <b>Wasserturbine</b>, die einen Generator dreht. Ordne zu.</p>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="bewerten" data-label="M1 Bewerten" data-yr="Material M1" data-title="Vor- und Nachteile" data-sub="Wind und Wasser bewerten">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Vor- und Nachteile abwägen</h2>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Wind und Wasser</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Wind- und Wasserkraft</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Windenergieanlage:</b> Rotor → Welle → Getriebe → Generator in der Gondel; Turm und Fundament tragen alles.</li>
+        <li data-step>Die Leistung wächst mit der <b>dritten Potenz</b> der Windgeschwindigkeit. Anlauf ca. 3 m/s, Abschaltung ca. 25 m/s.</li>
+        <li data-step><b>Wasserkraft:</b> Laufwasserkraftwerk (Fluss, Dauerbetrieb), Speicherkraftwerk (Stausee), Pumpspeicherkraftwerk (speichert überschüssigen Strom).</li>
+        <li data-step>Wind und Wasser sind erneuerbar und CO₂-arm, aber Wind schwankt; Bauwerke verändern Landschaft und Lebensräume.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Bauauftrag</span><p>Baut ein Modellwindrad mit drei Flügeln und einem kleinen Generator. Testet verschiedene Flügelformen vor einem Ventilator und messt die Spannung.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Wind- und Wasser-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+explorer($('#wr'), $('#wr-panel'), [
+  {id: 'rotor', n: 'Rotor mit Rotorblättern', t: 'Die Blätter sind wie Flugzeugflügel geformt. Der Wind erzeugt Auftrieb und dreht den Rotor. Die Blätter lassen sich verstellen (Pitch).'},
+  {id: 'gondel', n: 'Gondel', t: 'Enthält Welle, Getriebe (grau) und Generator (grün). Sie dreht sich automatisch in den Wind.'},
+  {id: 'turm', n: 'Turm', t: 'Bis über 160 m hoch – weiter oben weht der Wind stärker und gleichmäßiger.'},
+  {id: 'fundament', n: 'Fundament', t: 'Ein riesiger Stahlbetonsockel, der die Anlage auch bei Sturm hält.'},
+  {id: 'anemometer', n: 'Windmesser', t: 'Misst Windgeschwindigkeit und -richtung. Die Steuerung richtet danach Gondel und Blätter aus.'}
+], {modeRoot: $('#wr-mode'), label: 'Windrad'});
+const Pw = v => v < 3 || v > 25 ? 0 : v >= 12 ? 4000 : 4000 * ((v ** 3 - 27) / (1728 - 27));
+const wp = plot($('#wl-pl'), {x: [0, 30], y: [0, 4500], xs: 5, ys: 1000, xl: 'Wind in m/s', yl: 'Leistung in kW', series: [{pts: [...Array(121)].map((_, i) => [i / 4, Pw(i / 4)]), cls: 's0'}]});
+function wl() {
+  const v = +$('#wl-v').value, P = Pw(v);
+  $('#wl-vv').textContent = numDE(v, 1) + ' m/s';
+  wp.set({marks: [{x: v, y: P, t: numDE(P, 0) + ' kW'}]});
+  readout($('#wl-ro'), [['Wind', numDE(v, 1) + ' m/s = ' + numDE(v * 3.6, 0) + ' km/h'], ['Leistung', numDE(P, 0) + ' kW'], ['versorgt gerade ≈', numDE(P / 0.4, 0) + ' Haushalte']]);
+  $('#wl-st').innerHTML = v < 3 ? 'Zu wenig Wind – der Rotor steht still.' : v > 25 ? '<b>Sturm:</b> Die Anlage dreht die Blätter aus dem Wind und schaltet zum Schutz ab.' : v >= 12 ? 'Die Anlage liefert ihre <b>Nennleistung</b>. Mehr geht nicht – die Blätter werden etwas aus dem Wind gedreht.' : `Doppelter Wind ergibt achtfache Leistung: bei ${numDE(v / 2, 1)} m/s wären es nur etwa ${numDE(Pw(v / 2), 0)} kW.`;
+}
+$('#wl-v').oninput = wl; wl();
+matcher($('#match'), [['Laufwasserkraftwerk', 'an einem Fluss, läuft rund um die Uhr'], ['Speicherkraftwerk', 'Stausee in den Bergen, Wasser fällt durch Rohre ins Tal'], ['Pumpspeicherkraftwerk', 'pumpt bei Stromüberschuss Wasser nach oben, gibt es bei Bedarf wieder ab'], ['Gezeitenkraftwerk', 'nutzt Ebbe und Flut an der Küste']]);
+sorter($('#sort'), [{id: 'v', name: 'Vorteil'}, {id: 'n', name: 'Nachteil'}], [
+  {t: 'kein CO₂ im Betrieb', c: 'v'}, {t: 'Wind weht nicht immer', c: 'n'}, {t: 'Brennstoff kostet nichts', c: 'v'}, {t: 'Vögel und Fledermäuse können verletzt werden', c: 'n'},
+  {t: 'Stauseen überfluten Täler', c: 'n'}, {t: 'Wasserkraft ist gut planbar', c: 'v'}, {t: 'Windräder verändern das Landschaftsbild', c: 'n'}, {t: 'Flächen unter Windrädern bleiben nutzbar', c: 'v'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Wo sitzt der Generator einer Windenergieanlage?', a: ['in der Gondel', 'im Fundament', 'im Rotorblatt', 'im Turmfuß'], ok: 0},
+  {q: 'Der Wind verdoppelt sich. Wie ändert sich die Leistung (unter Nennleistung)?', a: ['achtfach', 'doppelt', 'vierfach', 'gleich'], ok: 0},
+  {q: 'Warum schaltet ein Windrad bei Sturm ab?', a: ['zum Schutz vor Schäden', 'weil es zu viel Strom gibt', 'weil der Generator kalt ist', 'gar nicht'], ok: 0},
+  {q: 'Welches Kraftwerk kann Strom speichern?', a: ['Pumpspeicherkraftwerk', 'Laufwasserkraftwerk', 'Kohlekraftwerk', 'Windrad'], ok: 0},
+  {q: 'Was dreht im Wasserkraftwerk den Generator?', a: ['eine Wasserturbine', 'ein Dampfkessel', 'Solarzellen', 'ein Motor'], ok: 0}
+]);
+</script>

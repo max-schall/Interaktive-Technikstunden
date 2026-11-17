@@ -1,0 +1,126 @@
+<!--
+title: Widerstand und ohmsches Gesetz
+short: Widerstand
+time: 2 Unterrichtsstunden
+q: Wie hängen Spannung, Stromstärke und Widerstand zusammen?
+facts: Der Widerstand R (Einheit Ohm, Ω) gibt an, wie stark ein Bauteil den Strom hemmt | Ohmsches Gesetz: U = R · I, daraus R = U : I und I = U : R | Die U-I-Kennlinie eines Widerstands ist eine Gerade durch den Ursprung | Formeldreieck zum Umstellen | Der Widerstand eines Drahtes hängt von Länge, Querschnitt und Material ab
+inter: Messreihe im Simulator mit Kennlinie · Formeldreieck · Rechentrainer U, R, I · Drahtwiderstand richtig/falsch
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der elektrische Stromkreis</p>
+      <h1>Widerstand und ohmsches Gesetz</h1>
+      <p class="lead">Eine LED braucht nur 20 mA – an 9 V würde sie ohne „Bremse“ sofort durchbrennen. Diese Bremse heißt <b>Widerstand</b>. Wie stark sie wirkt, beschreibt eines der wichtigsten Gesetze der Elektrotechnik.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum wird ein langer, dünner Draht beim Stromfluss warm?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie hängen Spannung, Stromstärke und Widerstand zusammen?</p></div>
+      <div class="controls"><button class="btn primary" data-go="messreihe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="messreihe" data-label="Messreihe" data-yr="Erarbeitung" data-title="Eine Messreihe" data-sub="U verändern, I messen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Messreihe</p>
+    <h2>Eine Messreihe aufnehmen</h2>
+    <p class="lead">Stelle verschiedene Spannungen ein und trage jede Messung mit „Messwert speichern“ ins Diagramm ein. Wähle danach einen anderen Widerstand.</p>
+  </div>
+  <div class="cols-2">
+    <div><div id="c1"></div><div class="controls"><button class="btn primary" id="save">Messwert speichern</button><button class="btn" id="clr">Löschen</button></div></div>
+    <div><div id="pl"></div><div class="table-wrap"><table class="cmp" id="tab"><thead><tr><th>R</th><th>U in V</th><th>I in mA</th><th>U : I</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+</section>
+
+<section class="station" id="gesetz" data-label="Ohmsches Gesetz" data-yr="Erarbeitung" data-title="Das ohmsche Gesetz" data-sub="U = R · I">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Ohmsches Gesetz</p>
+    <h2>U = R · I</h2>
+    <p class="lead">Verdoppelt man die Spannung, verdoppelt sich die Stromstärke: <b>U und I sind proportional</b>. Der Quotient U : I ist immer gleich – das ist der <b>Widerstand R</b>. Mit dem <b>Formeldreieck</b> stellst du die Formel um: Halte die gesuchte Größe zu.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 300 250" id="dreieck" role="img" aria-label="Formeldreieck" style="font-family:var(--f-mono)"></svg><div class="tk-row"><span id="dr-seg"></span></div></div>
+    <div class="box" id="dr-t"></div>
+  </div>
+</section>
+
+<section class="station" id="rechnen" data-label="Rechnen" data-yr="Übung" data-title="Rechentrainer" data-sub="U, R oder I gesucht">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Rechentrainer</p>
+    <h2>Rechnen mit dem ohmschen Gesetz</h2>
+    <p class="lead">Achte auf die Einheiten: Stromstärke in Ampere einsetzen (250 mA = 0,25 A).</p>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="draht" data-label="M1 Draht" data-yr="Material M1" data-title="Widerstand eines Drahtes" data-sub="Länge, Dicke, Material">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Wovon hängt der Widerstand eines Drahtes ab?</h2>
+    <p class="lead">Ein Draht hat einen umso größeren Widerstand, je <b>länger</b> und je <b>dünner</b> er ist. Außerdem kommt es auf das <b>Material</b> an: Kupfer leitet viel besser als Eisen oder Konstantan.</p>
+  </div>
+  <div id="tf"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Widerstand</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Widerstand und ohmsches Gesetz</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Der <b>Widerstand R</b> gibt an, wie stark ein Bauteil den Strom hemmt. Einheit: <b>Ohm (Ω)</b>; 1 kΩ = 1000 Ω.</li>
+        <li data-step><b>Ohmsches Gesetz:</b> <b>U = R · I</b>, umgestellt R = U : I und I = U : R.</li>
+        <li data-step>Bei einem festen Widerstand sind U und I <b>proportional</b>: Die Kennlinie ist eine Gerade durch den Ursprung.</li>
+        <li data-step>Ein Draht hat einen großen Widerstand, wenn er lang und dünn ist und aus schlecht leitendem Material besteht.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Beispiel</span><p>U = 9 V, R = 450 Ω → I = U : R = 9 V : 450 Ω = 0,02 A = 20 mA.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Ohm-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+let rows = [];
+const cc = circuit($('#c1'), {mode: 'series', loads: [{t: 'res', R: 100, name: 'R'}], U: 4, uMax: 12, uStep: 1, editR: true, rMin: 50, rMax: 300, show: ['U', 'I', 'R']});
+const pl = plot($('#pl'), {x: [0, 12], y: [0, 250], xs: 2, ys: 50, xl: 'U in V', yl: 'I in mA', series: []});
+function drawRows() {
+  const byR = {}; rows.forEach(r => (byR[r.R] = byR[r.R] || []).push([r.U, r.I * 1000]));
+  pl.set({series: Object.entries(byR).map(([R, p], i) => ({pts: [[0, 0], ...p.sort((a, b) => a[0] - b[0])], cls: 's' + (i % 3), name: R + ' Ω'})).slice(0, 3), marks: rows.map(r => ({x: r.U, y: r.I * 1000}))});
+  $('#tab tbody').innerHTML = rows.map(r => `<tr><td>${r.R} Ω</td><td>${numDE(r.U, 1)}</td><td>${numDE(r.I * 1000, 1)}</td><td>${r.I ? numDE(r.U / r.I, 0) + ' Ω' : '–'}</td></tr>`).join('');
+}
+$('#save').onclick = () => { const R = +$('#c1 [data-k="R0"]').value, U = +$('#c1 [data-k="U"]').value; rows.push({R, U, I: U / R}); drawRows(); };
+$('#clr').onclick = () => { rows = []; drawRows(); };
+const DR = {U: ['U = R · I', 'Halte U zu: R und I stehen nebeneinander – sie werden <b>multipliziert</b>.'], R: ['R = U : I', 'Halte R zu: U steht über I – <b>U geteilt durch I</b>.'], I: ['I = U : R', 'Halte I zu: U steht über R – <b>U geteilt durch R</b>.']};
+seg($('#dr-seg'), [['U', 'U gesucht'], ['R', 'R gesucht'], ['I', 'I gesucht']], v => {
+  const c = k => k === v ? 'var(--accent)' : 'var(--ink)', o = k => k === v ? .25 : 1;
+  $('#dreieck').innerHTML = `<path d="M150 20L280 230H20Z" fill="var(--surface-2)" stroke="var(--edge)" stroke-width="3"/><path d="M85 125H215M150 125V230" stroke="var(--edge)" stroke-width="3"/>` +
+    `<text x="150" y="100" text-anchor="middle" style="font-size:52px;font-weight:700;fill:${c('U')};opacity:${o('U')}">U</text><text x="100" y="200" text-anchor="middle" style="font-size:52px;font-weight:700;fill:${c('R')};opacity:${o('R')}">R</text><text x="200" y="200" text-anchor="middle" style="font-size:52px;font-weight:700;fill:${c('I')};opacity:${o('I')}">I</text>`;
+  $('#dr-t').innerHTML = `<span class="tag info">${v} gesucht</span><p style="font-family:var(--f-mono);font-size:2rem;font-weight:700;margin:.4rem 0">${DR[v][0]}</p><p>${DR[v][1]}</p>`;
+});
+taskSet($('#ts'), () => {
+  const t = randInt(0, 2), R = pick([10, 20, 47, 100, 150, 220, 330, 470, 1000]), I = pick([0.01, 0.02, 0.05, 0.1, 0.2, 0.3]), U = +(R * I).toFixed(3);
+  if (t === 0) return {key: `U${R}${I}`, tag: 'U gesucht', q: `R = <b>${R} Ω</b>, I = <b>${numDE(I * 1000, 0)} mA</b>`, fields: [{l: 'U', a: U, tol: .02, unit: 'V'}], hint: `U = R · I = ${R} Ω · ${numDE(I, 2)} A`};
+  if (t === 1) return {key: `R${U}${I}`, tag: 'R gesucht', q: `U = <b>${numDE(U, 2)} V</b>, I = <b>${numDE(I * 1000, 0)} mA</b>`, fields: [{l: 'R', a: R, tol: .6, unit: 'Ω'}], hint: `R = U : I = ${numDE(U, 2)} V : ${numDE(I, 2)} A`};
+  return {key: `I${U}${R}`, tag: 'I gesucht', q: `U = <b>${numDE(U, 2)} V</b>, R = <b>${R} Ω</b>`, fields: [{l: 'I', a: I * 1000, tol: .6, unit: 'mA'}], hint: `I = U : R, dann · 1000 für mA`};
+}, {n: 6});
+trueFalse($('#tf'), [
+  {t: 'Ein doppelt so langer Draht hat den doppelten Widerstand.', ok: true},
+  {t: 'Ein dickerer Draht hat einen größeren Widerstand.', ok: false, why: 'Dicker = mehr Querschnitt = kleinerer Widerstand.'},
+  {t: 'Kupfer leitet besser als Eisen.', ok: true},
+  {t: 'Verlängerungskabel für große Geräte haben dicke Adern, damit sie nicht heiß werden.', ok: true},
+  {t: 'Der Widerstand eines Bauteils ändert sich, wenn man die Spannung erhöht.', ok: false, why: 'Bei einem ohmschen Widerstand bleibt R gleich – nur I ändert sich.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'In welcher Einheit misst man den Widerstand?', a: ['Ohm (Ω)', 'Volt (V)', 'Ampere (A)', 'Watt (W)'], ok: 0},
+  {q: 'Wie lautet das ohmsche Gesetz?', a: ['U = R · I', 'U = R : I', 'I = U · R', 'R = U · I'], ok: 0},
+  {q: 'U = 12 V, R = 60 Ω. Wie groß ist I?', a: ['0,2 A', '5 A', '720 A', '0,5 A'], ok: 0},
+  {q: 'U = 6 V, I = 0,03 A. Wie groß ist R?', a: ['200 Ω', '0,18 Ω', '20 Ω', '2 Ω'], ok: 0},
+  {q: 'Wie sieht die Kennlinie eines Widerstands aus?', a: ['Gerade durch den Ursprung', 'Kurve nach oben', 'waagerechte Linie', 'Kreis'], ok: 0},
+  {q: 'Wie viele Ohm sind 4,7 kΩ?', a: ['4700 Ω', '47 Ω', '470 Ω', '0,0047 Ω'], ok: 0}
+]);
+</script>

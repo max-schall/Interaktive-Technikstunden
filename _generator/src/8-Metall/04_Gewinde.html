@@ -1,0 +1,114 @@
+<!--
+title: Gewinde schneiden
+short: Gewinde
+time: 2 Unterrichtsstunden
+q: Wie stelle ich ein Innen- und ein Außengewinde her?
+facts: Gewinde verbinden Teile lösbar | Bezeichnung: M8 = metrisches Gewinde, Nenndurchmesser 8 mm | Kernloch = Nenndurchmesser − Steigung (M6 → 5 mm, M8 → 6,8 mm) | Innengewinde mit Gewindebohrersatz (Vor-, Mittel-, Fertigschneider) im Windeisen | Außengewinde mit Schneideisen im Schneideisenhalter | Senkrecht ansetzen, Schneidöl, nach jeder Umdrehung etwas zurückdrehen
+inter: Gewinde erkunden · Kernloch berechnen · Werkzeuge zuordnen · Ablauf Innengewinde ordnen · Richtig oder falsch
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Metall</p>
+      <h1>Gewinde schneiden</h1>
+      <p class="lead">Schraube rein, Schraube raus – Gewinde machen Verbindungen <b>lösbar</b>. In der Werkstatt kannst du selbst Gewinde in Metall schneiden: innen in ein Loch und außen auf einen Stab.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Schau dir eine Schraube und eine Mutter genau an. Was passt wie zusammen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie stelle ich ein Innen- und ein Außengewinde her?</p></div>
+      <div class="controls"><button class="btn primary" data-go="gewinde">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="gewinde" data-label="Das Gewinde" data-yr="Erarbeitung" data-title="Das Gewinde" data-sub="Begriffe am Gewinde">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Das Gewinde</p>
+    <h2>Was ist ein Gewinde?</h2>
+    <p class="lead">Ein Gewinde ist eine Rille, die sich wie eine Wendeltreppe um einen Zylinder windet. Tippe die Begriffe an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 240" id="gw" role="img" aria-label="Gewinde" style="font-family:var(--f-mono)">
+      <g data-part="aussen"><rect x="80" y="70" width="260" height="100" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/><path d="M80 70L95 58 110 70 125 58 140 70 155 58 170 70 185 58 200 70 215 58 230 70 245 58 260 70 275 58 290 70 305 58 320 70 335 58 340 62" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/><path d="M80 170L95 182 110 170 125 182 140 170 155 182 170 170 185 182 200 170 215 182 230 170 245 182 260 170 275 182 290 170 305 182 320 170 335 182 340 178" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="nenn"><path d="M60 58v124M52 58h16M52 182h16" stroke="var(--accent)" stroke-width="2.5"/><text x="20" y="124" style="font-weight:700;fill:var(--accent)">d</text></g>
+      <g data-part="kern"><path d="M370 70v100M362 70h16M362 170h16" stroke="var(--bad)" stroke-width="2.5"/><text x="384" y="124" style="font-weight:700;fill:var(--bad)">d₁</text></g>
+      <g data-part="steigung"><path d="M95 40h30M95 34v12M125 34v12" stroke="var(--good)" stroke-width="2.5"/><text x="100" y="28" style="font-weight:700;fill:var(--good)">P</text></g>
+      <g data-part="flanke"><path d="M200 70l15 -12" stroke="var(--k1)" stroke-width="5"/><circle cx="208" cy="64" r="16" fill="transparent"/></g>
+      <text x="210" y="225" text-anchor="middle" style="font-weight:600;fill:var(--ink-2)">Bezeichnung: M8 × 1,25</text>
+    </svg></div>
+    <div><div class="tk-row"><span id="gw-mode"></span></div><div class="box" id="gw-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="kernloch" data-label="Kernloch" data-yr="Übung" data-title="Das Kernloch" data-sub="d − P">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Kernloch</p>
+    <h2>Wie groß muss das Loch sein?</h2>
+    <p class="lead">Für ein Innengewinde wird zuerst ein <b>Kernloch</b> gebohrt. Ist es zu groß, hat das Gewinde keinen Halt. Ist es zu klein, bricht der Gewindebohrer ab. Regel: <b>Kernloch = Nenndurchmesser − Steigung</b>.</p>
+    <div class="table-wrap"><table class="cmp"><thead><tr><th>Gewinde</th><th>M3</th><th>M4</th><th>M5</th><th>M6</th><th>M8</th><th>M10</th><th>M12</th></tr></thead><tbody><tr><th>Steigung P in mm</th><td>0,5</td><td>0,7</td><td>0,8</td><td>1</td><td>1,25</td><td>1,5</td><td>1,75</td></tr></tbody></table></div>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="werkzeug" data-label="Werkzeuge" data-yr="Erarbeitung" data-title="Gewindewerkzeuge" data-sub="Innen und außen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Werkzeuge</p>
+    <h2>Gewindewerkzeuge</h2>
+    <p class="lead">Innengewinde schneidet man mit einem <b>Satz aus drei Gewindebohrern</b> nacheinander – der erste schneidet vor, der letzte fertig. Außengewinde schneidet ein <b>Schneideisen</b>.</p>
+  </div>
+  <div id="match-g"></div>
+</section>
+
+<section class="station" id="ablauf" data-label="Ablauf" data-yr="Werkstatt" data-title="Innengewinde schneiden" data-sub="Schritt für Schritt">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Werkstatt</p>
+    <h2>Ein Innengewinde M6 schneiden</h2>
+    <p class="lead">Bringe die Schritte in die richtige Reihenfolge.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Gewinde</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Gewinde schneiden</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Gewinde verbinden Teile <b>lösbar</b>. <b>M8</b> bedeutet: metrisches Gewinde mit 8 mm Nenndurchmesser.</li>
+        <li data-step><b>Kernloch</b> für ein Innengewinde: <b>Nenndurchmesser − Steigung</b> (M6: 6 − 1 = 5 mm, M8: 8 − 1,25 ≈ 6,8 mm).</li>
+        <li data-step><b>Innengewinde:</b> Gewindebohrer 1, 2, 3 nacheinander im Windeisen. <b>Außengewinde:</b> Schneideisen im Schneideisenhalter.</li>
+        <li data-step>Werkzeug senkrecht ansetzen, Schneidöl verwenden, nach jeder Umdrehung eine halbe Umdrehung zurückdrehen, damit der Span bricht.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Praxis</span><p>Schneide in einen Flachstahl ein Gewinde M6 und auf einen Rundstab Ø 6 ein Außengewinde. Passen beide zusammen?</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Gewinde-Check</h2></div>
+  <div id="tf"></div>
+</section>
+
+<script>
+explorer($('#gw'), $('#gw-panel'), [
+  {id: 'aussen', n: 'Außengewinde', t: 'Gewinde auf einem Bolzen oder einer Schraube. Das Gegenstück ist das Innengewinde in der Mutter.'},
+  {id: 'nenn', n: 'Nenndurchmesser d', t: 'Außendurchmesser des Gewindes. Er steht in der Bezeichnung: M8 → d = 8 mm.'},
+  {id: 'kern', n: 'Kerndurchmesser d₁', t: 'Durchmesser am Grund der Rillen. So groß wird das Kernloch für ein Innengewinde gebohrt.'},
+  {id: 'steigung', n: 'Steigung P', t: 'Abstand von einer Spitze zur nächsten. Bei einer Umdrehung wandert die Schraube um P weiter (M8: 1,25 mm).'},
+  {id: 'flanke', n: 'Flanke', t: 'Schräge Seitenfläche des Gewindegangs. Beim metrischen Gewinde bilden die Flanken einen Winkel von 60°.'}
+], {modeRoot: $('#gw-mode'), label: 'Gewinde'});
+taskSet($('#ts'), () => {
+  const [d, P] = pick([[3, .5], [4, .7], [5, .8], [6, 1], [8, 1.25], [10, 1.5], [12, 1.75]]);
+  return {key: 'M' + d, tag: 'M' + d, q: `Welchen Durchmesser hat das Kernloch für ein Gewinde <b>M${d}</b> (Steigung ${numDE(P, 2)} mm)?`, fields: [{l: 'Kernloch', a: d - P, tol: .06, unit: 'mm'}], hint: `${d} mm − ${numDE(P, 2)} mm`};
+}, {n: 4});
+matcher($('#match-g'), [['Gewindebohrer 1 (Vorschneider)', 'ein Ring am Schaft, schneidet vor'], ['Gewindebohrer 3 (Fertigschneider)', 'ohne Ring, schneidet das Gewinde fertig'], ['Windeisen', 'Halter zum Drehen der Gewindebohrer'], ['Schneideisen', 'schneidet ein Außengewinde'], ['Schneideisenhalter', 'hält und dreht das Schneideisen'], ['Schneidöl', 'kühlt und schmiert, schont das Werkzeug']]);
+orderSteps($('#order'), ['Bohrstelle anreißen und körnen', 'Kernloch Ø 5 mm bohren', 'Bohrung beidseitig senken (anfasen)', 'Werkstück senkrecht im Schraubstock spannen', 'Vorschneider im Windeisen senkrecht ansetzen, Schneidöl geben', 'Drehen: eine Umdrehung vor, eine halbe zurück', 'Mit Mittel- und Fertigschneider nachschneiden'], {label: 'Ablauf'});
+trueFalse($('#tf'), [
+  {t: 'Für ein Gewinde M10 bohrt man ein Kernloch von 10 mm.', ok: false, why: '10 mm − 1,5 mm = 8,5 mm.'},
+  {t: 'Der Gewindebohrer wird senkrecht angesetzt.', ok: true},
+  {t: 'Zurückdrehen bricht den Span.', ok: true},
+  {t: 'Ein Außengewinde schneidet man mit dem Gewindebohrer.', ok: false, why: 'Mit dem Schneideisen.'},
+  {t: 'Gewinde ermöglichen lösbare Verbindungen.', ok: true},
+  {t: 'Schneidöl ist nur bei Holz nötig.', ok: false, why: 'Es wird beim Gewindeschneiden in Metall gebraucht.'}
+]);
+</script>

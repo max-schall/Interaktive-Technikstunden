@@ -1,0 +1,106 @@
+<!--
+title: Metall fügen, umformen und schützen
+short: Fügen & Umformen
+time: 2 Unterrichtsstunden
+q: Wie verbindet und formt man Metallteile – und wie schützt man sie vor Rost?
+facts: Fügen: Schrauben, Nieten (Blindniet), Löten (Weich- und Hartlöten), Schweißen, Kleben | Umformen: Biegen, Abkanten, Treiben – der Werkstoff wird nicht getrennt | Rost entsteht durch Wasser und Sauerstoff; Salz beschleunigt | Korrosionsschutz: Lackieren, Pulverbeschichten, Verzinken, Ölen, Edelstahl
+inter: Verfahren sortieren · Blindniet setzen (Schritte) · Rost-Versuch auswerten · Korrosionsschutz zuordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Metall</p>
+      <h1>Metall fügen, umformen und schützen</h1>
+      <p class="lead">Ein Fahrradgepäckträger ist gebogen, geschweißt, verschraubt und lackiert. Jedes dieser Verfahren hat seine Aufgabe.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Untersuche einen Fahrradgepäckträger: Wie sind die Teile verbunden?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie verbindet und formt man Metallteile – und wie schützt man sie vor Rost?</p></div>
+      <div class="controls"><button class="btn primary" data-go="verfahren">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="verfahren" data-label="Verfahren" data-yr="Einstieg" data-title="Fügen oder Umformen?" data-sub="Verfahren sortieren">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Verfahren</p>
+    <h2>Fügen, Umformen oder Beschichten?</h2>
+    <p class="lead"><b>Fügen</b> verbindet Teile. <b>Umformen</b> bringt ein Teil in eine neue Form, ohne Material abzutrennen. <b>Beschichten</b> bringt eine Schicht auf.</p>
+  </div>
+  <div id="sort-v"></div>
+</section>
+
+<section class="station" id="nieten" data-label="Nieten & Löten" data-yr="Erarbeitung" data-title="Nieten und Löten" data-sub="Unlösbar verbinden">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Nieten und Löten</p>
+    <h2>Blindniet setzen</h2>
+    <p class="lead">Ein <b>Blindniet</b> wird nur von einer Seite gesetzt – praktisch, wenn die Rückseite nicht erreichbar ist. Ordne die Schritte.</p>
+  </div>
+  <div class="model">
+    <div id="order-n"></div>
+    <div class="box"><span class="tag info">Löten</span><p>Beim Löten verbindet ein geschmolzenes Lot (z. B. Zinn) zwei Metallteile, die selbst <b>nicht schmelzen</b>. <b>Weichlöten</b> unter 450 °C (Elektronik), <b>Hartlöten</b> über 450 °C (Rohre, Fahrradrahmen). Beim <b>Schweißen</b> schmelzen dagegen die Teile selbst.</p></div>
+  </div>
+</section>
+
+<section class="station" id="rost" data-label="Rost" data-yr="Material M1" data-title="Wann rostet Eisen?" data-sub="Ein Versuch">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Material M1</p>
+    <h2>Wann rostet ein Eisennagel?</h2>
+    <p class="lead">Fünf Nägel lagen eine Woche in verschiedenen Gläsern. Sage voraus, welche Nägel rosten, und decke dann auf.</p>
+  </div>
+  <div id="sort-r"></div>
+</section>
+
+<section class="station" id="schutz" data-label="Korrosionsschutz" data-yr="Erarbeitung" data-title="Korrosionsschutz" data-sub="So rostet nichts">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Korrosionsschutz</p>
+    <h2>So schützt man Metall vor Rost</h2>
+    <p class="lead">Rost (<b>Korrosion</b>) zerstört jedes Jahr Werte in Milliardenhöhe. Schutzschichten halten Wasser und Sauerstoff fern. Ordne zu.</p>
+  </div>
+  <div id="match-s"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Fügen und Umformen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Metall fügen, umformen, schützen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Fügen:</b> Schrauben (lösbar), Nieten, Löten, Schweißen, Kleben (unlösbar).</li>
+        <li data-step>Beim <b>Löten</b> schmilzt nur das Lot, beim <b>Schweißen</b> schmelzen die Werkstücke selbst.</li>
+        <li data-step><b>Umformen:</b> Biegen, Abkanten, Treiben – das Teil bekommt eine neue Form, ohne dass Material abgetrennt wird.</li>
+        <li data-step>Eisen <b>rostet</b> mit Wasser und Sauerstoff, Salz beschleunigt das. Schutz: Lackieren, Pulverbeschichten, Verzinken, Ölen oder Edelstahl verwenden.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Setzt den Rostversuch selbst an: Nagel trocken, in Leitungswasser, in Salzwasser, geölt, verzinkt. Fotografiert jeden Tag.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz: Fügen und Umformen</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-v'), [{id: 'f', name: 'Fügen'}, {id: 'u', name: 'Umformen'}, {id: 'b', name: 'Beschichten'}], [
+  {t: 'Schrauben', c: 'f'}, {t: 'Nieten', c: 'f'}, {t: 'Löten', c: 'f'}, {t: 'Schweißen', c: 'f'}, {t: 'Biegen', c: 'u'}, {t: 'Abkanten', c: 'u'}, {t: 'Treiben (Schale hämmern)', c: 'u'},
+  {t: 'Lackieren', c: 'b'}, {t: 'Verzinken', c: 'b'}, {t: 'Pulverbeschichten', c: 'b'}
+]);
+orderSteps($('#order-n'), ['Beide Bleche übereinanderlegen und gemeinsam bohren', 'Grat entfernen', 'Blindniet mit dem Dorn voran durch beide Löcher stecken', 'Nietzange auf den Dorn setzen', 'Zange mehrmals drücken: Der Niet staucht sich hinten', 'Der Dorn reißt ab – die Verbindung ist fertig'], {label: 'Blindniet setzen'});
+sorter($('#sort-r'), [{id: 'j', name: 'rostet'}, {id: 'n', name: 'rostet nicht'}], [
+  {t: 'Nagel in trockener Luft (mit Trockenmittel)', c: 'n', why: 'Ohne Wasser kein Rost.'},
+  {t: 'Nagel halb in Leitungswasser', c: 'j', why: 'Wasser und Sauerstoff sind vorhanden.'},
+  {t: 'Nagel in Salzwasser', c: 'j', why: 'Am stärksten – Salz beschleunigt das Rosten.'},
+  {t: 'Nagel in abgekochtem Wasser mit Ölschicht', c: 'n', why: 'Kein Sauerstoff im Wasser.'},
+  {t: 'verzinkter Nagel in Leitungswasser', c: 'n', why: 'Die Zinkschicht schützt das Eisen.'}
+]);
+matcher($('#match-s'), [['Lackieren', 'Farbschicht hält Wasser fern, z. B. Gartenzaun'], ['Pulverbeschichten', 'Pulver wird aufgesprüht und eingebrannt, z. B. Fahrradrahmen'], ['Feuerverzinken', 'Bad in flüssigem Zink, z. B. Leitplanke'], ['Ölen und Fetten', 'dünner Film, z. B. Werkzeug, Fahrradkette'], ['Edelstahl verwenden', 'Chrom bildet eine Schutzschicht, z. B. Spüle']]);
+mcQuiz($('#quiz'), [
+  {q: 'Welche Verbindung ist lösbar?', a: ['Schraube', 'Niet', 'Lötstelle', 'Schweißnaht'], ok: 0},
+  {q: 'Was unterscheidet Löten von Schweißen?', a: ['Beim Löten schmilzt nur das Lot.', 'Beim Löten schmilzt das Werkstück.', 'Löten ist lösbar.', 'Es gibt keinen Unterschied.'], ok: 0},
+  {q: 'Was braucht Eisen zum Rosten?', a: ['Wasser und Sauerstoff', 'nur Wärme', 'nur Licht', 'Öl'], ok: 0},
+  {q: 'Was beschleunigt das Rosten?', a: ['Salz', 'Öl', 'Kälte', 'Lack'], ok: 0},
+  {q: 'Welches Verfahren ist Umformen?', a: ['Biegen', 'Bohren', 'Sägen', 'Kleben'], ok: 0},
+  {q: 'Wann benutzt man einen Blindniet?', a: ['wenn die Rückseite nicht erreichbar ist', 'wenn man Holz verbindet', 'wenn es lösbar sein soll', 'nur bei Kunststoff'], ok: 0}
+]);
+</script>

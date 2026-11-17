@@ -1,0 +1,99 @@
+<!--
+title: Werkstücke räumlich darstellen
+short: Räumlich zeichnen
+time: 2 Unterrichtsstunden
+q: Wie zeichnet man ein Werkstück räumlich, sodass man es auf einen Blick versteht?
+facts: Kabinettprojektion: Vorderansicht in wahrer Größe, Tiefenkanten unter 45° und auf die Hälfte verkürzt | Isometrische Projektion: Breite und Tiefe unter 30°, alle Kanten in wahrer Länge | Zeichenschritte: Grundfläche, Höhen, Deckfläche, sichtbare Kanten nachziehen | Isometriepapier erleichtert das Zeichnen
+inter: Körper in Kabinett und Isometrie umschalten · Tiefenkanten berechnen · Zeichenschritte ordnen · Projektionen sortieren · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Skizzen und technische Zeichnungen</p>
+      <h1>Werkstücke räumlich darstellen</h1>
+      <p class="lead">Drei Ansichten sind genau, aber man muss sie erst im Kopf zusammensetzen. Eine <b>räumliche Darstellung</b> zeigt das Werkstück so, wie wir es sehen – auf einen Blick.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Zeichne aus dem Kopf einen Würfel. Welche Kanten verlaufen schräg?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie zeichnet man ein Werkstück räumlich, sodass man es auf einen Blick versteht?</p></div>
+      <div class="controls"><button class="btn primary" data-go="vergleich">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="vergleich" data-label="Zwei Verfahren" data-yr="Erarbeitung" data-title="Kabinett und Isometrie" data-sub="Zwei Verfahren im Vergleich">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Zwei Verfahren</p>
+    <h2>Kabinettprojektion und Isometrie</h2>
+    <p class="lead">Schalte zwischen den beiden Darstellungen um und vergleiche die Richtung und Länge der Tiefenkanten.</p>
+  </div>
+  <div id="vox"></div>
+  <div class="cols-2 mt">
+    <div class="box"><span class="tag info">Kabinettprojektion</span><p>Die Vorderansicht wird in <b>wahrer Größe</b> gezeichnet. Tiefenkanten verlaufen unter <b>45°</b> nach hinten und werden auf die <b>Hälfte verkürzt</b>.</p></div>
+    <div class="box"><span class="tag info">Isometrische Projektion</span><p>Breiten- und Tiefenkanten verlaufen unter <b>30°</b> zur Waagerechten. Alle Kanten werden in <b>wahrer Länge</b> gezeichnet. Wirkt natürlicher.</p></div>
+  </div>
+</section>
+
+<section class="station" id="tiefe" data-label="Tiefe berechnen" data-yr="Übung" data-title="Tiefenkanten" data-sub="Halbieren oder nicht?">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Tiefenkanten</p>
+    <h2>Wie lang wird die Kante gezeichnet?</h2>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="schritte" data-label="Zeichenschritte" data-yr="Werkstatt" data-title="Zeichenschritte" data-sub="Eine Kabinettprojektion zeichnen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Werkstatt</p>
+    <h2>Schritt für Schritt zur Kabinettprojektion</h2>
+    <p class="lead">Bringe die Zeichenschritte für einen Quader (60 × 40 × 30 mm) in die richtige Reihenfolge.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Sortieren" data-yr="Material M1" data-title="Merkmale sortieren" data-sub="Kabinett oder Isometrie?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Kabinett oder Isometrie?</h2>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Räumlich zeichnen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Werkstücke räumlich darstellen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Kabinettprojektion:</b> Vorderansicht in wahrer Größe, Tiefenkanten unter 45° und auf die Hälfte verkürzt.</li>
+        <li data-step><b>Isometrie:</b> Breite und Tiefe unter 30° zur Waagerechten, alle Kanten in wahrer Länge.</li>
+        <li data-step>Zeichenschritte: Vorderfläche → Tiefenkanten → Rückfläche → sichtbare Kanten breit nachziehen, Hilfslinien entfernen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Zeichenauftrag</span><p>Zeichne den Körper „Treppe“ einmal in Kabinettprojektion (Karopapier) und einmal isometrisch (Isometriepapier).</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Räumlich-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+voxel($('#vox'), {bodies: VOX_BODIES, proj: 'kab'});
+taskSet($('#ts'), () => {
+  const d = randInt(2, 12) * 10, p = pick(['kab', 'iso']);
+  return {key: p + d, tag: p === 'kab' ? 'Kabinettprojektion' : 'Isometrie', q: `Ein Werkstück ist <b>${d} mm</b> tief. Wie lang zeichnest du die Tiefenkante in der <b>${p === 'kab' ? 'Kabinettprojektion' : 'Isometrie'}</b>?`, fields: [{l: 'Länge', a: p === 'kab' ? d / 2 : d, unit: 'mm'}, {l: 'Winkel', a: p === 'kab' ? 45 : 30, unit: '°'}], hint: p === 'kab' ? 'Kabinett: halbieren, 45°' : 'Isometrie: wahre Länge, 30°'};
+}, {n: 4});
+orderSteps($('#order'), ['Vorderfläche 60 × 30 mm in wahrer Größe zeichnen', 'An den Ecken Tiefenkanten unter 45° ansetzen', 'Tiefenkanten auf 20 mm verkürzen (40 : 2)', 'Endpunkte zur Rückfläche verbinden', 'Sichtbare Kanten mit breiter Volllinie nachziehen', 'Hilfslinien wegradieren'], {label: 'Zeichenschritte'});
+sorter($('#sort'), [{id: 'k', name: 'Kabinettprojektion'}, {id: 'i', name: 'Isometrie'}], [
+  {t: 'Tiefenkanten unter 45°', c: 'k'}, {t: 'Tiefe auf die Hälfte verkürzt', c: 'k'}, {t: 'Vorderansicht unverzerrt', c: 'k'}, {t: 'alle Kanten in wahrer Länge', c: 'i'}, {t: 'Breite und Tiefe unter 30°', c: 'i'}, {t: 'wird oft auf Dreieckspapier gezeichnet', c: 'i'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Unter welchem Winkel zeichnet man in der Kabinettprojektion die Tiefe?', a: ['45°', '30°', '60°', '90°'], ok: 0},
+  {q: 'Ein Quader ist 50 mm tief. Wie lang ist die Tiefenkante in der Kabinettprojektion?', a: ['25 mm', '50 mm', '100 mm', '45 mm'], ok: 0},
+  {q: 'Welche Kanten sind in der Isometrie verkürzt?', a: ['keine', 'nur die Tiefe', 'nur die Höhe', 'alle'], ok: 0},
+  {q: 'Welche Fläche zeichnet man in der Kabinettprojektion zuerst?', a: ['die Vorderfläche', 'die Rückfläche', 'die Deckfläche', 'die Bodenfläche'], ok: 0},
+  {q: 'Unter welchem Winkel zur Waagerechten verlaufen Breite und Tiefe in der Isometrie?', a: ['30°', '45°', '15°', '60°'], ok: 0}
+]);
+</script>

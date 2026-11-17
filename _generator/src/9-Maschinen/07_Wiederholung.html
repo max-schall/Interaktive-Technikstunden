@@ -1,0 +1,89 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Getriebe berechnen, Wirkungsgrad, Motoren und Sicherheit | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Getriebe-Rechentrainer · Wirkungsgrad · Sicherheitssysteme · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Maschinen und Mobilität</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Baugruppen und Maschinenelemente, Zahnrad-, Riemen- und Kettengetriebe, Wirkungsgrad, Motoren, Antriebe und Sicherheit: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Getriebe" data-yr="Trainer" data-title="T1 Getriebe" data-sub="Übersetzung berechnen">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Getriebe berechnen</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Wirkungsgrad" data-yr="Trainer" data-title="T2 Wirkungsgrad" data-sub="η berechnen">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Wirkungsgrad</h2></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Sicherheit" data-yr="Trainer" data-title="T3 Sicherheit" data-sub="Aktiv oder passiv">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Sicherheitssysteme</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Antrieb', 'wandelt Energie in Bewegung'], ['Welle', 'überträgt ein Drehmoment'], ['Achse', 'trägt nur, überträgt kein Drehmoment'], ['Übersetzung i', 'z₂ : z₁'],
+  ['ins Langsame', 'i > 1, mehr Drehmoment'], ['Zwischenrad', 'kehrt die Drehrichtung um'], ['Kettengetriebe', 'rutschfest, gleichsinnig'], ['Wirkungsgrad', 'genutzte : zugeführte Energie'],
+  ['Arbeitstakt', 'einziger Takt, der Energie abgibt'], ['Kommutator', 'polt den Strom im Elektromotor um'], ['aktive Sicherheit', 'vermeidet Unfälle'], ['passive Sicherheit', 'mindert Unfallfolgen']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+taskSet($('#t1'), () => {
+  const z1 = pick([10, 12, 15, 20]), z2 = pick([30, 36, 40, 60]), n1 = pick([600, 900, 1200]);
+  return {key: `${z1}${z2}${n1}`, tag: 'Getriebe', q: `z₁ = ${z1}, z₂ = ${z2}, n₁ = ${n1} 1/min`, fields: [{l: 'i', a: +(z2 / z1).toFixed(2), tol: .011}, {l: 'n₂', a: Math.round(n1 * z1 / z2), tol: 1, unit: '1/min'}]};
+}, {n: 3});
+taskSet($('#t2'), () => { const zu = pick([400, 600, 1000]), eta = pick([.2, .3, .5, .9]); return {key: `${zu}${eta}`, tag: 'Wirkungsgrad', q: `zugeführt ${zu} J, genutzt ${numDE(zu * eta, 0)} J`, fields: [{l: 'η', a: eta * 100, tol: .5, unit: '%'}]}; }, {n: 3});
+sorter($('#t3'), [{id: 'a', name: 'aktiv'}, {id: 'p', name: 'passiv'}], [{t: 'ABS', c: 'a'}, {t: 'Airbag', c: 'p'}, {t: 'ESP', c: 'a'}, {t: 'Gurt', c: 'p'}, {t: 'Knautschzone', c: 'p'}, {t: 'Notbremsassistent', c: 'a'}]);
+mcQuiz($('#quiz'), [
+  {q: 'Welche Baugruppe verrichtet die eigentliche Arbeit?', a: ['Arbeitseinheit', 'Antrieb', 'Gestell', 'Steuerung'], ok: 0},
+  {q: 'Welches Maschinenelement dient dem Lagern?', a: ['Kugellager', 'Zahnrad', 'Kupplung', 'Riemen'], ok: 0},
+  {q: 'z₁ = 20, z₂ = 60. i = ?', a: ['3', '0,33', '40', '1200'], ok: 0},
+  {q: 'Wie drehen zwei direkt ineinandergreifende Zahnräder?', a: ['gegensinnig', 'gleichsinnig', 'gar nicht', 'abwechselnd'], ok: 0},
+  {q: 'Wie berechnet man i beim Riemengetriebe?', a: ['d₂ : d₁', 'z₁ : z₂', 'd₁ · d₂', 'n₂ · n₁'], ok: 0},
+  {q: 'Welcher Gang ist am Berg am leichtesten?', a: ['kleines Kettenblatt, großes Ritzel', 'großes Kettenblatt, kleines Ritzel', 'beide groß', 'beide klein'], ok: 0},
+  {q: 'Welcher Wirkungsgrad passt zur Glühlampe?', a: ['ca. 5 %', 'ca. 90 %', 'ca. 50 %', '100 %'], ok: 0},
+  {q: 'Was passiert im 2. Takt?', a: ['Verdichten', 'Ansaugen', 'Arbeiten', 'Ausstoßen'], ok: 0},
+  {q: 'Was macht eine Brennstoffzelle?', a: ['Aus Wasserstoff Strom erzeugen', 'Benzin verbrennen', 'Akkus laden', 'Bremsen'], ok: 0},
+  {q: 'Was ist passive Sicherheit?', a: ['Knautschzone', 'ABS', 'ESP', 'Spurhalteassistent'], ok: 0},
+  {q: 'Welches Verkehrsmittel ist pro Person am klimafreundlichsten (motorisiert)?', a: ['Fernzug', 'Pkw allein', 'Flugzeug', 'Motorrad'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann die Baugruppen einer Maschine nennen.', href: '01_Baugruppen.html#baugruppen'},
+  {t: 'Ich kenne Maschinenelemente und ihre Aufgaben.', href: '01_Baugruppen.html#elemente'},
+  {t: 'Ich kann Übersetzung und Drehzahl eines Zahnradgetriebes berechnen.', href: '02_Zahnradgetriebe.html#rechnen'},
+  {t: 'Ich kann Riemen- und Kettengetriebe vergleichen und berechnen.', href: '03_Riemen_Kette.html#fahrrad'},
+  {t: 'Ich kann den Wirkungsgrad berechnen und ein Energieflussbild lesen.', href: '04_Energiewandler.html#fluss'},
+  {t: 'Ich kann den Viertaktmotor und den Elektromotor erklären.', href: '05_Motoren.html#viertakt'},
+  {t: 'Ich kann Antriebe, Verkehrsmittel und Sicherheitssysteme bewerten.', href: '06_Mobilitaet.html#sicherheit'}
+]);
+</script>

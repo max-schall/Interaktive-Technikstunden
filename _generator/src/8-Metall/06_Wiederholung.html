@@ -1,0 +1,95 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Metalle und Stahl, Bearbeitung und Gewinde, Fügen und Korrosion | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Metalle sortieren · Drehzahl und Kernloch rechnen · Verfahren sortieren · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Metall</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Metalle und Legierungen, Stahlherstellung, Sägen, Feilen und Bohren, Gewinde, Fügen und Korrosionsschutz: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Metalle" data-yr="Trainer" data-title="T1 Metalle" data-sub="Eisen, NE-Metall, Legierung">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Metalle ordnen</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Rechnen" data-yr="Trainer" data-title="T2 Rechnen" data-sub="Drehzahl und Kernloch">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Drehzahl und Kernloch</h2></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Verfahren" data-yr="Trainer" data-title="T3 Verfahren" data-sub="Trennen, Fügen, Umformen, Beschichten">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Verfahren ordnen</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Eisenmetall', 'Stahl oder Gusseisen, meist magnetisch'], ['Legierung', 'Mischung aus Metallen, z. B. Messing'], ['Roheisen', 'Produkt des Hochofens, ca. 4 % Kohlenstoff'], ['Stahl', 'Eisen mit unter 2 % Kohlenstoff'],
+  ['Körner', 'markiert die Bohrstelle'], ['Bügelsäge', 'schneidet auf Stoß'], ['Kernloch', 'Bohrung für ein Innengewinde: d − Steigung'], ['Schneideisen', 'schneidet Außengewinde'],
+  ['Blindniet', 'wird von einer Seite gesetzt'], ['Weichlöten', 'Lot schmilzt unter 450 °C'], ['Korrosion', 'Zerstörung durch Rost'], ['Verzinken', 'Zinkschicht schützt Stahl']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1'), [{id: 'fe', name: 'Eisenmetall'}, {id: 'ne', name: 'Nichteisenmetall'}, {id: 'leg', name: 'Legierung (NE)'}], [
+  {t: 'Baustahl', c: 'fe'}, {t: 'Gusseisen', c: 'fe'}, {t: 'Aluminium', c: 'ne'}, {t: 'Kupfer', c: 'ne'}, {t: 'Zinn', c: 'ne'}, {t: 'Messing', c: 'leg'}, {t: 'Bronze', c: 'leg'}
+]);
+taskSet($('#t2'), () => {
+  if (Math.random() < .5) { const [d, P] = pick([[4, .7], [5, .8], [6, 1], [8, 1.25], [10, 1.5]]); return {key: 'k' + d, tag: 'Kernloch', q: `Kernloch für <b>M${d}</b> (P = ${numDE(P, 2)} mm)?`, fields: [{l: 'Ø', a: d - P, tol: .06, unit: 'mm'}], hint: 'd − P'}; }
+  const M = pick([['Stahl', 25], ['Aluminium', 60]]), d = pick([5, 6, 8, 10]), n = M[1] * 1000 / (Math.PI * d);
+  return {key: M[0] + d, tag: 'Drehzahl', q: `Bohrer Ø ${d} mm in ${M[0]} (v = ${M[1]} m/min)`, fields: [{l: 'n', a: Math.round(n), tol: Math.max(15, n * .03), unit: '1/min'}], hint: 'n = v · 1000 : (π · d)'};
+}, {n: 4});
+sorter($('#t3'), [{id: 't', name: 'Trennen'}, {id: 'f', name: 'Fügen'}, {id: 'u', name: 'Umformen'}, {id: 'b', name: 'Beschichten'}], [
+  {t: 'Sägen', c: 't'}, {t: 'Bohren', c: 't'}, {t: 'Gewinde schneiden', c: 't'}, {t: 'Nieten', c: 'f'}, {t: 'Löten', c: 'f'}, {t: 'Biegen', c: 'u'}, {t: 'Abkanten', c: 'u'}, {t: 'Lackieren', c: 'b'}, {t: 'Verzinken', c: 'b'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Woraus besteht Bronze?', a: ['Kupfer und Zinn', 'Kupfer und Zink', 'Eisen und Chrom', 'Aluminium und Kupfer'], ok: 0},
+  {q: 'Welche Probe haftet am Magneten?', a: ['Stahl', 'Kupfer', 'Aluminium', 'Messing'], ok: 0},
+  {q: 'Was wird im Konverter aus dem Roheisen entfernt?', a: ['Kohlenstoff', 'Eisen', 'Kalk', 'Wasser'], ok: 0},
+  {q: 'Was macht grünen Stahl klimafreundlicher?', a: ['Wasserstoff aus Ökostrom statt Koks', 'mehr Koks', 'grüne Farbe', 'kleinere Hochöfen'], ok: 0},
+  {q: 'Wie viele Zähne müssen beim Sägen mindestens im Eingriff sein?', a: ['3', '1', '10', 'egal'], ok: 0},
+  {q: 'Was zeigt die Hiebnummer einer Feile?', a: ['wie grob oder fein sie ist', 'ihre Länge', 'ihr Gewicht', 'ihren Preis'], ok: 0},
+  {q: 'Kernloch für M8?', a: ['6,8 mm', '8 mm', '5 mm', '10 mm'], ok: 0},
+  {q: 'Womit schneidet man ein Außengewinde?', a: ['Schneideisen', 'Gewindebohrer', 'Körner', 'Senker'], ok: 0},
+  {q: 'Welches Verfahren ist Umformen?', a: ['Abkanten', 'Nieten', 'Bohren', 'Lackieren'], ok: 0},
+  {q: 'Was beschleunigt Rost?', a: ['Salzwasser', 'trockene Luft', 'Öl', 'Zink'], ok: 0},
+  {q: 'Warum körnt man vor dem Bohren?', a: ['damit der Bohrer nicht verläuft', 'damit es glänzt', 'damit es nicht rostet', 'damit es härter wird'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann Eisen- und Nichteisenmetalle unterscheiden und Legierungen nennen.', href: '01_Metalle.html#gruppen'},
+  {t: 'Ich kenne Handelsformen von Metall.', href: '01_Metalle.html#formen'},
+  {t: 'Ich kann den Weg vom Erz zum Stahl beschreiben.', href: '02_Stahl.html#weg'},
+  {t: 'Ich kann Metall anreißen, sägen, feilen und bohren.', href: '03_Trennen.html#werkzeuge'},
+  {t: 'Ich kann die Drehzahl berechnen.', href: '03_Trennen.html#bohren'},
+  {t: 'Ich kann ein Innen- und Außengewinde herstellen.', href: '04_Gewinde.html#ablauf'},
+  {t: 'Ich kenne Füge- und Umformverfahren für Metall.', href: '05_Fuegen_Umformen.html#verfahren'},
+  {t: 'Ich kann erklären, wie Rost entsteht und wie man Metall schützt.', href: '05_Fuegen_Umformen.html#rost'}
+]);
+</script>

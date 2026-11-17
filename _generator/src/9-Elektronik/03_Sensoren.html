@@ -1,0 +1,119 @@
+<!--
+title: Sensoren: LDR und NTC
+short: Sensoren
+time: 2 Unterrichtsstunden
+q: Wie verwandeln Sensoren Licht und Wärme in elektrische Signale?
+facts: Sensoren wandeln physikalische Größen in elektrische Signale | LDR (Fotowiderstand): Widerstand sinkt bei Licht | NTC (Heißleiter): Widerstand sinkt bei Wärme; PTC (Kaltleiter): steigt | Spannungsteiler: Die Spannung teilt sich im Verhältnis der Widerstände, U₂ = U · R₂ : (R₁ + R₂) | Sensoren im Alltag: Dämmerungsschalter, Thermostat, Rauchmelder
+inter: LDR und NTC messen (Kennlinien) · Spannungsteiler mit LDR · Sensoren im Alltag zuordnen · Rechentrainer · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Schalter, Sensoren und Schaltungen</p>
+      <h1>Sensoren: LDR und NTC</h1>
+      <p class="lead">Die Straßenlaterne geht in der Dämmerung von selbst an, der Backofen hält 180 °C. Dafür brauchen Schaltungen „Sinnesorgane“: <b>Sensoren</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Halte die Hand über einen Fotowiderstand, der an ein Multimeter (Ω) angeschlossen ist. Was beobachtest du?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie verwandeln Sensoren Licht und Wärme in elektrische Signale?</p></div>
+      <div class="controls"><button class="btn primary" data-go="ldr">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="ldr" data-label="LDR & NTC" data-yr="Erarbeitung" data-title="LDR und NTC" data-sub="Widerstand ändert sich">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · LDR und NTC</p>
+    <h2>Widerstände, die auf die Umwelt reagieren</h2>
+    <p class="lead">Ein <b>LDR</b> (light dependent resistor) leitet bei Licht besser: Sein Widerstand <b>sinkt</b>. Ein <b>NTC</b> (Heißleiter) leitet bei Wärme besser: Sein Widerstand <b>sinkt</b> ebenfalls. Bewege die Regler.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-row"><label>Helligkeit <input type="range" min="0" max="3" step="0.05" value="2" id="s-l"> <span class="tk-val" id="s-lv"></span></label></div><div id="pl-l"></div></div>
+    <div><div class="tk-row"><label>Temperatur <input type="range" min="0" max="80" step="1" value="25" id="s-t"> <span class="tk-val" id="s-tv"></span></label></div><div id="pl-t"></div></div>
+  </div>
+</section>
+
+<section class="station" id="teiler" data-label="Spannungsteiler" data-yr="Erarbeitung" data-title="Der Spannungsteiler" data-sub="Aus Widerstand wird Spannung">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Spannungsteiler</p>
+    <h2>Der Spannungsteiler</h2>
+    <p class="lead">Ein Sensor allein liefert nur einen Widerstand. Schaltet man ihn mit einem festen Widerstand in Reihe, teilt sich die Spannung im Verhältnis der Widerstände: <b>U₂ = U · R₂ : (R₁ + R₂)</b>. So wird aus Licht eine <b>Spannung</b>.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 360 300" id="st" role="img" aria-label="Spannungsteiler"></svg></div>
+    <div><div class="tk-row"><label>Helligkeit <input type="range" min="0" max="3" step="0.05" value="2" id="st-l"> <span class="tk-val" id="st-lv"></span></label></div><div class="tk-row"><label>R₁ (fest) <input type="range" min="1000" max="47000" step="1000" value="10000" id="st-r"> <span class="tk-val" id="st-rv"></span></label></div><div class="tk-readout" id="st-ro"></div><p class="status" id="st-s"></p></div>
+  </div>
+</section>
+
+<section class="station" id="alltag" data-label="Alltag" data-yr="Übung" data-title="Sensoren im Alltag" data-sub="Wo steckt welcher Sensor?">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Sensoren im Alltag</p>
+    <h2>Wo steckt welcher Sensor?</h2>
+  </div>
+  <div id="match-a"></div>
+</section>
+
+<section class="station" id="rechnen" data-label="Rechnen" data-yr="Übung" data-title="Spannungsteiler berechnen" data-sub="Rechentrainer">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Rechentrainer</p>
+    <h2>Spannungsteiler berechnen</h2>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Sensoren</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Sensoren: LDR und NTC</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Sensoren</b> wandeln physikalische Größen (Licht, Temperatur, Druck …) in elektrische Signale um.</li>
+        <li data-step><b>LDR</b> (Fotowiderstand): Je heller, desto kleiner der Widerstand. <b>NTC</b> (Heißleiter): Je wärmer, desto kleiner der Widerstand. <b>PTC</b> (Kaltleiter): Je wärmer, desto größer.</li>
+        <li data-step>Im <b>Spannungsteiler</b> teilt sich die Spannung im Verhältnis der Widerstände: Am größeren Widerstand liegt die größere Spannung. U₂ = U · R₂ : (R₁ + R₂).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Messauftrag</span><p>Miss den Widerstand eines LDR im Dunkeln, bei Raumlicht und unter der Taschenlampe. Miss den NTC in kaltem und warmem Wasser.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Sensor-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+const RL = lx => 400000 * Math.pow(Math.max(lx, 1), -0.85), RN = t => 10000 * Math.exp(3950 * (1 / (t + 273.15) - 1 / 298.15));
+const pL = plot($('#pl-l'), {x: [0, 1000], y: [0, 100], xs: 200, ys: 20, xl: 'Helligkeit in lx', yl: 'R des LDR in kΩ', series: [{pts: [...Array(100)].map((_, i) => [i * 10 + 5, RL(i * 10 + 5) / 1000]), cls: 's0'}]});
+const pT = plot($('#pl-t'), {x: [0, 80], y: [0, 35], xs: 10, ys: 5, xl: 'Temperatur in °C', yl: 'R des NTC in kΩ', series: [{pts: [...Array(81)].map((_, i) => [i, RN(i) / 1000]), cls: 's1'}]});
+function sens() {
+  const lx = 10 ** +$('#s-l').value, t = +$('#s-t').value;
+  $('#s-lv').textContent = `${numDE(lx, 0)} lx → ${fmtR(RL(lx))}`; $('#s-tv').textContent = `${t} °C → ${fmtR(RN(t))}`;
+  pL.set({marks: [{x: Math.min(lx, 1000), y: Math.min(RL(lx) / 1000, 100), t: fmtR(RL(lx))}]}); pT.set({marks: [{x: t, y: Math.min(RN(t) / 1000, 35), t: fmtR(RN(t))}]});
+}
+$('#s-l').oninput = sens; $('#s-t').oninput = sens; sens();
+function st() {
+  const lx = 10 ** +$('#st-l').value, R1 = +$('#st-r').value, R2 = RL(lx), U = 9, U2 = U * R2 / (R1 + R2);
+  let s = SY.wire([[60, 40], [200, 40], [200, 60]]) + SY.wire([[200, 120], [200, 180]]) + SY.wire([[200, 240], [200, 270], [60, 270]]) + SY.wire([[60, 40], [60, 145]]) + SY.wire([[60, 165], [60, 270]]) + SY.bat(60, 155);
+  s += SY.res(200, 90, true) + SY.res(200, 210, true) + `<path class="thin" d="M160 184l20 14m-8 -1 8 1-3 -8M160 202l20 14m-8 -1 8 1-3 -8"/>`;
+  s += SY.wire([[200, 150], [300, 150]]) + SY.wire([[200, 270], [300, 270]]) + `<circle cx="200" cy="150" r="4" class="fillw"/><circle cx="300" cy="150" r="5" class="sym"/><circle cx="300" cy="270" r="5" class="sym"/>`;
+  s += `<path d="M300 160v100" stroke="var(--accent)" stroke-width="3"/><path d="M300 262l-6 -12h12z" fill="var(--accent)"/><text x="312" y="215">U₂</text><text x="225" y="95">R₁</text><text x="225" y="215">LDR</text><text x="20" y="160">9 V</text>`;
+  $('#st').innerHTML = s;
+  $('#st-lv').textContent = numDE(lx, 0) + ' lx'; $('#st-rv').textContent = fmtR(R1);
+  readout($('#st-ro'), [['R₁', fmtR(R1)], ['R des LDR', fmtR(R2)], ['U an R₁', numDE(U - U2, 2) + ' V'], ['U₂ am LDR', numDE(U2, 2) + ' V']]);
+  $('#st-s').innerHTML = U2 > 4.5 ? 'Es ist <b>dunkel</b>: Der LDR hat einen großen Widerstand – an ihm liegt die größere Spannung.' : 'Es ist <b>hell</b>: Der LDR hat einen kleinen Widerstand – an ihm liegt nur eine kleine Spannung.';
+}
+$('#st-l').oninput = st; $('#st-r').oninput = st; st();
+matcher($('#match-a'), [['Straßenlaterne schaltet in der Dämmerung', 'Lichtsensor (LDR)'], ['Fieberthermometer', 'Temperatursensor (NTC)'], ['Smartphone dreht das Bild', 'Lagesensor'], ['Einparkhilfe', 'Ultraschallsensor'], ['Rauchmelder', 'optischer Rauchsensor'], ['Automatische Tür', 'Bewegungsmelder (Infrarot)']]);
+taskSet($('#ts'), () => {
+  const U = pick([9, 12, 6]), R1 = pick([1, 2, 4.7, 10]) * 1000, R2 = pick([1, 2, 3, 10, 22]) * 1000;
+  return {key: `${U}${R1}${R2}`, tag: 'Spannungsteiler', q: `U = ${U} V, R₁ = ${fmtR(R1)}, R₂ = ${fmtR(R2)}. Welche Spannung liegt an R₂?`, fields: [{l: 'U₂', a: +(U * R2 / (R1 + R2)).toFixed(2), tol: .05, unit: 'V'}], hint: 'U₂ = U · R₂ : (R₁ + R₂)'};
+}, {n: 4});
+mcQuiz($('#quiz'), [
+  {q: 'Was passiert mit dem Widerstand eines LDR bei mehr Licht?', a: ['Er sinkt.', 'Er steigt.', 'Er bleibt gleich.', 'Er wird null und bleibt dort.'], ok: 0},
+  {q: 'Was ist ein NTC?', a: ['ein Heißleiter', 'ein Kaltleiter', 'ein Lichtsensor', 'eine Diode'], ok: 0},
+  {q: 'Im Spannungsteiler liegt die größere Spannung …', a: ['am größeren Widerstand', 'am kleineren Widerstand', 'immer in der Mitte', 'an der Batterie'], ok: 0},
+  {q: 'U = 12 V, R₁ = R₂. Wie groß ist U₂?', a: ['6 V', '12 V', '3 V', '24 V'], ok: 0},
+  {q: 'Wofür steht LDR?', a: ['lichtabhängiger Widerstand', 'Leuchtdiode rot', 'Lastwiderstand', 'Lautsprecher'], ok: 0},
+  {q: 'Ein PTC …', a: ['erhöht seinen Widerstand bei Wärme', 'senkt seinen Widerstand bei Wärme', 'reagiert auf Licht', 'leuchtet'], ok: 0}
+]);
+</script>

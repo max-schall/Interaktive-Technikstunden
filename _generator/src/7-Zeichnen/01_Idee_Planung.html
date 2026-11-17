@@ -1,0 +1,102 @@
+<!--
+title: Von der Idee zum Produkt
+short: Planung
+time: 2 Unterrichtsstunden
+q: Welche Schritte führen von einer Idee zu einem fertigen Werkstück?
+facts: Phasen: Problem erkennen → Anforderungen festlegen → Ideen skizzieren → Lösung auswählen → planen → fertigen → bewerten | Anforderungsliste mit Muss- und Wunschanforderungen | Ideen mit einer Bewertungstabelle vergleichen | Planungsunterlagen: technische Zeichnung, Stückliste, Arbeitsablaufplan
+inter: Phasen ordnen · Anforderungen sortieren · Ideen bewerten (Punkte) · Stückliste lesen · Arbeitsablaufplan ordnen
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Skizzen und technische Zeichnungen</p>
+      <h1>Von der Idee zum Produkt</h1>
+      <p class="lead">Dein Smartphone liegt nachts immer auf dem Boden. Ein <b>Handyhalter</b> aus Holz wäre die Lösung! Aber wie wird aus dieser Idee ein fertiges Werkstück? Fachleute gehen dabei in festen <b>Schritten</b> vor.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Was muss dein Handyhalter alles können? Sammelt Anforderungen.</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Welche Schritte führen von einer Idee zu einem fertigen Werkstück?</p></div>
+      <div class="controls"><button class="btn primary" data-go="phasen">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="phasen" data-label="Phasen" data-yr="Einstieg" data-title="Der Weg zum Produkt" data-sub="Sieben Schritte">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Phasen</p>
+    <h2>Der Weg vom Problem zum Produkt</h2>
+    <p class="lead">Bringe die Phasen der Produktentwicklung in die richtige Reihenfolge.</p>
+  </div>
+  <div id="order-p"></div>
+</section>
+
+<section class="station" id="anforderungen" data-label="Anforderungen" data-yr="Erarbeitung" data-title="Die Anforderungsliste" data-sub="Muss oder Wunsch?">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Anforderungsliste</p>
+    <h2>Was muss der Handyhalter können?</h2>
+    <p class="lead">In der <b>Anforderungsliste</b> steht, was ein Produkt unbedingt erfüllen <b>muss</b> und was <b>wünschenswert</b> wäre. Sortiere.</p>
+  </div>
+  <div id="sort-a"></div>
+</section>
+
+<section class="station" id="bewerten" data-label="Ideen bewerten" data-yr="Erarbeitung" data-title="Ideen bewerten" data-sub="Die Bewertungstabelle">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Ideen bewerten</p>
+    <h2>Welche Idee ist die beste?</h2>
+    <p class="lead">Drei Ideenskizzen liegen vor: <b>A</b> Ständer mit Schlitz, <b>B</b> Wandhalter mit Kabelloch, <b>C</b> Box mit Schublade. Vergib für jede Anforderung 1 bis 5 Punkte. Die Idee mit den meisten Punkten wird gebaut.</p>
+  </div>
+  <div id="rate"></div>
+</section>
+
+<section class="station" id="unterlagen" data-label="Planungsunterlagen" data-yr="Material M1" data-title="Planungsunterlagen" data-sub="Zeichnung, Stückliste, Arbeitsplan">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Ohne Plan kein Werkstück</h2>
+    <p class="lead">Zur Planung gehören die <b>technische Zeichnung</b>, die <b>Stückliste</b> und der <b>Arbeitsablaufplan</b>. Tippe in der Stückliste auf die leeren Felder, um sie aufzudecken.</p>
+  </div>
+  <div class="model">
+    <div class="table-wrap"><table class="cmp" id="stl">
+      <thead><tr><th>Pos.</th><th>Anzahl</th><th>Benennung</th><th>Werkstoff</th><th>Maße in mm</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>1</td><td>Grundplatte</td><td>Buche</td><td class="q">120 × 80 × 18</td></tr>
+        <tr><td>2</td><td>1</td><td>Rückenlehne</td><td class="q">Buche</td><td>100 × 80 × 10</td></tr>
+        <tr><td>3</td><td class="q">2</td><td>Rundstab (Dübel)</td><td>Buche</td><td>Ø 6 × 30</td></tr>
+        <tr><td>4</td><td>4</td><td class="q">Filzgleiter</td><td>Filz</td><td>Ø 10</td></tr>
+      </tbody></table>
+      <div class="controls"><button class="btn" id="stl-q">Verdecken</button><button class="btn" id="stl-a">Alles zeigen</button></div></div>
+    <div><h3>Arbeitsablaufplan</h3><div id="order-ap"></div></div>
+  </div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Planung</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Von der Idee zum Produkt</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Phasen: Problem erkennen → <b>Anforderungen</b> festlegen → Ideen <b>skizzieren</b> → Lösung <b>auswählen</b> → <b>planen</b> → <b>fertigen</b> → <b>bewerten</b>.</li>
+        <li data-step>Die <b>Anforderungsliste</b> enthält Muss-Anforderungen (unbedingt nötig) und Wunsch-Anforderungen.</li>
+        <li data-step>Mit einer <b>Bewertungstabelle</b> werden Ideen nach Kriterien mit Punkten verglichen.</li>
+        <li data-step>Planungsunterlagen: <b>technische Zeichnung</b> (Form und Maße), <b>Stückliste</b> (alle Teile mit Werkstoff und Maßen), <b>Arbeitsablaufplan</b> (Arbeitsschritte, Werkzeuge, Maschinen).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Projekt</span><p>Zeichne zwei eigene Ideenskizzen für einen Handyhalter und bewerte sie mit der Tabelle.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Planungsbegriffe</h2></div>
+  <div id="match"></div>
+</section>
+
+<script>
+orderSteps($('#order-p'), ['Problem erkennen: Das Handy liegt auf dem Boden.', 'Anforderungen festlegen', 'Ideen sammeln und skizzieren', 'Ideen bewerten und eine Lösung auswählen', 'Planen: Zeichnung, Stückliste, Arbeitsablaufplan', 'Fertigen', 'Testen und bewerten'], {label: 'Phasen'});
+sorter($('#sort-a'), [{id: 'm', name: 'Muss-Anforderung'}, {id: 'w', name: 'Wunsch-Anforderung'}], [
+  {t: 'Das Handy steht sicher und kippt nicht.', c: 'm'}, {t: 'Das Ladekabel passt durch.', c: 'm'}, {t: 'Der Halter ist aus Holz.', c: 'm', why: 'Vorgabe des Projekts'},
+  {t: 'Man kann den Namen eingravieren.', c: 'w'}, {t: 'Er hat ein Fach für Kopfhörer.', c: 'w'}, {t: 'Er ist höchstens 15 cm breit.', c: 'm'}, {t: 'Er ist farbig lackiert.', c: 'w'}, {t: 'Er hat keine scharfen Kanten.', c: 'm'}
+]);
+rating($('#rate'), ['Handy steht sicher', 'Kabel passt durch', 'leicht herzustellen', 'wenig Material', 'sieht gut aus'], ['Idee A', 'Idee B', 'Idee C'], {head: 'Anforderung'});
+quizTable($('#stl'), $('#stl-q'), $('#stl-a'));
+orderSteps($('#order-ap'), ['Maße auf das Brett übertragen (anreißen)', 'Teile mit der Feinsäge zusägen', 'Dübellöcher bohren', 'Kanten feilen und schleifen', 'Teile mit Dübeln und Leim fügen', 'Oberfläche ölen'], {label: 'Arbeitsschritte'});
+matcher($('#match'), [['Anforderungsliste', 'Was das Produkt können muss'], ['Ideenskizze', 'schnelle Freihandzeichnung einer Lösung'], ['Bewertungstabelle', 'Ideen mit Punkten vergleichen'], ['technische Zeichnung', 'Form und Maße genau dargestellt'], ['Stückliste', 'alle Einzelteile mit Werkstoff und Maßen'], ['Arbeitsablaufplan', 'Reihenfolge der Arbeitsschritte mit Werkzeugen']]);
+</script>

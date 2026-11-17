@@ -1,0 +1,105 @@
+<!--
+title: Maschinen als Energiewandler
+short: Wirkungsgrad
+time: 1–2 Unterrichtsstunden
+q: Wie viel der zugeführten Energie nutzt eine Maschine wirklich?
+facts: Energie geht nicht verloren, sie wird umgewandelt (Energieerhaltung) | Energieformen: elektrisch, chemisch, mechanisch (Bewegung, Lage), thermisch, Strahlung | Ein Teil wird immer in nicht nutzbare Wärme umgewandelt | Wirkungsgrad η = genutzte Energie : zugeführte Energie (in %) | Energieflussbild | Elektromotor ca. 90 %, Benzinmotor ca. 25–35 %
+inter: Energieformen und Wandler zuordnen · Energieflussbilder für fünf Maschinen · Wirkungsgrad berechnen · Wandlerketten ordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Maschinen und Mobilität</p>
+      <h1>Maschinen als Energiewandler</h1>
+      <p class="lead">Eine alte Glühlampe wird so heiß, dass man sich verbrennt – dabei soll sie doch leuchten. Ein Automotor wird heiß, obwohl er das Auto bewegen soll. Wo bleibt die Energie?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Fasse vorsichtig ein Ladegerät an, das gerade lädt. Was spürst du?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie viel der zugeführten Energie nutzt eine Maschine wirklich?</p></div>
+      <div class="controls"><button class="btn primary" data-go="formen">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="formen" data-label="Energieformen" data-yr="Einstieg" data-title="Energieformen und Wandler" data-sub="Aus welcher Form in welche?">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Energieformen</p>
+    <h2>Energie wird umgewandelt</h2>
+    <p class="lead">Energie kann nicht verloren gehen und nicht neu entstehen – sie wird nur <b>umgewandelt</b>. Maschinen sind <b>Energiewandler</b>. Ordne zu.</p>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="fluss" data-label="Energieflussbild" data-yr="Erarbeitung" data-title="Das Energieflussbild" data-sub="Nutzen und Verluste">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Energieflussbild</p>
+    <h2>Wohin fließt die Energie?</h2>
+    <p class="lead">Das <b>Energieflussbild</b> zeigt, wie viel der zugeführten Energie genutzt wird (grün) und wie viel als Wärme, Schall oder Reibung „verloren“ geht (rot). Wähle eine Maschine.</p>
+  </div>
+  <div class="cols-2"><div><div class="tk-row"><span id="fl-seg"></span></div><div id="sk"></div></div><div><div class="tk-readout" id="fl-ro"></div><p class="status" id="fl-st"></p></div></div>
+</section>
+
+<section class="station" id="eta" data-label="Wirkungsgrad" data-yr="Übung" data-title="Der Wirkungsgrad" data-sub="η = Nutzen : Aufwand">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Wirkungsgrad</p>
+    <h2>Der Wirkungsgrad η</h2>
+    <p class="lead"><b>η = genutzte Energie : zugeführte Energie</b>. Er wird meist in Prozent angegeben und ist immer kleiner als 100 %.</p>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="kette" data-label="M1 Wandlerkette" data-yr="Material M1" data-title="Wandlerketten" data-sub="Vom Kraftwerk zur Lampe">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Eine Kette von Energiewandlern</h2>
+    <p class="lead">Oft wird Energie mehrmals umgewandelt. Die Wirkungsgrade werden dann <b>multipliziert</b>: Kraftwerk 40 % · Leitung 95 % · LED 40 % = nur etwa 15 % der Kohleenergie werden zu Licht. Ordne die Kette.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Wirkungsgrad</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Maschinen als Energiewandler</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Energie geht nicht verloren, sie wird umgewandelt. Maschinen sind <b>Energiewandler</b>.</li>
+        <li data-step>Bei jeder Umwandlung entsteht auch nicht nutzbare Energie, meist <b>Wärme</b>.</li>
+        <li data-step><b>Wirkungsgrad:</b> η = genutzte Energie : zugeführte Energie. Er ist immer kleiner als 100 %.</li>
+        <li data-step>Elektromotor ca. 90 %, Benzinmotor ca. 30 %, LED ca. 40 %, Glühlampe ca. 5 %. Bei Wandlerketten werden die Wirkungsgrade multipliziert.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Beispiel</span><p>Ein Motor nimmt 500 J auf und gibt 400 J Bewegungsenergie ab: η = 400 J : 500 J = 0,8 = 80 %.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Energie-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match'), [['Elektromotor', 'elektrische → Bewegungsenergie'], ['Generator (Dynamo)', 'Bewegungs- → elektrische Energie'], ['Benzinmotor', 'chemische → Bewegungsenergie (+ Wärme)'], ['Solarzelle', 'Strahlungs- → elektrische Energie'], ['Wasserkocher', 'elektrische → thermische Energie'], ['Akku beim Laden', 'elektrische → chemische Energie']]);
+const MA = {emotor: ['Elektromotor', 'elektrische Energie', [['Bewegung', 90, 1], ['Wärme', 8], ['Reibung', 2]]], benzin: ['Benzinmotor', 'chemische Energie', [['Bewegung', 30, 1], ['Abgaswärme', 35], ['Kühlung', 30], ['Reibung', 5]]],
+  led: ['LED-Lampe', 'elektrische Energie', [['Licht', 40, 1], ['Wärme', 60]]], gluehl: ['Glühlampe', 'elektrische Energie', [['Licht', 5, 1], ['Wärme', 95]]], fahrrad: ['Fahrrad (Mensch)', 'chemische Energie (Nahrung)', [['Bewegung', 25, 1], ['Körperwärme', 73], ['Reibung', 2]]]};
+const sk = sankey($('#sk'), {outs: []});
+seg($('#fl-seg'), Object.entries(MA).map(([k, v]) => [k, v[0]]), v => {
+  const [n, inp, outs] = MA[v]; sk.set(outs.map(([nn, val, use]) => ({n: nn, v: val, use: !!use})));
+  const eta = outs.find(o => o[2])[1];
+  readout($('#fl-ro'), [['Maschine', n], ['zugeführt', inp], ['Wirkungsgrad η', eta + ' %']]);
+  $('#fl-st').innerHTML = eta >= 80 ? 'Sehr effizient – fast die ganze Energie wird genutzt.' : eta >= 30 ? 'Ein großer Teil wird zu Wärme, die nicht genutzt wird.' : 'Der größte Teil der Energie wird zu Wärme – sehr ineffizient.';
+});
+taskSet($('#ts'), () => {
+  const zu = pick([200, 500, 800, 1000, 1200, 2000]), eta = pick([0.25, 0.3, 0.4, 0.5, 0.8, 0.9]), nu = zu * eta;
+  return Math.random() < .5 ? {key: `e${zu}${eta}`, tag: 'η gesucht', q: `zugeführt: <b>${zu} J</b>, genutzt: <b>${numDE(nu, 0)} J</b>`, fields: [{l: 'η', a: eta * 100, tol: .5, unit: '%'}], hint: 'η = genutzt : zugeführt · 100 %'}
+    : {key: `n${zu}${eta}`, tag: 'Nutzen gesucht', q: `zugeführt: <b>${zu} J</b>, η = <b>${numDE(eta * 100, 0)} %</b>`, fields: [{l: 'genutzt', a: nu, tol: .5, unit: 'J'}], hint: 'genutzt = zugeführt · η'};
+}, {n: 4});
+orderSteps($('#order'), ['Kohle (chemische Energie)', 'Kessel: Verbrennung → Wärme, Wasserdampf', 'Turbine: Dampf → Drehbewegung', 'Generator: Bewegung → elektrische Energie', 'Stromleitung zum Haus', 'LED: elektrische Energie → Licht'], {label: 'Wandlerkette'});
+mcQuiz($('#quiz'), [
+  {q: 'Was gilt für die Energie bei einer Umwandlung?', a: ['Sie bleibt insgesamt erhalten.', 'Sie wird vernichtet.', 'Sie entsteht neu.', 'Sie verdoppelt sich.'], ok: 0},
+  {q: 'In welche Form wird meist „verlorene“ Energie umgewandelt?', a: ['Wärme', 'Licht', 'Strom', 'Lageenergie'], ok: 0},
+  {q: 'Welche Maschine hat den höchsten Wirkungsgrad?', a: ['Elektromotor', 'Glühlampe', 'Benzinmotor', 'Dampfmaschine'], ok: 0},
+  {q: 'zugeführt 400 J, genutzt 100 J. η = ?', a: ['25 %', '40 %', '4 %', '75 %'], ok: 0},
+  {q: 'Was wandelt ein Generator um?', a: ['Bewegungs- in elektrische Energie', 'elektrische in Bewegungsenergie', 'Licht in Wärme', 'Wärme in Licht'], ok: 0}
+]);
+</script>

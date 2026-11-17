@@ -1,0 +1,106 @@
+<!--
+title: Zahnradgetriebe und Übersetzung
+short: Zahnradgetriebe
+time: 2 Unterrichtsstunden
+q: Wie verändern Zahnräder Drehzahl, Drehmoment und Drehrichtung?
+facts: Zwei Zahnräder kehren die Drehrichtung um; ein Zwischenrad stellt sie wieder her | Übersetzung i = z₂ : z₁ (Abtrieb : Antrieb) | i > 1: ins Langsame, mehr Drehmoment; i < 1: ins Schnelle, weniger Drehmoment | n₂ = n₁ : i | Was an Drehzahl gewonnen wird, geht an Kraft verloren (goldene Regel der Mechanik)
+inter: Zahnradgetriebe-Simulator mit Zwischenrad · Übersetzung berechnen · Ins Langsame oder ins Schnelle? · Drehrichtung vorhersagen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Maschinen und Mobilität</p>
+      <h1>Zahnradgetriebe und Übersetzung</h1>
+      <p class="lead">Der Motor im Akkuschrauber dreht sich 20 000-mal pro Minute – viel zu schnell und zu schwach, um eine Schraube einzudrehen. Ein <b>Getriebe</b> macht daraus eine langsame, kräftige Drehung.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Drehe an einer Kurbel mit zwei verschieden großen Zahnrädern. Was beobachtest du?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie verändern Zahnräder Drehzahl, Drehmoment und Drehrichtung?</p></div>
+      <div class="controls"><button class="btn primary" data-go="getriebe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="getriebe" data-label="Simulator" data-yr="Erarbeitung" data-title="Das Zahnradgetriebe" data-sub="Zähne zählen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Simulator</p>
+    <h2>Das Zahnradgetriebe</h2>
+    <p class="lead">Das <b>Antriebsrad</b> (z₁ Zähne) treibt das <b>Abtriebsrad</b> (z₂ Zähne). Verändere die Zähnezahlen und beobachte die roten Markierungen. Schalte ein <b>Zwischenrad</b> ein.</p>
+  </div>
+  <div id="g1"></div>
+</section>
+
+<section class="station" id="formel" data-label="Übersetzung" data-yr="Erarbeitung" data-title="Die Übersetzung" data-sub="i = z₂ : z₁">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Übersetzung</p>
+    <h2>i = z₂ : z₁</h2>
+    <p class="lead">Hat das Abtriebsrad doppelt so viele Zähne, dreht es sich nur halb so schnell – aber mit doppeltem Drehmoment. Die <b>Übersetzung</b> i gibt dieses Verhältnis an.</p>
+  </div>
+  <div class="cols-3">
+    <div class="box"><span class="tag info">i &gt; 1</span><p><b>Übersetzung ins Langsame:</b> großes Abtriebsrad. Drehzahl sinkt, Drehmoment steigt. Beispiel: Akkuschrauber, Fahrrad im ersten Gang.</p></div>
+    <div class="box"><span class="tag info">i &lt; 1</span><p><b>Übersetzung ins Schnelle:</b> kleines Abtriebsrad. Drehzahl steigt, Drehmoment sinkt. Beispiel: Handbohrer, Schneebesen.</p></div>
+    <div class="box"><span class="tag info">Drehzahl</span><p><b>n₂ = n₁ : i</b><br>Antrieb 600 1/min, i = 3 → Abtrieb 200 1/min.</p></div>
+  </div>
+  <h3 class="mt">Ins Langsame oder ins Schnelle?</h3>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="rechnen" data-label="Rechnen" data-yr="Übung" data-title="Rechentrainer" data-sub="i und n₂ berechnen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Rechentrainer</p>
+    <h2>Übersetzung und Drehzahl berechnen</h2>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="richtung" data-label="M1 Drehrichtung" data-yr="Material M1" data-title="Drehrichtung" data-sub="Rechts oder links herum?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Rechts oder links herum?</h2>
+    <p class="lead">Jedes weitere Zahnrad in einer Reihe kehrt die Drehrichtung um. Das erste Rad dreht im Uhrzeigersinn. Wie dreht sich das letzte?</p>
+  </div>
+  <div id="ts-r"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Zahnradgetriebe</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Zahnradgetriebe und Übersetzung</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Zwei ineinandergreifende Zahnräder drehen <b>gegensinnig</b>. Ein <b>Zwischenrad</b> stellt die Drehrichtung wieder her, ändert die Übersetzung aber nicht.</li>
+        <li data-step><b>Übersetzung:</b> i = z₂ : z₁ (Zähne Abtrieb : Zähne Antrieb). <b>Drehzahl:</b> n₂ = n₁ : i.</li>
+        <li data-step>i &gt; 1: <b>ins Langsame</b> – mehr Drehmoment. i &lt; 1: <b>ins Schnelle</b> – weniger Drehmoment.</li>
+        <li data-step>Goldene Regel der Mechanik: Was an Drehzahl gewonnen wird, geht an Kraft verloren – und umgekehrt.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Beispiel</span><p>z₁ = 12, z₂ = 36 → i = 36 : 12 = 3. Bei n₁ = 900 1/min ist n₂ = 900 : 3 = 300 1/min.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Getriebe-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+gears($('#g1'), {type: 'zahnrad', z1: 12, z2: 24, n1: 60, idlerBtn: true});
+sorter($('#sort'), [{id: 'l', name: 'ins Langsame (i > 1)'}, {id: 's', name: 'ins Schnelle (i < 1)'}], [
+  {t: 'z₁ = 10, z₂ = 40', c: 'l'}, {t: 'z₁ = 36, z₂ = 12', c: 's'}, {t: 'Akkuschrauber', c: 'l'}, {t: 'Handrührgerät mit Kurbel', c: 's'}, {t: 'Seilwinde zum Heben', c: 'l'}, {t: 'Fahrrad im schnellsten Gang', c: 's'}
+]);
+taskSet($('#ts'), () => {
+  const z1 = pick([10, 12, 15, 20, 24, 30, 40]), z2 = pick([10, 15, 20, 30, 36, 45, 60].filter(z => z !== z1)), n1 = pick([300, 600, 900, 1200, 1500]), i = z2 / z1;
+  return {key: `${z1}${z2}${n1}`, tag: 'Zahnradgetriebe', q: `z₁ = <b>${z1}</b>, z₂ = <b>${z2}</b>, n₁ = <b>${n1} 1/min</b>`, fields: [{l: 'i', a: +i.toFixed(2), tol: .011}, {l: 'n₂', a: Math.round(n1 / i), tol: 1, unit: '1/min'}], hint: 'i = z₂ : z₁, n₂ = n₁ : i'};
+}, {n: 4});
+taskSet($('#ts-r'), () => {
+  const n = randInt(2, 6), cw = n % 2 === 1;
+  return {key: 'r' + n, tag: `${n} Zahnräder`, q: `${n} Zahnräder greifen in einer Reihe ineinander. Wie dreht sich das <b>letzte</b>?<br><span style="font-family:var(--f-mono);letter-spacing:.2em">${[...Array(n)].map((_, k) => k % 2 ? '↺' : '↻').join(' ')}</span>`, fields: [{l: 'Drehrichtung (im / gegen)', a: cw ? ['im', 'im uhrzeigersinn', 'uhrzeigersinn'] : ['gegen', 'gegen den uhrzeigersinn']}], hint: 'Ungerade Anzahl: wie das erste. Gerade Anzahl: entgegengesetzt.'};
+}, {n: 3});
+mcQuiz($('#quiz'), [
+  {q: 'Wie berechnet man die Übersetzung?', a: ['i = z₂ : z₁', 'i = z₁ : z₂', 'i = z₁ · z₂', 'i = z₂ − z₁'], ok: 0},
+  {q: 'z₁ = 15, z₂ = 45. Was gilt?', a: ['i = 3, ins Langsame', 'i = 3, ins Schnelle', 'i = 0,33, ins Langsame', 'i = 30'], ok: 0},
+  {q: 'n₁ = 1200 1/min, i = 4. n₂ = ?', a: ['300 1/min', '4800 1/min', '1200 1/min', '1196 1/min'], ok: 0},
+  {q: 'Was bewirkt ein Zwischenrad?', a: ['Es kehrt die Drehrichtung um.', 'Es verdoppelt die Übersetzung.', 'Es halbiert die Drehzahl.', 'Nichts.'], ok: 0},
+  {q: 'Was steigt bei einer Übersetzung ins Langsame?', a: ['das Drehmoment', 'die Drehzahl', 'die Zähnezahl des Antriebs', 'der Lärm'], ok: 0}
+]);
+</script>

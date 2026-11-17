@@ -1,0 +1,106 @@
+<!--
+title: Holz fügen und beschichten
+short: Fügen
+time: 2 Unterrichtsstunden
+q: Wie verbinde ich Holzteile dauerhaft, und wie schütze ich die Oberfläche?
+facts: Fügen = Teile verbinden | Lösbare Verbindungen (Schrauben) und unlösbare Verbindungen (Leimen, Nageln, geleimte Dübel) | Leimen: dünn auftragen, pressen, Trockenzeit | Schrauben: vorbohren, senken | Beschichten mit Öl, Wachs, Lasur und Lack schützt vor Feuchtigkeit und Schmutz
+inter: Verbindungen lösbar/unlösbar sortieren · Leimen in Schritten ordnen · Dübelverbindung im Schnitt · Beschichtungen zuordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Holz</p>
+      <h1>Holz fügen und beschichten</h1>
+      <p class="lead">Ein Werkstück besteht meist aus mehreren Teilen. Sie müssen fest und genau <b>verbunden</b> werden. Zum Schluss bekommt das Holz eine schützende <b>Oberfläche</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wie sind die Teile deines Stuhls miteinander verbunden?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie verbinde ich Holzteile dauerhaft, und wie schütze ich die Oberfläche?</p></div>
+      <div class="controls"><button class="btn primary" data-go="arten">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="arten" data-label="Verbindungen" data-yr="Einstieg" data-title="Lösbar oder unlösbar?" data-sub="Arten von Verbindungen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Verbindungen</p>
+    <h2>Lösbar oder unlösbar?</h2>
+    <p class="lead">Eine Verbindung ist <b>lösbar</b>, wenn man sie ohne Beschädigung wieder öffnen kann. Bei einer <b>unlösbaren</b> Verbindung werden die Teile oder das Verbindungsmittel beim Trennen beschädigt.</p>
+  </div>
+  <div id="sort-v"></div>
+</section>
+
+<section class="station" id="leimen" data-label="Leimen" data-yr="Erarbeitung" data-title="Leimen" data-sub="Die häufigste Holzverbindung">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Leimen</p>
+    <h2>Leimen – so hält es</h2>
+    <p class="lead">Weißleim (Holzleim) dringt in die Poren beider Teile ein und härtet aus. Eine gute Leimfuge ist oft fester als das Holz selbst. Ordne die Schritte.</p>
+  </div>
+  <div id="order-l"></div>
+</section>
+
+<section class="station" id="schrauben" data-label="Schrauben & Dübeln" data-yr="Erarbeitung" data-title="Schrauben und Dübeln" data-sub="Vorbohren, senken, dübeln">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Schrauben und Dübeln</p>
+    <h2>Schrauben und Dübeln</h2>
+    <p class="lead">Wähle eine Verbindung und sieh sie dir im Schnitt an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig" id="vb-fig"></div>
+    <div><div class="tk-row"><span id="vb-seg"></span></div><div class="box" id="vb-txt"></div></div>
+  </div>
+</section>
+
+<section class="station" id="beschichten" data-label="Beschichten" data-yr="Material M1" data-title="Oberflächen schützen" data-sub="Öl, Wachs, Lasur, Lack">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Oberflächen schützen</h2>
+    <p class="lead">Unbehandeltes Holz wird schmutzig, nimmt Wasser auf und wird grau. Eine <b>Beschichtung</b> schützt es. Vorher wird glatt geschliffen und entstaubt. Ordne zu.</p>
+  </div>
+  <div id="match-o"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Fügen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Holz fügen und beschichten</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Fügen</b> heißt Teile verbinden. <b>Lösbar</b>: Schrauben, Steckverbindungen. <b>Unlösbar</b>: Leimen, Nageln, geleimte Dübel.</li>
+        <li data-step><b>Leimen:</b> Flächen sauber und passend, Leim dünn auf beide Seiten, Teile mit Zwingen pressen, ausgetretenen Leim entfernen, trocknen lassen.</li>
+        <li data-step><b>Schrauben:</b> vorbohren, damit das Holz nicht reißt, und senken, damit der Kopf bündig sitzt.</li>
+        <li data-step><b>Beschichten</b> mit Öl, Wachs, Lasur oder Lack schützt das Holz vor Feuchtigkeit und Schmutz.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Leimt zwei Leisten stumpf und zwei Leisten mit Dübel zusammen. Prüft nach dem Trocknen, welche Verbindung mehr aushält.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Fügen-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-v'), [{id: 'l', name: 'lösbar'}, {id: 'u', name: 'unlösbar'}], [
+  {t: 'Schraube', c: 'l'}, {t: 'Leim', c: 'u'}, {t: 'Nagel', c: 'u', why: 'Beim Herausziehen werden Holz und Nagel beschädigt.'}, {t: 'Holzdübel mit Leim', c: 'u'},
+  {t: 'Steckverbindung ohne Leim', c: 'l'}, {t: 'Heißkleber', c: 'u'}, {t: 'Möbelverbinder mit Gewinde', c: 'l'}, {t: 'Tacker-Klammer', c: 'u'}
+]);
+orderSteps($('#order-l'), ['Teile genau zuschneiden und Klebeflächen prüfen', 'Leim dünn und gleichmäßig auf beide Flächen auftragen', 'Teile zusammenfügen und ausrichten', 'Mit Schraubzwingen pressen (Zulagen gegen Druckstellen)', 'Ausgetretenen Leim feucht abwischen', 'Trocknen lassen (je nach Leim etwa 30 Minuten bis 24 Stunden)'], {label: 'Ablauf'});
+const VB = {
+  schraube: {n: 'Schraube', t: 'Das obere Brett wird mit einem Bohrer in Schraubendicke vorgebohrt und gesenkt, das untere nur dünn vorgebohrt. So zieht die Schraube die Teile zusammen und das Holz reißt nicht.', s: `<rect x="40" y="40" width="340" height="50" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/><rect x="40" y="90" width="340" height="70" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="2"/><path d="M190 40h40l-14 14v80l-6 14-6-14V54z" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/><path d="M204 70l12 6M204 82l12 6M204 94l12 6M204 106l12 6M204 118l12 6M204 130l12 6" stroke="var(--edge)" stroke-width="1.5"/>`},
+  nagel: {n: 'Nagel', t: 'Schnell, aber unlösbar. Nägel schräg gegeneinander („schwalbenschwanzförmig“) einschlagen, dann halten sie besser. Nicht zu nah am Rand – das Holz kann reißen.', s: `<rect x="40" y="40" width="340" height="50" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/><rect x="40" y="90" width="340" height="70" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="2"/><path d="M150 34h24M162 34l-14 110" stroke="var(--steel-2)" stroke-width="5"/><path d="M260 34h24M272 34l14 110" stroke="var(--steel-2)" stroke-width="5"/>`},
+  duebel: {n: 'Dübel', t: 'In beide Teile wird ein Loch gebohrt (z. B. Ø 8 mm). Ein geriffelter Holzdübel mit Leim verbindet die Teile unsichtbar und sehr fest. Die Riffeln lassen Luft und überschüssigen Leim entweichen.', s: `<rect x="40" y="40" width="160" height="120" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/><rect x="200" y="40" width="180" height="120" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="2"/><rect x="150" y="70" width="100" height="18" fill="#E9CD9E" stroke="var(--edge)" stroke-width="1.5"/><rect x="150" y="112" width="100" height="18" fill="#E9CD9E" stroke="var(--edge)" stroke-width="1.5"/><path d="M160 70v18M172 70v18M184 70v18M216 70v18M228 70v18M240 70v18M160 112v18M172 112v18M184 112v18M216 112v18M228 112v18M240 112v18" stroke="#A8743E"/>`},
+  stumpf: {n: 'stumpf geleimt', t: 'Die Teile werden nur mit Leim aneinandergesetzt. An der Stirnseite (Hirnholz) hält Leim schlecht, weil er in die Poren gesaugt wird. Besser: Dübel oder Holzverbindung (z. B. Überblattung).', s: `<rect x="40" y="70" width="170" height="60" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/><rect x="213" y="70" width="170" height="60" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="2"/><path d="M211 70v60" stroke="#F4E3A0" stroke-width="4"/>`}
+};
+seg($('#vb-seg'), Object.entries(VB).map(([k, v]) => [k, v.n]), v => { $('#vb-fig').innerHTML = `<svg viewBox="0 0 420 200" role="img" aria-label="${VB[v].n}">${VB[v].s}</svg><p class="tk-cap">${VB[v].n} – Schnitt</p>`; $('#vb-txt').innerHTML = `<span class="tag info">${VB[v].n}</span><p>${VB[v].t}</p>`; });
+matcher($('#match-o'), [['Öl', 'zieht ein, betont die Maserung, Holz bleibt offenporig'], ['Wachs', 'seidiger Glanz, wird poliert, schützt nur leicht'], ['Lasur', 'farbig, aber die Maserung bleibt sichtbar; gut für außen'], ['Lack', 'harte, geschlossene Schicht, sehr widerstandsfähig'], ['Beize', 'färbt das Holz, schützt aber nicht']]);
+mcQuiz($('#quiz'), [
+  {q: 'Welche Verbindung ist lösbar?', a: ['Schraube', 'Leim', 'Nagel', 'geleimter Dübel'], ok: 0},
+  {q: 'Warum bohrt man vor dem Schrauben vor?', a: ['damit das Holz nicht reißt', 'damit die Schraube rostet', 'damit es schneller trocknet', 'damit man weniger Schrauben braucht'], ok: 0},
+  {q: 'Wozu dienen Zulagen beim Pressen mit Zwingen?', a: ['Sie verhindern Druckstellen.', 'Sie beschleunigen das Trocknen.', 'Sie ersetzen den Leim.', 'Sie färben das Holz.'], ok: 0},
+  {q: 'Warum hat ein Holzdübel Riffeln?', a: ['Luft und überschüssiger Leim können entweichen.', 'Er sieht schöner aus.', 'Er lässt sich leichter brechen.', 'Er wird dadurch leichter.'], ok: 0},
+  {q: 'Was macht man vor dem Beschichten?', a: ['glatt schleifen und entstauben', 'nass machen', 'ölen', 'nageln'], ok: 0},
+  {q: 'Welche Beschichtung bildet eine harte, geschlossene Schicht?', a: ['Lack', 'Öl', 'Wachs', 'Beize'], ok: 0}
+]);
+</script>

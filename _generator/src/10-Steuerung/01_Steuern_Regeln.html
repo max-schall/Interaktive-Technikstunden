@@ -1,0 +1,111 @@
+<!--
+title: Steuern und Regeln
+short: Steuern & Regeln
+time: 2 Unterrichtsstunden
+q: Was unterscheidet eine Steuerung von einer Regelung?
+facts: Steuerung: offene Wirkungskette, keine Rückmeldung (Zeitschaltuhr, Ampel mit festen Phasen) | Regelung: geschlossener Regelkreis – Istwert wird gemessen, mit dem Sollwert verglichen und nachgeregelt (Thermostat, Tempomat) | Begriffe: Sollwert, Istwert, Regler, Stellglied, Regelstrecke, Störgröße | Zweipunktregler mit Schaltdifferenz
+inter: Raumheizung als Steuerung und Regelung simulieren · Störgröße Fenster · Begriffe des Regelkreises zuordnen · Steuerung oder Regelung sortieren · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Steuerung und Regelung</p>
+      <h1>Steuern und Regeln</h1>
+      <p class="lead">Ein Toaster bräunt das Brot eine feste Zeit lang – egal ob es schon schwarz ist. Ein Backofen dagegen hält die Temperatur genau bei 180 °C. Beide arbeiten automatisch, aber nach einem ganz unterschiedlichen Prinzip.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Woher „weiß“ der Backofen, wann er nachheizen muss?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Was unterscheidet eine Steuerung von einer Regelung?</p></div>
+      <div class="controls"><button class="btn primary" data-go="sim">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="sim" data-label="Heizung" data-yr="Einstieg" data-title="Die Raumheizung" data-sub="Steuerung gegen Regelung">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Raumheizung</p>
+    <h2>Steuerung oder Regelung?</h2>
+    <p class="lead">Probiere beide Betriebsarten. Öffne dann das Fenster (Störgröße) und beobachte, wie die beiden Systeme reagieren.</p>
+  </div>
+  <div id="rg"></div>
+</section>
+
+<section class="station" id="kreis" data-label="Regelkreis" data-yr="Erarbeitung" data-title="Der Regelkreis" data-sub="Soll, Ist, Regler, Stellglied">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Regelkreis</p>
+    <h2>Der geschlossene Regelkreis</h2>
+    <p class="lead">Bei der <b>Regelung</b> wird das Ergebnis ständig gemessen und zurückgemeldet – der Kreis ist geschlossen. Bei der <b>Steuerung</b> fehlt diese Rückmeldung. Ordne die Begriffe am Beispiel Heizung zu.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 460 260" role="img" aria-label="Regelkreis" style="font-family:var(--f-mono)">
+      <g fill="var(--surface)" stroke="var(--edge)" stroke-width="2"><rect x="150" y="30" width="110" height="50"/><rect x="310" y="30" width="120" height="50"/><rect x="310" y="160" width="120" height="50"/><rect x="150" y="160" width="110" height="50"/><circle cx="90" cy="55" r="16"/></g>
+      <g style="font-size:14px;font-weight:700;fill:var(--ink)" text-anchor="middle"><text x="205" y="60">Regler</text><text x="370" y="60">Stellglied</text><text x="370" y="182">Regelstrecke</text><text x="370" y="199" style="font-size:11px;font-weight:500">(Raum)</text><text x="205" y="190">Sensor</text></g>
+      <g stroke="var(--ink)" stroke-width="2.5" fill="none"><path d="M10 55H74M106 55H150M260 55H310M370 80V160M310 185H260M150 185H90V71"/></g>
+      <g fill="var(--ink)"><path d="M74 55l-10 -5v10zM150 55l-10 -5v10zM310 55l-10 -5v10zM370 160l-5 -10h10zM260 185l10 -5v10zM90 71l-5 10h10z"/></g>
+      <text x="20" y="45" style="font-size:12px;fill:var(--accent);font-weight:700">Sollwert</text><text x="80" y="105" style="font-size:12px;fill:var(--accent);font-weight:700">Istwert</text><text x="84" y="60" style="font-size:16px">−</text>
+      <text x="440" y="130" text-anchor="end" style="font-size:12px;fill:var(--bad);font-weight:700">Störgröße ↓</text><path d="M430 140v20" stroke="var(--bad)" stroke-width="2.5"/>
+    </svg></div>
+    <div id="match"></div>
+  </div>
+</section>
+
+<section class="station" id="sortieren" data-label="Beispiele" data-yr="Übung" data-title="Steuerung oder Regelung?" data-sub="Beispiele aus dem Alltag">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Beispiele</p>
+    <h2>Steuerung oder Regelung?</h2>
+    <p class="lead">Frage dich: Wird das Ergebnis gemessen und zurückgemeldet?</p>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Zweipunktregler" data-yr="Material M1" data-title="Der Zweipunktregler" data-sub="An oder aus">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Der Zweipunktregler</h2>
+    <p class="lead">Ein Bügeleisen oder Kühlschrank kennt nur zwei Zustände: <b>an</b> oder <b>aus</b>. Damit es nicht ständig klickt, gibt es eine <b>Schaltdifferenz</b>: Die Heizung geht erst bei 0,5 °C unter dem Sollwert an und erst bei 0,5 °C darüber wieder aus. Deshalb pendelt der Istwert um den Sollwert. Prüfe die Aussagen.</p>
+  </div>
+  <div id="tf"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Steuern und Regeln</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Steuern und Regeln</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Steuerung:</b> offene Wirkungskette ohne Rückmeldung. Störungen werden nicht ausgeglichen (Toaster, Zeitschaltuhr).</li>
+        <li data-step><b>Regelung:</b> geschlossener Regelkreis. Der <b>Istwert</b> wird gemessen, mit dem <b>Sollwert</b> verglichen und bei Abweichung nachgeregelt (Thermostat, Tempomat).</li>
+        <li data-step>Teile des Regelkreises: <b>Sensor</b> (misst Istwert), <b>Regler</b> (vergleicht), <b>Stellglied</b> (greift ein, z. B. Ventil), <b>Regelstrecke</b> (z. B. der Raum). Die <b>Störgröße</b> wirkt von außen (offenes Fenster).</li>
+        <li data-step>Ein <b>Zweipunktregler</b> schaltet nur an oder aus; durch die Schaltdifferenz pendelt der Istwert um den Sollwert.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Erkundung</span><p>Sucht zu Hause drei Regelungen und drei Steuerungen. Zeichnet für eine Regelung den Regelkreis.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Regel-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+regel($('#rg'), {mode: 'steuer'});
+matcher($('#match'), [['Sollwert', 'gewünschte Raumtemperatur, z. B. 21 °C'], ['Istwert', 'tatsächlich gemessene Temperatur'], ['Sensor', 'Thermometer im Thermostat'], ['Regler', 'vergleicht Soll und Ist, entscheidet'], ['Stellglied', 'Ventil am Heizkörper'], ['Störgröße', 'offenes Fenster, Sonne, viele Menschen']]);
+sorter($('#sort'), [{id: 's', name: 'Steuerung'}, {id: 'r', name: 'Regelung'}], [
+  {t: 'Toaster mit Zeitregler', c: 's'}, {t: 'Kühlschrank mit Thermostat', c: 'r'}, {t: 'Ampel mit festen Phasen', c: 's'}, {t: 'Tempomat im Auto', c: 'r', why: 'Die Geschwindigkeit wird gemessen und nachgeregelt.'},
+  {t: 'Waschmaschinenprogramm', c: 's'}, {t: 'Spülkasten mit Schwimmer', c: 'r', why: 'Der Schwimmer misst den Wasserstand und schließt das Ventil.'}, {t: 'Rasensprenger mit Zeitschaltuhr', c: 's'}, {t: 'Bügeleisen mit Temperaturwahl', c: 'r'}
+]);
+trueFalse($('#tf'), [
+  {t: 'Ein Zweipunktregler kann die Heizung nur ein- und ausschalten.', ok: true},
+  {t: 'Ohne Schaltdifferenz würde der Regler sehr oft schalten.', ok: true},
+  {t: 'Bei einer Regelung bleibt der Istwert immer exakt gleich dem Sollwert.', ok: false, why: 'Er pendelt um den Sollwert.'},
+  {t: 'Eine Steuerung gleicht ein offenes Fenster automatisch aus.', ok: false, why: 'Ohne Rückmeldung merkt sie die Störung nicht.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was fehlt bei einer Steuerung?', a: ['die Rückmeldung des Istwerts', 'der Sollwert', 'die Energie', 'das Stellglied'], ok: 0},
+  {q: 'Was ist der Istwert?', a: ['der gemessene Wert', 'der gewünschte Wert', 'die Störung', 'das Ventil'], ok: 0},
+  {q: 'Welches Beispiel ist eine Regelung?', a: ['Thermostat am Heizkörper', 'Zeitschaltuhr', 'Toaster', 'Lichtschalter'], ok: 0},
+  {q: 'Was ist bei der Raumheizung die Störgröße?', a: ['ein offenes Fenster', 'der Sollwert', 'das Ventil', 'der Regler'], ok: 0},
+  {q: 'Welches Bauteil ist das Stellglied der Heizung?', a: ['das Heizkörperventil', 'das Thermometer', 'der Raum', 'das Fenster'], ok: 0}
+]);
+</script>

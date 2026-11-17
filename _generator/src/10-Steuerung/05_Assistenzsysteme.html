@@ -1,0 +1,117 @@
+<!--
+title: Assistenzsysteme und autonomes Fahren
+short: Assistenzsysteme
+time: 2 Unterrichtsstunden
+q: Wie helfen Steuerungen und Regelungen beim Autofahren – und wie weit darf die Technik entscheiden?
+facts: Assistenzsysteme nutzen Sensoren (Kamera, Radar, Ultraschall, Lidar) und Aktoren (Bremse, Lenkung, Motor) | Abstandsregeltempomat und Spurhalteassistent sind Regelungen | Stufen des automatisierten Fahrens 0 bis 5 | Chancen: weniger Unfälle, mehr Mobilität | Fragen: Verantwortung, Datenschutz, ethische Entscheidungen
+inter: Assistenzsystem – Sensor – Aktor zuordnen · Abstandsregelung simulieren · Automatisierungsstufen ordnen · Pro und Contra · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Steuerung und Regelung</p>
+      <h1>Assistenzsysteme und autonomes Fahren</h1>
+      <p class="lead">Moderne Autos bremsen selbst, halten die Spur und parken ein. In einigen Städten fahren schon Robotertaxis ohne Fahrer. Hinter all dem stecken Sensoren, Regelkreise – und viele Fragen.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Würdest du in ein Auto ohne Lenkrad steigen? Warum (nicht)?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie helfen Steuerungen und Regelungen beim Autofahren – und wie weit darf die Technik entscheiden?</p></div>
+      <div class="controls"><button class="btn primary" data-go="systeme">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="systeme" data-label="Assistenzsysteme" data-yr="Einstieg" data-title="Assistenzsysteme" data-sub="Sensor und Aktor">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Assistenzsysteme</p>
+    <h2>Welcher Sensor, welcher Aktor?</h2>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="acc" data-label="Abstandsregelung" data-yr="Erarbeitung" data-title="Der Abstandsregeltempomat" data-sub="Ein Regelkreis auf der Autobahn">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Abstandsregelung</p>
+    <h2>Der Abstandsregeltempomat</h2>
+    <p class="lead">Ein Radarsensor misst ständig den Abstand zum vorausfahrenden Auto (<b>Istwert</b>). Der Regler vergleicht mit dem Sicherheitsabstand (<b>Sollwert</b>) und gibt Gas oder bremst (<b>Stellglied</b>). Das vordere Auto ist die <b>Störgröße</b> – verändere seine Geschwindigkeit.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-fig"><svg viewBox="0 0 460 120" id="acc-s" role="img" aria-label="Zwei Autos auf der Straße"></svg></div><div class="tk-row"><label>Tempo vorne <input type="range" min="60" max="140" step="5" value="110" id="acc-v"> <span class="tk-val" id="acc-vv"></span></label><label>Wunschtempo <input type="range" min="80" max="150" step="5" value="130" id="acc-w"> <span class="tk-val" id="acc-wv"></span></label></div></div>
+    <div><div class="tk-readout" id="acc-ro"></div><div id="acc-pl"></div></div>
+  </div>
+</section>
+
+<section class="station" id="stufen" data-label="Automatisierung" data-yr="Erarbeitung" data-title="Stufen des automatisierten Fahrens" data-sub="Von 0 bis 5">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Stufen</p>
+    <h2>Von Stufe 0 bis Stufe 5</h2>
+    <p class="lead">Ordne die Stufen des automatisierten Fahrens – vom Menschen, der alles selbst macht, bis zum Auto ohne Lenkrad.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="ethik" data-label="M1 Pro & Contra" data-yr="Material M1" data-title="Chancen und Fragen" data-sub="Pro und Contra">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Chancen und offene Fragen</h2>
+    <p class="lead">Sortiert die Argumente und diskutiert: Wer haftet, wenn ein autonomes Auto einen Unfall baut?</p>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Assistenzsysteme</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Assistenzsysteme und autonomes Fahren</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Assistenzsysteme nutzen <b>Sensoren</b> (Kamera, Radar, Ultraschall, Lidar) und <b>Aktoren</b> (Bremse, Lenkung, Motor).</li>
+        <li data-step>Der <b>Abstandsregeltempomat</b> ist eine Regelung: Istwert Abstand, Sollwert Sicherheitsabstand, Stellglied Gas und Bremse, Störgröße das vorausfahrende Auto.</li>
+        <li data-step>Automatisiertes Fahren hat <b>Stufen 0 bis 5</b> – von „Mensch fährt“ bis „Auto fährt überall allein“.</li>
+        <li data-step>Chancen: weniger Unfälle, Mobilität für alle. Offene Fragen: Haftung, Datenschutz, Entscheidungen in Notsituationen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Debatte</span><p>Bereitet eine Pro-und-Contra-Debatte vor: „Ab 2040 sollen nur noch autonome Autos fahren dürfen.“</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Assistenz-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match'), [['Einparkhilfe', 'Ultraschallsensoren → Piepton'], ['Notbremsassistent', 'Radar und Kamera → Bremse'], ['Spurhalteassistent', 'Kamera erkennt Linien → Lenkung'], ['Abstandsregeltempomat', 'Radar misst Abstand → Gas und Bremse'], ['Regensensor', 'Infrarotlicht in der Scheibe → Scheibenwischer'], ['Müdigkeitswarner', 'Lenkverhalten → Kaffeetassen-Symbol']]);
+let v = 130, gap = 120, t = 0, hist = [];
+const accPl = plot($('#acc-pl'), {x: [0, 60], y: [0, 160], xs: 10, ys: 40, xl: 't in s', yl: 'km/h bzw. m', series: []});
+function accDraw() {
+  const vf = +$('#acc-v').value, w = +$('#acc-w').value, soll = v / 2;
+  const x2 = Math.min(420, 70 + gap * 2.2);
+  $('#acc-s').innerHTML = `<rect x="0" y="60" width="460" height="50" fill="var(--steel-2)"/><path d="M0 85h460" stroke="#fff" stroke-dasharray="20 14" stroke-width="3"/>` +
+    `<rect x="20" y="66" width="50" height="22" rx="6" fill="var(--accent)"/><rect x="${x2}" y="66" width="50" height="22" rx="6" fill="var(--bad)"/>` +
+    `<path d="M70 77L${x2} 77" stroke="var(--lamp)" stroke-width="2" stroke-dasharray="4 4"/><text x="${(70 + x2) / 2}" y="50" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:var(--ink)">${numDE(gap, 0)} m</text>`;
+  $('#acc-vv').textContent = vf + ' km/h'; $('#acc-wv').textContent = w + ' km/h';
+  readout($('#acc-ro'), [['eigenes Tempo', numDE(v, 0) + ' km/h'], ['Abstand (Istwert)', numDE(gap, 0) + ' m'], ['Sollabstand (halber Tacho)', numDE(soll, 0) + ' m'], ['Stellglied', gap < soll - 2 ? 'bremsen' : v < w - 1 ? 'Gas geben' : 'halten']]);
+  accPl.set({series: [{pts: hist.map(([a, b]) => [a, b]), cls: 's0', name: 'eigenes Tempo'}, {pts: hist.map(([a, , c]) => [a, c]), cls: 's2', name: 'Abstand'}]});
+}
+animLoop($('#acc-s'), dt => {
+  const vf = +$('#acc-v').value, w = +$('#acc-w').value, soll = v / 2;
+  let acc = 0; if (gap < soll) acc = -Math.min(8, (soll - gap) * .6); else acc = clamp((w - v) * .5, -3, 3) * (gap > soll * 1.3 || v < vf ? 1 : 0.3);
+  v = clamp(v + acc * dt * 3, 0, 160); gap = clamp(gap + (vf - v) / 3.6 * dt * 3, 5, 300);
+  t += dt * 3; if (hist.length === 0 || t - hist[hist.length - 1][0] > .5) { hist.push([t, v, gap]); if (t > 60) { hist = hist.map(([a, b, c]) => [a - .5, b, c]).filter(h => h[0] >= 0); t -= .5; } }
+  accDraw();
+});
+accDraw();
+orderSteps($('#order'), ['Stufe 0: Der Mensch fährt allein, Systeme warnen höchstens', 'Stufe 1: Assistenz – Tempomat oder Spurhalter hilft', 'Stufe 2: Teilautomatisiert – Lenken und Bremsen gleichzeitig, Mensch überwacht', 'Stufe 3: Hochautomatisiert – Auto fährt z. B. im Stau, Mensch muss übernehmen können', 'Stufe 4: Vollautomatisiert – in bestimmten Gebieten ohne Eingriff', 'Stufe 5: Autonom – überall, ohne Lenkrad'], {label: 'Stufen'});
+sorter($('#sort'), [{id: 'p', name: 'Chance'}, {id: 'c', name: 'Risiko / offene Frage'}], [
+  {t: 'Die meisten Unfälle entstehen durch menschliche Fehler', c: 'p'}, {t: 'Ältere oder blinde Menschen werden mobil', c: 'p'}, {t: 'Fahrzeuge sammeln viele Daten', c: 'c'},
+  {t: 'Wer haftet bei einem Unfall?', c: 'c'}, {t: 'Hackerangriffe auf Fahrzeuge', c: 'c'}, {t: 'Verkehr fließt gleichmäßiger, weniger Staus', c: 'p'}, {t: 'Sensoren können bei Schnee und Nebel versagen', c: 'c'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Welcher Sensor misst beim Abstandsregeltempomat den Abstand?', a: ['Radar', 'Thermometer', 'Mikrofon', 'Lichtsensor'], ok: 0},
+  {q: 'Was ist beim Abstandsregeltempomat die Störgröße?', a: ['das vorausfahrende Auto', 'der Sollabstand', 'die Bremse', 'der Radarsensor'], ok: 0},
+  {q: 'Ab welcher Stufe braucht ein Auto kein Lenkrad mehr?', a: ['Stufe 5', 'Stufe 1', 'Stufe 2', 'Stufe 0'], ok: 0},
+  {q: 'Welcher Aktor ist beim Spurhalteassistent wichtig?', a: ['die Lenkung', 'der Scheibenwischer', 'das Radio', 'die Hupe'], ok: 0},
+  {q: 'Warum ist der Spurhalteassistent eine Regelung?', a: ['Die Position wird gemessen und korrigiert.', 'Er hat eine Zeitschaltuhr.', 'Er funktioniert ohne Sensor.', 'Er schaltet nur ein.'], ok: 0}
+]);
+</script>

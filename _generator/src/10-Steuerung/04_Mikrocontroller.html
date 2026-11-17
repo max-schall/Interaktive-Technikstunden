@@ -1,0 +1,107 @@
+<!--
+title: Steuern mit dem Mikrocontroller
+short: Mikrocontroller
+time: 3–4 Unterrichtsstunden
+q: Wie programmiert man eine Steuerung mit einem Mikrocontroller?
+facts: Ein Mikrocontroller ist ein kleiner Computer auf einem Chip mit Ein- und Ausgängen | Programme mit Blöcken (z. B. NEPO, MakeCode): Start, Endlosschleife, Bedingung, Warten | Struktogramm plant den Ablauf | Treppenhauslicht: Taster startet Licht für eine feste Zeit (Steuerung) | Nachtlicht: Lichtsensor mit Schwellwert | Regelung mit Sensor und Aktor im Programm
+inter: Treppenhauslicht im Simulator · Nachtlicht mit Schwellwert · Struktogramm lesen · Ablauf eines Programms vorhersagen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Steuerung und Regelung</p>
+      <h1>Steuern mit dem Mikrocontroller</h1>
+      <p class="lead">In Waschmaschinen, Ampeln und Autos stecken winzige Computer: <b>Mikrocontroller</b>. Sie lesen Sensoren, entscheiden nach einem Programm und schalten Aktoren. Mit einem Calliope mini oder micro:bit kannst du selbst solche Steuerungen bauen.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Das Licht im Treppenhaus geht nach einiger Zeit von selbst aus. Wie könnte das Programm dafür aussehen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie programmiert man eine Steuerung mit einem Mikrocontroller?</p></div>
+      <div class="controls"><button class="btn primary" data-go="treppe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="treppe" data-label="Treppenhauslicht" data-yr="Erarbeitung" data-title="Das Treppenhauslicht" data-sub="Eine Zeitsteuerung">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Treppenhauslicht</p>
+    <h2>Das Treppenhauslicht</h2>
+    <p class="lead">Drückt man Taster A, geht das Licht (LED) an und nach 5 Sekunden wieder aus. Starte das Programm und drücke A. Ist das eine Steuerung oder eine Regelung?</p>
+  </div>
+  <div class="model">
+    <div id="ns-t"></div>
+    <div id="cal-t"></div>
+  </div>
+</section>
+
+<section class="station" id="nacht" data-label="Nachtlicht" data-yr="Erarbeitung" data-title="Das automatische Nachtlicht" data-sub="Sensor und Schwellwert">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Nachtlicht</p>
+    <h2>Licht an, wenn es dunkel wird</h2>
+    <p class="lead">In einer <b>Endlosschleife</b> fragt das Programm ständig den Lichtsensor ab. Ist der Wert kleiner als der <b>Schwellwert</b> 30, geht die LED an. Bewege den Licht-Regler.</p>
+  </div>
+  <div id="cal-n"></div>
+</section>
+
+<section class="station" id="struktogramm" data-label="Struktogramm" data-yr="Übung" data-title="Ein Programm planen" data-sub="Lüfter mit Temperatursensor">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Struktogramm</p>
+    <h2>Ein Programm planen: der Lüfter</h2>
+    <p class="lead">Ein Lüfter soll bei über 25 °C laufen. Lies das Struktogramm und teste das Programm im Simulator mit dem Temperatur-Regler.</p>
+  </div>
+  <div class="model">
+    <div id="ns-l"></div>
+    <div id="cal-l"></div>
+  </div>
+</section>
+
+<section class="station" id="vorhersage" data-label="M1 Vorhersage" data-yr="Material M1" data-title="Was macht das Programm?" data-sub="Vorhersagen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Was macht das Programm?</h2>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Mikrocontroller</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Steuern mit dem Mikrocontroller</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Ein <b>Mikrocontroller</b> ist ein kleiner Computer auf einem Chip. Er liest Sensoren (Eingabe), verarbeitet nach einem Programm und schaltet Aktoren (Ausgabe).</li>
+        <li data-step>Wichtige Programmbausteine: <b>Start</b>, <b>Endlosschleife</b> (wiederhole fortlaufend), <b>Bedingung</b> (wenn … dann … sonst), <b>Warten</b>.</li>
+        <li data-step>Ein <b>Struktogramm</b> plant den Ablauf eines Programms vor dem Programmieren.</li>
+        <li data-step>Treppenhauslicht = <b>Steuerung</b> (feste Zeit). Lüfter mit Temperatursensor = einfache <b>Regelung</b> (Messen, Vergleichen, Schalten).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Projekt</span><p>Programmiert mit dem Calliope oder micro:bit eine Ampel für Fußgänger: Taster drücken → Autoampel gelb, rot → Fußgänger grün für 5 s.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Mikrocontroller-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+nsd($('#ns-t'), [{t: 'forever', body: [{t: 'if', cond: 'Taster A gedrückt?', yes: [{t: 's', text: 'LED an (weiß)'}, {t: 's', text: 'warte 5 Sekunden'}, {t: 's', text: 'LED aus'}], no: []}]}], {title: 'Treppenhauslicht'});
+calliope($('#cal-t'), {blocks: [[0, 'st', '+ Programm starten'], [1, 'ko', 'wiederhole unendlich oft'], [2, 'ko', 'wenn Taste <i>A</i> gedrückt?'], [3, 'ak', 'schalte LED an Farbe <i>weiß</i>'], [3, 'ko', 'warte <i>5000</i> ms'], [3, 'ak', 'schalte LED aus']],
+  run: async c => { while (c.running) { if (c.pressed('A')) { c.rgb('#FFFFFF'); c.image('SONNE'); for (let k = 5; k > 0 && c.running; k--) { c.set('Restzeit', k + ' s'); await c.wait(1000); } c.rgb(null); c.clear(); c.set('Restzeit', '–'); } await c.wait(50); } }, only: []});
+calliope($('#cal-n'), {blocks: [[0, 'st', '+ Programm starten'], [1, 'ko', 'wiederhole unendlich oft'], [2, 'va', 'setze H auf <span class="nb se" style="display:inline">gib Helligkeit</span>'], [2, 'ko', 'wenn H &lt; <i>30</i>'], [3, 'ak', 'schalte LED an Farbe <i>gelb</i>'], [2, 'ko', 'sonst'], [3, 'ak', 'schalte LED aus'], [2, 'ko', 'warte <i>100</i> ms']],
+  run: async c => { while (c.running) { const h = c.sensor('licht'); c.set('H', h); if (h < 30) { c.rgb('#FDE047'); c.image('MOND'); } else { c.rgb(null); c.clear(); } await c.wait(100); } }, only: ['licht']});
+nsd($('#ns-l'), [{t: 'forever', body: [{t: 's', text: 'setze T auf Temperatur'}, {t: 'if', cond: 'T > 25?', yes: [{t: 's', text: 'Lüfter an (LED blau)'}], no: [{t: 's', text: 'Lüfter aus'}]}, {t: 's', text: 'warte 1 Sekunde'}]}], {title: 'Lüftersteuerung'});
+calliope($('#cal-l'), {blocks: [[0, 'st', '+ Programm starten'], [1, 'ko', 'wiederhole unendlich oft'], [2, 'va', 'setze T auf <span class="nb se" style="display:inline">gib Temperatur</span>'], [2, 'ko', 'wenn T &gt; <i>25</i>'], [3, 'ak', 'schalte LED an Farbe <i>blau</i>'], [2, 'ko', 'sonst'], [3, 'ak', 'schalte LED aus'], [2, 'ko', 'warte <i>1000</i> ms']],
+  run: async c => { while (c.running) { const t = c.sensor('temp'); c.set('T', t + ' °C'); if (t > 25) { c.rgb('#3B82F6'); c.image('PFEIL_HOCH'); } else { c.rgb(null); c.clear(); } await c.wait(300); } }, only: ['temp'], sensors: {temp: 22}});
+taskSet($('#ts'), () => {
+  const t = randInt(0, 1);
+  if (t === 0) { const h = randInt(0, 100), s = pick([20, 30, 50]); return {key: `h${h}${s}`, tag: 'Nachtlicht', q: `<span style="font-family:var(--f-code);font-size:.9rem">wenn Helligkeit &lt; ${s} → LED an, sonst aus</span><br>Helligkeit = <b>${h}</b>`, fields: [{l: 'LED (an/aus)', a: h < s ? 'an' : 'aus'}]}; }
+  const n = randInt(2, 6), w = pick([200, 500, 1000]); return {key: `b${n}${w}`, tag: 'Blinken', q: `<span style="font-family:var(--f-code);font-size:.9rem">wiederhole ${n}-mal: LED an · warte ${w} ms · LED aus · warte ${w} ms</span>`, fields: [{l: 'Wie oft leuchtet die LED?', a: n}, {l: 'Dauer gesamt', a: n * 2 * w / 1000, tol: .01, unit: 's'}]};
+}, {n: 4});
+mcQuiz($('#quiz'), [
+  {q: 'Was ist ein Mikrocontroller?', a: ['ein kleiner Computer auf einem Chip', 'ein Messgerät', 'ein Motor', 'ein Kabel'], ok: 0},
+  {q: 'Wozu dient die Endlosschleife?', a: ['Der Sensor wird ständig abgefragt.', 'Das Programm endet sofort.', 'Die LED blinkt einmal.', 'Sie spart Strom.'], ok: 0},
+  {q: 'Was ist ein Schwellwert?', a: ['der Wert, ab dem geschaltet wird', 'die höchste Temperatur', 'die Batteriespannung', 'die Programmlänge'], ok: 0},
+  {q: 'Das Treppenhauslicht ist …', a: ['eine Steuerung', 'eine Regelung', 'ein Sensor', 'ein Speicher'], ok: 0},
+  {q: 'Womit plant man ein Programm übersichtlich?', a: ['mit einem Struktogramm', 'mit einem Schaltplan', 'mit dem Messschieber', 'mit dem Multimeter'], ok: 0}
+]);
+</script>

@@ -1,0 +1,128 @@
+<!--
+title: Linien und Bemaßung
+short: Linien & Maße
+time: 2 Unterrichtsstunden
+q: Wie liest und zeichnet man Linien und Maße in einer technischen Zeichnung?
+facts: Linienarten: breite Volllinie (sichtbare Kanten), schmale Volllinie (Maß- und Maßhilfslinien), Strichlinie (verdeckte Kanten), Strichpunktlinie (Mittellinien) | Bemaßung: Maßhilfslinie, Maßlinie mit Maßpfeilen, Maßzahl in mm ohne Einheit | Maßzahlen lesbar von unten und von rechts | Durchmesserzeichen Ø | Skizze (freihand) und Zeichnung (mit Lineal, maßstäblich)
+inter: Zeichnung erkunden und Linien finden · Linienarten zuordnen · Bemaßungsregeln richtig/falsch · Maße aus der Zeichnung ablesen · Lückentext
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Skizzen und technische Zeichnungen</p>
+      <h1>Linien und Bemaßung</h1>
+      <p class="lead">Eine technische Zeichnung ist eine <b>Sprache ohne Worte</b>: Fachleute auf der ganzen Welt können sie lesen. Dafür gibt es feste Regeln für Linien und Maße – die Normen.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Was ist der Unterschied zwischen einer Skizze und einer technischen Zeichnung?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie liest und zeichnet man Linien und Maße in einer technischen Zeichnung?</p></div>
+      <div class="controls"><button class="btn primary" data-go="linien">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="linien" data-label="Linienarten" data-yr="Erarbeitung" data-title="Linienarten" data-sub="Jede Linie hat eine Bedeutung">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Linienarten und Bemaßung</p>
+    <h2>Jede Linie hat eine Bedeutung</h2>
+    <p class="lead">Die Zeichnung zeigt eine Platte mit Bohrung und einer Nut auf der Rückseite. Tippe Linien und Maßelemente an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 480 380" id="zg" role="img" aria-label="Technische Zeichnung einer Platte" style="font-family:var(--f-mono)">
+      <g data-part="kante"><rect x="70" y="50" width="320" height="200" fill="none" stroke="var(--ink)" stroke-width="3.2"/><circle cx="230" cy="150" r="40" fill="none" stroke="var(--ink)" stroke-width="3.2"/><rect x="66" y="46" width="328" height="208" fill="none" stroke="transparent" stroke-width="10"/></g>
+      <g data-part="verdeckt"><path d="M310 50v200M350 50v200" stroke="var(--ink)" stroke-width="1.8" stroke-dasharray="10 5"/><path d="M310 50v200M350 50v200" stroke="transparent" stroke-width="12"/></g>
+      <g data-part="mitte"><path d="M170 150h120M230 90v120" stroke="var(--ink)" stroke-width="1.2" stroke-dasharray="20 4 3 4"/><path d="M170 150h120M230 90v120" stroke="transparent" stroke-width="12"/></g>
+      <g data-part="mhl"><path d="M70 256v74M390 256v74M396 50h64M396 250h64" stroke="var(--ink)" stroke-width="1.2"/><path d="M70 256v74M390 256v74M396 50h64M396 250h64" stroke="transparent" stroke-width="12"/></g>
+      <g data-part="ml"><path d="M70 320h320M450 50v200" stroke="var(--ink)" stroke-width="1.2"/><path d="M70 320h320M450 50v200" stroke="transparent" stroke-width="12"/></g>
+      <g data-part="pfeil" fill="var(--ink)"><path d="M70 320l14 -4v8zM390 320l-14 -4v8zM450 50l-4 14h8zM450 250l-4 -14h8z"/><circle cx="80" cy="320" r="14" fill="transparent"/><circle cx="380" cy="320" r="14" fill="transparent"/></g>
+      <g data-part="zahl" fill="var(--ink)" style="font-size:22px;font-weight:600"><text x="230" y="312" text-anchor="middle">80</text><text x="442" y="150" text-anchor="middle" transform="rotate(-90 442 150)">50</text><text x="276" y="114">Ø20</text></g>
+      <path d="M258 122l-12 12" stroke="var(--ink)" stroke-width="1.2"/>
+    </svg></div>
+    <div><div class="tk-row"><span id="zg-mode"></span></div><div class="box" id="zg-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="regeln" data-label="Regeln" data-yr="Erarbeitung" data-title="Bemaßungsregeln" data-sub="So wird richtig bemaßt">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Bemaßungsregeln</p>
+    <h2>So wird richtig bemaßt</h2>
+    <p class="lead">Prüfe die Aussagen über die Bemaßung.</p>
+  </div>
+  <div id="tf-r"></div>
+</section>
+
+<section class="station" id="ablesen" data-label="Maße ablesen" data-yr="Übung" data-title="Maße ablesen" data-sub="Rechnen mit Maßen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Maße ablesen</p>
+    <h2>Rechnen mit Maßen</h2>
+    <p class="lead">Lies die Maße aus der Zeichnung und rechne. Alle Maße sind in Millimetern.</p>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Skizze" data-yr="Material M1" data-title="Skizze oder Zeichnung?" data-sub="Freihand oder genau">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Skizze oder Zeichnung?</h2>
+  </div>
+  <div class="cols-2">
+    <div class="box"><span class="tag info">Skizze</span><p>Schnell <b>freihand</b> gezeichnet, ohne Lineal. Sie hält eine Idee fest. Die Proportionen sollen ungefähr stimmen, Maße können eingetragen werden.</p></div>
+    <div class="box"><span class="tag info">Technische Zeichnung</span><p>Mit Lineal, Geodreieck und Zirkel <b>genau</b> gezeichnet, im <b>Maßstab</b> (z. B. 1 : 1 oder 1 : 2), mit genormten Linien, vollständiger Bemaßung und Schriftfeld.</p></div>
+  </div>
+  <h3 class="mt">Maßstab</h3>
+  <div id="ts-m"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Linien und Maße</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Linien und Bemaßung</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Breite Volllinie:</b> sichtbare Kanten · <b>schmale Volllinie:</b> Maß- und Maßhilfslinien · <b>Strichlinie:</b> verdeckte Kanten · <b>Strichpunktlinie:</b> Mittellinien.</li>
+        <li data-step>Ein Maß besteht aus zwei <b>Maßhilfslinien</b>, der <b>Maßlinie</b> mit <b>Maßpfeilen</b> und der <b>Maßzahl</b>.</li>
+        <li data-step>Maße stehen in <b>mm ohne Einheit</b> über der Maßlinie und sind von <b>unten</b> und von <b>rechts</b> lesbar. Jedes Maß wird nur einmal eingetragen.</li>
+        <li data-step>Das Zeichen <b>Ø</b> steht für Durchmesser. Der <b>Maßstab</b> gibt an, wie groß gezeichnet wurde (1 : 2 = halb so groß).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Zeichenauftrag</span><p>Zeichne die Platte im Maßstab 1 : 1 auf Karopapier und bemaße sie vollständig.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Linien und Maße</h2></div>
+  <div id="cloze"></div>
+</section>
+
+<script>
+explorer($('#zg'), $('#zg-panel'), [
+  {id: 'kante', n: 'Breite Volllinie', t: 'Zeichnet alle sichtbaren Kanten und Umrisse des Werkstücks.'},
+  {id: 'verdeckt', n: 'Strichlinie (schmal)', t: 'Zeigt verdeckte Kanten – hier die Nut auf der Rückseite der Platte.'},
+  {id: 'mitte', n: 'Strichpunktlinie (schmal)', t: 'Mittellinie: markiert die Mitte von Bohrungen und symmetrischen Teilen.'},
+  {id: 'mhl', n: 'Maßhilfslinie', t: 'Schmale Volllinie, verlängert die Kante. Sie ragt etwa 2 mm über die Maßlinie hinaus.'},
+  {id: 'ml', n: 'Maßlinie', t: 'Schmale Volllinie zwischen den Maßhilfslinien, etwa 10 mm von der Kante entfernt.'},
+  {id: 'pfeil', n: 'Maßpfeil', t: 'Begrenzt die Maßlinie. Die Spitze berührt die Maßhilfslinie.'},
+  {id: 'zahl', n: 'Maßzahl', t: 'Steht über der Maßlinie, in mm ohne Einheit, lesbar von unten oder von rechts.'}
+], {modeRoot: $('#zg-mode'), label: 'Zeichnungselement'});
+trueFalse($('#tf-r'), [
+  {t: 'Maßzahlen werden in Millimetern ohne Einheit eingetragen.', ok: true},
+  {t: 'Die Maßzahl steht unter der Maßlinie.', ok: false, why: 'Sie steht über der Maßlinie.'},
+  {t: 'Senkrechte Maße sind von rechts lesbar.', ok: true},
+  {t: 'Ein Maß darf mehrfach eingetragen werden, damit man es besser findet.', ok: false, why: 'Jedes Maß wird nur einmal eingetragen.'},
+  {t: 'Maßlinien werden mit breiten Volllinien gezeichnet.', ok: false, why: 'Mit schmalen Volllinien.'},
+  {t: 'Verdeckte Kanten zeichnet man als Strichlinie.', ok: true},
+  {t: 'Die erste Maßlinie liegt etwa 10 mm von der Körperkante entfernt.', ok: true}
+]);
+taskSet($('#ts'), () => {
+  const b = randInt(6, 18) * 10, h = randInt(4, 10) * 10, d = pick([8, 10, 12, 16, 20]), t = randInt(0, 2);
+  const svg = `<svg viewBox="0 0 260 160" style="width:100%;max-width:260px;display:block;font-family:var(--f-mono)"><rect x="30" y="20" width="180" height="100" fill="none" stroke="var(--ink)" stroke-width="2.5"/><circle cx="120" cy="70" r="16" fill="none" stroke="var(--ink)" stroke-width="2.5"/><path d="M30 124v26M210 124v26M30 142h180M214 20h36M214 120h36M240 20v100" stroke="var(--ink)" stroke-width="1"/><text x="120" y="138" text-anchor="middle" style="font-size:14px;fill:var(--ink)">${b}</text><text x="234" y="74" text-anchor="middle" transform="rotate(-90 234 74)" style="font-size:14px;fill:var(--ink)">${h}</text><text x="140" y="52" style="font-size:13px;fill:var(--ink)">Ø${d}</text></svg>`;
+  if (t === 0) return {key: `u${b}${h}`, tag: 'Umfang', q: svg + 'Wie lang ist der Umfang der Platte?', fields: [{l: 'Umfang', a: 2 * (b + h), unit: 'mm'}], hint: '2 · (Breite + Höhe)'};
+  if (t === 1) return {key: `r${b}${d}`, tag: 'Radius', q: svg + 'Welchen Radius hat die Bohrung?', fields: [{l: 'Radius', a: d / 2, unit: 'mm'}], hint: 'Radius = Durchmesser : 2'};
+  return {key: `f${b}${h}`, tag: 'Fläche', q: svg + 'Wie groß ist die Fläche der Platte ohne Bohrung in cm²?', fields: [{l: 'Fläche', a: b * h / 100, unit: 'cm²'}], hint: 'Breite · Höhe in mm², dann durch 100'};
+}, {n: 3});
+taskSet($('#ts-m'), () => {
+  const m = pick([[1, 2], [1, 5], [2, 1], [1, 10]]), real = randInt(2, 30) * 10;
+  return {key: `${m}${real}`, tag: `Maßstab ${m[0]} : ${m[1]}`, q: `Das Werkstück ist <b>${real} mm</b> lang. Wie lang zeichnest du es im Maßstab <b>${m[0]} : ${m[1]}</b>?`, fields: [{l: 'gezeichnete Länge', a: real * m[0] / m[1], unit: 'mm'}], hint: `${m[0]} : ${m[1]} bedeutet: ${m[1]} mm am Werkstück sind ${m[0]} mm in der Zeichnung.`};
+}, {n: 3});
+cloze($('#cloze'), 'Sichtbare Kanten zeichnet man mit der {breiten Volllinie|Strichlinie|Strichpunktlinie}, verdeckte Kanten mit der {Strichlinie|breiten Volllinie|Maßlinie}. Die Mitte einer Bohrung zeigt die {Strichpunktlinie|Strichlinie|Maßhilfslinie}. Die Maßzahl steht {über|unter|neben} der Maßlinie und wird in {mm|cm|m} ohne Einheit angegeben. Senkrechte Maße liest man von {rechts|links|oben}.');
+</script>

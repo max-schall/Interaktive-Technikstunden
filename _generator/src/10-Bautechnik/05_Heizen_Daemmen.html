@@ -1,0 +1,115 @@
+<!--
+title: Heizen, Dämmen, Energie sparen
+short: Heizen & Dämmen
+time: 2 Unterrichtsstunden
+q: Wie hält man ein Haus mit möglichst wenig Energie warm?
+facts: Heizungsarten: Gas- und Öl-Brennwertkessel, Wärmepumpe, Holzpellets, Fernwärme, Solarthermie | Wärme geht über Wände, Dach, Fenster und Lüftung verloren | U-Wert: Wärmeverlust pro m² und Kelvin – je kleiner, desto besser gedämmt | Wärmeverlust ≈ U · Fläche · Temperaturunterschied | Energiesparen: 1 °C weniger spart etwa 6 % Heizenergie, Stoßlüften, Standby vermeiden | Smart Home regelt automatisch
+inter: Heizungsarten zuordnen · Wärmeverlust-Rechner mit Dämmung · Wärmeverluste am Haus · Spartipps richtig/falsch · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Bauen und Wohnen</p>
+      <h1>Heizen, Dämmen, Energie sparen</h1>
+      <p class="lead">Etwa zwei Drittel der Energie im Haushalt werden zum Heizen gebraucht. Ein schlecht gedämmtes Haus braucht fünfmal so viel Energie wie ein modernes. Wo geht die Wärme verloren – und wie hält man sie drin?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Halte im Winter die Hand an eine Außenwand, ein Fenster und eine Innenwand. Was spürst du?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie hält man ein Haus mit möglichst wenig Energie warm?</p></div>
+      <div class="controls"><button class="btn primary" data-go="heizung">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="heizung" data-label="Heizungsarten" data-yr="Erarbeitung" data-title="Heizungsarten" data-sub="Woher kommt die Wärme?">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Heizungsarten</p>
+    <h2>Woher kommt die Wärme?</h2>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="verlust" data-label="Wärmeverlust" data-yr="Erarbeitung" data-title="Wärmeverlust und Dämmung" data-sub="Der U-Wert">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Wärmeverlust</p>
+    <h2>Wie viel Wärme geht durch die Wand?</h2>
+    <p class="lead">Der <b>U-Wert</b> gibt an, wie viel Wärme (in Watt) pro m² Wand und pro Grad Temperaturunterschied verloren geht. <b>Je kleiner der U-Wert, desto besser die Dämmung.</b> Wärmeverlust ≈ U · A · ΔT.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-row"><span id="wv-seg"></span></div><div class="tk-row"><label>Wandfläche <input type="range" min="50" max="250" step="10" value="120" id="wv-a"> <span class="tk-val" id="wv-av"></span></label></div><div class="tk-row"><label>Außentemperatur <input type="range" min="-15" max="15" value="0" id="wv-t"> <span class="tk-val" id="wv-tv"></span></label></div><div class="tk-fig"><svg viewBox="0 0 400 140" id="wv-svg" role="img" aria-label="Wandaufbau"></svg></div></div>
+    <div><div class="tk-readout" id="wv-ro"></div><p class="status" id="wv-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="haus" data-label="Verluste am Haus" data-yr="Übung" data-title="Wo geht Wärme verloren?" data-sub="Anteile der Verluste">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Verluste am Haus</p>
+    <h2>Wo geht die Wärme verloren?</h2>
+    <p class="lead">So verteilen sich die Wärmeverluste eines typischen ungedämmten Einfamilienhauses. Welche Maßnahme bringt am meisten?</p>
+  </div>
+  <div class="cols-2"><div id="ch"></div><div id="match-m"></div></div>
+</section>
+
+<section class="station" id="sparen" data-label="M1 Energie sparen" data-yr="Material M1" data-title="Energie sparen" data-sub="Tipps im Check">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Energie sparen im Alltag</h2>
+  </div>
+  <div id="tf"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Heizen und Dämmen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Heizen, Dämmen, Energie sparen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Heizungsarten: Gas- oder Öl-Brennwertkessel, <b>Wärmepumpe</b> (nutzt Umweltwärme mit Strom), Holzpellets, Fernwärme, Solarthermie.</li>
+        <li data-step>Wärme geht über Dach, Wände, Fenster, Keller und Lüftung verloren. Der <b>U-Wert</b> beschreibt den Verlust: je kleiner, desto besser gedämmt.</li>
+        <li data-step>Wärmeverlust ≈ <b>U · A · ΔT</b> (U-Wert · Fläche · Temperaturunterschied).</li>
+        <li data-step>Sparen: Raumtemperatur senken (1 °C ≈ 6 %), Stoßlüften statt Kippfenster, Heizkörper frei lassen, Thermostate nutzen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Füllt gleiche Gläser mit heißem Wasser und umwickelt sie mit verschiedenen Dämmstoffen. Messt die Temperatur alle 5 Minuten.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Dämm-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match'), [['Gas-Brennwertkessel', 'verbrennt Erdgas und nutzt auch die Wärme im Abgas'], ['Wärmepumpe', 'holt mit Strom Wärme aus Luft, Erde oder Grundwasser'], ['Pelletheizung', 'verbrennt gepresste Holzreste'], ['Fernwärme', 'heißes Wasser aus einem Kraftwerk über Rohre im Stadtgebiet'], ['Solarthermie', 'Kollektoren auf dem Dach erwärmen Wasser mit Sonnenlicht']]);
+const WAND = {alt: ['Altbau ungedämmt', 1.4, [['Ziegel 24 cm', 'var(--wood-2)', 80]]], gedaemmt: ['nachträglich gedämmt', 0.24, [['Ziegel', 'var(--wood-2)', 80], ['Dämmung 14 cm', '#F4D35E', 50]]], passiv: ['Passivhaus', 0.1, [['Ziegel', 'var(--wood-2)', 80], ['Dämmung 30 cm', '#F4D35E', 110]]]};
+let wk = 'alt';
+function wv() {
+  const [n, U, layers] = WAND[wk], A = +$('#wv-a').value, Ta = +$('#wv-t').value, dT = 21 - Ta, P = U * A * dT, year = U * A * 84; /* ca. 84 000 Kelvinstunden pro Heizperiode */
+  let x = 60, s = `<rect x="0" y="10" width="60" height="110" fill="color-mix(in srgb,var(--bad) 18%,var(--surface))"/><text x="30" y="70" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:var(--bad)">21 °C</text>`;
+  layers.forEach(([ln, c, w]) => { s += `<rect x="${x}" y="10" width="${w}" height="110" fill="${c}" stroke="var(--edge)"/><text x="${x + w / 2}" y="134" text-anchor="middle" style="font-family:var(--f-mono);font-size:11px;fill:var(--ink-2)">${ln}</text>`; x += w; });
+  s += `<text x="${x + 40}" y="70" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:var(--e)">${Ta} °C</text>` + [...Array(Math.min(8, Math.round(U * 6)))].map((_, i) => `<path d="M${x - 10 + i * 6} ${30 + i * 10}h30" stroke="var(--bad)" stroke-width="3"/><path d="M${x + 20 + i * 6} ${24 + i * 10}l8 6-8 6" fill="var(--bad)"/>`).join('');
+  $('#wv-svg').innerHTML = s;
+  $('#wv-av').textContent = A + ' m²'; $('#wv-tv').textContent = Ta + ' °C';
+  readout($('#wv-ro'), [['U-Wert', numDE(U, 2) + ' W/(m²·K)'], ['Temperaturunterschied', dT + ' K'], ['Wärmeverlust jetzt', numDE(P, 0) + ' W'], ['pro Heizperiode ≈', numDE(year, 0) + ' kWh']]);
+  $('#wv-st').innerHTML = `${n}: Durch ${A} m² Wand gehen bei ${Ta} °C außen etwa <b>${numDE(P / 1000, 1)} kW</b> Wärme verloren – so viel wie ${Math.max(1, Math.round(P / 2000))} Heizlüfter leisten.`;
+}
+seg($('#wv-seg'), Object.entries(WAND).map(([k, v]) => [k, v[0]]), v => { wk = v; wv(); });
+$('#wv-a').oninput = wv; $('#wv-t').oninput = wv;
+chart($('#ch'), {type: 'pie', title: 'Wärmeverluste eines ungedämmten Hauses (Beispiel)', data: [['Außenwände', 30], ['Lüftung', 25], ['Dach', 20], ['Fenster', 15], ['Keller', 10]]});
+matcher($('#match-m'), [['Außenwände', 'Wärmedämmverbundsystem auf der Fassade'], ['Dach', 'Dämmung zwischen und unter den Sparren'], ['Fenster', 'Dreifachverglasung'], ['Lüftung', 'Lüftungsanlage mit Wärmerückgewinnung'], ['Keller', 'Dämmung der Kellerdecke']]);
+trueFalse($('#tf'), [
+  {t: 'Ein dauerhaft gekipptes Fenster ist sparsamer als Stoßlüften.', ok: false, why: 'Stoßlüften (5–10 Minuten, Fenster weit auf) tauscht die Luft schnell, ohne die Wände auszukühlen.'},
+  {t: 'Wer die Raumtemperatur um 1 °C senkt, spart etwa 6 % Heizenergie.', ok: true},
+  {t: 'Möbel vor dem Heizkörper behindern die Wärmeabgabe.', ok: true},
+  {t: 'Geräte im Standby verbrauchen keinen Strom.', ok: false, why: 'Standby kann pro Haushalt über 100 kWh im Jahr kosten.'},
+  {t: 'Smarte Thermostate senken die Temperatur automatisch, wenn niemand zu Hause ist.', ok: true}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was bedeutet ein kleiner U-Wert?', a: ['gute Dämmung', 'schlechte Dämmung', 'viel Licht', 'dicke Fenster'], ok: 0},
+  {q: 'U = 0,25 W/(m²·K), A = 100 m², ΔT = 20 K. Wärmeverlust?', a: ['500 W', '2000 W', '5000 W', '125 W'], ok: 0},
+  {q: 'Wie arbeitet eine Wärmepumpe?', a: ['Sie holt Umweltwärme mit Strom ins Haus.', 'Sie verbrennt Gas.', 'Sie verbrennt Holz.', 'Sie kühlt nur.'], ok: 0},
+  {q: 'Wie lüftet man energiesparend?', a: ['Stoßlüften', 'Fenster dauerhaft kippen', 'gar nicht', 'Heizung auf und Fenster auf'], ok: 0},
+  {q: 'Wofür wird im Haushalt die meiste Energie gebraucht?', a: ['Heizen', 'Licht', 'Fernsehen', 'Kochen'], ok: 0}
+]);
+wv();
+</script>

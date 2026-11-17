@@ -1,0 +1,124 @@
+<!--
+title: Spannung und Stromstärke
+short: Spannung & Strom
+time: 2 Unterrichtsstunden
+q: Was sind Spannung und Stromstärke, und wie misst man sie?
+facts: Spannung U in Volt (V): Antrieb des Stroms | Stromstärke I in Ampere (A): wie viel Ladung pro Sekunde fließt | Wassermodell: Pumpe = Spannungsquelle, Wasserstrom = elektrischer Strom | Amperemeter in Reihe, Voltmeter parallel zum Bauteil | Multimeter: Messbereich wählen, Buchsen COM und V/A | 1 A = 1000 mA
+inter: Wassermodell · Spannung erhöhen im Simulator · Multimeter erkunden · Messgeräte richtig anschließen · Einheiten umrechnen
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der elektrische Stromkreis</p>
+      <h1>Spannung und Stromstärke</h1>
+      <p class="lead">Eine Flachbatterie hat 4,5 V, eine Autobatterie 12 V, die Steckdose 230 V. Und auf dem Netzteil steht „2 A“. Was bedeuten diese Zahlen?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Suche auf Batterien, Netzteilen und Geräten Angaben in V und A.</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Was sind Spannung und Stromstärke, und wie misst man sie?</p></div>
+      <div class="controls"><button class="btn primary" data-go="modell">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="modell" data-label="Wassermodell" data-yr="Einstieg" data-title="Das Wassermodell" data-sub="Pumpe, Rohr, Turbine">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Wassermodell</p>
+    <h2>Strom ist wie Wasser im Kreislauf</h2>
+    <p class="lead">Im Wasserkreislauf treibt eine <b>Pumpe</b> das Wasser durch die Rohre zu einer <b>Turbine</b>. Im Stromkreis treibt die <b>Spannungsquelle</b> die Elektronen durch die Leitungen zum <b>Verbraucher</b>. Ordne zu.</p>
+  </div>
+  <div id="match-m"></div>
+</section>
+
+<section class="station" id="groessen" data-label="U und I" data-yr="Erarbeitung" data-title="Spannung und Stromstärke" data-sub="Volt und Ampere">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · U und I</p>
+    <h2>Mehr Spannung – mehr Strom</h2>
+    <p class="lead">Die <b>Spannung U</b> (Einheit Volt, V) ist der Antrieb. Die <b>Stromstärke I</b> (Einheit Ampere, A) gibt an, wie viel Ladung pro Sekunde fließt. Erhöhe die Spannung und beobachte.</p>
+  </div>
+  <div id="c1"></div>
+</section>
+
+<section class="station" id="multimeter" data-label="Multimeter" data-yr="Erarbeitung" data-title="Das Multimeter" data-sub="Ein Gerät für alles">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Multimeter</p>
+    <h2>Das Multimeter</h2>
+    <p class="lead">Mit dem Multimeter misst man Spannung, Stromstärke und Widerstand. Tippe die Teile an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 300 420" id="mm" role="img" aria-label="Multimeter" style="font-family:var(--f-mono)">
+      <rect x="30" y="10" width="240" height="400" rx="18" fill="#F2B90F" stroke="var(--edge)" stroke-width="2"/>
+      <g data-part="display"><rect x="55" y="35" width="190" height="80" fill="#C9D8C1" stroke="var(--edge)" stroke-width="2"/><text x="235" y="95" text-anchor="end" style="font-size:44px;font-weight:700;fill:#222">4.52</text><text x="70" y="58" style="font-size:12px;fill:#222">DC V</text></g>
+      <g data-part="dreh"><circle cx="150" cy="225" r="62" fill="#333" stroke="var(--edge)" stroke-width="2"/><path d="M150 225L150 170" stroke="#fff" stroke-width="8" stroke-linecap="round"/><g style="font-size:13px;font-weight:700;fill:#222"><text x="140" y="150">V⎓</text><text x="210" y="190">V~</text><text x="222" y="245">Ω</text><text x="200" y="300">A⎓</text><text x="72" y="300">mA</text><text x="62" y="190">OFF</text></g></g>
+      <g data-part="com"><circle cx="150" cy="350" r="16" fill="#111" stroke="var(--edge)" stroke-width="2"/><text x="150" y="384" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#222">COM</text></g>
+      <g data-part="vbuchse"><circle cx="225" cy="350" r="16" fill="#C1121C" stroke="var(--edge)" stroke-width="2"/><text x="225" y="384" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#222">VΩmA</text></g>
+      <g data-part="abuchse"><circle cx="75" cy="350" r="16" fill="#C1121C" stroke="var(--edge)" stroke-width="2"/><text x="75" y="384" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#222">10 A</text></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="mm-mode"></span></div><div class="box" id="mm-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="messen" data-label="Messen" data-yr="Werkstatt" data-title="Richtig messen" data-sub="In Reihe oder parallel?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Werkstatt</p>
+    <h2>Richtig anschließen</h2>
+    <p class="lead">Das <b>Amperemeter</b> misst den Strom, der <b>durch</b> es hindurchfließt – es wird <b>in Reihe</b> geschaltet. Das <b>Voltmeter</b> vergleicht zwei Punkte – es wird <b>parallel</b> zum Bauteil angeschlossen.</p>
+  </div>
+  <div class="cols-2">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 440 260" role="img" aria-label="Messschaltung"></svg></div>
+    <div id="tf-m"></div>
+  </div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: U und I</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Spannung und Stromstärke</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Die <b>Spannung U</b> ist der Antrieb des Stroms. Einheit: <b>Volt (V)</b>. Gemessen mit dem Voltmeter, <b>parallel</b> zum Bauteil.</li>
+        <li data-step>Die <b>Stromstärke I</b> gibt an, wie viel Ladung pro Sekunde fließt. Einheit: <b>Ampere (A)</b>, 1 A = 1000 mA. Gemessen mit dem Amperemeter, <b>in Reihe</b>.</li>
+        <li data-step>Je größer die Spannung, desto größer die Stromstärke (bei gleichem Verbraucher).</li>
+        <li data-step>Multimeter: Messgröße und Bereich am Drehschalter wählen, schwarzes Kabel in <b>COM</b>, rotes in <b>V</b> oder <b>A</b>. Bei unbekannter Größe mit dem größten Bereich beginnen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Messauftrag</span><p>Miss die Spannung von drei verschiedenen Batterien. Vergleiche mit der Angabe auf der Batterie.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Einheiten umrechnen</h2></div>
+  <div id="ts"></div>
+</section>
+
+<script>
+matcher($('#match-m'), [['Pumpe', 'Spannungsquelle (Batterie)'], ['Wasserdruck der Pumpe', 'Spannung U'], ['Wassermenge pro Sekunde', 'Stromstärke I'], ['Rohr', 'Leitung'], ['Turbine', 'Verbraucher (Lampe)'], ['Absperrhahn', 'Schalter']]);
+circuit($('#c1'), {mode: 'series', loads: [{t: 'lamp', R: 20, name: 'Lampe'}], U: 3, uMax: 9, uStep: .5, unom: 6, show: ['U', 'I'], note: (s, U) => U ? `Bei <b>${numDE(U, 1)} V</b> fließen <b>${fmtI(s.I)}</b>. Je größer die Spannung, desto größer die Stromstärke – und desto heller die Lampe.` : 'Ohne Spannung fließt kein Strom.'});
+explorer($('#mm'), $('#mm-panel'), [
+  {id: 'display', n: 'Anzeige', t: 'Zeigt den Messwert. Ein Minuszeichen bedeutet: Kabel vertauscht.'},
+  {id: 'dreh', n: 'Drehschalter', t: 'Wählt Messgröße und Bereich: V⎓ Gleichspannung, V~ Wechselspannung, A Stromstärke, Ω Widerstand. Nach der Messung auf OFF stellen.'},
+  {id: 'com', n: 'Buchse COM', t: 'Gemeinsamer Anschluss (common) für das schwarze Kabel – bei jeder Messung.'},
+  {id: 'vbuchse', n: 'Buchse V Ω mA', t: 'Rotes Kabel für Spannung, Widerstand und kleine Ströme.'},
+  {id: 'abuchse', n: 'Buchse 10 A', t: 'Rotes Kabel für große Ströme bis 10 A. Nie damit Spannung messen – Kurzschluss!'}
+], {modeRoot: $('#mm-mode'), label: 'Multimeter'});
+/* Messschaltung zeichnen */
+(() => {
+  const s = $('#messen svg');
+  s.innerHTML = SY.wire([[60, 140], [60, 40], [150, 40]]) + SY.wire([[180, 40], [380, 40], [380, 220], [60, 220], [60, 160]]) + SY.bat(60, 150) + SY.meter(165, 40, 'A') + SY.lamp(280, 40, 1) +
+    SY.wire([[250, 40], [250, 120], [265, 120]]) + SY.wire([[295, 120], [310, 120], [310, 40]]) + SY.meter(280, 120, 'V') + `<circle cx="250" cy="40" r="4" class="fillw"/><circle cx="310" cy="40" r="4" class="fillw"/>` +
+    `<text x="165" y="80" text-anchor="middle" class="sm">in Reihe</text><text x="280" y="160" text-anchor="middle" class="sm">parallel</text>`;
+})();
+trueFalse($('#tf-m'), [
+  {t: 'Das Amperemeter wird in Reihe zum Verbraucher geschaltet.', ok: true},
+  {t: 'Das Voltmeter wird in die Leitung eingefügt.', ok: false, why: 'Es wird parallel zum Bauteil angeschlossen.'},
+  {t: 'Bei unbekannter Größe beginnt man mit dem größten Messbereich.', ok: true},
+  {t: 'Das schwarze Kabel gehört immer in die Buchse COM.', ok: true},
+  {t: 'Mit der 10-A-Buchse kann man Spannung messen.', ok: false, why: 'Das Messgerät wirkt dann wie ein Kurzschluss.'}
+]);
+taskSet($('#ts'), () => {
+  const t = randInt(0, 2);
+  if (t === 0) { const a = pick([0.2, 0.25, 0.5, 1.5, 0.05, 2.4]); return {key: 'a' + a, tag: 'A → mA', q: `<span class="big">${numDE(a, 2)} A</span>`, fields: [{l: 'in mA', a: a * 1000, unit: 'mA'}]}; }
+  if (t === 1) { const m = pick([300, 50, 750, 1200, 20, 450]); return {key: 'm' + m, tag: 'mA → A', q: `<span class="big">${m} mA</span>`, fields: [{l: 'in A', a: m / 1000, unit: 'A'}]}; }
+  const k = pick([1.5, 4.5, 0.23, 2.3]); return {key: 'k' + k, tag: 'kV → V', q: `<span class="big">${numDE(k, 2)} kV</span>`, fields: [{l: 'in V', a: k * 1000, unit: 'V'}]};
+}, {n: 6});
+</script>

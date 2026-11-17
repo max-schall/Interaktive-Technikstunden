@@ -1,0 +1,87 @@
+<!--
+title: Fertigungsverfahren auf einen Blick
+short: Fertigungsverfahren
+time: 1–2 Unterrichtsstunden
+q: Wie lassen sich alle Fertigungsverfahren ordnen?
+facts: Sechs Hauptgruppen nach DIN 8580 | Urformen: aus formlosem Stoff einen Körper schaffen (gießen, spritzgießen, 3D-Druck) | Umformen: Form ändern, Masse bleibt (biegen, walzen, schmieden) | Trennen: Werkstoff abtrennen (sägen, bohren, feilen, schneiden) | Fügen: Teile verbinden (schrauben, kleben, schweißen) | Beschichten: Schicht auftragen (lackieren, verzinken) | Stoffeigenschaft ändern: härten, glühen
+inter: Hauptgruppen kennenlernen · Verfahren in sechs Gruppen sortieren · Werkstück-Lebenslauf ordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Kunststoffe und Fertigungsverfahren</p>
+      <h1>Fertigungsverfahren auf einen Blick</h1>
+      <p class="lead">Sägen, Bohren, Biegen, Löten, Lackieren, Spritzgießen … Es gibt Hunderte Fertigungsverfahren. Damit man den Überblick behält, ordnet man sie in <b>sechs Hauptgruppen</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Sammelt alle Verfahren, die ihr in Technik schon kennengelernt habt.</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie lassen sich alle Fertigungsverfahren ordnen?</p></div>
+      <div class="controls"><button class="btn primary" data-go="gruppen">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="gruppen" data-label="Hauptgruppen" data-yr="Erarbeitung" data-title="Sechs Hauptgruppen" data-sub="Nach DIN 8580">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Hauptgruppen</p>
+    <h2>Sechs Hauptgruppen</h2>
+    <p class="lead">Die Gruppen unterscheiden sich darin, ob der Zusammenhalt des Werkstoffs <b>geschaffen</b>, <b>beibehalten</b>, <b>vermindert</b> oder <b>vermehrt</b> wird. Tippe auf eine Karte.</p>
+  </div>
+  <div id="flip"></div>
+</section>
+
+<section class="station" id="sortieren" data-label="Sortieren" data-yr="Übung" data-title="Verfahren sortieren" data-sub="Welche Hauptgruppe?">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Sortieren</p>
+    <h2>Welche Hauptgruppe?</h2>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="lebenslauf" data-label="M1 Lebenslauf" data-yr="Material M1" data-title="Lebenslauf eines Schraubendrehers" data-sub="Vom Rohstoff zum Werkzeug">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Material M1</p>
+    <h2>Der Lebenslauf eines Schraubendrehers</h2>
+    <p class="lead">Ein Schraubendreher durchläuft fast alle Hauptgruppen. Ordne die Fertigungsschritte und überlege, zu welcher Gruppe jeder gehört.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Fertigungsverfahren</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Fertigungsverfahren (DIN 8580)</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Urformen:</b> aus formlosem Stoff entsteht ein Körper – gießen, spritzgießen, 3D-Druck.</li>
+        <li data-step><b>Umformen:</b> die Form ändert sich, die Masse bleibt – biegen, walzen, schmieden, tiefziehen.</li>
+        <li data-step><b>Trennen:</b> Werkstoff wird abgetrennt – sägen, bohren, feilen, schneiden. <b>Fügen:</b> Teile werden verbunden – schrauben, kleben, schweißen.</li>
+        <li data-step><b>Beschichten:</b> eine Schicht wird aufgetragen – lackieren, verzinken. <b>Stoffeigenschaft ändern:</b> härten, glühen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Merkhilfe</span><p><b>U</b>rformen – <b>U</b>mformen – <b>T</b>rennen – <b>F</b>ügen – <b>B</b>eschichten – <b>S</b>toffeigenschaft ändern: „<b>Unser Uhu tanzt fröhlich bei Sonne</b>“.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Verfahren-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+flipCards($('#flip'), [['1 · Urformen', 'Zusammenhalt wird <b>geschaffen</b>: Aus Pulver, Schmelze oder Granulat entsteht ein fester Körper. Gießen, Spritzgießen, 3D-Druck.'], ['2 · Umformen', 'Zusammenhalt bleibt <b>erhalten</b>: Biegen, Walzen, Schmieden, Tiefziehen – kein Span fällt ab.'], ['3 · Trennen', 'Zusammenhalt wird <b>vermindert</b>: Sägen, Bohren, Feilen, Scheren, Lasern.'], ['4 · Fügen', 'Zusammenhalt wird <b>vermehrt</b>: Schrauben, Nieten, Kleben, Löten, Schweißen.'], ['5 · Beschichten', 'Eine fest haftende Schicht wird aufgebracht: Lackieren, Verzinken, Pulverbeschichten.'], ['6 · Stoffeigenschaft ändern', 'Die Eigenschaften des Werkstoffs ändern sich: Härten, Glühen, Magnetisieren.']]);
+sorter($('#sort'), [{id: 'ur', name: 'Urformen'}, {id: 'um', name: 'Umformen'}, {id: 'tr', name: 'Trennen'}, {id: 'fu', name: 'Fügen'}, {id: 'be', name: 'Beschichten'}, {id: 'st', name: 'Stoffeigenschaft ändern'}], [
+  {t: 'Spritzgießen', c: 'ur'}, {t: '3D-Druck', c: 'ur'}, {t: 'Sandguss', c: 'ur'}, {t: 'Biegen', c: 'um'}, {t: 'Walzen', c: 'um'}, {t: 'Tiefziehen', c: 'um'},
+  {t: 'Bohren', c: 'tr'}, {t: 'Lasercutten', c: 'tr'}, {t: 'Feilen', c: 'tr'}, {t: 'Kleben', c: 'fu'}, {t: 'Schweißen', c: 'fu'}, {t: 'Nieten', c: 'fu'},
+  {t: 'Lackieren', c: 'be'}, {t: 'Verzinken', c: 'be'}, {t: 'Härten', c: 'st'}, {t: 'Glühen', c: 'st'}
+]);
+orderSteps($('#order'), ['Stahl wird gegossen (Urformen)', 'Stab wird zu Draht gewalzt und geschmiedet (Umformen)', 'Spitze wird geschliffen (Trennen)', 'Spitze wird gehärtet (Stoffeigenschaft ändern)', 'Klinge wird verchromt (Beschichten)', 'Kunststoffgriff wird angespritzt und befestigt (Urformen/Fügen)'], {label: 'Fertigungsschritte'});
+mcQuiz($('#quiz'), [
+  {q: 'Zu welcher Hauptgruppe gehört Sägen?', a: ['Trennen', 'Fügen', 'Umformen', 'Urformen'], ok: 0},
+  {q: 'Zu welcher Hauptgruppe gehört der 3D-Druck?', a: ['Urformen', 'Trennen', 'Beschichten', 'Umformen'], ok: 0},
+  {q: 'Bei welcher Gruppe fallen keine Späne an und die Masse bleibt gleich?', a: ['Umformen', 'Trennen', 'Fügen', 'Beschichten'], ok: 0},
+  {q: 'Zu welcher Gruppe gehört Härten?', a: ['Stoffeigenschaft ändern', 'Beschichten', 'Umformen', 'Fügen'], ok: 0},
+  {q: 'Welches Verfahren gehört zum Fügen?', a: ['Löten', 'Walzen', 'Feilen', 'Gießen'], ok: 0},
+  {q: 'Was ist Verzinken?', a: ['Beschichten', 'Trennen', 'Urformen', 'Umformen'], ok: 0}
+]);
+</script>

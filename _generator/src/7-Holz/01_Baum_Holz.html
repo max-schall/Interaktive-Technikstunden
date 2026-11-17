@@ -1,0 +1,132 @@
+<!--
+title: Vom Baum zum Holz
+short: Baum und Holz
+time: 1–2 Unterrichtsstunden
+q: Wie ist ein Baumstamm aufgebaut, und warum „arbeitet“ Holz?
+facts: Aufbau des Stammes: Rinde, Bast, Kambium, Splintholz, Kernholz, Mark, Jahresringe | Laubhölzer (Buche, Eiche, Ahorn) und Nadelhölzer (Fichte, Kiefer, Lärche) | Holz quillt bei Feuchtigkeit und schwindet beim Trocknen | Faserrichtung bestimmt Festigkeit und Bearbeitung | Nachhaltige Forstwirtschaft (FSC, PEFC)
+inter: Stammquerschnitt erkunden und Teile finden · Jahresringe zählen · Laub- und Nadelholz sortieren · Richtig oder falsch zum Arbeiten des Holzes · Lückentext
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der Werkstoff Holz</p>
+      <h1>Vom Baum zum Holz</h1>
+      <p class="lead">Holz wächst nach, lässt sich gut bearbeiten und riecht gut. Kein Wunder, dass es der erste Werkstoff in der Werkstatt ist. Doch Holz <b>lebt</b> – auch noch als Brett.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum klemmt eine Holztür im Winter manchmal nicht, im feuchten Herbst aber schon?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie ist ein Baumstamm aufgebaut, und warum „arbeitet“ Holz?</p></div>
+      <div class="controls"><button class="btn primary" data-go="stamm">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="stamm" data-label="Stamm" data-yr="Erarbeitung" data-title="Aufbau des Stammes" data-sub="Von der Rinde bis zum Mark">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Aufbau des Stammes</p>
+    <h2>Ein Blick in den Baumstamm</h2>
+    <p class="lead">Tippe die Schichten des Stammquerschnitts an. Im Modus „Finden“ wird ein Begriff genannt.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 360 360" id="stammsvg" role="img" aria-label="Stammquerschnitt">
+      <g data-part="rinde"><circle cx="180" cy="180" r="165" fill="#6B4A2E" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="bast"><circle cx="180" cy="180" r="150" fill="#9C7449"/></g>
+      <g data-part="kambium"><circle cx="180" cy="180" r="143" fill="#3F7D3A"/></g>
+      <g data-part="splint"><circle cx="180" cy="180" r="139" fill="#E7C99A"/></g>
+      <g data-part="kern"><circle cx="180" cy="180" r="92" fill="#B9844E"/></g>
+      <g data-part="ringe" fill="none" stroke="#8A5A2E" stroke-width="1.6"><circle cx="180" cy="180" r="125"/><circle cx="180" cy="180" r="110"/><circle cx="180" cy="180" r="80"/><circle cx="180" cy="180" r="66"/><circle cx="180" cy="180" r="52"/><circle cx="180" cy="180" r="38"/><circle cx="180" cy="180" r="24"/></g>
+      <g data-part="mark"><circle cx="180" cy="180" r="9" fill="#5A3A1E"/></g>
+      <g data-part="strahlen" stroke="#F4E3C4" stroke-width="2"><path d="M180 171V45M189 180H315M180 189V315M171 180H45M186 174l80-80M174 186l-80 80"/></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="st-mode"></span></div><div class="box" id="st-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="ringe" data-label="Jahresringe" data-yr="Übung" data-title="Jahresringe lesen" data-sub="Wie alt ist der Baum?">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Jahresringe</p>
+    <h2>Wie alt ist der Baum?</h2>
+    <p class="lead">Im Frühjahr wächst <b>helles, weiches Frühholz</b>, im Sommer <b>dunkles, festes Spätholz</b>. Ein heller und ein dunkler Ring zusammen sind ein <b>Jahresring</b>. Zähle die dunklen Ringe.</p>
+  </div>
+  <div id="ts-r"></div>
+</section>
+
+<section class="station" id="arten" data-label="Holzarten" data-yr="Erarbeitung" data-title="Laub- und Nadelholz" data-sub="Holzarten unterscheiden">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Holzarten</p>
+    <h2>Laubholz oder Nadelholz?</h2>
+    <p class="lead"><b>Nadelhölzer</b> wachsen schnell, sind meist leicht, weich und harzreich – gut für Bauholz und Möbel. <b>Laubhölzer</b> wachsen langsamer und sind oft härter – gut für Werkzeugstiele, Böden und Spielzeug.</p>
+  </div>
+  <div id="sort-a"></div>
+</section>
+
+<section class="station" id="arbeiten" data-label="Holz arbeitet" data-yr="Material M1" data-title="Holz arbeitet" data-sub="Quellen und Schwinden">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Holz arbeitet</h2>
+    <p class="lead">Holz nimmt Feuchtigkeit aus der Luft auf und gibt sie wieder ab. Dabei <b>quillt</b> es (wird größer) oder <b>schwindet</b> (wird kleiner) – vor allem quer zur Faser. Längs zur Faser ändert sich die Länge kaum.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 210" role="img" aria-label="Quellen und Schwinden">
+      <rect x="40" y="70" width="300" height="60" fill="var(--wood)" stroke="var(--edge)" stroke-width="2" id="brett"/>
+      <path d="M50 85h280M50 100h280M50 115h280" stroke="var(--wood-2)" stroke-width="2"/>
+      <text x="190" y="40" text-anchor="middle" style="font-family:var(--f-mono);font-weight:600;fill:var(--ink)">Faserrichtung →</text>
+      <path d="M370 70v60M362 78l8-8 8 8M362 122l8 8 8-8" stroke="var(--accent)" stroke-width="3" fill="none"/>
+      <text x="200" y="175" text-anchor="middle" style="font-family:var(--f-mono);fill:var(--ink-2)" id="brett-t">Holzfeuchte 12 %</text>
+    </svg>
+    <div class="tk-row"><label>Luftfeuchte <input type="range" min="20" max="95" value="55" id="feuchte"> <span class="tk-val" id="feuchte-v"></span></label></div></div>
+    <div id="tf-a"></div>
+  </div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Holz</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Vom Baum zum Holz</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Aufbau des Stammes von außen nach innen: <b>Rinde</b> (Schutz), <b>Bast</b> (leitet Nährstoffe nach unten), <b>Kambium</b> (Wachstumsschicht), <b>Splintholz</b> (leitet Wasser), <b>Kernholz</b> (stützt), <b>Mark</b>.</li>
+        <li data-step>Jedes Jahr wächst ein <b>Jahresring</b> aus hellem Frühholz und dunklem Spätholz.</li>
+        <li data-step><b>Nadelhölzer</b> (Fichte, Kiefer, Tanne) sind meist weich und leicht, <b>Laubhölzer</b> (Buche, Eiche, Ahorn) meist hart und schwer.</li>
+        <li data-step>Holz <b>arbeitet</b>: Es quillt bei Feuchtigkeit und schwindet beim Trocknen, vor allem quer zur Faser.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Nachhaltig</span><p>Holz ist ein nachwachsender Rohstoff. Die Siegel <b>FSC</b> und <b>PEFC</b> zeigen, dass nicht mehr Holz geschlagen wird, als nachwächst.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Rund ums Holz</h2></div>
+  <div id="cloze-u"></div>
+</section>
+
+<script>
+explorer($('#stammsvg'), $('#st-panel'), [
+  {id: 'rinde', n: 'Rinde (Borke)', t: 'Äußere Schutzschicht gegen Hitze, Kälte, Tiere und Pilze.'},
+  {id: 'bast', n: 'Bast', t: 'Leitet die in den Blättern gebildeten Nährstoffe (Zucker) nach unten.'},
+  {id: 'kambium', n: 'Kambium', t: 'Dünne Wachstumsschicht: Nach innen bildet sie Holz, nach außen Bast. So wird der Stamm dicker.'},
+  {id: 'splint', n: 'Splintholz', t: 'Junges, helles Holz. Es leitet Wasser und Mineralstoffe von den Wurzeln nach oben.'},
+  {id: 'kern', n: 'Kernholz', t: 'Älteres, oft dunkleres Holz. Es leitet kein Wasser mehr, stützt den Baum und ist besonders fest und haltbar.'},
+  {id: 'ringe', n: 'Jahresringe', t: 'Jedes Jahr entsteht ein Ring aus hellem Frühholz und dunklem Spätholz.'},
+  {id: 'mark', n: 'Mark', t: 'Weiches Gewebe in der Mitte – der Rest des ganz jungen Triebs.'},
+  {id: 'strahlen', n: 'Markstrahlen', t: 'Verbinden das Innere mit der Rinde und transportieren Stoffe quer durch den Stamm.'}
+], {modeRoot: $('#st-mode'), label: 'Stammquerschnitt'});
+taskSet($('#ts-r'), () => {
+  const n = randInt(4, 11); let s = '';
+  for (let k = n; k >= 1; k--) { const r = 12 + k * 100 / n; s += `<circle cx="120" cy="120" r="${r}" fill="${k % 2 ? '#E7C99A' : '#E7C99A'}"/><circle cx="120" cy="120" r="${r - 2}" fill="none" stroke="#8A5A2E" stroke-width="${2 + 30 / n}" opacity=".85"/>`; }
+  return {key: 'r' + n, tag: 'Querschnitt', q: `<svg viewBox="0 0 240 240" style="width:100%;max-width:220px;display:block;margin:auto"><circle cx="120" cy="120" r="118" fill="#6B4A2E"/>${s}<circle cx="120" cy="120" r="10" fill="#E7C99A"/><circle cx="120" cy="120" r="4" fill="#5A3A1E"/></svg>Wie viele Jahre ist der Baum gewachsen?`, fields: [{l: 'Alter in Jahren', a: n}], hint: 'Zähle nur die dunklen Ringe von innen nach außen.'};
+}, {n: 3});
+sorter($('#sort-a'), [{id: 'l', name: 'Laubholz'}, {id: 'n', name: 'Nadelholz'}], [
+  {t: 'Buche', c: 'l'}, {t: 'Fichte', c: 'n'}, {t: 'Eiche', c: 'l'}, {t: 'Kiefer', c: 'n'}, {t: 'Ahorn', c: 'l'}, {t: 'Tanne', c: 'n'}, {t: 'Lärche', c: 'n', why: 'verliert im Herbst die Nadeln, ist aber ein Nadelbaum'}, {t: 'Birke', c: 'l'}, {t: 'Linde', c: 'l', why: 'Laubholz, aber sehr weich – gut zum Schnitzen'}, {t: 'Douglasie', c: 'n'}
+]);
+const fe = $('#feuchte');
+const upd = () => { const f = +fe.value, mc = Math.round(5 + f * .18), w = 60 * (1 + (mc - 12) * .012); $('#brett').setAttribute('height', w.toFixed(1)); $('#brett').setAttribute('y', (100 - w / 2).toFixed(1)); $('#feuchte-v').textContent = f + ' %'; $('#brett-t').textContent = `Holzfeuchte ${mc} % · Breite ${numDE(100 * w / 60, 1)} mm (bei 12 %: 100 mm)`; };
+fe.oninput = upd; upd();
+trueFalse($('#tf-a'), [
+  {t: 'Holz wird bei Feuchtigkeit größer.', ok: true, why: 'Es quillt.'},
+  {t: 'Längs zur Faser ändert sich die Länge stark.', ok: false, why: 'Vor allem quer zur Faser – längs kaum.'},
+  {t: 'Frisch geschlagenes Holz muss erst trocknen, bevor man Möbel daraus baut.', ok: true, why: 'Sonst verzieht es sich und reißt.'},
+  {t: 'Eine Lackschicht verlangsamt das Quellen und Schwinden.', ok: true}
+], {pick: 4});
+cloze($('#cloze-u'), 'Der Baum wächst durch das {Kambium|Mark|Splintholz} in die Dicke. Wasser wird im {Splintholz|Kernholz|Bast} nach oben geleitet. Jedes Jahr entsteht ein {Jahresring|Markstrahl|Astloch}. Fichte und Kiefer sind {Nadelhölzer|Laubhölzer|Holzwerkstoffe}, Buche und Eiche sind {Laubhölzer|Nadelhölzer|Weichhölzer}. Bei Feuchtigkeit {quillt|schwindet|bricht} Holz, beim Trocknen {schwindet|quillt|wächst} es.');
+</script>

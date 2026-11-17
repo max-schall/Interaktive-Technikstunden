@@ -1,0 +1,86 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Steuern und Regeln, Signale und Logik, Mikrocontroller | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Steuerung oder Regelung · Logik-Trainer · Programm vorhersagen · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Steuerung und Regelung</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Steuern und Regeln, Sensoren, Aktoren und Signale, Logik, Mikrocontroller und Assistenzsysteme: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Regeln" data-yr="Trainer" data-title="T1 Steuern oder Regeln" data-sub="Beispiele sortieren">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Steuerung oder Regelung?</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Logik" data-yr="Trainer" data-title="T2 Logik" data-sub="UND, ODER, NICHT">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Logik</h2></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Signale" data-yr="Trainer" data-title="T3 Signale" data-sub="Bits und Stufen">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Bits und Stufen</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Steuerung', 'offene Wirkungskette ohne Rückmeldung'], ['Regelung', 'geschlossener Regelkreis mit Rückmeldung'], ['Sollwert', 'gewünschter Wert'], ['Istwert', 'gemessener Wert'],
+  ['Störgröße', 'Einfluss von außen, z. B. offenes Fenster'], ['Aktor', 'setzt Befehle um, z. B. Motor'], ['A/D-Wandler', 'macht aus analogen Signalen Zahlen'], ['UND', 'Y = 1 nur wenn alle Eingänge 1'],
+  ['ODER', 'Y = 1 wenn mindestens ein Eingang 1'], ['NICHT', 'kehrt das Signal um'], ['Endlosschleife', 'fragt den Sensor ständig ab'], ['Radar', 'misst den Abstand zum Vorderauto']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1'), [{id: 's', name: 'Steuerung'}, {id: 'r', name: 'Regelung'}], [{t: 'Zeitschaltuhr', c: 's'}, {t: 'Thermostat', c: 'r'}, {t: 'Tempomat', c: 'r'}, {t: 'Treppenhauslicht', c: 's'}, {t: 'Spurhalteassistent', c: 'r'}, {t: 'Toaster', c: 's'}]);
+taskSet($('#t2'), () => { const T = pick(['UND', 'ODER', 'NICHT']), A = randInt(0, 1), B = randInt(0, 1), Y = T === 'UND' ? A & B : T === 'ODER' ? A | B : 1 - A; return {key: T + A + B, tag: T, q: T === 'NICHT' ? `A = ${A}` : `A = ${A}, B = ${B}`, fields: [{l: 'Y', a: Y}]}; }, {n: 6});
+taskSet($('#t3'), () => { const b = randInt(1, 10); return {key: 'b' + b, tag: 'Auflösung', q: `Wie viele Stufen hat ein <b>${b}-Bit</b>-Wandler?`, fields: [{l: 'Stufen', a: 2 ** b}], hint: '2 hoch Anzahl der Bits'}; }, {n: 3});
+mcQuiz($('#quiz'), [
+  {q: 'Was unterscheidet die Regelung von der Steuerung?', a: ['die Rückmeldung des Istwerts', 'der Stromverbrauch', 'die Größe', 'nichts'], ok: 0},
+  {q: 'Was ist beim Thermostat das Stellglied?', a: ['das Heizkörperventil', 'das Thermometer', 'der Raum', 'der Sollwert'], ok: 0},
+  {q: 'Was ist ein Sensor?', a: ['ein Messfühler', 'ein Motor', 'ein Programm', 'eine Lampe'], ok: 0},
+  {q: 'Wie viele Stufen hat ein 8-Bit-Wandler?', a: ['256', '8', '16', '1024'], ok: 0},
+  {q: 'Welcher Schalterkombination entspricht UND?', a: ['Reihenschaltung', 'Parallelschaltung', 'Öffner', 'Wechselschaltung'], ok: 0},
+  {q: 'A = 1, B = 0, ODER-Gatter. Y = ?', a: ['1', '0', '10', '2'], ok: 0},
+  {q: 'Was macht eine NICHT-Schaltung?', a: ['Sie kehrt das Signal um.', 'Sie verdoppelt es.', 'Sie speichert es.', 'Sie misst es.'], ok: 0},
+  {q: 'Wozu dient ein Schwellwert im Programm?', a: ['Ab ihm wird geschaltet.', 'Er misst die Temperatur.', 'Er beendet das Programm.', 'Er zählt Tastendrücke.'], ok: 0},
+  {q: 'Was ist beim Abstandsregeltempomat der Istwert?', a: ['der gemessene Abstand', 'die Wunschgeschwindigkeit', 'die Bremse', 'das Radar'], ok: 0},
+  {q: 'In welcher Stufe fährt ein Auto überall ohne Lenkrad?', a: ['Stufe 5', 'Stufe 2', 'Stufe 3', 'Stufe 1'], ok: 0},
+  {q: '00000101 ist dezimal …', a: ['5', '101', '3', '6'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann Steuerung und Regelung unterscheiden.', href: '01_Steuern_Regeln.html#sim'},
+  {t: 'Ich kann die Teile eines Regelkreises benennen.', href: '01_Steuern_Regeln.html#kreis'},
+  {t: 'Ich kann Sensoren und Aktoren nach dem EVA-Prinzip zuordnen.', href: '02_Signale.html#eva'},
+  {t: 'Ich kann analoge und digitale Signale unterscheiden und den A/D-Wandler erklären.', href: '02_Signale.html#ad'},
+  {t: 'Ich kann UND, ODER und NICHT mit Wahrheitstabellen beschreiben.', href: '03_Logik.html#und'},
+  {t: 'Ich kann ein einfaches Mikrocontroller-Programm lesen und planen.', href: '04_Mikrocontroller.html#struktogramm'},
+  {t: 'Ich kann Assistenzsysteme erklären und autonomes Fahren bewerten.', href: '05_Assistenzsysteme.html#acc'}
+]);
+</script>

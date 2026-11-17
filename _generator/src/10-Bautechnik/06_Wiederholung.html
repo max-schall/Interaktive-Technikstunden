@@ -1,0 +1,86 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Bauweisen und Kräfte, Brücken, Haustechnik und Dämmung | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Beanspruchungen · Rahmen und Dreieck · Wärmeverlust rechnen · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Bauen und Wohnen</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Bauweisen und Baustoffe, Lasten und Kräfte, Brücken, Haustechnik, Heizen und Dämmen: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Kräfte" data-yr="Trainer" data-title="T1 Kräfte" data-sub="Zug oder Druck?">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Zug oder Druck?</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Wärmeverlust" data-yr="Trainer" data-title="T2 Wärmeverlust" data-sub="U · A · ΔT">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Wärmeverlust berechnen</h2></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Haustechnik" data-yr="Trainer" data-title="T3 Haustechnik" data-sub="Wege ordnen">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Der Weg des Stroms</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Massivbau', 'Wände tragen das Gebäude'], ['Skelettbau', 'Stützen und Träger tragen'], ['Stahlbeton', 'Beton für Druck, Stahl für Zug'], ['Nutzlast', 'Menschen, Möbel'],
+  ['Biegung', 'oben Druck, unten Zug'], ['I-Profil', 'biegesteif bei wenig Material'], ['Bogenbrücke', 'leitet Last als Druck in die Widerlager'], ['Fachwerk', 'Dreiecke sind unverschieblich'],
+  ['Siphon', 'Geruchsverschluss unter dem Waschbecken'], ['FI-Schutzschalter', 'schaltet bei Fehlerstrom ab'], ['U-Wert', 'Wärmeverlust pro m² und Kelvin'], ['Wärmepumpe', 'holt Umweltwärme mit Strom']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1'), [{id: 'z', name: 'Zug'}, {id: 'd', name: 'Druck'}], [{t: 'Tragseil', c: 'z'}, {t: 'Säule', c: 'd'}, {t: 'Steinbogen', c: 'd'}, {t: 'Unterseite eines Balkens', c: 'z'}, {t: 'Oberseite eines Balkens', c: 'd'}, {t: 'Kette einer Schaukel', c: 'z'}]);
+taskSet($('#t2'), () => { const U = pick([0.2, 0.25, 0.5, 1, 1.4]), A = pick([20, 50, 100, 150]), dT = pick([10, 20, 25, 30]); return {key: `${U}${A}${dT}`, tag: 'Wärmeverlust', q: `U = ${numDE(U, 2)} W/(m²·K), A = ${A} m², ΔT = ${dT} K`, fields: [{l: 'Verlust', a: U * A * dT, tol: .5, unit: 'W'}], hint: 'U · A · ΔT'}; }, {n: 4});
+orderSteps($('#t3'), ['Ortsnetz', 'Hausanschlusskasten', 'Stromzähler', 'Sicherungskasten', 'Stromkreis', 'Steckdose'], {label: 'Weg des Stroms'});
+mcQuiz($('#quiz'), [
+  {q: 'Was trägt beim Massivbau?', a: ['die Wände', 'Stützen', 'Seile', 'das Dach'], ok: 0},
+  {q: 'Warum liegt die Bewehrung im Balken unten?', a: ['Dort ist die Zugzone.', 'Dort ist die Druckzone.', 'Damit man sie sieht.', 'Wegen des Gewichts.'], ok: 0},
+  {q: 'Welche Beanspruchung erfährt eine Antriebswelle?', a: ['Verdrehung', 'Druck', 'Abscherung', 'keine'], ok: 0},
+  {q: 'Welches Profil ist am biegesteifsten?', a: ['I-Profil', 'Flachstab liegend', 'Draht', 'Rundstab dünn'], ok: 0},
+  {q: 'Welche Brücke nutzt Pylone und Tragseile?', a: ['Hängebrücke', 'Balkenbrücke', 'Bogenbrücke', 'Holzsteg'], ok: 0},
+  {q: 'Was macht ein Dreieck im Fachwerk?', a: ['Es ist unverschieblich und stabil.', 'Es spart Farbe.', 'Es bewegt sich im Wind.', 'Es trägt nur Zug.'], ok: 0},
+  {q: 'Was misst der Wasserzähler?', a: ['den Wasserverbrauch in m³', 'die Wassertemperatur', 'den Druck', 'den Strom'], ok: 0},
+  {q: 'Wozu dient der Siphon?', a: ['Er sperrt Kanalgase aus.', 'Er heizt Wasser.', 'Er spart Strom.', 'Er filtert Regen.'], ok: 0},
+  {q: 'Ein kleiner U-Wert bedeutet …', a: ['gute Dämmung', 'schlechte Dämmung', 'hohe Kosten', 'viel Licht'], ok: 0},
+  {q: 'Wie lüftet man richtig?', a: ['Stoßlüften', 'Fenster dauerhaft kippen', 'nie', 'nur nachts'], ok: 0},
+  {q: 'Wo geht bei einem ungedämmten Haus viel Wärme verloren?', a: ['über die Außenwände', 'über die Innenwände', 'über die Möbel', 'über den Teppich'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann Massiv-, Skelett- und Fertigbau unterscheiden.', href: '01_Bauen.html#bauweisen'},
+  {t: 'Ich kenne Baustoffe und weiß, warum man Stahlbeton verwendet.', href: '01_Bauen.html#baustoffe'},
+  {t: 'Ich kann Lasten und Beanspruchungen benennen.', href: '02_Kraefte.html#beanspruchung'},
+  {t: 'Ich kann erklären, warum die Profilform die Steifigkeit bestimmt.', href: '02_Kraefte.html#biegung'},
+  {t: 'Ich kenne Brückenarten und die Bedeutung des Dreiecks.', href: '03_Bruecken.html#arten'},
+  {t: 'Ich kann den Weg von Strom, Wasser und Abwasser im Haus beschreiben.', href: '04_Versorgung.html#haus'},
+  {t: 'Ich kann Wärmeverluste berechnen und Maßnahmen zum Energiesparen nennen.', href: '05_Heizen_Daemmen.html#verlust'}
+]);
+</script>

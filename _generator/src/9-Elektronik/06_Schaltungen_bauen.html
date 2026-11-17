@@ -1,0 +1,103 @@
+<!--
+title: Schaltungen planen, aufbauen und löten
+short: Schaltungen bauen
+time: 3–4 Unterrichtsstunden
+q: Wie wird aus einem Schaltplan eine funktionierende Schaltung?
+facts: Widerstandswerte mit dem Farbcode ablesen (4 Ringe: Ziffer, Ziffer, Multiplikator, Toleranz) | Steckbrett: Leiterbahnen in Reihen, Versorgungsschienen am Rand | Löten: Lötstelle erhitzen, Lot zuführen, Kegelform, keine kalte Lötstelle | Fehlersuche systematisch: Spannung, Polung, Verbindungen, Bauteilwerte prüfen | Sicherheit: Absaugung, Lötspitze nicht berühren
+inter: Farbcode-Trainer · Steckbrett-Regeln · Löten in Schritten · Lötstellen beurteilen · Fehlersuche
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Schalter, Sensoren und Schaltungen</p>
+      <h1>Schaltungen planen, aufbauen und löten</h1>
+      <p class="lead">Der Schaltplan ist fertig – jetzt wird gebaut. Zuerst wird auf dem <b>Steckbrett</b> getestet, dann dauerhaft auf einer Platine <b>gelötet</b>. Und wenn es nicht funktioniert, beginnt die <b>Fehlersuche</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Auf einem Widerstand sind vier farbige Ringe. Was könnten sie bedeuten?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie wird aus einem Schaltplan eine funktionierende Schaltung?</p></div>
+      <div class="controls"><button class="btn primary" data-go="farbcode">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="farbcode" data-label="Farbcode" data-yr="Erarbeitung" data-title="Der Farbcode" data-sub="Widerstandswerte ablesen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Farbcode</p>
+    <h2>Den Farbcode lesen</h2>
+    <p class="lead">Ring 1 und 2 sind <b>Ziffern</b>, Ring 3 ist der <b>Multiplikator</b> (Anzahl der Nullen), der goldene Ring 4 die Toleranz (±5 %). Beispiel: braun-schwarz-rot = 1 0 und zwei Nullen = 1000 Ω.</p>
+  </div>
+  <div class="cols-2">
+    <div class="table-wrap"><table class="cmp"><thead><tr><th>Farbe</th><th>Ziffer</th><th>Multiplikator</th></tr></thead><tbody id="fc-tab"></tbody></table></div>
+    <div id="ts-f"></div>
+  </div>
+</section>
+
+<section class="station" id="steckbrett" data-label="Steckbrett" data-yr="Werkstatt" data-title="Das Steckbrett" data-sub="Ohne Löten testen">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Steckbrett</p>
+    <h2>Das Steckbrett</h2>
+    <p class="lead">Im Steckbrett sind je fünf Löcher einer kurzen Reihe leitend verbunden. Die langen Schienen am Rand sind für Plus und Minus. Prüfe die Aussagen.</p>
+  </div>
+  <div class="cols-2">
+    <div class="tk-fig"><svg viewBox="0 0 420 240" role="img" aria-label="Steckbrett"><rect x="10" y="10" width="400" height="220" rx="8" fill="#F3F1EA" stroke="var(--edge)" stroke-width="1.5"/>
+      <path d="M30 30H390" stroke="var(--bad)" stroke-width="3"/><path d="M30 50H390" stroke="var(--e)" stroke-width="3"/><path d="M30 190H390M30 210H390" stroke="#999" stroke-width="2"/>
+      <path d="M30 120H390" stroke="#ccc" stroke-width="10"/>
+      <g id="sb-holes"></g><text x="400" y="34" text-anchor="end" style="font-family:var(--f-mono);font-size:11px;fill:var(--bad)">+</text><text x="400" y="54" text-anchor="end" style="font-family:var(--f-mono);font-size:11px;fill:var(--e)">−</text></svg></div>
+    <div id="tf-s"></div>
+  </div>
+</section>
+
+<section class="station" id="loeten" data-label="Löten" data-yr="Werkstatt" data-title="Löten" data-sub="Schritt für Schritt">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Löten</p>
+    <h2>Löten – Schritt für Schritt</h2>
+    <p class="lead">Beim Löten verbindet geschmolzenes Lötzinn das Bauteil mit der Leiterbahn. Ordne die Schritte. Eine gute Lötstelle glänzt und hat die Form eines kleinen <b>Kegels</b> (wie ein Vulkan).</p>
+  </div>
+  <div id="order-l"></div>
+</section>
+
+<section class="station" id="fehler" data-label="Fehlersuche" data-yr="Material M1" data-title="Fehlersuche" data-sub="Systematisch vorgehen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Die LED leuchtet nicht – was nun?</h2>
+    <p class="lead">Ordne jedem Fehlerbild die wahrscheinlichste Ursache zu.</p>
+  </div>
+  <div id="match-f"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Schaltungen bauen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Schaltungen planen, aufbauen und löten</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Farbcode:</b> Ring 1 und 2 Ziffern, Ring 3 Anzahl der Nullen, Ring 4 Toleranz. Gelb-Violett-Rot = 4 7 00 = 4,7 kΩ.</li>
+        <li data-step>Auf dem <b>Steckbrett</b> wird ohne Löten getestet. Kurze Reihen sind verbunden, die Randschienen führen Plus und Minus.</li>
+        <li data-step><b>Löten:</b> Lötstelle mit der Spitze erhitzen, Lot an die Lötstelle (nicht an die Spitze) führen, Lot und Kolben wegnehmen, nicht bewegen. Gute Lötstelle: glänzend, kegelförmig.</li>
+        <li data-step><b>Fehlersuche:</b> Spannung vorhanden? Bauteile richtig gepolt? Verbindungen und Lötstellen in Ordnung? Richtige Bauteilwerte?</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Sicherheit beim Löten</span><p>Lötkolben immer in den Ständer, Spitze nicht berühren (über 300 °C), Absaugung einschalten, nach dem Löten Hände waschen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Farbcode rückwärts</h2></div>
+  <div id="ts-r"></div>
+</section>
+
+<script>
+$('#fc-tab').innerHTML = RCOL.map(([n, c], i) => `<tr><td><span style="display:inline-block;width:1.4em;height:1em;background:${c};border:1px solid var(--edge);vertical-align:middle;margin-right:.5em"></span>${n}</td><td>${i}</td><td>× ${(10 ** i).toLocaleString('de-DE')}</td></tr>`).join('');
+taskSet($('#ts-f'), () => { const v = pick(E12) * 10 ** randInt(0, 3); return {key: 'r' + v, tag: 'Farbcode', q: resistorSVG(v) + '<br>Welchen Wert hat der Widerstand?', fields: [{l: 'R', a: v, unit: 'Ω'}], hint: resistorBands(v).join(' – ')}; }, {n: 3});
+$('#sb-holes').innerHTML = [...Array(18)].map((_, c) => [...Array(5)].map((_, r) => `<rect x="${36 + c * 20}" y="${70 + r * 9}" width="5" height="5" fill="#555"/><rect x="${36 + c * 20}" y="${130 + r * 9}" width="5" height="5" fill="#555"/>`).join('')).join('') + `<path d="M38 70v40" stroke="var(--accent)" stroke-width="3" opacity=".7"/><text x="48" y="118" style="font-family:var(--f-mono);font-size:10px;fill:var(--accent)">verbunden</text>`;
+trueFalse($('#tf-s'), [
+  {t: 'Die fünf Löcher einer kurzen Reihe sind leitend verbunden.', ok: true},
+  {t: 'Die beiden Hälften links und rechts des Mittelstegs sind verbunden.', ok: false, why: 'Der Mittelsteg trennt sie – dort sitzen ICs.'},
+  {t: 'Die langen Randschienen führen meist Plus und Minus.', ok: true},
+  {t: 'Steckt man beide Beine eines Widerstands in dieselbe Reihe, ist er kurzgeschlossen.', ok: true}
+]);
+orderSteps($('#order-l'), ['Lötkolben auf ca. 350 °C aufheizen, Spitze am feuchten Schwamm reinigen', 'Bauteil einstecken, Beinchen leicht abbiegen', 'Lötspitze an Bauteilbein und Lötauge halten (2 Sekunden)', 'Lötzinn an die erhitzte Lötstelle führen, nicht an die Spitze', 'Erst das Lot, dann den Kolben wegnehmen – nicht bewegen', 'Überstehende Beinchen mit dem Seitenschneider kürzen'], {label: 'Ablauf'});
+matcher($('#match-f'), [['Nichts passiert, auch nicht am Multimeter', 'Batterie leer oder nicht angeschlossen'], ['LED bleibt dunkel, Spannung ist da', 'LED falsch herum eingesteckt'], ['LED blitzt kurz auf und ist dann tot', 'Vorwiderstand vergessen'], ['Funktioniert nur, wenn man auf die Platine drückt', 'kalte oder fehlende Lötstelle'], ['LED leuchtet nur schwach', 'zu großer Vorwiderstand (falscher Farbcode)']]);
+taskSet($('#ts-r'), () => { const v = pick(E12) * 10 ** randInt(1, 3), b = resistorBands(v); return {key: 'b' + v, tag: fmtR(v), q: `Welche Farben haben die ersten drei Ringe von <b>${fmtR(v)}</b>?`, fields: [{l: 'Ring 1', a: b[0]}, {l: 'Ring 2', a: b[1]}, {l: 'Ring 3', a: b[2]}]}; }, {n: 3});
+</script>

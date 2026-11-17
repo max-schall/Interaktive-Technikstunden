@@ -1,0 +1,110 @@
+<!--
+title: Bauweisen und Baustoffe
+short: Bauen
+time: 2 Unterrichtsstunden
+q: Wie werden Häuser gebaut, und welche Baustoffe eignen sich wofür?
+facts: Wohnen ist ein Grundbedürfnis | Massivbau (Mauerwerk, Beton): Wände tragen | Skelettbau (Stützen und Träger aus Holz, Stahl oder Stahlbeton): Wände nur raumabschließend | Fertigbau: vorgefertigte Wandelemente | Baustoffe: Ziegel, Kalksandstein, Beton, Stahlbeton, Holz, Lehm | Beton nimmt Druck auf, Stahl Zug – Stahlbeton kombiniert beides | Ökologisch bauen: nachwachsende Baustoffe, kurze Wege, Recycling
+inter: Bauweisen zuordnen · Baustoffe nach Eigenschaften sortieren · Betonmischung berechnen · Ökologische Baustoffe bewerten · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Bauen und Wohnen</p>
+      <h1>Bauweisen und Baustoffe</h1>
+      <p class="lead">Ein Fachwerkhaus aus dem Mittelalter, ein Hochhaus aus Stahlbeton, ein Holzhaus aus Fertigteilen: Menschen bauen seit Jahrtausenden – mit immer neuen <b>Bauweisen</b> und <b>Baustoffen</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Woraus besteht das Haus, in dem du wohnst? Woran kann man das erkennen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie werden Häuser gebaut, und welche Baustoffe eignen sich wofür?</p></div>
+      <div class="controls"><button class="btn primary" data-go="bauweisen">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="bauweisen" data-label="Bauweisen" data-yr="Erarbeitung" data-title="Drei Bauweisen" data-sub="Massiv, Skelett, Fertig">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Bauweisen</p>
+    <h2>Massivbau, Skelettbau, Fertigbau</h2>
+  </div>
+  <div class="cols-3">
+    <div class="box"><span class="tag info">Massivbau</span><p>Die <b>Wände tragen</b> das Gebäude. Sie bestehen aus Mauerwerk (Ziegel, Kalksandstein) oder Beton. Robust, speichert Wärme, guter Schallschutz.</p></div>
+    <div class="box"><span class="tag info">Skelettbau</span><p>Ein Gerüst aus <b>Stützen und Trägern</b> trägt die Lasten. Wände schließen nur den Raum ab und können versetzt werden. Hochhäuser, Hallen, Fachwerkhäuser.</p></div>
+    <div class="box"><span class="tag info">Fertigbau</span><p><b>Vorgefertigte</b> Wand- und Deckenelemente werden in der Fabrik gebaut und auf der Baustelle in wenigen Tagen montiert. Oft Holzständerbauweise.</p></div>
+  </div>
+  <h3 class="mt">Welche Bauweise?</h3>
+  <div id="sort-b"></div>
+</section>
+
+<section class="station" id="baustoffe" data-label="Baustoffe" data-yr="Erarbeitung" data-title="Baustoffe" data-sub="Eigenschaften und Einsatz">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Baustoffe</p>
+    <h2>Der richtige Baustoff an der richtigen Stelle</h2>
+    <p class="lead"><b>Beton</b> (Zement, Sand, Kies, Wasser) hält enormen <b>Druck</b> aus, reißt aber unter <b>Zug</b>. Stahl ist sehr zugfest. Im <b>Stahlbeton</b> werden beide kombiniert. Ordne Baustoff und Einsatz zu.</p>
+  </div>
+  <div id="match-s"></div>
+</section>
+
+<section class="station" id="beton" data-label="Betonmischung" data-yr="Übung" data-title="Beton mischen" data-sub="Das Mischungsverhältnis">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Beton mischen</p>
+    <h2>Das Mischungsverhältnis</h2>
+    <p class="lead">Für ein Fundament mischt man Beton im Verhältnis <b>1 Teil Zement : 4 Teile Gesteinskörnung (Sand und Kies)</b>, dazu etwa halb so viel Wasser wie Zement. Berechne die Mengen.</p>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="oeko" data-label="M1 Ökologisch" data-yr="Material M1" data-title="Ökologisch bauen" data-sub="Holz, Lehm, Recycling">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Ökologisch bauen</h2>
+    <p class="lead">Die Herstellung von Zement verursacht etwa 8 % der weltweiten CO₂-Emissionen. Neue Ideen: Holz als CO₂-Speicher, Lehm, Hanf-Dämmung, Recyclingbeton, Beton, der sich mit Bakterien selbst repariert. Prüfe die Aussagen.</p>
+  </div>
+  <div id="tf"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Bauen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Bauweisen und Baustoffe</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Massivbau:</b> Wände tragen. <b>Skelettbau:</b> Stützen und Träger tragen, Wände schließen nur ab. <b>Fertigbau:</b> vorgefertigte Elemente.</li>
+        <li data-step><b>Beton</b> besteht aus Zement, Sand, Kies und Wasser. Er ist sehr druckfest, aber wenig zugfest.</li>
+        <li data-step><b>Stahlbeton:</b> Beton nimmt den Druck, eingelegter Stahl (Bewehrung) den Zug auf.</li>
+        <li data-step>Ökologisch bauen: nachwachsende Baustoffe (Holz, Hanf), Lehm, Recyclingbaustoffe, kurze Transportwege.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Erkundung</span><p>Macht einen Rundgang um die Schule: Welche Bauweise und welche Baustoffe erkennt ihr? Fotografiert Beispiele.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Bau-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-b'), [{id: 'm', name: 'Massivbau'}, {id: 's', name: 'Skelettbau'}, {id: 'f', name: 'Fertigbau'}], [
+  {t: 'Einfamilienhaus aus Ziegelsteinen', c: 'm'}, {t: 'Hochhaus mit Stahlbetonstützen', c: 's'}, {t: 'Fachwerkhaus', c: 's', why: 'Das Holzgerüst trägt, die Gefache sind nur ausgefüllt.'},
+  {t: 'Holzhaus, in drei Tagen aufgestellt', c: 'f'}, {t: 'Lagerhalle mit Stahlträgern', c: 's'}, {t: 'Kellerwand aus Beton', c: 'm'}
+]);
+matcher($('#match-s'), [['Ziegel', 'Mauerwerk, speichert Wärme'], ['Kalksandstein', 'tragende Innenwände, guter Schallschutz'], ['Stahlbeton', 'Decken, Stützen, Brücken'], ['Bauholz', 'Dachstuhl, Holzständerwände'], ['Dämmstoff (Mineralwolle, Holzfaser)', 'hält Wärme im Haus'], ['Lehm', 'Innenputz, reguliert die Luftfeuchte']]);
+taskSet($('#ts'), () => {
+  const z = pick([1, 2, 2.5, 4, 5]);
+  return {key: 'z' + z, tag: 'Mischung 1 : 4', q: `Du hast <b>${numDE(z, 1)} Eimer Zement</b>. Wie viel Sand/Kies und Wasser brauchst du?`, fields: [{l: 'Sand und Kies', a: z * 4, unit: 'Eimer'}, {l: 'Wasser', a: z / 2, tol: .01, unit: 'Eimer'}], hint: 'Gesteinskörnung = 4 · Zement, Wasser = Zement : 2'};
+}, {n: 3});
+trueFalse($('#tf'), [
+  {t: 'Holz speichert das CO₂, das der Baum beim Wachsen aufgenommen hat.', ok: true},
+  {t: 'Bei der Zementherstellung entsteht kaum CO₂.', ok: false, why: 'Zement ist für etwa 8 % der weltweiten CO₂-Emissionen verantwortlich.'},
+  {t: 'Abbruchbeton kann zu Recyclingbeton verarbeitet werden.', ok: true},
+  {t: 'Lehm ist ein sehr alter, natürlicher Baustoff.', ok: true},
+  {t: 'Holzhäuser brennen immer schneller ab als Massivhäuser.', ok: false, why: 'Dicke Holzbauteile verkohlen außen und schützen so den Kern; moderne Holzhäuser erfüllen den Brandschutz.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was trägt beim Skelettbau die Lasten?', a: ['Stützen und Träger', 'die Wände', 'das Dach', 'die Fenster'], ok: 0},
+  {q: 'Woraus besteht Beton?', a: ['Zement, Sand, Kies, Wasser', 'Ton und Stroh', 'Kalk und Holz', 'Stahl und Glas'], ok: 0},
+  {q: 'Warum legt man Stahl in Beton?', a: ['Stahl nimmt die Zugkräfte auf.', 'Damit er schwerer wird.', 'Damit er schneller trocknet.', 'Damit er nicht rostet.'], ok: 0},
+  {q: 'Welcher Baustoff ist nachwachsend?', a: ['Holz', 'Beton', 'Stahl', 'Glas'], ok: 0},
+  {q: 'Was ist ein Vorteil des Fertigbaus?', a: ['kurze Bauzeit', 'besonders schwer', 'kein Fundament nötig', 'keine Planung nötig'], ok: 0}
+]);
+</script>

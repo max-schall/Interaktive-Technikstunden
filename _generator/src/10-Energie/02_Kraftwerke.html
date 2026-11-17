@@ -1,0 +1,137 @@
+<!--
+title: Generator und Wärmekraftwerk
+short: Kraftwerke
+time: 2 Unterrichtsstunden
+q: Wie erzeugt ein Kraftwerk elektrische Energie?
+facts: Generator: Bewegt man einen Magneten in einer Spule, entsteht eine Spannung (Induktion) – je schneller, desto größer | Fast alle Kraftwerke drehen einen Generator | Wärmekraftwerk: Brennstoff → Kessel (Dampf) → Turbine → Generator; Kondensator und Kühlturm kühlen den Dampf | Wirkungsgrad ca. 35–45 %; mit Kraft-Wärme-Kopplung (Fernwärme) bis 85 % | Kohlekraftwerke verursachen viel CO₂
+inter: Generator-Modell: Magnet bewegen · Wärmekraftwerk erkunden · Energieflussbild Kraftwerk mit und ohne KWK · Ablauf ordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Energieversorgung</p>
+      <h1>Generator und Wärmekraftwerk</h1>
+      <p class="lead">Ob Kohle, Gas, Wind oder Wasser – fast überall steckt am Ende dasselbe Bauteil: ein <b>Generator</b>, der Bewegung in elektrische Energie verwandelt. Am Fahrrad heißt er Dynamo.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum leuchtet das Fahrradlicht mit Dynamo heller, wenn man schneller fährt?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie erzeugt ein Kraftwerk elektrische Energie?</p></div>
+      <div class="controls"><button class="btn primary" data-go="generator">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="generator" data-label="Generator" data-yr="Einstieg" data-title="Der Generator" data-sub="Bewegung wird Strom">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Generator</p>
+    <h2>Bewegung wird zu Strom</h2>
+    <p class="lead">Dreht sich ein Magnet in einer Spule, entsteht an der Spule eine <b>Spannung</b> – das heißt <b>Induktion</b>. Je schneller der Magnet dreht, desto größer die Spannung. Verändere die Drehzahl.</p>
+  </div>
+  <div class="cols-2">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 360 260" id="gen" role="img" aria-label="Generator-Modell"></svg><div class="tk-row"><label>Drehzahl <input type="range" min="0" max="100" value="40" id="gen-n"> <span class="tk-val" id="gen-nv"></span></label></div></div>
+    <div><div id="gen-pl"></div><div class="tk-readout" id="gen-ro"></div></div>
+  </div>
+</section>
+
+<section class="station" id="kraftwerk" data-label="Wärmekraftwerk" data-yr="Erarbeitung" data-title="Das Wärmekraftwerk" data-sub="Vom Brennstoff zum Strom">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Wärmekraftwerk</p>
+    <h2>Das Wärmekraftwerk</h2>
+    <p class="lead">Tippe die Teile an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 480 300" id="kw" role="img" aria-label="Wärmekraftwerk" style="font-family:var(--f-mono)">
+      <g data-part="kessel"><rect x="30" y="100" width="90" height="150" fill="var(--bad)" opacity=".75" stroke="var(--edge)" stroke-width="2"/><path d="M50 240q10 -30 20 0q10 -30 20 0" fill="#F59E0B"/><path d="M45 120h60M45 140h60M45 160h60M45 180h60" stroke="var(--e)" stroke-width="3"/></g>
+      <g data-part="dampf"><path d="M120 120H200" stroke="var(--ink-2)" stroke-width="8" stroke-dasharray="10 4"/></g>
+      <g data-part="turbine"><path d="M200 100h70l20 60h-110z" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/><path d="M210 110v40M225 110v40M240 110v40M255 110v40" stroke="var(--steel-2)" stroke-width="3"/></g>
+      <g data-part="generator"><rect x="300" y="105" width="70" height="50" fill="var(--good)" stroke="var(--edge)" stroke-width="2"/><path d="M290 130h10" stroke="var(--ink)" stroke-width="6"/><path d="M370 130h40V60" stroke="var(--bad)" stroke-width="3"/><path d="M400 60l10 -14 10 14" fill="none" stroke="var(--bad)" stroke-width="3"/></g>
+      <g data-part="kondensator"><rect x="200" y="190" width="90" height="40" fill="var(--e)" opacity=".5" stroke="var(--edge)" stroke-width="2"/><path d="M245 160v30" stroke="var(--ink-2)" stroke-width="6"/><path d="M200 210H120" stroke="var(--e)" stroke-width="5"/></g>
+      <g data-part="kuehlturm"><path d="M330 280l12 -90h56l12 90z" fill="var(--surface-2)" stroke="var(--edge)" stroke-width="2"/><path d="M350 186q20 -30 0 -50M380 186q20 -30 0 -50" stroke="var(--line)" stroke-width="6" fill="none"/><path d="M290 220h50" stroke="var(--e)" stroke-width="4"/></g>
+      <g data-part="schornstein"><rect x="60" y="20" width="24" height="80" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="kw-mode"></span></div><div class="box" id="kw-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="kwk" data-label="Wirkungsgrad" data-yr="Erarbeitung" data-title="Wirkungsgrad und KWK" data-sub="Abwärme nutzen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Wirkungsgrad</p>
+    <h2>Mehr als die Hälfte wird zu Abwärme</h2>
+    <p class="lead">Ein Kohlekraftwerk wandelt nur etwa 40 % der Energie in Strom um. Bei der <b>Kraft-Wärme-Kopplung (KWK)</b> wird die Abwärme als <b>Fernwärme</b> zum Heizen genutzt.</p>
+  </div>
+  <div class="cols-2"><div><div class="tk-row"><span id="kwk-seg"></span></div><div id="sk"></div></div><div class="box" id="kwk-t"></div></div>
+</section>
+
+<section class="station" id="ablauf" data-label="M1 Ablauf" data-yr="Material M1" data-title="Vom Brennstoff zur Steckdose" data-sub="Energieumwandlungen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Vom Brennstoff zur Steckdose</h2>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Kraftwerke</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Generator und Wärmekraftwerk</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Generator:</b> Ein Magnet dreht sich in einer Spule – es entsteht eine Spannung (<b>Induktion</b>). Je schneller, desto größer die Spannung.</li>
+        <li data-step><b>Wärmekraftwerk:</b> Brennstoff erhitzt im <b>Kessel</b> Wasser zu Dampf → der Dampf dreht die <b>Turbine</b> → die Turbine dreht den <b>Generator</b>.</li>
+        <li data-step>Im <b>Kondensator</b> wird der Dampf wieder zu Wasser; der <b>Kühlturm</b> gibt die Abwärme ab.</li>
+        <li data-step>Wirkungsgrad ca. 40 %. Mit <b>Kraft-Wärme-Kopplung</b> (Fernwärme) bis 85 %.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Schließt einen Fahrraddynamo an ein Multimeter (V~) an und dreht unterschiedlich schnell. Notiert die Spannungen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Kraftwerks-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+let ang = 0;
+const gp = plot($('#gen-pl'), {x: [0, 2], y: [-12, 12], xs: .5, ys: 4, xl: 't in s', yl: 'U in V', series: []});
+function gen(dt) {
+  const n = +$('#gen-n').value, w = n / 100 * 4 * Math.PI, U = n / 100 * 10;
+  ang += w * (dt || 0);
+  const a = ang, c = Math.cos(a), s = Math.sin(a);
+  let g = `<rect x="40" y="70" width="40" height="120" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/>${[0, 1, 2, 3, 4, 5].map(i => `<path d="M40 ${82 + i * 20}h40" stroke="var(--cu)" stroke-width="6"/>`).join('')}<rect x="280" y="70" width="40" height="120" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/>${[0, 1, 2, 3, 4, 5].map(i => `<path d="M280 ${82 + i * 20}h40" stroke="var(--cu)" stroke-width="6"/>`).join('')}`;
+  g += `<g transform="rotate(${a * 180 / Math.PI} 180 130)"><rect x="110" y="115" width="70" height="30" fill="var(--verbot)"/><rect x="180" y="115" width="70" height="30" fill="var(--gebot)"/><text x="140" y="136" fill="#fff" style="fill:#fff">N</text><text x="215" y="136" style="fill:#fff">S</text></g><circle cx="180" cy="130" r="5" class="fillw"/>`;
+  g += SY.wire([[60, 70], [60, 30], [300, 30], [300, 70]]) + SY.lamp(180, 30, Math.abs(Math.cos(a)) * U / 10) + `<text x="180" y="245" text-anchor="middle" class="sm">Spule – Magnet (dreht) – Spule</text>`;
+  $('#gen').innerHTML = g;
+}
+function genPlot() {
+  const n = +$('#gen-n').value, w = n / 100 * 4 * Math.PI, U = n / 100 * 10;
+  $('#gen-nv').textContent = n + ' %';
+  gp.set({series: [{pts: [...Array(81)].map((_, i) => [i / 40, U * Math.cos(w * i / 40)]), cls: 's0'}]});
+  readout($('#gen-ro'), [['Drehzahl', n + ' %'], ['Spannung (Spitze)', numDE(U, 1) + ' V'], ['Frequenz', numDE(w / (2 * Math.PI), 1) + ' Hz']]);
+}
+$('#gen-n').oninput = () => { gen(0); genPlot(); };
+genPlot();
+animLoop($('#gen'), dt => gen(dt));
+explorer($('#kw'), $('#kw-panel'), [
+  {id: 'kessel', n: 'Kessel (Dampferzeuger)', t: 'Brennstoff (Kohle, Gas, Müll, Holz) verbrennt. In Rohren verdampft Wasser bei hohem Druck zu über 500 °C heißem Dampf.'},
+  {id: 'dampf', n: 'Frischdampfleitung', t: 'Führt den Dampf unter hohem Druck zur Turbine.'},
+  {id: 'turbine', n: 'Dampfturbine', t: 'Der Dampf strömt durch Schaufelräder und versetzt die Welle in schnelle Drehung (3000 Umdrehungen pro Minute).'},
+  {id: 'generator', n: 'Generator', t: 'Sitzt auf derselben Welle wie die Turbine und wandelt die Drehung in elektrische Energie um.'},
+  {id: 'kondensator', n: 'Kondensator', t: 'Kühlt den Dampf ab, sodass er wieder zu Wasser wird. Das Wasser wird zurück in den Kessel gepumpt.'},
+  {id: 'kuehlturm', n: 'Kühlturm', t: 'Gibt die Abwärme des Kühlwassers an die Luft ab. Die „Wolke“ ist Wasserdampf, kein Rauch.'},
+  {id: 'schornstein', n: 'Schornstein mit Filteranlage', t: 'Rauchgas wird gereinigt (Staub, Schwefel) und abgeleitet. CO₂ lässt sich nicht einfach herausfiltern.'}
+], {modeRoot: $('#kw-mode'), label: 'Kraftwerk'});
+const sk = sankey($('#sk'), {outs: []});
+seg($('#kwk-seg'), [['ohne', 'nur Strom'], ['kwk', 'mit Kraft-Wärme-Kopplung']], v => {
+  sk.set(v === 'ohne' ? [{n: 'Strom', v: 40, use: true}, {n: 'Abwärme Kühlturm', v: 52}, {n: 'Abgas', v: 8}] : [{n: 'Strom + Fernwärme', v: 85, use: true}, {n: 'Abwärme', v: 8}, {n: 'Abgas', v: 7}]);
+  $('#kwk-t').innerHTML = v === 'ohne' ? '<span class="tag info">Nur Strom</span><p>Über die Hälfte der Energie geht als Abwärme über den Kühlturm verloren.</p>' : '<span class="tag info">Kraft-Wärme-Kopplung</span><p>Die Abwärme heizt über ein Fernwärmenetz Wohnungen. So werden bis zu 85 % der Brennstoffenergie genutzt.</p>';
+});
+orderSteps($('#order'), ['chemische Energie in der Kohle', 'Verbrennung: thermische Energie im Dampf', 'Turbine: Bewegungsenergie', 'Generator: elektrische Energie', 'Transformator und Stromnetz', 'Steckdose'], {label: 'Energieumwandlungen'});
+mcQuiz($('#quiz'), [
+  {q: 'Wie entsteht im Generator eine Spannung?', a: ['Ein Magnet bewegt sich in einer Spule.', 'Durch Erhitzen eines Drahtes.', 'Durch Licht.', 'Durch Reibung von Wolle.'], ok: 0},
+  {q: 'Was dreht im Wärmekraftwerk den Generator?', a: ['die Dampfturbine', 'der Kühlturm', 'der Kessel', 'der Schornstein'], ok: 0},
+  {q: 'Was kommt aus dem Kühlturm?', a: ['Wasserdampf', 'Rauch', 'CO₂', 'Kohlenstaub'], ok: 0},
+  {q: 'Wie hoch ist der Wirkungsgrad eines Kohlekraftwerks etwa?', a: ['40 %', '95 %', '5 %', '100 %'], ok: 0},
+  {q: 'Was ist Kraft-Wärme-Kopplung?', a: ['Abwärme wird als Fernwärme genutzt.', 'Zwei Generatoren laufen gleichzeitig.', 'Strom wird gespeichert.', 'Wind treibt die Turbine.'], ok: 0}
+]);
+</script>

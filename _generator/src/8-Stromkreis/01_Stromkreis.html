@@ -1,0 +1,118 @@
+<!--
+title: Der einfache Stromkreis
+short: Stromkreis
+time: 2 Unterrichtsstunden
+q: Wann fließt Strom – und wie zeichnet man einen Stromkreis?
+facts: Ein Stromkreis besteht aus Spannungsquelle, Leitungen, Verbraucher und meist einem Schalter | Strom fließt nur im geschlossenen Stromkreis | Schaltzeichen und Schaltplan | Leiter (Metalle, Graphit) und Nichtleiter (Kunststoff, Glas, Holz) | Kurzschluss: Strom fließt am Verbraucher vorbei, sehr große Stromstärke
+inter: Stromkreis-Simulator mit Schalter · Schaltzeichen zuordnen · Leitfähigkeitsprüfer · Kurzschluss-Brücke · Schaltplan-Fehler finden
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der elektrische Stromkreis</p>
+      <h1>Der einfache Stromkreis</h1>
+      <p class="lead">Eine Batterie, zwei Kabel, ein Lämpchen – und es leuchtet. Aber nur, wenn alles richtig verbunden ist. Elektrischer Strom braucht einen <b>geschlossenen Kreis</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Bringe mit einer Flachbatterie, zwei Kabeln und einem Lämpchen das Lämpchen zum Leuchten. Skizziere deinen Aufbau.</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wann fließt Strom – und wie zeichnet man einen Stromkreis?</p></div>
+      <div class="controls"><button class="btn primary" data-go="kreis">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="kreis" data-label="Stromkreis" data-yr="Einstieg" data-title="Der geschlossene Stromkreis" data-sub="Quelle, Leitung, Verbraucher">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Der Stromkreis</p>
+    <h2>Strom fließt nur im geschlossenen Kreis</h2>
+    <p class="lead">Ein Stromkreis besteht aus <b>Spannungsquelle</b>, <b>Leitungen</b> und <b>Verbraucher</b>. Mit dem <b>Schalter</b> wird er geöffnet oder geschlossen. Tippe auf den Schalter.</p>
+  </div>
+  <div id="c1"></div>
+</section>
+
+<section class="station" id="zeichen" data-label="Schaltzeichen" data-yr="Erarbeitung" data-title="Schaltzeichen" data-sub="Die Sprache der Elektrotechnik">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Schaltzeichen</p>
+    <h2>Die Sprache der Elektrotechnik</h2>
+    <p class="lead">In einem <b>Schaltplan</b> wird jedes Bauteil durch ein genormtes <b>Schaltzeichen</b> dargestellt. Leitungen zeichnet man als gerade Linien mit rechten Winkeln. Ordne zu.</p>
+  </div>
+  <div id="match-z"></div>
+</section>
+
+<section class="station" id="leiter" data-label="Leiter" data-yr="Werkstatt" data-title="Leiter und Nichtleiter" data-sub="Der Leitfähigkeitsprüfer">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Werkstatt</p>
+    <h2>Leiter oder Nichtleiter?</h2>
+    <p class="lead">Ein Prüfgerät mit Lücke: Lege einen Gegenstand in die Lücke. Leuchtet die Lampe, ist er ein <b>Leiter</b>.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 440 260" id="lp" role="img" aria-label="Leitfähigkeitsprüfer"></svg><div class="tk-row"><span id="lp-seg"></span></div><p class="status" id="lp-st"></p></div>
+    <div id="sort-l"></div>
+  </div>
+</section>
+
+<section class="station" id="kurzschluss" data-label="Kurzschluss" data-yr="Material M1" data-title="Der Kurzschluss" data-sub="Wenn der Strom abkürzt">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Der Kurzschluss</h2>
+    <p class="lead">Verbindet ein Leiter die beiden Pole der Spannungsquelle direkt, fließt der Strom am Verbraucher vorbei. Die Stromstärke wird sehr groß, Leitungen werden heiß – Brandgefahr! Schalte die Brücke ein.</p>
+  </div>
+  <div id="c2"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Stromkreis</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Der einfache Stromkreis</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Ein Stromkreis besteht aus <b>Spannungsquelle</b>, <b>Leitungen</b>, <b>Verbraucher</b> und meist einem <b>Schalter</b>.</li>
+        <li data-step>Strom fließt nur im <b>geschlossenen</b> Stromkreis. Ein offener Schalter unterbricht ihn.</li>
+        <li data-step>Im <b>Schaltplan</b> werden Bauteile mit genormten Schaltzeichen gezeichnet, Leitungen als gerade Linien.</li>
+        <li data-step><b>Leiter:</b> Metalle, Graphit, Salzwasser. <b>Nichtleiter (Isolatoren):</b> Kunststoff, Glas, Holz, Gummi.</li>
+        <li data-step><b>Kurzschluss:</b> Der Strom fließt am Verbraucher vorbei, die Stromstärke wird sehr groß. Eine Sicherung unterbricht dann den Stromkreis.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Wichtig</span><p>Experimentiere nur mit Batterien oder Schülernetzgeräten bis 24 V – <b>niemals</b> mit der Steckdose!</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Leuchtet die Lampe?</h2></div>
+  <div id="tf"></div>
+</section>
+
+<script>
+circuit($('#c1'), {mode: 'series', loads: [{t: 'lamp', R: 15, name: 'Lampe'}], U: 4.5, closed: false, show: ['U', 'I'], note: () => 'Der Stromkreis ist <b>geschlossen</b> – Strom fließt vom Pluspol durch die Lampe zum Minuspol. Die Lampe leuchtet.'});
+const ZS = (s, vb = '0 0 120 50') => `<svg viewBox="${vb}" class="sch" style="width:7rem;height:3rem;vertical-align:middle">${s}</svg>`;
+matcher($('#match-z'), [
+  [ZS(SY.wire([[5, 25], [115, 25]]) + SY.batH(60, 25)), 'Batterie (Spannungsquelle)'],
+  [ZS(SY.wire([[5, 25], [115, 25]]) + SY.lamp(60, 25)), 'Lampe'],
+  [ZS(SY.wire([[5, 25], [115, 25]]) + SY.res(60, 25)), 'Widerstand'],
+  [ZS(SY.wire([[5, 25], [115, 25]]) + SY.sw(60, 25, false, 'x')), 'Schalter (offen)'],
+  [ZS(SY.wire([[5, 25], [115, 25]]) + SY.meter(60, 25, 'A')), 'Amperemeter (Strommesser)'],
+  [ZS(SY.wire([[5, 25], [115, 25]]) + SY.meter(60, 25, 'M')), 'Motor'],
+  [ZS(SY.wire([[5, 25], [115, 25]]) + `<circle cx="60" cy="25" r="5" class="fillw"/>` + SY.wire([[60, 25], [60, 48]])), 'Leitungsverzweigung']
+]);
+const MAT = {kupfer: ['Kupferdraht', 1], alu: ['Alufolie', 1], nagel: ['Eisennagel', 1], graphit: ['Bleistiftmine (Graphit)', 1], kunststoff: ['Kunststofflineal', 0], holz: ['Holzstab', 0], glas: ['Glasstab', 0], gummi: ['Radiergummi', 0]};
+function lp(k) {
+  const [n, ok] = MAT[k];
+  $('#lp').innerHTML = SY.wire([[60, 140], [60, 40], [380, 40], [380, 220], [270, 220]]) + SY.wire([[170, 220], [60, 220], [60, 160]]) + SY.bat(60, 150) + SY.lamp(220, 40, ok) +
+    `<rect x="170" y="210" width="100" height="20" fill="${ok ? 'var(--steel)' : 'var(--wood)'}" stroke="var(--edge)" stroke-width="1.5"/><circle cx="170" cy="220" r="5" class="fillw"/><circle cx="270" cy="220" r="5" class="fillw"/>` +
+    (ok ? `<path class="flow" d="M60 140V40H380V220H60V160"/>` : '') + `<text x="220" y="252" text-anchor="middle">${n}</text>`;
+  $('#lp-st').innerHTML = ok ? `<b>${n}</b> leitet den Strom – die Lampe leuchtet: ein <b>Leiter</b>.` : `<b>${n}</b> leitet nicht – die Lampe bleibt aus: ein <b>Nichtleiter</b> (Isolator).`;
+}
+seg($('#lp-seg'), Object.entries(MAT).map(([k, v]) => [k, v[0].split(' ')[0]]), lp);
+sorter($('#sort-l'), [{id: 'l', name: 'Leiter'}, {id: 'n', name: 'Nichtleiter'}], [
+  {t: 'Kupfer', c: 'l'}, {t: 'Aluminium', c: 'l'}, {t: 'Graphit', c: 'l'}, {t: 'Salzwasser', c: 'l'}, {t: 'Kunststoff', c: 'n'}, {t: 'trockenes Holz', c: 'n'}, {t: 'Glas', c: 'n'}, {t: 'Gummi', c: 'n'}
+]);
+circuit($('#c2'), {mode: 'series', loads: [{t: 'lamp', R: 15, name: 'Lampe'}], U: 4.5, short: true, show: ['U', 'I']});
+trueFalse($('#tf'), [
+  {t: 'Eine Lampe leuchtet, wenn nur ein Kabel vom Pluspol zur Lampe führt.', ok: false, why: 'Der Kreis muss zurück zum Minuspol geschlossen sein.'},
+  {t: 'Ein offener Schalter unterbricht den Stromkreis.', ok: true},
+  {t: 'Ein Holzstab in der Lücke lässt die Lampe leuchten.', ok: false, why: 'Holz ist ein Nichtleiter.'},
+  {t: 'Bei einem Kurzschluss leuchtet die Lampe besonders hell.', ok: false, why: 'Der Strom fließt an ihr vorbei – sie bleibt dunkel.'},
+  {t: 'Leitungen werden im Schaltplan als gerade Linien gezeichnet.', ok: true},
+  {t: 'Kunststoff um Kabel schützt vor Berührung mit dem Leiter.', ok: true, why: 'Kunststoff ist ein Isolator.'}
+]);
+</script>

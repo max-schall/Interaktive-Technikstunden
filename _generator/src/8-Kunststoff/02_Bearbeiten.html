@@ -1,0 +1,122 @@
+<!--
+title: Kunststoffe bearbeiten
+short: Bearbeiten
+time: 2 Unterrichtsstunden
+q: Wie bearbeitet man Acrylglas in der Werkstatt – und wie fertigt die Industrie Kunststoffteile?
+facts: Acrylglas (PMMA) ist ein Thermoplast | Trennen: sägen mit feiner Zahnung, ritzen und brechen, Schutzfolie dranlassen | Bohren: Metallbohrer, geringe Drehzahl, Unterlage | Warmumformen: bei ca. 160 °C an der Biegelinie erwärmen und biegen | Kanten feilen, schleifen, polieren | Industrie: Spritzgießen, Extrudieren, Blasformen, Tiefziehen
+inter: Werkstatt-Ablauf Biegen ordnen · Industrielle Verfahren zuordnen · Spritzgießen Schritt für Schritt · Sicherheit richtig/falsch
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Kunststoffe und Fertigungsverfahren</p>
+      <h1>Kunststoffe bearbeiten</h1>
+      <p class="lead">Ein Handyständer aus Acrylglas: zugesägt, gebohrt, an einer Linie erwärmt und gebogen. Thermoplaste lassen sich in der Werkstatt gut bearbeiten – in der Industrie entstehen Millionen Teile pro Tag.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wie wird wohl ein Legostein hergestellt?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie bearbeitet man Acrylglas in der Werkstatt – und wie fertigt die Industrie Kunststoffteile?</p></div>
+      <div class="controls"><button class="btn primary" data-go="werkstatt">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="werkstatt" data-label="Werkstatt" data-yr="Erarbeitung" data-title="Acrylglas in der Werkstatt" data-sub="Trennen, bohren, kanten">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Werkstatt</p>
+    <h2>Acrylglas in der Werkstatt</h2>
+  </div>
+  <div class="cols-3">
+    <div class="box"><span class="tag info">Trennen</span><p>Dünne Platten mit dem Messer <b>ritzen</b> und über einer Kante <b>brechen</b>. Dickere Platten mit <b>feiner Zahnung</b> sägen. Die <b>Schutzfolie</b> bleibt bis zum Schluss drauf – sie verhindert Kratzer.</p></div>
+    <div class="box"><span class="tag info">Bohren</span><p>Mit einem <b>Metallbohrer</b> bei <b>geringer Drehzahl</b> und wenig Druck. Holzunterlage verwenden. Sonst schmilzt der Kunststoff oder die Platte reißt.</p></div>
+    <div class="box"><span class="tag info">Kanten bearbeiten</span><p>Mit der Feile glätten, mit Nassschleifpapier (K 240 → 600 → 1000) schleifen und mit Polierpaste zum Glänzen bringen.</p></div>
+  </div>
+</section>
+
+<section class="station" id="biegen" data-label="Warmbiegen" data-yr="Werkstatt" data-title="Warmumformen" data-sub="Biegen an der Heizleiste">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Warmumformen</p>
+    <h2>Biegen an der Heizleiste</h2>
+    <p class="lead">Acrylglas wird bei etwa <b>160 °C</b> weich. An der Biegelinie über einem Heizdraht erwärmt, lässt es sich biegen und behält nach dem Abkühlen die neue Form. Ordne die Schritte.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 400 220" id="bg" role="img" aria-label="Biegen von Acrylglas"></svg><div class="tk-row"><label>Temperatur <input type="range" min="20" max="200" value="20" id="bg-t"> <span class="tk-val" id="bg-v"></span></label></div><p class="status" id="bg-st"></p></div>
+    <div id="order-b"></div>
+  </div>
+</section>
+
+<section class="station" id="industrie" data-label="Industrie" data-yr="Erarbeitung" data-title="Industrielle Verfahren" data-sub="Spritzgießen, Extrudieren …">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Industrie</p>
+    <h2>Millionen Teile am Tag</h2>
+    <p class="lead">In der Industrie wird Kunststoffgranulat geschmolzen und in Form gebracht. Diese Verfahren heißen <b>Urformen</b>: Aus formlosem Stoff entsteht ein fester Körper. Ordne Verfahren und Produkt zu.</p>
+  </div>
+  <div id="match-i"></div>
+</section>
+
+<section class="station" id="spritz" data-label="M1 Spritzgießen" data-yr="Material M1" data-title="Spritzgießen" data-sub="Wie ein Legostein entsteht">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>So entsteht ein Legostein</h2>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 440 220" id="sg" role="img" aria-label="Spritzgießmaschine"></svg><div class="controls" id="sg-st"></div></div>
+    <div class="box" id="sg-t"></div>
+  </div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Kunststoffe bearbeiten</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Kunststoffe bearbeiten</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Acrylglas: ritzen und brechen oder mit feiner Zahnung sägen; mit Metallbohrer bei geringer Drehzahl bohren; Schutzfolie bis zum Schluss drauflassen.</li>
+        <li data-step><b>Warmumformen:</b> Thermoplaste an der Biegelinie auf ca. 160 °C erwärmen, biegen, in Form abkühlen lassen.</li>
+        <li data-step>Kanten: feilen → nass schleifen → polieren. Fügen durch Kleben oder Schrauben.</li>
+        <li data-step>Industrie (Urformen): <b>Spritzgießen</b> (Legostein), <b>Extrudieren</b> (Rohr, Profil), <b>Blasformen</b> (Flasche), <b>Tiefziehen</b> (Joghurtbecher).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Sicherheit</span><p>Heizleiste nicht berühren, Handschuhe beim Biegen. Kunststoffe nie über offener Flamme erhitzen – giftige Dämpfe!</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Richtig bearbeitet?</h2></div>
+  <div id="tf"></div>
+</section>
+
+<script>
+function bg() {
+  const t = +$('#bg-t').value, soft = clamp((t - 110) / 50, 0, 1), ang = soft * 90;
+  const r = Math.PI / 180, L = 150, x0 = 200, y0 = 120;
+  const x1 = x0 + L * Math.cos(ang * r), y1 = y0 - L * Math.sin(ang * r);
+  $('#bg').innerHTML = `<rect x="40" y="132" width="320" height="10" fill="var(--steel-2)"/><rect x="190" y="128" width="20" height="6" fill="${t > 100 ? 'var(--bad)' : 'var(--ink-2)'}"/>` +
+    `<path d="M50 ${y0}H${x0}L${x1.toFixed(1)} ${y1.toFixed(1)}" stroke="color-mix(in srgb,var(--plastic) 70%,var(--surface))" stroke-width="12" fill="none" stroke-linejoin="round"/>` +
+    `<text x="200" y="190" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;fill:var(--ink)">${Math.round(ang)}° gebogen</text>`;
+  $('#bg-v').textContent = t + ' °C';
+  $('#bg-st').innerHTML = t < 110 ? 'Zu kalt: Acrylglas ist hart und spröde – beim Biegen würde es <b>brechen</b>.' : t < 150 ? 'Das Material wird langsam weich. Noch etwas warten.' : t <= 175 ? '<b class="good">Richtig:</b> Das Acrylglas ist weich und lässt sich biegen.' : '<b class="bad">Zu heiß:</b> Es bilden sich Blasen, der Kunststoff zersetzt sich.';
+}
+$('#bg-t').oninput = bg; bg();
+orderSteps($('#order-b'), ['Biegelinie mit Folienstift anzeichnen', 'Platte mit der Biegelinie über den Heizdraht legen', 'Von beiden Seiten erwärmen, bis die Linie weich wird', 'Mit Handschuhen um eine Biegeschablone biegen', 'In Form halten, bis der Kunststoff abgekühlt ist'], {label: 'Ablauf'});
+matcher($('#match-i'), [['Spritzgießen', 'Legostein, Flaschendeckel'], ['Extrudieren', 'Rohre, Fensterprofile, Folien'], ['Blasformen', 'Flaschen, Kanister'], ['Tiefziehen', 'Joghurtbecher, Verpackungen'], ['Schäumen', 'Styropor, Matratzen']]);
+const SG = [['1 · Granulat einfüllen', 'Das Kunststoffgranulat rieselt aus dem Trichter in den Zylinder.'], ['2 · Plastifizieren', 'Eine Schnecke dreht sich, Heizbänder erwärmen den Zylinder auf über 200 °C: Der Kunststoff schmilzt.'], ['3 · Einspritzen', 'Die Schnecke drückt die Schmelze mit hohem Druck in die geschlossene Form aus Stahl.'], ['4 · Abkühlen', 'In der gekühlten Form erstarrt der Kunststoff in wenigen Sekunden.'], ['5 · Entformen', 'Die Form öffnet sich, Auswerferstifte stoßen das fertige Teil aus. Der Zyklus beginnt von vorn.']];
+stepper($('#sg-st'), SG.length, k => {
+  const col = ['var(--plastic)', 'var(--bad)', 'var(--bad)', 'var(--e)', 'var(--e)'][k];
+  $('#sg').innerHTML = `<path d="M60 30h50l-15 40h-20z" fill="var(--steel)" stroke="var(--edge)" stroke-width="1.5"/><rect x="40" y="70" width="220" height="60" fill="var(--steel)" stroke="var(--edge)" stroke-width="1.5"/>` +
+    `<path d="M${k >= 2 ? 120 : 60} 100h${k >= 2 ? 120 : 180}" stroke="var(--steel-2)" stroke-width="22"/>${[0, 1, 2, 3, 4, 5].map(i => `<path d="M${(k >= 2 ? 120 : 60) + i * 22} 89l12 22" stroke="var(--edge)" stroke-width="2"/>`).join('')}` +
+    (k >= 1 ? `<rect x="230" y="90" width="${k >= 2 ? 30 : 12}" height="20" fill="${col}"/>` : '') + `<path d="M50 70h200M50 130h200" stroke="${k === 1 || k === 2 ? 'var(--bad)' : 'var(--steel-2)'}" stroke-width="5" stroke-dasharray="8 4"/>` +
+    `<rect x="${k === 4 ? 300 : 280}" y="50" width="70" height="100" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="1.5"/><rect x="${k === 4 ? 360 : 350}" y="50" width="60" height="100" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="1.5"/>` +
+    (k >= 2 ? `<rect x="330" y="80" width="40" height="40" fill="${col}" opacity="${k === 4 ? 1 : .85}"/>` : '') + `<path d="M260 100h20" stroke="var(--steel-2)" stroke-width="8"/>` +
+    `<text x="90" y="25" style="font-family:var(--f-mono);font-size:12px;fill:var(--ink-2)">Trichter</text><text x="120" y="150" style="font-family:var(--f-mono);font-size:12px;fill:var(--ink-2)">Schnecke, Heizbänder</text><text x="330" y="170" style="font-family:var(--f-mono);font-size:12px;fill:var(--ink-2)">Form</text>`;
+  $('#sg-t').innerHTML = `<span class="tag info">${SG[k][0]}</span><p>${SG[k][1]}</p>`;
+});
+trueFalse($('#tf'), [
+  {t: 'Die Schutzfolie zieht man vor dem Sägen ab.', ok: false, why: 'Sie bleibt bis zum Schluss drauf und schützt vor Kratzern.'},
+  {t: 'Acrylglas bohrt man mit hoher Drehzahl.', ok: false, why: 'Mit geringer Drehzahl, sonst schmilzt es.'},
+  {t: 'Duroplaste lassen sich warm biegen.', ok: false, why: 'Nur Thermoplaste werden beim Erwärmen weich.'},
+  {t: 'Rohre werden durch Extrudieren hergestellt.', ok: true},
+  {t: 'Spritzgießen ist ein Urformverfahren.', ok: true},
+  {t: 'Kunststoff darf man über einer offenen Flamme erwärmen.', ok: false, why: 'Es entstehen giftige Dämpfe und Brandgefahr.'}
+]);
+</script>

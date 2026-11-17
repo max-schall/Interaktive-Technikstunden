@@ -1,0 +1,91 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Bauteile und Schaltzeichen, Rechnen (Vorwiderstand, Spannungsteiler, τ), Transistorschaltungen | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Bauteile zuordnen · Rechentrainer · Transistor-Simulator · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Schalter, Sensoren und Schaltungen</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Schalter und Relais, Diode und LED, Sensoren, Transistor, Kondensator, Steckbrett und Löten: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Rechnen" data-yr="Trainer" data-title="T1 Rechnen" data-sub="Vorwiderstand, Teiler, τ">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Rechnen in der Elektronik</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Transistor" data-yr="Trainer" data-title="T2 Transistor" data-sub="Welche Schaltung?">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Transistorschaltungen</h2><p class="lead">Wähle eine Schaltung und erkläre deiner Partnerin oder deinem Partner, warum die LED angeht.</p></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Farbcode" data-yr="Trainer" data-title="T3 Farbcode" data-sub="Widerstände ablesen">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Farbcode</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Taster', 'springt beim Loslassen zurück'], ['Wechselschaltung', 'Licht von zwei Stellen schalten'], ['Relais', 'elektromagnetischer Schalter'], ['Diode', 'lässt Strom nur in eine Richtung'],
+  ['Vorwiderstand', 'begrenzt den Strom der LED'], ['LDR', 'Widerstand sinkt bei Licht'], ['NTC', 'Widerstand sinkt bei Wärme'], ['Spannungsteiler', 'Spannung teilt sich im Verhältnis der Widerstände'],
+  ['Basis', 'Steueranschluss des Transistors'], ['0,7 V', 'Schaltschwelle des Transistors'], ['Kondensator', 'speichert Ladung'], ['τ = R · C', 'Zeitkonstante']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+taskSet($('#t1'), () => {
+  const t = randInt(0, 2);
+  if (t === 0) { const U = pick([5, 6, 9, 12]), UL = pick([2, 3]); return {key: `v${U}${UL}`, tag: 'Vorwiderstand', q: `U_B = ${U} V, U_LED = ${UL} V, I = 20 mA`, fields: [{l: 'R_V', a: (U - UL) / 0.02, tol: 2, unit: 'Ω'}]}; }
+  if (t === 1) { const R1 = pick([1, 2, 10]) * 1000, R2 = pick([1, 2, 4]) * 1000; return {key: `t${R1}${R2}`, tag: 'Spannungsteiler', q: `U = 9 V, R₁ = ${fmtR(R1)}, R₂ = ${fmtR(R2)}`, fields: [{l: 'U₂', a: +(9 * R2 / (R1 + R2)).toFixed(2), tol: .05, unit: 'V'}]}; }
+  const R = pick([10, 47, 100]), C = pick([100, 470, 1000]); return {key: `c${R}${C}`, tag: 'τ = R · C', q: `R = ${R} kΩ, C = ${C} µF`, fields: [{l: 'τ', a: R * C / 1000, tol: .05, unit: 's'}]};
+}, {n: 4});
+transistorSim($('#t2'), {mode: 'hell'});
+taskSet($('#t3'), () => { const v = pick(E12) * 10 ** randInt(0, 3); return {key: 'r' + v, tag: 'Farbcode', q: resistorSVG(v), fields: [{l: 'R', a: v, unit: 'Ω'}], hint: resistorBands(v).join(' – ')}; }, {n: 3});
+mcQuiz($('#quiz'), [
+  {q: 'Welcher Kontakt unterbricht beim Betätigen?', a: ['Öffner', 'Schließer', 'Wechsler', 'Relais'], ok: 0},
+  {q: 'Was zieht im Relais den Anker an?', a: ['die stromdurchflossene Spule', 'eine Feder', 'die Batterie', 'der Taster'], ok: 0},
+  {q: 'Woran erkennt man die Anode einer LED?', a: ['längeres Bein', 'abgeflachte Seite', 'kürzeres Bein', 'roter Punkt'], ok: 0},
+  {q: 'U_B = 9 V, rote LED 2 V, 20 mA: R_V = ?', a: ['350 Ω', '450 Ω', '100 Ω', '35 Ω'], ok: 0},
+  {q: 'Was passiert mit dem Widerstand eines NTC bei Wärme?', a: ['Er sinkt.', 'Er steigt.', 'Er bleibt gleich.', 'Er wird unendlich.'], ok: 0},
+  {q: 'In der Hellschaltung sitzt der LDR …', a: ['zwischen Plus und Basis', 'zwischen Basis und Emitter', 'am Kollektor', 'parallel zur LED'], ok: 0},
+  {q: 'Welcher Transistor-Anschluss trägt im Schaltzeichen den Pfeil?', a: ['Emitter', 'Basis', 'Kollektor', 'keiner'], ok: 0},
+  {q: 'Was verlängert die Leuchtdauer bei der Ausschaltverzögerung?', a: ['größeres C oder R', 'kleineres C', 'höhere LED-Spannung', 'kürzere Kabel'], ok: 0},
+  {q: 'Was bedeutet der dritte Farbring?', a: ['Anzahl der Nullen', 'Toleranz', 'erste Ziffer', 'Leistung'], ok: 0},
+  {q: 'Woran erkennt man eine gute Lötstelle?', a: ['glänzend und kegelförmig', 'matt und kugelig', 'schwarz', 'mit viel Kleber'], ok: 0},
+  {q: 'Wozu dient das Steckbrett?', a: ['Schaltungen ohne Löten testen', 'Lötkolben ablegen', 'Bauteile messen', 'Spannung erhöhen'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann Schalterarten unterscheiden und die Wechselschaltung erklären.', href: '01_Schalter_Relais.html#wechsel'},
+  {t: 'Ich kann die Funktion eines Relais erklären.', href: '01_Schalter_Relais.html#relais'},
+  {t: 'Ich kann eine LED richtig anschließen und den Vorwiderstand berechnen.', href: '02_Dioden_LED.html#vorwiderstand'},
+  {t: 'Ich kann LDR und NTC im Spannungsteiler einsetzen.', href: '03_Sensoren.html#teiler'},
+  {t: 'Ich kann Dunkel-, Hell- und Wärmeschaltung mit dem Transistor erklären.', href: '04_Transistor.html#dunkel'},
+  {t: 'Ich kann eine Ausschaltverzögerung mit dem Kondensator erklären.', href: '05_Kondensator.html#laden'},
+  {t: 'Ich kann den Farbcode lesen, auf dem Steckbrett aufbauen und löten.', href: '06_Schaltungen_bauen.html#farbcode'}
+]);
+</script>

@@ -1,0 +1,104 @@
+<!--
+title: Kunststoffe recyceln
+short: Recycling
+time: 1 Unterrichtsstunde
+q: Was passiert mit Kunststoffabfall, und wie können wir ihn verringern?
+facts: Recycling-Codes 1–7 kennzeichnen die Kunststoffsorte (1 PET, 2 PE-HD, 3 PVC, 4 PE-LD, 5 PP, 6 PS, 7 andere) | Verwertung: werkstofflich (neues Granulat), rohstofflich (zurück zu Öl/Gas), energetisch (Verbrennung) | In Deutschland wird der größte Teil verbrannt | Mikroplastik entsteht durch Abrieb und Zerfall | Vermeiden vor Wiederverwenden vor Recyceln
+inter: Recycling-Codes zuordnen · Verwertungsarten sortieren · Diagramm zur Verwertung · Abfallhierarchie ordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Kunststoffe und Fertigungsverfahren</p>
+      <h1>Kunststoffe recyceln</h1>
+      <p class="lead">Jeder Mensch in Deutschland verursacht rund 40 kg Kunststoffverpackungsmüll im Jahr. Was passiert damit, nachdem die Gelbe Tonne geleert wurde?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Sucht auf Verpackungen nach einem Dreieck aus Pfeilen mit einer Zahl. Was bedeutet es?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Was passiert mit Kunststoffabfall, und wie können wir ihn verringern?</p></div>
+      <div class="controls"><button class="btn primary" data-go="codes">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="codes" data-label="Recycling-Codes" data-yr="Einstieg" data-title="Recycling-Codes" data-sub="Welche Sorte ist das?">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Recycling-Codes</p>
+    <h2>Welche Kunststoffsorte ist das?</h2>
+    <p class="lead">Nur sortenreiner Kunststoff lässt sich gut recyceln. Der <b>Recycling-Code</b> zeigt die Sorte. Ordne Code und typisches Produkt zu.</p>
+  </div>
+  <div id="match-c"></div>
+</section>
+
+<section class="station" id="wege" data-label="Verwertung" data-yr="Erarbeitung" data-title="Drei Wege der Verwertung" data-sub="werkstofflich, rohstofflich, energetisch">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Verwertung</p>
+    <h2>Drei Wege für alten Kunststoff</h2>
+    <p class="lead"><b>Werkstofflich:</b> waschen, zerkleinern, einschmelzen → neues Granulat. <b>Rohstofflich:</b> chemisch zurück zu Öl oder Gas. <b>Energetisch:</b> verbrennen, die Wärme erzeugt Strom und Fernwärme. Sortiere.</p>
+  </div>
+  <div class="cols-2"><div id="sort-w"></div><div id="ch"></div></div>
+</section>
+
+<section class="station" id="mikro" data-label="Mikroplastik" data-yr="Material M1" data-title="Mikroplastik" data-sub="Unsichtbar, aber überall">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Material M1</p>
+    <h2>Mikroplastik – unsichtbar, aber überall</h2>
+    <p class="lead">Kunststoffteilchen kleiner als 5 mm heißen <b>Mikroplastik</b>. Sie entstehen vor allem durch Abrieb und Zerfall größerer Teile und gelangen in Böden, Flüsse und Meere. Prüfe die Aussagen.</p>
+  </div>
+  <div id="tf-m"></div>
+</section>
+
+<section class="station" id="vermeiden" data-label="Vermeiden" data-yr="Übung" data-title="Die Abfallhierarchie" data-sub="Vermeiden zuerst">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Abfallhierarchie</p>
+    <h2>Was ist am besten für die Umwelt?</h2>
+    <p class="lead">Ordne von der besten zur schlechtesten Lösung.</p>
+  </div>
+  <div id="order-v"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Recycling</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Kunststoffe recyceln</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Der <b>Recycling-Code</b> (1 PET, 2 PE-HD, 3 PVC, 4 PE-LD, 5 PP, 6 PS, 7 andere) zeigt die Kunststoffsorte.</li>
+        <li data-step>Verwertung: <b>werkstofflich</b> (neues Granulat), <b>rohstofflich</b> (zurück zu Öl/Gas), <b>energetisch</b> (Verbrennung). In Deutschland wird der größte Teil verbrannt.</li>
+        <li data-step>Nur Thermoplaste lassen sich einschmelzen und werkstofflich recyceln.</li>
+        <li data-step>Am besten ist es, Abfall zu <b>vermeiden</b>, dann wiederverwenden, recyceln – und erst zuletzt verbrennen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Projekt</span><p>Führt eine Woche lang ein Plastik-Tagebuch: Welche Verpackungen fallen an? Welche hätte man vermeiden können?</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Recycling-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match-c'), [['1 · PET', 'Getränkeflasche'], ['2 · PE-HD', 'Shampooflasche, Eimer'], ['3 · PVC', 'Rohre, Bodenbelag'], ['4 · PE-LD', 'Folien, Tüten'], ['5 · PP', 'Joghurtdeckel, Brotdose'], ['6 · PS', 'Einwegbesteck, Styropor'], ['7 · O (andere)', 'Mischkunststoffe, z. B. Verbundverpackungen']]);
+sorter($('#sort-w'), [{id: 'w', name: 'werkstofflich'}, {id: 'r', name: 'rohstofflich'}, {id: 'e', name: 'energetisch'}], [
+  {t: 'PET-Flaschen werden zu neuen Flaschen', c: 'w'}, {t: 'Folienreste werden zu Parkbänken', c: 'w'}, {t: 'Kunststoff wird in Öl zurückverwandelt', c: 'r'},
+  {t: 'Mischkunststoff ersetzt Koks im Hochofen', c: 'r'}, {t: 'Müllverbrennung erzeugt Fernwärme', c: 'e'}, {t: 'Ersatzbrennstoff im Zementwerk', c: 'e'}
+]);
+chart($('#ch'), {type: 'pie', title: 'Verwertung von Kunststoffabfall in Deutschland (gerundet)', data: [['energetisch', 64], ['werkstofflich', 35], ['rohstofflich', 1]]});
+trueFalse($('#tf-m'), [
+  {t: 'Autoreifen erzeugen durch Abrieb viel Mikroplastik.', ok: true, why: 'Reifenabrieb ist eine der größten Quellen.'},
+  {t: 'Mikroplastik lässt sich im Klärwerk vollständig herausfiltern.', ok: false, why: 'Ein Teil gelangt trotzdem in Flüsse oder mit dem Klärschlamm auf Felder.'},
+  {t: 'Beim Waschen von Fleece-Kleidung lösen sich Kunststofffasern.', ok: true},
+  {t: 'Eine Plastiktüte im Meer zerfällt in kleinere Teile, verschwindet aber nicht.', ok: true},
+  {t: 'Mikroplastik ist größer als 5 cm.', ok: false, why: 'Kleiner als 5 mm.'}
+]);
+orderSteps($('#order-v'), ['Vermeiden: Brotdose statt Folie', 'Wiederverwenden: Mehrwegflasche', 'Recyceln: sortenrein in die Gelbe Tonne', 'Energetisch verwerten: verbrennen mit Energiegewinnung', 'Beseitigen: Deponie'], {label: 'Von gut nach schlecht'});
+mcQuiz($('#quiz'), [
+  {q: 'Wofür steht der Recycling-Code 1?', a: ['PET', 'PVC', 'PS', 'PP'], ok: 0},
+  {q: 'Welche Kunststoffe lassen sich einschmelzen und neu formen?', a: ['Thermoplaste', 'Duroplaste', 'Elastomere', 'keine'], ok: 0},
+  {q: 'Was passiert bei der energetischen Verwertung?', a: ['Der Kunststoff wird verbrannt.', 'Er wird zu Granulat.', 'Er wird zu Öl.', 'Er wird vergraben.'], ok: 0},
+  {q: 'Was ist die beste Lösung für die Umwelt?', a: ['Abfall vermeiden', 'Abfall verbrennen', 'Abfall vergraben', 'Abfall exportieren'], ok: 0},
+  {q: 'Wie groß ist Mikroplastik höchstens?', a: ['5 mm', '5 cm', '5 m', '0,5 m'], ok: 0},
+  {q: 'Warum ist sortenreiner Kunststoff wichtig?', a: ['Nur so entsteht gutes neues Material.', 'Er ist schwerer.', 'Er brennt besser.', 'Er ist billiger in der Herstellung.'], ok: 0}
+]);
+</script>

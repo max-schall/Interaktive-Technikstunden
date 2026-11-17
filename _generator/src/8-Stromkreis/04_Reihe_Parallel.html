@@ -1,0 +1,99 @@
+<!--
+title: Reihen- und Parallelschaltung
+short: Reihe & Parallel
+time: 2 Unterrichtsstunden
+q: Wie verhalten sich Spannung, Stromstärke und Widerstand in Reihen- und Parallelschaltung?
+facts: Reihenschaltung: ein Stromweg, überall gleiche Stromstärke, die Spannung teilt sich, R_ges = R₁ + R₂ | Fällt ein Bauteil aus, ist der ganze Kreis unterbrochen | Parallelschaltung: an jedem Zweig die volle Spannung, die Ströme addieren sich, R_ges kleiner als der kleinste Einzelwiderstand | Im Haus sind alle Geräte parallel geschaltet
+inter: Zwei Lampen in Reihe (eine herausdrehen) · Zwei Lampen parallel mit Zweigschaltern · Regeln sortieren · Rechentrainer · Wo steckt welche Schaltung?
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der elektrische Stromkreis</p>
+      <h1>Reihen- und Parallelschaltung</h1>
+      <p class="lead">Bei alten Lichterketten ging die ganze Kette aus, wenn ein Lämpchen kaputt war. Im Haus läuft der Kühlschrank aber weiter, wenn die Lampe durchbrennt. Der Unterschied liegt in der <b>Schaltung</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Baue mit zwei Lämpchen zwei verschiedene Stromkreise. Was fällt dir an der Helligkeit auf?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie verhalten sich Spannung, Stromstärke und Widerstand in Reihen- und Parallelschaltung?</p></div>
+      <div class="controls"><button class="btn primary" data-go="reihe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="reihe" data-label="Reihenschaltung" data-yr="Erarbeitung" data-title="Reihenschaltung" data-sub="Ein Weg für den Strom">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Reihenschaltung</p>
+    <h2>Reihenschaltung: ein einziger Weg</h2>
+    <p class="lead">Beide Lampen liegen hintereinander. Vergleiche Stromstärke und Spannungen. Erhöhe dann die Spannung so weit, bis eine Lampe durchbrennt – was passiert mit der anderen?</p>
+  </div>
+  <div id="c1"></div>
+</section>
+
+<section class="station" id="parallel" data-label="Parallelschaltung" data-yr="Erarbeitung" data-title="Parallelschaltung" data-sub="Mehrere Wege">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Parallelschaltung</p>
+    <h2>Parallelschaltung: mehrere Wege</h2>
+    <p class="lead">Jede Lampe hat ihren eigenen Zweig und einen eigenen Schalter. Schalte die Zweige ein und aus und beobachte die Gesamtstromstärke.</p>
+  </div>
+  <div id="c2"></div>
+</section>
+
+<section class="station" id="regeln" data-label="Regeln" data-yr="Übung" data-title="Die Regeln" data-sub="Sortieren">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Regeln</p>
+    <h2>Reihe oder parallel?</h2>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="rechnen" data-label="Rechnen" data-yr="Übung" data-title="Rechentrainer" data-sub="Gesamtwiderstand und Ströme">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Rechentrainer</p>
+    <h2>Gesamtwiderstand und Stromstärke</h2>
+    <p class="lead">Reihe: R<sub>ges</sub> = R₁ + R₂. Parallel bei zwei gleichen Widerständen: R<sub>ges</sub> = R : 2. Allgemein parallel: I<sub>ges</sub> = I₁ + I₂.</p>
+  </div>
+  <div id="ts"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Schaltungen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Reihen- und Parallelschaltung</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Reihenschaltung:</b> Es gibt nur einen Stromweg. Die <b>Stromstärke ist überall gleich</b>, die <b>Spannung teilt sich</b> auf: U = U₁ + U₂. R<sub>ges</sub> = R₁ + R₂.</li>
+        <li data-step>Fällt in der Reihenschaltung ein Bauteil aus, ist der ganze Stromkreis unterbrochen.</li>
+        <li data-step><b>Parallelschaltung:</b> An jedem Zweig liegt die <b>volle Spannung</b>. Die <b>Ströme addieren sich</b>: I = I₁ + I₂. Der Gesamtwiderstand ist kleiner als der kleinste Einzelwiderstand.</li>
+        <li data-step>Im Haushalt sind alle Geräte <b>parallel</b> geschaltet: Jedes bekommt 230 V und lässt sich einzeln schalten.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Baue beide Schaltungen mit zwei gleichen Lämpchen auf und miss jeweils U₁, U₂, I₁, I₂ und I<sub>ges</sub>.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Wo steckt welche Schaltung?</h2></div>
+  <div id="sort-a"></div>
+</section>
+
+<script>
+circuit($('#c1'), {mode: 'series', loads: [{t: 'lamp', R: 15, name: 'L1'}, {t: 'lamp', R: 15, name: 'L2'}], U: 4.5, uMax: 24, unom: 4.5, show: ['U', 'I', 'U1', 'U2', 'R'],
+  note: (s, U) => `In der Reihenschaltung fließt durch beide Lampen derselbe Strom (<b>${fmtI(s.I)}</b>). Die Spannung teilt sich: ${fmtU(s.Ui[0])} + ${fmtU(s.Ui[1])} = ${fmtU(U)}. Jede Lampe bekommt nur die halbe Spannung und leuchtet schwächer.`});
+circuit($('#c2'), {mode: 'parallel', loads: [{t: 'lamp', R: 15, name: 'L1'}, {t: 'lamp', R: 15, name: 'L2'}], U: 4.5, branchSw: true, show: ['U', 'I', 'I1', 'I2', 'R'], burn: false,
+  note: s => `An jeder Lampe liegt die volle Spannung. Die Ströme addieren sich: ${fmtI(s.Ii[0])} + ${fmtI(s.Ii[1])} = <b>${fmtI(s.I)}</b>. Jede Lampe leuchtet hell – unabhängig von der anderen.`});
+sorter($('#sort'), [{id: 'r', name: 'Reihenschaltung'}, {id: 'p', name: 'Parallelschaltung'}], [
+  {t: 'Die Stromstärke ist überall gleich.', c: 'r'}, {t: 'Die Spannung teilt sich auf.', c: 'r'}, {t: 'R_ges = R₁ + R₂', c: 'r'}, {t: 'Fällt ein Bauteil aus, geht alles aus.', c: 'r'},
+  {t: 'An jedem Bauteil liegt die volle Spannung.', c: 'p'}, {t: 'Die Ströme addieren sich.', c: 'p'}, {t: 'Bauteile lassen sich einzeln schalten.', c: 'p'}, {t: 'R_ges ist kleiner als jeder Einzelwiderstand.', c: 'p'}
+]);
+taskSet($('#ts'), () => {
+  const t = randInt(0, 2), R1 = pick([10, 20, 30, 50, 100]), R2 = pick([10, 20, 40, 60, 100]), U = pick([6, 9, 12]);
+  if (t === 0) return {key: `r${R1}${R2}`, tag: 'Reihe', q: `R₁ = ${R1} Ω und R₂ = ${R2} Ω in <b>Reihe</b> an ${U} V.`, fields: [{l: 'R_ges', a: R1 + R2, unit: 'Ω'}, {l: 'I', a: U / (R1 + R2) * 1000, tol: 1, unit: 'mA'}], hint: 'R_ges = R₁ + R₂, dann I = U : R_ges'};
+  if (t === 1) return {key: `p${R1}`, tag: 'Parallel (gleich)', q: `Zwei Widerstände mit je ${R1 * 2} Ω <b>parallel</b>.`, fields: [{l: 'R_ges', a: R1, unit: 'Ω'}], hint: 'Zwei gleiche parallel: R : 2'};
+  return {key: `i${R1}${R2}${U}`, tag: 'Parallel', q: `R₁ = ${R1} Ω und R₂ = ${R2} Ω <b>parallel</b> an ${U} V.`, fields: [{l: 'I₁', a: U / R1 * 1000, tol: 1, unit: 'mA'}, {l: 'I₂', a: U / R2 * 1000, tol: 1, unit: 'mA'}, {l: 'I_ges', a: (U / R1 + U / R2) * 1000, tol: 2, unit: 'mA'}], hint: 'Jeder Zweig: I = U : R. Gesamt: Summe.'};
+}, {n: 4});
+sorter($('#sort-a'), [{id: 'r', name: 'Reihenschaltung'}, {id: 'p', name: 'Parallelschaltung'}], [
+  {t: 'Steckdosen in einer Wohnung', c: 'p'}, {t: 'Scheinwerfer am Auto', c: 'p', why: 'Fällt einer aus, leuchtet der andere weiter.'}, {t: 'Batterien in einer Taschenlampe (für mehr Spannung)', c: 'r'},
+  {t: 'Schalter und Lampe', c: 'r', why: 'Der Schalter muss den Stromweg der Lampe unterbrechen.'}, {t: 'Lampen im Klassenzimmer', c: 'p'}, {t: 'Sicherung und Steckdosenkreis', c: 'r', why: 'Die Sicherung muss den ganzen Strom „sehen“.'}
+]);
+</script>

@@ -1,0 +1,106 @@
+<!--
+title: Verbrennungsmotor und Elektromotor
+short: Motoren
+time: 2 Unterrichtsstunden
+q: Wie funktionieren Verbrennungs- und Elektromotor, und worin unterscheiden sie sich?
+facts: Viertaktmotor: Ansaugen, Verdichten, Arbeiten, Ausstoßen – nur im Arbeitstakt wird Energie abgegeben | Kolben, Pleuel und Kurbelwelle wandeln die Auf-und-ab-Bewegung in eine Drehung | Elektromotor: Stromdurchflossene Spule im Magnetfeld dreht sich; der Kommutator polt den Strom um | Vergleich: Wirkungsgrad, Abgase, Reichweite, Wartung
+inter: Viertaktmotor animiert · Teile zuordnen · Elektromotor Schritt für Schritt · Motoren vergleichen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Maschinen und Mobilität</p>
+      <h1>Verbrennungsmotor und Elektromotor</h1>
+      <p class="lead">Seit über 130 Jahren treibt der Verbrennungsmotor Autos an. Heute fahren immer mehr Fahrzeuge elektrisch. Zwei völlig unterschiedliche Prinzipien – mit dem gleichen Ziel: eine <b>Drehbewegung</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Was hört man, wenn ein Benzin-Auto und ein Elektroauto anfahren? Woran liegt der Unterschied?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie funktionieren Verbrennungs- und Elektromotor, und worin unterscheiden sie sich?</p></div>
+      <div class="controls"><button class="btn primary" data-go="viertakt">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="viertakt" data-label="Viertaktmotor" data-yr="Erarbeitung" data-title="Der Viertaktmotor" data-sub="Vier Takte, zwei Umdrehungen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Viertaktmotor</p>
+    <h2>Der Viertakt-Ottomotor</h2>
+    <p class="lead">In zwei Umdrehungen der Kurbelwelle durchläuft der Motor vier Takte. Spiele die Animation ab oder wähle einen Takt.</p>
+  </div>
+  <div id="en"></div>
+</section>
+
+<section class="station" id="teile" data-label="Motorteile" data-yr="Übung" data-title="Teile des Motors" data-sub="Kolben, Pleuel, Kurbelwelle">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Motorteile</p>
+    <h2>Teile des Verbrennungsmotors</h2>
+    <p class="lead">Ordne die Teile ihren Aufgaben zu.</p>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="emotor" data-label="Elektromotor" data-yr="Erarbeitung" data-title="Der Elektromotor" data-sub="Magnetkraft wird Drehung">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Elektromotor</p>
+    <h2>Der Gleichstrom-Elektromotor</h2>
+    <p class="lead">Fließt Strom durch eine Spule, wird sie zum Elektromagneten. Zwischen den Polen eines festen Magneten wird sie angezogen und abgestoßen – sie dreht sich. Gehe Schritt für Schritt.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 360 300" id="em" role="img" aria-label="Elektromotor"></svg><div class="controls" id="em-st"></div></div>
+    <div class="box" id="em-t"></div>
+  </div>
+</section>
+
+<section class="station" id="vergleich" data-label="M1 Vergleich" data-yr="Material M1" data-title="Motoren im Vergleich" data-sub="Verbrenner oder Elektro?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Verbrenner oder Elektromotor?</h2>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Motoren</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Verbrennungsmotor und Elektromotor</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Viertaktmotor:</b> 1. Ansaugen · 2. Verdichten · 3. Arbeiten (Zündung) · 4. Ausstoßen. Nur im Arbeitstakt wird Energie abgegeben.</li>
+        <li data-step>Kolben, <b>Pleuel</b> und <b>Kurbelwelle</b> wandeln die Auf-und-ab-Bewegung in eine Drehung um.</li>
+        <li data-step><b>Elektromotor:</b> Eine stromdurchflossene Spule dreht sich im Magnetfeld. Der <b>Kommutator</b> polt den Strom jede halbe Umdrehung um, damit sie weiterdreht.</li>
+        <li data-step>Elektromotoren haben einen hohen Wirkungsgrad (ca. 90 %), sind leise und abgasfrei; Verbrennungsmotoren haben große Reichweite, aber Abgase und ca. 30 % Wirkungsgrad.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Bauauftrag</span><p>Baue einen einfachen Elektromotor aus einer Batterie, einem Magneten und einer Drahtspule (Kupferlackdraht).</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Motoren-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+engine4($('#en'));
+matcher($('#match'), [['Kolben', 'wird vom Gasdruck nach unten gedrückt'], ['Pleuel', 'verbindet Kolben und Kurbelwelle'], ['Kurbelwelle', 'wandelt Auf und Ab in Drehung'], ['Zündkerze', 'zündet das verdichtete Gemisch'], ['Einlassventil', 'lässt Kraftstoff-Luft-Gemisch herein'], ['Auslassventil', 'lässt Abgase hinaus']]);
+const EM = [['Strom an', 'Strom fließt durch die Spule. Sie wird zum Elektromagneten: oben Nordpol, unten Südpol.', 0], ['Anziehen und Abstoßen', 'Gleiche Pole stoßen sich ab, ungleiche ziehen sich an. Die Spule dreht sich.', 45], ['Waagerecht', 'Die Spule steht jetzt zwischen den Polen. Ohne Umpolen würde sie hier stehen bleiben.', 90], ['Kommutator polt um', 'Der Kommutator (Stromwender) dreht sich mit und polt den Strom genau jetzt um – die Pole der Spule tauschen.', 95], ['Weiterdrehen', 'Jetzt wird die Spule wieder abgestoßen und angezogen – sie dreht weiter. Jede halbe Umdrehung wiederholt sich das.', 150]];
+stepper($('#em-st'), EM.length, k => {
+  const a = EM[k][2] * Math.PI / 180, flip = k >= 3, c = Math.cos(a), s = Math.sin(a);
+  const N = flip ? 'S' : 'N', S = flip ? 'N' : 'S';
+  $('#em').innerHTML = `<rect x="20" y="90" width="60" height="120" fill="var(--verbot)"/><text x="50" y="158" text-anchor="middle" style="fill:#fff;font-size:28px">N</text><rect x="280" y="90" width="60" height="120" fill="var(--gebot)"/><text x="310" y="158" text-anchor="middle" style="fill:#fff;font-size:28px">S</text>` +
+    `<g transform="rotate(${EM[k][2]} 180 150)"><rect x="165" y="70" width="30" height="160" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/>${[0, 1, 2, 3, 4, 5, 6].map(i => `<path d="M165 ${90 + i * 18}h30" stroke="var(--cu)" stroke-width="5"/>`).join('')}<text x="180" y="66" text-anchor="middle" style="font-size:20px">${N}</text><text x="180" y="250" text-anchor="middle" style="font-size:20px">${S}</text></g>` +
+    `<circle cx="180" cy="150" r="6" class="fillw"/><text x="180" y="290" text-anchor="middle" class="sm">Schritt ${k + 1}: ${EM[k][0]}</text>`;
+  $('#em-t').innerHTML = `<span class="tag info">${EM[k][0]}</span><p>${EM[k][1]}</p>`;
+});
+sorter($('#sort'), [{id: 'v', name: 'Verbrennungsmotor'}, {id: 'e', name: 'Elektromotor'}], [
+  {t: 'Wirkungsgrad etwa 90 %', c: 'e'}, {t: 'Wirkungsgrad etwa 30 %', c: 'v'}, {t: 'keine Abgase am Fahrzeug', c: 'e'}, {t: 'braucht Getriebe mit vielen Gängen', c: 'v'},
+  {t: 'volles Drehmoment schon beim Anfahren', c: 'e'}, {t: 'in wenigen Minuten vollgetankt', c: 'v'}, {t: 'kann beim Bremsen Energie zurückgewinnen', c: 'e'}, {t: 'braucht Ölwechsel', c: 'v'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'In welchem Takt wird Energie abgegeben?', a: ['Arbeiten', 'Ansaugen', 'Verdichten', 'Ausstoßen'], ok: 0},
+  {q: 'Wie viele Kurbelwellen-Umdrehungen dauert ein Viertakt-Zyklus?', a: ['2', '1', '4', '8'], ok: 0},
+  {q: 'Was macht der Kommutator?', a: ['Er polt den Strom um.', 'Er zündet das Gemisch.', 'Er kühlt den Motor.', 'Er misst die Drehzahl.'], ok: 0},
+  {q: 'Was verbindet Kolben und Kurbelwelle?', a: ['Pleuel', 'Ventil', 'Zündkerze', 'Kommutator'], ok: 0},
+  {q: 'Welcher Motor hat den höheren Wirkungsgrad?', a: ['Elektromotor', 'Benzinmotor', 'beide gleich', 'Dieselmotor'], ok: 0}
+]);
+</script>

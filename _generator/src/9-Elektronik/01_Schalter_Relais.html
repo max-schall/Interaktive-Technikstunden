@@ -1,0 +1,143 @@
+<!--
+title: Schalter, Taster und Relais
+short: Schalter & Relais
+time: 2 Unterrichtsstunden
+q: Welche Schalterarten gibt es, und wie schaltet ein kleiner Strom einen großen?
+facts: Schalter bleiben in ihrer Stellung, Taster springen zurück | Schließer (Arbeitskontakt) und Öffner (Ruhekontakt) | Wechselschalter: Wechselschaltung schaltet eine Lampe von zwei Stellen | Relais: Elektromagnet zieht einen Anker an und schaltet einen Laststromkreis | Steuerstromkreis und Laststromkreis sind getrennt | Selbsthaltung
+inter: Schalterarten sortieren · Wechselschaltung im Flur · Relais ein- und ausschalten · Bauteile des Relais zuordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Schalter, Sensoren und Schaltungen</p>
+      <h1>Schalter, Taster und Relais</h1>
+      <p class="lead">Im Treppenhaus kann man das Licht unten einschalten und oben wieder aus. Die Klingel läutet nur, solange man drückt. Und der Anlasser im Auto braucht 200 A – geschaltet von einem kleinen Zündschlüssel. Hinter all dem stecken verschiedene <b>Schalter</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Welche Schalter und Taster benutzt du jeden Tag?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Welche Schalterarten gibt es, und wie schaltet ein kleiner Strom einen großen?</p></div>
+      <div class="controls"><button class="btn primary" data-go="arten">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="arten" data-label="Schalterarten" data-yr="Einstieg" data-title="Schalter oder Taster?" data-sub="Schließer und Öffner">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Schalterarten</p>
+    <h2>Schalter oder Taster? Schließer oder Öffner?</h2>
+    <p class="lead">Ein <b>Schalter</b> bleibt in seiner Stellung, ein <b>Taster</b> springt beim Loslassen zurück. Ein <b>Schließer</b> schließt den Kreis beim Betätigen, ein <b>Öffner</b> unterbricht ihn.</p>
+  </div>
+  <div id="sort-s"></div>
+</section>
+
+<section class="station" id="wechsel" data-label="Wechselschaltung" data-yr="Erarbeitung" data-title="Die Wechselschaltung" data-sub="Licht von zwei Stellen schalten">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Wechselschaltung</p>
+    <h2>Licht von zwei Stellen schalten</h2>
+    <p class="lead">Ein <b>Wechselschalter</b> hat drei Anschlüsse und verbindet den mittleren entweder mit dem oberen oder dem unteren. Mit zwei Wechselschaltern lässt sich eine Lampe von zwei Stellen schalten. Tippe auf die Schalter.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 460 260" id="ws" role="img" aria-label="Wechselschaltung"></svg></div>
+    <div><table class="tt" id="ws-tt"><thead><tr><th>Schalter A</th><th>Schalter B</th><th>Lampe</th></tr></thead><tbody></tbody></table><p class="status" id="ws-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="relais" data-label="Relais" data-yr="Erarbeitung" data-title="Das Relais" data-sub="Kleiner Strom schaltet großen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Relais</p>
+    <h2>Das Relais: ein elektromagnetischer Schalter</h2>
+    <p class="lead">Im <b>Steuerstromkreis</b> fließt ein kleiner Strom durch eine Spule. Sie wird zum <b>Elektromagneten</b> und zieht den <b>Anker</b> an. Der Anker schließt die Kontakte im <b>Laststromkreis</b> – dort kann ein großer Strom fließen. Drücke den Taster.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg class="sch" viewBox="0 0 480 300" id="rl" role="img" aria-label="Relais"></svg><div class="tk-row"><button class="btn primary" id="rl-t">Taster gedrückt halten</button><button class="btn" id="rl-h">Selbsthaltung: aus</button></div></div>
+    <div><div id="match-r"></div><p class="status" id="rl-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Anwendungen" data-yr="Material M1" data-title="Wo stecken Relais?" data-sub="Anwendungen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Wo stecken Relais?</h2>
+    <p class="lead">Relais trennen einen ungefährlichen Steuerstromkreis von einem gefährlichen oder starken Laststromkreis. Prüfe die Aussagen.</p>
+  </div>
+  <div id="tf-a"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Schalter und Relais</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Schalter, Taster und Relais</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Schalter</b> bleiben in ihrer Stellung, <b>Taster</b> springen zurück. <b>Schließer</b> schließen beim Betätigen, <b>Öffner</b> unterbrechen.</li>
+        <li data-step>Mit zwei <b>Wechselschaltern</b> (Wechselschaltung) lässt sich eine Lampe von zwei Stellen schalten.</li>
+        <li data-step>Ein <b>Relais</b> ist ein elektromagnetischer Schalter: Ein kleiner Strom durch die Spule zieht den Anker an, der den Laststromkreis schaltet.</li>
+        <li data-step>Steuerstromkreis und Laststromkreis sind elektrisch getrennt. Bei der <b>Selbsthaltung</b> hält sich das Relais über einen eigenen Kontakt selbst.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Praxis</span><p>Baue mit einem Relais eine Schaltung, bei der ein Taster einen Motor einschaltet. Erweitere sie um eine Selbsthaltung und einen Aus-Taster.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Schalter-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-s'), [{id: 'ss', name: 'Schalter (bleibt)'}, {id: 'ts', name: 'Taster, Schließer'}, {id: 'to', name: 'Taster, Öffner'}], [
+  {t: 'Lichtschalter im Zimmer', c: 'ss'}, {t: 'Klingelknopf', c: 'ts'}, {t: 'Kippschalter an der Steckdosenleiste', c: 'ss'}, {t: 'Tastatur-Taste', c: 'ts'},
+  {t: 'Kühlschranktür-Kontakt: Licht aus, wenn Tür zu', c: 'to', why: 'Die geschlossene Tür drückt den Taster und öffnet den Kreis.'}, {t: 'Hupe am Fahrrad', c: 'ts'}, {t: 'Alarmanlage: Kreis unterbrochen, wenn Fenster geöffnet', c: 'to'}
+]);
+let a = 0, b = 0;
+function ws() {
+  const on = a === b;
+  const sw = (x, pos, id) => `<g class="click" data-ws="${id}" tabindex="0" role="button" aria-label="Wechselschalter umschalten"><rect x="${x - 30}" y="70" width="60" height="120" fill="var(--surface)" opacity=".01"/><circle class="sym" cx="${x}" cy="130" r="4"/><circle class="sym" cx="${x + (id === 'a' ? 30 : -30)}" cy="90" r="4"/><circle class="sym" cx="${x + (id === 'a' ? 30 : -30)}" cy="170" r="4"/><path class="w" d="M${x} 130L${x + (id === 'a' ? 28 : -28)} ${pos ? 168 : 92}"/></g>`;
+  let s = SY.wire([[40, 140], [40, 130], [120, 130]]) + SY.wire([[40, 160], [40, 230], [420, 230], [420, 130], [340, 130]]) + SY.bat(40, 150);
+  s += SY.wire([[150, 90], [310, 90]]) + SY.wire([[150, 170], [310, 170]]) + sw(120, a, 'a') + sw(340, b, 'b') + SY.lamp(420, 180, on ? 1 : 0);
+  if (on) s += `<path class="flow" d="M40 140V130H120L150 ${a ? 170 : 90}H310L340 130H420V230H40V160"/>`;
+  s += `<text x="120" y="215" text-anchor="middle" class="sm">A · Erdgeschoss</text><text x="340" y="215" text-anchor="middle" class="sm">B · 1. Stock</text>`;
+  $('#ws').innerHTML = s;
+  $('#ws-tt tbody').innerHTML = [[0, 0], [0, 1], [1, 0], [1, 1]].map(([x, y]) => `<tr class="${x === a && y === b ? 'cur' : ''}"><td>Stellung ${x + 1}</td><td>Stellung ${y + 1}</td><td>${x === y ? 'AN' : 'aus'}</td></tr>`).join('');
+  $('#ws-st').innerHTML = on ? 'Beide Schalter verbinden dieselbe Leitung – der Kreis ist <b>geschlossen</b>.' : 'Die Schalter stehen auf verschiedenen Leitungen – der Kreis ist <b>offen</b>. Jeder Schalter kann jetzt das Licht einschalten.';
+}
+$('#ws').addEventListener('click', e => { const g = e.target.closest('[data-ws]'); if (!g) return; if (g.dataset.ws === 'a') a = 1 - a; else b = 1 - b; ws(); });
+ws();
+let held = false, hold = false, latched = false;
+function rl() {
+  const coil = held || (hold && latched);
+  if (coil && hold) latched = true;
+  let s = SY.wire([[40, 150], [40, 60], [90, 60]]) + SY.wire([[130, 60], [170, 60], [170, 90]]) + SY.wire([[170, 210], [170, 240], [40, 240], [40, 170]]) + SY.bat(40, 160);
+  s += `<g class="click" id="rl-tg"><rect x="80" y="40" width="60" height="40" fill="var(--surface)" opacity=".01"/><circle class="sym" cx="93" cy="60" r="3.5"/><circle class="sym" cx="127" cy="60" r="3.5"/><path class="w" d="M93 ${held ? 52 : 40}H127M110 ${held ? 52 : 40}V30"/></g><text x="110" y="22" text-anchor="middle" class="sm">Taster</text>`;
+  s += `<rect x="150" y="90" width="40" height="120" fill="var(--surface)" stroke="var(--wire)" stroke-width="2.2"/>${[0, 1, 2, 3, 4, 5].map(i => `<path d="M150 ${102 + i * 18}h40" stroke="var(--cu)" stroke-width="5"/>`).join('')}<text x="170" y="228" text-anchor="middle" class="sm">Spule</text>`;
+  s += `<path d="M215 ${coil ? 92 : 80}L${coil ? 215 : 230} 215" stroke="var(--steel-2)" stroke-width="9" stroke-linecap="round"/><circle cx="222" cy="214" r="5" class="fillw"/><text x="252" y="150" class="sm">Anker</text>`;
+  s += SY.wire([[218, 92], [300, 92]]) + `<circle class="sym" cx="300" cy="${coil ? 92 : 74}" r="4"/><circle class="sym" cx="330" cy="92" r="4"/><path class="w" d="M300 ${coil ? 92 : 74}L330 92"/>`;
+  s += SY.wire([[330, 92], [440, 92], [440, 140]]) + SY.wire([[440, 210], [440, 270], [270, 270], [270, 230]]) + SY.wire([[270, 190], [270, 120], [218, 120]]) + `<rect x="250" y="190" width="40" height="40" fill="var(--surface)" stroke="var(--wire)" stroke-width="2.2"/><text x="270" y="216" text-anchor="middle">~</text><text x="300" y="250" class="sm">Netz / Akku</text>`;
+  s += SY.meter(440, 175, 'M');
+  if (coil) s += `<path class="flow" style="stroke-width:2" d="M40 150V60H170V240H40"/><path class="flow" d="M270 190V120H218V92H440V270H270V230"/>`;
+  s += `<text x="100" y="290" text-anchor="middle" class="sm">Steuerstromkreis (4,5 V)</text><text x="370" y="290" text-anchor="middle" class="sm">Laststromkreis</text>`;
+  $('#rl').innerHTML = s;
+  $('#rl-st').innerHTML = coil ? (held ? 'Strom fließt durch die Spule – der <b>Elektromagnet</b> zieht den Anker an, der Motor läuft.' : 'Der Taster ist losgelassen, aber die <b>Selbsthaltung</b> hält das Relais angezogen.') : 'Kein Strom in der Spule – die Feder zieht den Anker zurück, der Laststromkreis ist offen.';
+}
+const T = $('#rl-t');
+const down = e => { e.preventDefault(); held = true; rl(); }, up = () => { held = false; rl(); };
+T.addEventListener('pointerdown', down); T.addEventListener('pointerup', up); T.addEventListener('pointerleave', up);
+T.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') down(e); }); T.addEventListener('keyup', up);
+$('#rl-h').onclick = () => { hold = !hold; latched = false; $('#rl-h').textContent = 'Selbsthaltung: ' + (hold ? 'an (zum Ausschalten erneut tippen)' : 'aus'); rl(); };
+rl();
+matcher($('#match-r'), [['Spule', 'wird vom Steuerstrom zum Elektromagneten'], ['Anker', 'beweglicher Eisenhebel, wird angezogen'], ['Feder', 'zieht den Anker zurück, wenn kein Strom fließt'], ['Arbeitskontakt', 'schließt den Laststromkreis']]);
+trueFalse($('#tf-a'), [
+  {t: 'Im Auto schaltet ein Relais den großen Strom für den Anlasser.', ok: true},
+  {t: 'Mit einem Relais kann ein Mikrocontroller eine 230-V-Lampe schalten.', ok: true, why: 'Der Mikrocontroller bleibt vom gefährlichen Netz getrennt.'},
+  {t: 'Steuer- und Laststromkreis sind beim Relais leitend verbunden.', ok: false, why: 'Sie sind getrennt – die Kopplung ist magnetisch.'},
+  {t: 'Ein Relais klickt hörbar beim Schalten.', ok: true, why: 'Der Anker schlägt an.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was macht ein Taster beim Loslassen?', a: ['Er springt zurück.', 'Er bleibt in Stellung.', 'Er schaltet das Licht ein.', 'Er wird heiß.'], ok: 0},
+  {q: 'Wie viele Anschlüsse hat ein Wechselschalter?', a: ['3', '2', '4', '1'], ok: 0},
+  {q: 'Wann leuchtet die Lampe in der Wechselschaltung?', a: ['wenn beide Schalter auf derselben Leitung stehen', 'nur wenn beide oben sind', 'immer', 'nie'], ok: 0},
+  {q: 'Was zieht im Relais den Anker an?', a: ['der Elektromagnet (Spule)', 'eine Feder', 'die Lampe', 'der Motor'], ok: 0},
+  {q: 'Welche Kontaktart unterbricht beim Betätigen?', a: ['Öffner', 'Schließer', 'Wechsler', 'keiner'], ok: 0},
+  {q: 'Wozu dient die Selbsthaltung?', a: ['Das Relais bleibt nach dem Loslassen angezogen.', 'Sie spart eine Batterie.', 'Sie macht das Relais leiser.', 'Sie misst den Strom.'], ok: 0}
+]);
+</script>

@@ -1,0 +1,121 @@
+<!--
+title: Maschinen und Maschinenelemente
+short: Baugruppen
+time: 2 Unterrichtsstunden
+q: Woraus bestehen Maschinen, und welche Aufgaben haben ihre Teile?
+facts: Maschinen wandeln Energie um und übertragen Kräfte und Bewegungen | Baugruppen: Antrieb, Übertragung (Getriebe), Arbeitseinheit, Steuerung, Gestell | Maschinenelemente sind genormte Bauteile: Schraube, Welle, Achse, Lager, Zahnrad, Feder, Kupplung | Welle überträgt Drehmoment, Achse trägt nur | Demontieren und Remontieren mit Protokoll
+inter: Akkuschrauber erkunden · Baugruppen zuordnen · Maschinenelemente nach Funktion sortieren · Demontage-Ablauf ordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Maschinen und Mobilität</p>
+      <h1>Maschinen und Maschinenelemente</h1>
+      <p class="lead">Ein Akkuschrauber, ein Mixer und ein Bagger sehen völlig verschieden aus – und sind doch nach demselben Prinzip aufgebaut. Und sie bestehen aus vielen gleichen Grundbausteinen: den <b>Maschinenelementen</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Was haben ein Akkuschrauber und ein Fahrrad gemeinsam?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Woraus bestehen Maschinen, und welche Aufgaben haben ihre Teile?</p></div>
+      <div class="controls"><button class="btn primary" data-go="akku">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="akku" data-label="Akkuschrauber" data-yr="Einstieg" data-title="Ein Blick in den Akkuschrauber" data-sub="Baugruppen erkunden">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Akkuschrauber</p>
+    <h2>Ein Blick in den Akkuschrauber</h2>
+    <p class="lead">Tippe die Baugruppen an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 460 300" id="as" role="img" aria-label="Akkuschrauber im Schnitt" style="font-family:var(--f-mono)">
+      <path d="M40 60h300v80H190l-30 110h-80l20-110H40z" fill="var(--surface-2)" stroke="var(--edge)" stroke-width="2"/>
+      <g data-part="akku"><rect x="70" y="250" width="110" height="40" fill="var(--good)" stroke="var(--edge)" stroke-width="2"/><text x="125" y="276" text-anchor="middle" style="font-size:13px;fill:#fff;font-weight:700">Akku</text></g>
+      <g data-part="schalter"><rect x="160" y="150" width="20" height="34" fill="var(--bad)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="motor"><rect x="60" y="72" width="100" height="56" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/><path d="M75 80v40M90 80v40M105 80v40M120 80v40M135 80v40" stroke="var(--cu)" stroke-width="5"/></g>
+      <g data-part="getriebe"><rect x="170" y="72" width="80" height="56" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><circle cx="195" cy="100" r="15" fill="var(--steel-2)"/><circle cx="228" cy="92" r="9" fill="var(--steel-2)"/><circle cx="228" cy="112" r="9" fill="var(--steel-2)"/></g>
+      <g data-part="kupplung"><rect x="255" y="76" width="30" height="48" fill="var(--accent)" opacity=".7" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="futter"><path d="M290 80h50l20 10v20l-20 10h-50z" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><path d="M360 100h70" stroke="#B8C2CC" stroke-width="7"/></g>
+      <g data-part="welle"><path d="M160 100h10M250 100h5M285 100h5" stroke="var(--ink)" stroke-width="5"/></g>
+      <g data-part="gehaeuse"><path d="M42 62l40 -10" stroke="transparent" stroke-width="20"/><path d="M90 140l-10 100" stroke="transparent" stroke-width="18"/></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="as-mode"></span></div><div class="box" id="as-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="baugruppen" data-label="Baugruppen" data-yr="Erarbeitung" data-title="Baugruppen jeder Maschine" data-sub="Antrieb, Übertragung, Arbeitseinheit">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Baugruppen</p>
+    <h2>Fünf Baugruppen – in jeder Maschine</h2>
+    <p class="lead"><b>Antrieb</b> (wandelt Energie in Bewegung), <b>Übertragung</b> (Getriebe, Welle, Riemen), <b>Arbeitseinheit</b> (verrichtet die eigentliche Arbeit), <b>Steuerung</b> (Schalter, Elektronik) und <b>Gestell</b> (trägt alles). Ordne die Teile des Fahrrads zu.</p>
+  </div>
+  <div id="sort-b"></div>
+</section>
+
+<section class="station" id="elemente" data-label="Maschinenelemente" data-yr="Erarbeitung" data-title="Maschinenelemente" data-sub="Genormte Bausteine">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Maschinenelemente</p>
+    <h2>Genormte Bausteine</h2>
+    <p class="lead"><b>Maschinenelemente</b> sind genormte Bauteile, die in vielen Maschinen vorkommen. Sortiere sie nach ihrer Aufgabe. Achtung: Eine <b>Welle</b> dreht sich und überträgt ein Drehmoment, eine <b>Achse</b> trägt nur.</p>
+  </div>
+  <div id="sort-e"></div>
+</section>
+
+<section class="station" id="demontage" data-label="M1 Demontage" data-yr="Werkstatt" data-title="Eine Maschine zerlegen" data-sub="Demontieren und remontieren">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Werkstatt</p>
+    <h2>Eine Maschine zerlegen – und wieder zusammenbauen</h2>
+    <p class="lead">Ordne die Schritte für die Demontage eines ausgedienten Handmixers.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Maschinen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Maschinen und Maschinenelemente</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Maschinen wandeln Energie um und übertragen Kräfte und Bewegungen.</li>
+        <li data-step>Baugruppen: <b>Antrieb</b> → <b>Übertragung</b> → <b>Arbeitseinheit</b>, dazu <b>Steuerung</b> und <b>Gestell</b>.</li>
+        <li data-step><b>Maschinenelemente</b> sind genormte Bauteile: zum Verbinden (Schraube, Stift), Lagern (Lager, Achse), Übertragen (Welle, Zahnrad, Riemen, Kupplung) und Federn (Feder, Dämpfer).</li>
+        <li data-step>Eine <b>Welle</b> überträgt ein Drehmoment, eine <b>Achse</b> trägt nur.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Sicherheit</span><p>Nur Geräte ohne Netzkabel und mit entferntem Akku zerlegen. Kondensatoren in Netzteilen können geladen sein – nicht öffnen!</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Maschinen-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+explorer($('#as'), $('#as-panel'), [
+  {id: 'akku', n: 'Akku (Energiequelle)', t: 'Speichert elektrische Energie.'},
+  {id: 'schalter', n: 'Schalter (Steuerung)', t: 'Je weiter man drückt, desto schneller dreht der Motor. Die Elektronik regelt die Drehzahl.'},
+  {id: 'motor', n: 'Elektromotor (Antrieb)', t: 'Wandelt elektrische Energie in Bewegungsenergie (Drehung) um.'},
+  {id: 'getriebe', n: 'Planetengetriebe (Übertragung)', t: 'Macht die schnelle Drehung des Motors langsamer und erhöht dabei das Drehmoment.'},
+  {id: 'kupplung', n: 'Rutschkupplung', t: 'Rutscht durch, wenn die Schraube fest ist – schützt Schraube und Handgelenk.'},
+  {id: 'futter', n: 'Bohrfutter mit Bit (Arbeitseinheit)', t: 'Hält das Werkzeug, das die eigentliche Arbeit verrichtet.'},
+  {id: 'welle', n: 'Welle', t: 'Überträgt die Drehbewegung vom Motor über das Getriebe zum Bohrfutter.'},
+  {id: 'gehaeuse', n: 'Gehäuse (Gestell)', t: 'Trägt und schützt alle Teile, liegt gut in der Hand.'}
+], {modeRoot: $('#as-mode'), label: 'Akkuschrauber'});
+sorter($('#sort-b'), [{id: 'a', name: 'Antrieb'}, {id: 'u', name: 'Übertragung'}, {id: 'w', name: 'Arbeitseinheit'}, {id: 's', name: 'Steuerung'}, {id: 'g', name: 'Gestell'}], [
+  {t: 'Pedale mit Kurbel', c: 'a', why: 'Hier wird die Muskelkraft eingeleitet.'}, {t: 'Kette und Zahnräder', c: 'u'}, {t: 'Hinterrad', c: 'w', why: 'Es bewegt das Fahrrad vorwärts.'}, {t: 'Lenker und Bremsen', c: 's'},
+  {t: 'Rahmen', c: 'g'}, {t: 'Schaltung', c: 's'}
+]);
+sorter($('#sort-e'), [{id: 'v', name: 'Verbinden'}, {id: 'l', name: 'Lagern und Tragen'}, {id: 'u', name: 'Bewegung übertragen'}, {id: 'f', name: 'Federn und Dämpfen'}], [
+  {t: 'Schraube mit Mutter', c: 'v'}, {t: 'Stift', c: 'v'}, {t: 'Kugellager', c: 'l'}, {t: 'Achse eines Anhängers', c: 'l'}, {t: 'Welle', c: 'u'}, {t: 'Zahnrad', c: 'u'},
+  {t: 'Keilriemen', c: 'u'}, {t: 'Kupplung', c: 'u'}, {t: 'Schraubenfeder', c: 'f'}, {t: 'Stoßdämpfer', c: 'f'}
+]);
+orderSteps($('#order'), ['Netzstecker ziehen bzw. Akku entfernen, Gerät prüfen', 'Fotos machen und Demontageprotokoll anlegen', 'Schrauben lösen und nach Baugruppen sortiert ablegen', 'Teile benennen und ihre Funktion notieren', 'Mit Protokoll in umgekehrter Reihenfolge remontieren', 'Funktion prüfen (ohne Netz oder durch die Lehrkraft)'], {label: 'Ablauf'});
+mcQuiz($('#quiz'), [
+  {q: 'Welche Baugruppe wandelt Energie in Bewegung um?', a: ['Antrieb', 'Gestell', 'Steuerung', 'Arbeitseinheit'], ok: 0},
+  {q: 'Was unterscheidet eine Welle von einer Achse?', a: ['Die Welle überträgt ein Drehmoment.', 'Die Achse dreht sich immer.', 'Es gibt keinen Unterschied.', 'Die Welle ist immer kürzer.'], ok: 0},
+  {q: 'Wozu dient die Rutschkupplung im Akkuschrauber?', a: ['Sie schützt vor zu großem Drehmoment.', 'Sie lädt den Akku.', 'Sie kühlt den Motor.', 'Sie schaltet das Licht ein.'], ok: 0},
+  {q: 'Welches ist ein Maschinenelement zum Lagern?', a: ['Kugellager', 'Zahnrad', 'Riemen', 'Schraube'], ok: 0},
+  {q: 'Zu welcher Baugruppe gehört beim Fahrrad die Kette?', a: ['Übertragung', 'Antrieb', 'Gestell', 'Steuerung'], ok: 0}
+]);
+</script>

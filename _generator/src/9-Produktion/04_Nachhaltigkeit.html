@@ -1,0 +1,103 @@
+<!--
+title: Produkte nachhaltig bewerten
+short: Nachhaltigkeit
+time: 2 Unterrichtsstunden
+q: Wie lässt sich bewerten, wie nachhaltig ein Produkt ist?
+facts: Produktlebenszyklus: Rohstoffgewinnung, Herstellung, Transport, Nutzung, Entsorgung oder Recycling | In jeder Phase werden Energie und Rohstoffe verbraucht | Ein Smartphone enthält über 30 Metalle, z. B. Gold, Kupfer, Kobalt | Reparieren und länger nutzen spart am meisten | Kaufentscheidung mit einer Bewertungstabelle (gewichtete Kriterien)
+inter: Lebenszyklus ordnen · Rohstoffe im Handy · Was tun mit dem alten Handy? · Gewichtete Bewertung zweier Produkte · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Von der Idee zum Serienprodukt</p>
+      <h1>Produkte nachhaltig bewerten</h1>
+      <p class="lead">In deutschen Schubladen liegen über 200 Millionen alte Handys. Jedes enthält wertvolle Metalle – und für jedes neue wurde Erz abgebaut, Energie verbraucht und Ware um die Welt geschickt.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wie viele ungenutzte Handys, Tablets oder Kabel gibt es bei dir zu Hause?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie lässt sich bewerten, wie nachhaltig ein Produkt ist?</p></div>
+      <div class="controls"><button class="btn primary" data-go="zyklus">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="zyklus" data-label="Lebenszyklus" data-yr="Erarbeitung" data-title="Der Produktlebenszyklus" data-sub="Von der Wiege bis zur Bahre">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Lebenszyklus</p>
+    <h2>Der Lebensweg eines Produkts</h2>
+    <p class="lead">Jedes Produkt durchläuft Phasen – in jeder werden Rohstoffe und Energie verbraucht. Ordne den Lebensweg eines Smartphones.</p>
+  </div>
+  <div id="order"></div>
+</section>
+
+<section class="station" id="rohstoffe" data-label="Rohstoffe" data-yr="Erarbeitung" data-title="Was steckt im Handy?" data-sub="Rohstoffe und Herkunft">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Rohstoffe</p>
+    <h2>Was steckt im Handy?</h2>
+    <p class="lead">Ein Smartphone besteht zu großen Teilen aus Kunststoff, Glas und Metallen. Einige Metalle stammen aus Minen mit schlechten Arbeitsbedingungen. Ordne Rohstoff und Verwendung zu.</p>
+  </div>
+  <div class="cols-2"><div id="ch"></div><div id="match-r"></div></div>
+</section>
+
+<section class="station" id="handy" data-label="Altes Handy" data-yr="Übung" data-title="Was tun mit dem alten Handy?" data-sub="Von gut bis schlecht">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Altes Handy</p>
+    <h2>Was tun mit dem alten Handy?</h2>
+    <p class="lead">Ordne die Möglichkeiten von der nachhaltigsten zur schlechtesten.</p>
+  </div>
+  <div id="order-h"></div>
+</section>
+
+<section class="station" id="bewertung" data-label="M1 Kaufentscheidung" data-yr="Material M1" data-title="Eine Kaufentscheidung" data-sub="Gewichtete Bewertung">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Welches Smartphone kaufen?</h2>
+    <p class="lead">Nicht jedes Kriterium ist gleich wichtig. Gewichte die Kriterien (×1 bis ×3) und vergib Punkte (1–5). Die gewichtete Summe entscheidet.</p>
+  </div>
+  <div class="table-wrap"><table class="cmp" id="gw"><thead><tr><th>Kriterium</th><th>Gewicht</th><th>Handy A (günstig, neu)</th><th>Handy B (gebraucht, reparierbar)</th></tr></thead><tbody></tbody><tfoot><tr><th>gewichtete Summe</th><td></td><td id="sa"></td><td id="sb"></td></tr></tfoot></table></div>
+  <p class="status" id="gw-st"></p>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Nachhaltigkeit</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Produkte nachhaltig bewerten</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Produktlebenszyklus:</b> Rohstoffgewinnung → Herstellung → Transport → Nutzung → Entsorgung oder Recycling.</li>
+        <li data-step>Bei Smartphones entsteht der größte Teil der Umweltbelastung bei <b>Rohstoffgewinnung und Herstellung</b>. Lange Nutzung und Reparatur helfen am meisten.</li>
+        <li data-step>Alte Geräte: weiterverwenden, verkaufen oder spenden – sonst zum Recycling (Wertstoffhof, Rücknahme im Handel), nie in den Hausmüll.</li>
+        <li data-step>Mit einer <b>gewichteten Bewertungstabelle</b> lassen sich Produkte nach wichtigen und weniger wichtigen Kriterien vergleichen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Aktion</span><p>Organisiert eine Handy-Sammelaktion an der Schule und informiert über Recycling.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Nachhaltigkeits-Check</h2></div>
+  <div id="tf"></div>
+</section>
+
+<script>
+orderSteps($('#order'), ['Rohstoffe werden in Minen abgebaut (z. B. Kobalt, Gold, Kupfer)', 'Bauteile werden in Fabriken hergestellt', 'Das Handy wird montiert und verpackt', 'Transport per Schiff und Lkw zum Händler', 'Nutzung: Laden mit Strom über mehrere Jahre', 'Entsorgung oder Recycling'], {label: 'Lebensweg'});
+chart($('#ch'), {type: 'pie', title: 'CO₂ eines Smartphones nach Phasen (gerundet)', data: [['Herstellung', 80], ['Nutzung', 14], ['Transport', 5], ['Entsorgung', 1]]});
+matcher($('#match-r'), [['Kupfer', 'Leiterbahnen und Kabel'], ['Gold', 'Kontakte, rostet nicht'], ['Kobalt und Lithium', 'Akku'], ['Seltene Erden', 'Lautsprecher und Vibrationsmotor'], ['Silizium', 'Prozessor-Chip'], ['Glas', 'Display']]);
+orderSteps($('#order-h'), ['Weiter nutzen und reparieren lassen', 'Verkaufen oder verschenken', 'Spenden an eine Sammelaktion zur Wiederverwendung', 'Zum Recycling (Wertstoffhof, Händler)', 'In der Schublade liegen lassen', 'In den Hausmüll werfen'], {label: 'von gut nach schlecht'});
+const KR = [['Preis', 2, 5, 3], ['Lebensdauer', 3, 2, 4], ['Reparierbarkeit', 2, 1, 5], ['Kamera', 1, 4, 3], ['CO₂ / Umwelt', 3, 2, 5]];
+function gw() {
+  let sa = 0, sb = 0;
+  $$('#gw tbody tr').forEach((tr, i) => { const g = +$('select', tr).value; KR[i][1] = g; sa += g * KR[i][2]; sb += g * KR[i][3]; });
+  $('#sa').textContent = sa; $('#sb').textContent = sb;
+  $('#gw-st').innerHTML = sa === sb ? 'Unentschieden – überlegt, welches Kriterium den Ausschlag gibt.' : `Mit dieser Gewichtung gewinnt <b>Handy ${sa > sb ? 'A' : 'B'}</b>. Ändere die Gewichte: Was ist dir wirklich wichtig?`;
+}
+$('#gw tbody').innerHTML = KR.map(([k, g, a, b]) => `<tr><th>${k}</th><td><select>${[1, 2, 3].map(v => `<option ${v === g ? 'selected' : ''}>${v}</option>`).join('')}</select></td><td>${a} Punkte</td><td>${b} Punkte</td></tr>`).join('');
+$('#gw').addEventListener('change', gw); gw();
+trueFalse($('#tf'), [
+  {t: 'Die meiste Umweltbelastung eines Handys entsteht beim Aufladen.', ok: false, why: 'Bei der Herstellung.'},
+  {t: 'Ein Jahr längere Nutzung spart Rohstoffe und CO₂.', ok: true},
+  {t: 'Alte Handys gehören in den Hausmüll.', ok: false, why: 'Elektroschrott gehört zum Wertstoffhof oder zurück in den Handel.'},
+  {t: 'Gold aus alten Handys kann zurückgewonnen werden.', ok: true},
+  {t: 'Ein reparierbares Gerät hat z. B. einen austauschbaren Akku.', ok: true}
+]);
+</script>

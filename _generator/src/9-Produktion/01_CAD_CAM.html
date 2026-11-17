@@ -1,0 +1,111 @@
+<!--
+title: Konstruieren mit CAD und CAM
+short: CAD & CAM
+time: 2–3 Unterrichtsstunden
+q: Wie entsteht ein Bauteil am Computer, und wie wird daraus ein Werkstück?
+facts: CAD (computer-aided design): Bauteile am Computer konstruieren | Grundkörper werden verschoben, gedreht und kombiniert: vereinigen, abziehen, schneiden | Vorteile: Änderungen schnell, genaue Maße, 3D-Ansicht, Zeichnungen automatisch | CAM (computer-aided manufacturing): CAD-Daten steuern Maschinen (Lasercutter, 3D-Drucker, CNC-Fräse) | Dateiformate: SVG/DXF (2D), STL (3D)
+inter: Boolesche Operationen an Körpern · Arbeitsablauf CAD → CAM ordnen · Vorteile und Grenzen sortieren · Dateiformate zuordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Von der Idee zum Serienprodukt</p>
+      <h1>Konstruieren mit CAD und CAM</h1>
+      <p class="lead">Früher zeichneten Ingenieurinnen und Ingenieure am Zeichenbrett. Heute entsteht jedes Auto, jedes Handy und jede Schraube zuerst als <b>3D-Modell</b> am Computer – und Maschinen fertigen direkt aus diesen Daten.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Welche Vorteile hat es, ein Bauteil am Computer statt auf Papier zu zeichnen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie entsteht ein Bauteil am Computer, und wie wird daraus ein Werkstück?</p></div>
+      <div class="controls"><button class="btn primary" data-go="boolesch">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="boolesch" data-label="Grundkörper" data-yr="Erarbeitung" data-title="Grundkörper kombinieren" data-sub="Vereinigen, abziehen, schneiden">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Grundkörper kombinieren</p>
+    <h2>Aus einfachen Körpern wird ein Bauteil</h2>
+    <p class="lead">CAD-Programme setzen Bauteile aus <b>Grundkörpern</b> zusammen: Quader, Zylinder, Kegel. Die Körper werden <b>vereinigt</b> (addiert), voneinander <b>abgezogen</b> (Loch, Nut) oder <b>geschnitten</b> (nur die Überlappung bleibt). Wähle eine Operation.</p>
+  </div>
+  <div class="cols-3" style="grid-template-columns:1fr 1fr 1.4fr">
+    <div class="tk-fig" id="bo-a"></div><div class="tk-fig" id="bo-b"></div>
+    <div><div class="tk-row"><span id="bo-seg"></span></div><div class="tk-fig" id="bo-r"></div><p class="status" id="bo-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="ablauf" data-label="CAD → CAM" data-yr="Erarbeitung" data-title="Von CAD zu CAM" data-sub="Vom Modell zur Maschine">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · CAD → CAM</p>
+    <h2>Vom Modell zur Maschine</h2>
+    <p class="lead"><b>CAM</b> (computer-aided manufacturing) heißt: Die Maschine fertigt direkt mit den Daten aus dem CAD-Programm. Ordne den Ablauf.</p>
+  </div>
+  <div id="order"></div>
+  <h3 class="mt">Dateiformate</h3>
+  <div id="match-d"></div>
+</section>
+
+<section class="station" id="vorteile" data-label="Vor- und Nachteile" data-yr="Übung" data-title="Vorteile und Grenzen" data-sub="CAD bewerten">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Bewerten</p>
+    <h2>Vorteile und Grenzen von CAD</h2>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Auftrag" data-yr="Material M1" data-title="Konstruktionsauftrag" data-sub="Ein Schlüsselanhänger">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Konstruiere einen Schlüsselanhänger</h2>
+    <p class="lead">Konstruiere in einem CAD-Programm (z. B. Tinkercad, FreeCAD, Onshape) einen Schlüsselanhänger nach diesen Vorgaben.</p>
+  </div>
+  <div class="cols-2">
+    <div class="box"><span class="tag info">Anforderungen</span><ul class="facts"><li>Grundplatte höchstens 50 × 30 mm, 4 mm dick</li><li>Loch Ø 5 mm für den Schlüsselring, mindestens 3 mm vom Rand</li><li>Initialen 1 mm erhaben oder vertieft</li><li>Abgerundete Ecken (Radius 3 mm)</li></ul></div>
+    <div class="box"><span class="tag info">Vorgehen</span><ol style="margin:.3rem 0 0;padding-left:1.2rem"><li>Quader 50 × 30 × 4 mm einfügen</li><li>Zylinder Ø 5 mm als <b>Bohrung</b> platzieren und abziehen</li><li>Text einfügen und vereinigen oder abziehen</li><li>Maße prüfen, als STL exportieren</li></ol></div>
+  </div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: CAD und CAM</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Konstruieren mit CAD und CAM</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>CAD</b> (computerunterstütztes Konstruieren): Bauteile werden am Computer aus Grundkörpern aufgebaut, die man <b>vereinigt</b>, <b>abzieht</b> oder <b>schneidet</b>.</li>
+        <li data-step>Vorteile: genaue Maße, schnelle Änderungen, 3D-Ansicht von allen Seiten, technische Zeichnungen und Stücklisten entstehen automatisch.</li>
+        <li data-step><b>CAM</b> (computerunterstützte Fertigung): Die CAD-Daten steuern Maschinen wie Lasercutter, 3D-Drucker und CNC-Fräse.</li>
+        <li data-step>Dateiformate: <b>SVG/DXF</b> für 2D (Lasercutter), <b>STL</b> für 3D (3D-Drucker).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Tipp</span><p>Speichere oft und benenne Dateien eindeutig: <code>Anhaenger_Name_v2.stl</code>.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>CAD-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+const A = []; for (let x = 0; x < 4; x++) for (let y = 0; y < 2; y++) for (let z = 0; z < 2; z++) A.push([x, y, z]);
+const B = []; for (let x = 2; x < 4; x++) for (let y = 0; y < 2; y++) for (let z = 1; z < 3; z++) B.push([x, y, z]);
+const key = v => v.join(','), inB = new Set(B.map(key)), inA = new Set(A.map(key));
+const OPS = {u: ['vereinigen', () => [...A, ...B.filter(v => !inA.has(key(v)))], 'Beide Körper werden zu <b>einem</b> Körper verbunden.'],
+  d: ['A minus B', () => A.filter(v => !inB.has(key(v))), 'Körper B wird aus A <b>herausgeschnitten</b> – so entstehen Ausschnitte, Nuten und Bohrungen.'],
+  i: ['schneiden', () => A.filter(v => inB.has(key(v))), 'Nur der Teil, der zu <b>beiden</b> Körpern gehört, bleibt übrig.']};
+$('#bo-a').innerHTML = voxDraw(A, 'iso', 26) + '<p class="tk-cap">Körper A</p>';
+$('#bo-b').innerHTML = voxDraw(B, 'iso', 26) + '<p class="tk-cap">Körper B</p>';
+seg($('#bo-seg'), Object.entries(OPS).map(([k, v]) => [k, v[0]]), v => { $('#bo-r').innerHTML = voxDraw(OPS[v][1](), 'iso', 30) + `<p class="tk-cap">Ergebnis: ${OPS[v][0]}</p>`; $('#bo-st').innerHTML = OPS[v][2]; });
+orderSteps($('#order'), ['Ideenskizze mit Maßen anfertigen', 'Bauteil im CAD-Programm aus Grundkörpern modellieren', 'Maße prüfen, Modell speichern', 'Als SVG (2D) oder STL (3D) exportieren', 'In der CAM-Software (Slicer, Laser-Software) Einstellungen wählen', 'Maschine fertigt das Werkstück'], {label: 'Ablauf'});
+matcher($('#match-d'), [['SVG / DXF', '2D-Umrisse für den Lasercutter'], ['STL', '3D-Modell aus Dreiecken für den 3D-Drucker'], ['G-Code', 'Fahrbefehle für 3D-Drucker und CNC-Fräse'], ['PDF', 'technische Zeichnung zum Ausdrucken']]);
+sorter($('#sort'), [{id: 'v', name: 'Vorteil'}, {id: 'g', name: 'Grenze / Nachteil'}], [
+  {t: 'Änderungen sind in Sekunden gemacht', c: 'v'}, {t: 'Das Modell lässt sich von allen Seiten drehen', c: 'v'}, {t: 'Zeichnungen entstehen automatisch', c: 'v'}, {t: 'Daten können direkt an Maschinen gehen', c: 'v'},
+  {t: 'Man braucht Computer und Software', c: 'g'}, {t: 'Die Bedienung muss erst gelernt werden', c: 'g'}, {t: 'Eine falsch eingegebene Zahl wird genau so gefertigt', c: 'g'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Wofür steht CAD?', a: ['computerunterstütztes Konstruieren', 'computerunterstützte Fertigung', 'Datenformat für Bilder', 'eine Maschine'], ok: 0},
+  {q: 'Wie entsteht eine Bohrung im CAD-Modell?', a: ['Ein Zylinder wird abgezogen.', 'Ein Zylinder wird vereinigt.', 'Ein Quader wird gedreht.', 'Gar nicht.'], ok: 0},
+  {q: 'Welches Dateiformat braucht der 3D-Drucker-Slicer?', a: ['STL', 'SVG', 'MP3', 'DOCX'], ok: 0},
+  {q: 'Was bedeutet CAM?', a: ['Maschinen fertigen mit CAD-Daten', 'Kamera am Computer', 'Zeichnen von Hand', 'Messen mit dem Messschieber'], ok: 0},
+  {q: 'Was bleibt beim Schneiden zweier Körper übrig?', a: ['nur die Überlappung', 'beide Körper', 'nur Körper A', 'nichts'], ok: 0}
+]);
+</script>

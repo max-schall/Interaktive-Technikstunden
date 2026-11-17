@@ -1,0 +1,93 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Stromkreis und Schaltzeichen, ohmsches Gesetz, Schaltungen und Leistung | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Schaltzeichen · Rechentrainer · Reihe oder parallel · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Der elektrische Stromkreis</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Stromkreis und Schaltzeichen, Spannung und Stromstärke, Widerstand, Reihen- und Parallelschaltung, Leistung und Sicherheit: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Größen" data-yr="Trainer" data-title="T1 Größen und Einheiten" data-sub="U, I, R, P">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Größen und Einheiten</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Rechnen" data-yr="Trainer" data-title="T2 Rechnen" data-sub="Ohm und Leistung">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Rechnen</h2></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Schaltungen" data-yr="Trainer" data-title="T3 Schaltungen" data-sub="Reihe oder parallel">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Reihe oder parallel?</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Stromkreis', 'Quelle, Leitung, Verbraucher, geschlossen'], ['Kurzschluss', 'Strom fließt am Verbraucher vorbei'], ['Isolator', 'Nichtleiter, z. B. Kunststoff'], ['Spannung U', 'Antrieb des Stroms, in Volt'],
+  ['Stromstärke I', 'Ladung pro Sekunde, in Ampere'], ['Widerstand R', 'hemmt den Strom, in Ohm'], ['Ohmsches Gesetz', 'U = R · I'], ['Amperemeter', 'wird in Reihe geschaltet'],
+  ['Voltmeter', 'wird parallel geschaltet'], ['Reihenschaltung', 'Stromstärke überall gleich'], ['Parallelschaltung', 'Spannung überall gleich'], ['FI-Schutzschalter', 'schaltet bei Fehlerstrom ab']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+matcher($('#t1'), [['Spannung', 'U · Volt (V)'], ['Stromstärke', 'I · Ampere (A)'], ['Widerstand', 'R · Ohm (Ω)'], ['Leistung', 'P · Watt (W)'], ['Energie', 'E · Kilowattstunde (kWh)']]);
+taskSet($('#t2'), () => {
+  const t = randInt(0, 2), R = pick([20, 50, 100, 200]), I = pick([0.05, 0.1, 0.2]);
+  if (t === 0) return {key: `u${R}${I}`, tag: 'U = R · I', q: `R = ${R} Ω, I = ${numDE(I * 1000, 0)} mA`, fields: [{l: 'U', a: R * I, tol: .01, unit: 'V'}]};
+  if (t === 1) return {key: `i${R}${I}`, tag: 'I = U : R', q: `U = ${numDE(R * I, 1)} V, R = ${R} Ω`, fields: [{l: 'I', a: I * 1000, tol: .5, unit: 'mA'}]};
+  const U = pick([4.5, 9, 12]); return {key: `p${U}${I}`, tag: 'P = U · I', q: `U = ${numDE(U, 1)} V, I = ${numDE(I, 2)} A`, fields: [{l: 'P', a: U * I, tol: .01, unit: 'W'}]};
+}, {n: 4});
+sorter($('#t3'), [{id: 'r', name: 'Reihenschaltung'}, {id: 'p', name: 'Parallelschaltung'}], [
+  {t: 'U = U₁ + U₂', c: 'r'}, {t: 'I = I₁ + I₂', c: 'p'}, {t: 'eine Lampe aus – alle aus', c: 'r'}, {t: 'Steckdosen im Haus', c: 'p'}, {t: 'R_ges = R₁ + R₂', c: 'r'}, {t: 'jede Lampe einzeln schaltbar', c: 'p'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was braucht ein Stromkreis mindestens?', a: ['Quelle, Leitung, Verbraucher', 'nur eine Batterie', 'nur einen Schalter', 'ein Messgerät'], ok: 0},
+  {q: 'Welcher Stoff ist ein Leiter?', a: ['Kupfer', 'Glas', 'Gummi', 'Kunststoff'], ok: 0},
+  {q: 'Wie wird das Voltmeter angeschlossen?', a: ['parallel zum Bauteil', 'in Reihe', 'gar nicht', 'an die Steckdose'], ok: 0},
+  {q: 'Wie viele mA sind 0,3 A?', a: ['300 mA', '30 mA', '3 mA', '3000 mA'], ok: 0},
+  {q: 'U = 9 V, R = 300 Ω. Wie groß ist I?', a: ['30 mA', '2700 mA', '0,3 mA', '33 mA'], ok: 0},
+  {q: 'Zwei gleiche Lampen in Reihe an 6 V: Spannung an jeder Lampe?', a: ['3 V', '6 V', '12 V', '0 V'], ok: 0},
+  {q: 'Zwei gleiche Widerstände je 100 Ω parallel: R_ges?', a: ['50 Ω', '200 Ω', '100 Ω', '10 Ω'], ok: 0},
+  {q: 'Wie berechnet man die Leistung?', a: ['P = U · I', 'P = U : I', 'P = R : U', 'P = I : U'], ok: 0},
+  {q: 'Wozu dient die Sicherung?', a: ['Sie unterbricht bei zu großem Strom.', 'Sie erhöht die Spannung.', 'Sie speichert Energie.', 'Sie misst den Widerstand.'], ok: 0},
+  {q: 'Was passiert bei einem Kurzschluss?', a: ['Sehr große Stromstärke, Leitungen werden heiß', 'Die Lampe leuchtet heller', 'Es fließt kein Strom', 'Die Spannung steigt'], ok: 0},
+  {q: 'Ein 2000-W-Gerät läuft 30 Minuten. Energie?', a: ['1 kWh', '2 kWh', '60 kWh', '0,5 kWh'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann einen Stromkreis aufbauen und als Schaltplan zeichnen.', href: '01_Stromkreis.html#zeichen'},
+  {t: 'Ich kann Leiter und Nichtleiter unterscheiden und den Kurzschluss erklären.', href: '01_Stromkreis.html#kurzschluss'},
+  {t: 'Ich kann Spannung und Stromstärke mit dem Multimeter messen.', href: '02_Spannung_Strom.html#messen'},
+  {t: 'Ich kann mit dem ohmschen Gesetz rechnen.', href: '03_Widerstand.html#rechnen'},
+  {t: 'Ich kenne die Regeln der Reihen- und Parallelschaltung.', href: '04_Reihe_Parallel.html#regeln'},
+  {t: 'Ich kann Leistung, Energie und Stromkosten berechnen.', href: '05_Leistung_Sicherheit.html#kosten'},
+  {t: 'Ich kenne Gefahren des Stroms und Schutzmaßnahmen.', href: '05_Leistung_Sicherheit.html#gefahr'}
+]);
+</script>

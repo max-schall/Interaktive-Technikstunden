@@ -1,0 +1,93 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Technik im Alltag, Sicherheit und Zeichen, Arbeitsplatz | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Natur/Technik sortieren · Zeichen-Trainer · Stundenende ordnen · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Arbeiten im Technikraum</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Technik im Alltag, Regeln und Sicherheitszeichen, der Arbeitsplatz und die Natur als Vorbild: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Technik" data-yr="Trainer" data-title="T1 Technik im Alltag" data-sub="Natur, Technik, Bereiche">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Technik im Alltag</h2></div>
+  <div id="t1-sort"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Zeichen" data-yr="Trainer" data-title="T2 Sicherheitszeichen" data-sub="Form und Farbe">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Sicherheitszeichen</h2></div>
+  <div id="t2-sort"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Arbeitsplatz" data-yr="Trainer" data-title="T3 Sicher arbeiten" data-sub="Regeln und Ordnung">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Sicher arbeiten</h2></div>
+  <div id="t3-tf"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Technik', 'Gegenstände erfinden, herstellen, nutzen und verbessern'], ['Bedürfnis', 'Wunsch oder Notwendigkeit, z. B. Wohnen oder Mobilität'], ['Verbotszeichen', 'roter Kreis mit Schrägbalken'], ['Gebotszeichen', 'blauer Kreis: Das musst du tun'],
+  ['Warnzeichen', 'gelbes Dreieck: Achtung, Gefahr'], ['Rettungszeichen', 'grünes Rechteck: Hier gibt es Hilfe'], ['NOT-AUS', 'schaltet alle Maschinen sofort ab'], ['Schutzbacken', 'schützen das Werkstück im Schraubstock'],
+  ['Bankzange', 'Spannvorrichtung nur für Holz'], ['Bionik', 'Lösungen der Natur auf die Technik übertragen'], ['Leichtbau', 'stabil mit wenig Material, z. B. Wabenplatte'], ['Werkzeugdienst', 'gibt Werkzeuge aus und kontrolliert die Rückgabe']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1-sort'), [{id: 'n', name: 'Natur'}, {id: 't', name: 'Technik'}], [
+  {t: 'Holzbrett', c: 't'}, {t: 'Eiche im Wald', c: 'n', why: 'Die Eiche wächst von selbst – erst das Brett ist Technik.'}, {t: 'Fahrradhelm', c: 't'}, {t: 'Lotusblatt', c: 'n'}, {t: 'Klettverschluss', c: 't'}, {t: 'Bienenwabe', c: 'n'}, {t: 'Wabenplatte', c: 't'}, {t: 'Ahornsamen', c: 'n'}
+]);
+const S = [{k: 'gebot', p: 'brille', n: 'Augenschutz'}, {k: 'verbot', p: 'hand', n: 'Handschuhe verboten'}, {k: 'warn', p: 'blitz', n: 'Elektrische Spannung'}, {k: 'rettung', p: 'kreuz', n: 'Erste Hilfe'}, {k: 'gebot', p: 'ohr', n: 'Gehörschutz'}, {k: 'warn', p: 'heiss', n: 'Heiße Oberfläche'}, {k: 'verbot', p: 'becher', n: 'Essen verboten'}, {k: 'rettung', p: 'tuer', n: 'Notausgang'}];
+sorter($('#t2-sort'), [{id: 'verbot', name: 'Verbot'}, {id: 'gebot', name: 'Gebot'}, {id: 'warn', name: 'Warnung'}, {id: 'rettung', name: 'Rettung'}], S.map(s => ({t: `<span class="mini-sign">${signSVG(s.k, s.p)}</span>${s.n}`, c: s.k})));
+trueFalse($('#t3-tf'), [
+  {t: 'Späne werden vom Tisch gepustet.', ok: false, why: 'Sie werden gesaugt.'}, {t: 'Lange Haare werden zusammengebunden.', ok: true},
+  {t: 'Metall wird in der Bankzange gespannt.', ok: false, why: 'Bankzange nur für Holz.'}, {t: 'Beschädigtes Werkzeug wird sofort gemeldet.', ok: true},
+  {t: 'An der Bohrmaschine trägt man Handschuhe.', ok: false, why: 'Handschuhe können vom Bohrer erfasst werden.'}, {t: 'Am Stundenende wird das Werkstück beschriftet.', ok: true}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was bedeutet Technik?', a: ['Gegenstände erfinden, herstellen, nutzen und verbessern', 'alles, was in der Natur wächst', 'nur Computer und Handys', 'nur Maschinen in Fabriken'], ok: 0},
+  {q: 'Welche Form hat ein Gebotszeichen?', a: ['blauer Kreis', 'gelbes Dreieck', 'grünes Rechteck', 'rotes Achteck'], ok: 0},
+  {q: 'Wofür steht ein gelbes Dreieck?', a: ['Warnung vor einer Gefahr', 'Rettungsweg', 'Verbot', 'Feuerlöscher'], ok: 0},
+  {q: 'Was tust du bei einer Störung an einer Maschine?', a: ['NOT-AUS drücken und Lehrkraft rufen', 'weiterarbeiten', 'die Maschine selbst reparieren', 'den Raum verlassen'], ok: 0},
+  {q: 'Warum werden Werkstücke kurz über den Backen eingespannt?', a: ['damit sie nicht federn', 'damit sie schneller rosten', 'damit man sie besser sieht', 'damit sie herausfallen'], ok: 0},
+  {q: 'Wozu dienen Schutzbacken?', a: ['Sie schützen das Werkstück vor Abdrücken.', 'Sie schützen die Hände.', 'Sie halten das Werkzeug.', 'Sie kühlen den Bohrer.'], ok: 0},
+  {q: 'Welches Bedürfnis erfüllt ein Fahrrad?', a: ['Mobilität', 'Ernährung', 'Wohnen', 'Gesundheit'], ok: 0},
+  {q: 'Welche Erfindung hat die Klette als Vorbild?', a: ['Klettverschluss', 'Reißverschluss', 'Druckknopf', 'Sicherheitsnadel'], ok: 0},
+  {q: 'Was ist ein Beispiel für Leichtbau?', a: ['Wabenplatte', 'Betonklotz', 'Vollholzbalken', 'Stahlkugel'], ok: 0},
+  {q: 'Zu welchem Bereich der Technik gehört eine Brücke?', a: ['Bautechnik', 'Medizintechnik', 'Informationstechnik', 'Elektrotechnik'], ok: 0},
+  {q: 'Wie werden Späne entfernt?', a: ['absaugen oder fegen', 'wegpusten', 'mit der Hand wegwischen', 'liegen lassen'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann Natur und Technik unterscheiden und erklären, was Technik ist.', href: '01_Technik_Alltag.html#begriff'},
+  {t: 'Ich kann Bereiche der Technik mit Beispielen nennen.', href: '01_Technik_Alltag.html#bereiche'},
+  {t: 'Ich kenne die Regeln im Technikraum und kann sie begründen.', href: '02_Sicherheit.html#regeln'},
+  {t: 'Ich kann Sicherheitszeichen nach Form und Farbe einordnen.', href: '02_Sicherheit.html#zeichen'},
+  {t: 'Ich weiß, was bei einem Unfall zu tun ist.', href: '02_Sicherheit.html#notfall'},
+  {t: 'Ich kann meinen Arbeitsplatz einrichten und Werkstücke richtig spannen.', href: '03_Arbeitsplatz.html#spannen'},
+  {t: 'Ich kann erklären, was Bionik ist, und Beispiele nennen.', href: '04_Bionik.html#beispiele'}
+]);
+</script>

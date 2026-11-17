@@ -1,0 +1,90 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Energieformen und Einheiten, Kraftwerke, Speicher und Netz | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Energieträger sortieren · Einheiten rechnen · Speicher zuordnen · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Energieversorgung</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Energieträger und Einheiten, Generator und Kraftwerke, Wind, Wasser, Sonne, Speicher und Stromnetz: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Energieträger" data-yr="Trainer" data-title="T1 Energieträger" data-sub="Fossil oder erneuerbar">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Energieträger</h2></div>
+  <div id="t1"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Rechnen" data-yr="Trainer" data-title="T2 Rechnen" data-sub="kWh, Wirkungsgrad">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Rechnen mit Energie</h2></div>
+  <div id="t2"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Kraftwerke" data-yr="Trainer" data-title="T3 Kraftwerke" data-sub="Ablauf ordnen">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Im Wärmekraftwerk</h2></div>
+  <div id="t3"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Primärenergie', 'Energie in der Natur, z. B. Kohle, Wind'], ['Endenergie', 'Energie, die wir kaufen, z. B. Strom'], ['Nutzenergie', 'Licht, Wärme, Bewegung'], ['1 kWh', '3,6 MJ'],
+  ['Induktion', 'Magnet in Spule erzeugt Spannung'], ['Kühlturm', 'gibt Abwärme an die Luft ab'], ['Kraft-Wärme-Kopplung', 'Abwärme als Fernwärme nutzen'], ['Pumpspeicher', 'Wasser hochpumpen und später nutzen'],
+  ['Wechselrichter', 'macht aus Gleichstrom Wechselstrom'], ['Solarthermie', 'Sonne erwärmt Wasser'], ['Power-to-Gas', 'Strom wird zu Wasserstoff'], ['Smart Grid', 'digital vernetztes Stromnetz']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1'), [{id: 'f', name: 'fossil'}, {id: 'e', name: 'erneuerbar'}], [{t: 'Braunkohle', c: 'f'}, {t: 'Erdgas', c: 'f'}, {t: 'Erdöl', c: 'f'}, {t: 'Wind', c: 'e'}, {t: 'Biogas', c: 'e'}, {t: 'Erdwärme', c: 'e'}, {t: 'Sonne', c: 'e'}]);
+taskSet($('#t2'), () => {
+  const t = randInt(0, 2);
+  if (t === 0) { const k = pick([2, 5, 10]); return {key: 'k' + k, tag: 'kWh → MJ', q: `${k} kWh`, fields: [{l: 'MJ', a: k * 3.6, tol: .01}]}; }
+  if (t === 1) { const P = pick([800, 2000, 3000]), h = pick([2, 4, 5]); return {key: `p${P}${h}`, tag: 'E = P · t', q: `${P} W für ${h} h`, fields: [{l: 'E', a: P * h / 1000, tol: .001, unit: 'kWh'}]}; }
+  const zu = pick([100, 250, 500]), eta = pick([.4, .85]); return {key: `e${zu}${eta}`, tag: 'Wirkungsgrad', q: `Kraftwerk: ${zu} MJ Brennstoff, η = ${eta * 100} %. Wie viel Strom?`, fields: [{l: 'Strom', a: zu * eta, tol: .01, unit: 'MJ'}]};
+}, {n: 4});
+orderSteps($('#t3'), ['Brennstoff verbrennt im Kessel', 'Wasser verdampft', 'Dampf treibt die Turbine', 'Turbine dreht den Generator', 'Dampf kondensiert im Kondensator', 'Kühlturm gibt Abwärme ab'], {label: 'Ablauf'});
+mcQuiz($('#quiz'), [
+  {q: 'Welcher Energieträger setzt beim Verbrennen CO₂ frei?', a: ['Kohle', 'Wind', 'Sonne', 'Wasser'], ok: 0},
+  {q: 'Wie viele MJ sind 1 kWh?', a: ['3,6 MJ', '1 MJ', '36 MJ', '0,36 MJ'], ok: 0},
+  {q: 'Was entsteht, wenn sich ein Magnet in einer Spule dreht?', a: ['eine Spannung', 'Licht', 'Wasserstoff', 'nichts'], ok: 0},
+  {q: 'Was dreht im Wärmekraftwerk die Turbine?', a: ['Wasserdampf', 'Wind', 'Sonnenlicht', 'Kohlestaub'], ok: 0},
+  {q: 'Wie verändert sich die Windleistung bei doppelter Windgeschwindigkeit?', a: ['achtfach', 'doppelt', 'gleich', 'halb'], ok: 0},
+  {q: 'Welches Kraftwerk speichert Energie?', a: ['Pumpspeicherkraftwerk', 'Laufwasserkraftwerk', 'Solarthermie', 'Windrad'], ok: 0},
+  {q: 'Was macht der Wechselrichter einer PV-Anlage?', a: ['Gleichstrom in Wechselstrom', 'Licht in Wärme', 'Wechselstrom in Wasserstoff', 'nichts'], ok: 0},
+  {q: 'Wann liefert eine Südanlage am meisten?', a: ['mittags', 'abends', 'nachts', 'morgens um 6'], ok: 0},
+  {q: 'Welche Energie liefert auch nachts?', a: ['Erdwärme', 'Photovoltaik', 'Solarthermie', 'keine'], ok: 0},
+  {q: 'Was muss im Netz immer gleich sein?', a: ['Erzeugung und Verbrauch', 'Wind und Sonne', 'Strom und Gas', 'Tag und Nacht'], ok: 0},
+  {q: 'Was ist ein Smart Grid?', a: ['vernetztes, gesteuertes Stromnetz', 'ein Windrad', 'eine Batterie', 'eine Solarzelle'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann fossile und erneuerbare Energieträger unterscheiden.', href: '01_Energie.html#traeger'},
+  {t: 'Ich kann Primär-, End- und Nutzenergie erklären und Einheiten umrechnen.', href: '01_Energie.html#kette'},
+  {t: 'Ich kann das Prinzip des Generators und des Wärmekraftwerks erklären.', href: '02_Kraftwerke.html#kraftwerk'},
+  {t: 'Ich kann Wind- und Wasserkraft erklären und bewerten.', href: '03_Wind_Wasser.html#leistung'},
+  {t: 'Ich kann Photovoltaik und Solarthermie unterscheiden.', href: '04_Sonne.html#pv'},
+  {t: 'Ich kann Energiespeicher nennen und das Smart Grid erklären.', href: '05_Speicher_Netz.html#speicher'}
+]);
+</script>

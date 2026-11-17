@@ -1,0 +1,99 @@
+<!--
+title: Ein Werkstück – drei Ansichten
+short: Dreitafelbild
+time: 2–3 Unterrichtsstunden
+q: Wie stellt man einen Körper mit drei Ansichten eindeutig dar?
+facts: Vorderansicht (von vorn), Draufsicht (von oben), Seitenansicht von links | Anordnung: Draufsicht unter, Seitenansicht rechts neben der Vorderansicht | Gleiche Höhen und Breiten liegen auf einer Linie | Jede Ansicht zeigt zwei der drei Maße Breite, Höhe, Tiefe | Eine Ansicht allein ist oft nicht eindeutig
+inter: Würfelkörper mit drei Ansichten drehen · Ansichten verdecken und vorhersagen · Ansichten-Quiz · Welche Maße zeigt welche Ansicht?
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Skizzen und technische Zeichnungen</p>
+      <h1>Ein Werkstück – drei Ansichten</h1>
+      <p class="lead">Ein Foto zeigt einen Körper nur von einer Seite. Was dahinter liegt, bleibt verborgen. In der Technik zeichnet man ein Werkstück deshalb aus <b>drei Richtungen</b>: von vorn, von oben und von der Seite.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Halte eine Streichholzschachtel vor dich. Was siehst du von vorn, von oben und von links?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie stellt man einen Körper mit drei Ansichten eindeutig dar?</p></div>
+      <div class="controls"><button class="btn primary" data-go="ansichten">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="ansichten" data-label="Drei Ansichten" data-yr="Erarbeitung" data-title="Drei Blickrichtungen" data-sub="Vorn, oben, links">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Drei Blickrichtungen</p>
+    <h2>Von vorn, von oben, von links</h2>
+    <p class="lead">Wähle einen Körper. Rechts siehst du die drei Ansichten so angeordnet, wie sie im <b>Dreitafelbild</b> stehen: Vorderansicht oben links, Seitenansicht von links daneben, Draufsicht darunter.</p>
+  </div>
+  <div id="vox1"></div>
+</section>
+
+<section class="station" id="anordnung" data-label="Anordnung" data-yr="Erarbeitung" data-title="Die Anordnung" data-sub="Breite, Höhe, Tiefe">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Anordnung</p>
+    <h2>Was zeigt welche Ansicht?</h2>
+    <p class="lead">Jede Ansicht zeigt nur <b>zwei</b> der drei Maße. Deshalb braucht man mehrere Ansichten. Die Ansichten werden so angeordnet, dass gleiche Maße auf einer Linie liegen.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 330" role="img" aria-label="Anordnung im Dreitafelbild" style="font-family:var(--f-mono)">
+      <rect x="40" y="40" width="150" height="100" fill="color-mix(in srgb,var(--accent) 20%,var(--surface))" stroke="var(--ink)" stroke-width="2.5"/>
+      <rect x="240" y="40" width="80" height="100" fill="color-mix(in srgb,var(--accent) 20%,var(--surface))" stroke="var(--ink)" stroke-width="2.5"/>
+      <rect x="40" y="190" width="150" height="80" fill="color-mix(in srgb,var(--accent) 20%,var(--surface))" stroke="var(--ink)" stroke-width="2.5"/>
+      <path d="M190 40h50M190 140h50M40 140v50M190 140v50" stroke="var(--ink-2)" stroke-dasharray="5 4"/>
+      <path d="M240 140l80 50M320 140v50l-130 0" stroke="var(--ink-2)" stroke-dasharray="2 4" fill="none"/>
+      <g style="font-size:15px;font-weight:600;fill:var(--ink)"><text x="115" y="95" text-anchor="middle">Vorderansicht</text><text x="280" y="88" text-anchor="middle">Seiten-</text><text x="280" y="106" text-anchor="middle">ansicht</text><text x="115" y="235" text-anchor="middle">Draufsicht</text></g>
+      <g style="font-size:13px;fill:var(--accent);font-weight:600"><text x="115" y="30" text-anchor="middle">Breite</text><text x="25" y="95" text-anchor="middle" transform="rotate(-90 25 95)">Höhe</text><text x="280" y="30" text-anchor="middle">Tiefe</text><text x="25" y="232" text-anchor="middle" transform="rotate(-90 25 232)">Tiefe</text><text x="115" y="292" text-anchor="middle">Breite</text><text x="338" y="95" text-anchor="middle" transform="rotate(90 338 95)">Höhe</text></g>
+    </svg></div>
+    <div id="sort-m"></div>
+  </div>
+</section>
+
+<section class="station" id="vorhersage" data-label="Vorhersagen" data-yr="Übung" data-title="Ansichten vorhersagen" data-sub="Erst denken, dann aufdecken">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Vorhersagen</p>
+    <h2>Erst denken, dann aufdecken</h2>
+    <p class="lead">Die Ansichten sind verdeckt. Skizziere sie auf Karopapier (ein Kästchen = eine Würfelkante) und decke dann auf.</p>
+  </div>
+  <div id="vox2"></div>
+</section>
+
+<section class="station" id="quiz-v" data-label="Ansichten-Quiz" data-yr="Übung" data-title="Ansichten-Quiz" data-sub="Welche Zeichnung passt?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Quiz</p>
+    <h2>Welche Zeichnung passt?</h2>
+  </div>
+  <div id="vq"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Dreitafelbild</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Ein Werkstück – drei Ansichten</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Ein Werkstück wird in drei Ansichten gezeichnet: <b>Vorderansicht</b>, <b>Draufsicht</b> (von oben) und <b>Seitenansicht von links</b>.</li>
+        <li data-step>Die <b>Draufsicht</b> steht <b>unter</b> der Vorderansicht, die <b>Seitenansicht</b> <b>rechts</b> daneben.</li>
+        <li data-step>Die Vorderansicht zeigt Breite und Höhe, die Draufsicht Breite und Tiefe, die Seitenansicht Tiefe und Höhe.</li>
+        <li data-step>Gleiche Maße liegen auf einer Linie: Vorder- und Seitenansicht sind gleich hoch, Vorderansicht und Draufsicht gleich breit.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Praxis</span><p>Baue aus Holzwürfeln einen eigenen Körper. Deine Partnerin oder dein Partner zeichnet das Dreitafelbild.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Ansichten-Training</h2></div>
+  <div id="vq2"></div>
+</section>
+
+<script>
+voxel($('#vox1'), {bodies: VOX_BODIES.slice(0, 5)});
+sorter($('#sort-m'), [{id: 'v', name: 'Vorderansicht'}, {id: 'd', name: 'Draufsicht'}, {id: 's', name: 'Seitenansicht'}], [
+  {t: 'Breite und Höhe', c: 'v'}, {t: 'Breite und Tiefe', c: 'd'}, {t: 'Tiefe und Höhe', c: 's'}, {t: 'Blick von oben', c: 'd'}, {t: 'steht rechts', c: 's'}, {t: 'wichtigste Ansicht, oben links', c: 'v'}
+]);
+voxel($('#vox2'), {bodies: VOX_BODIES.slice(3), show: false});
+voxQuiz($('#vq'), VOX_BODIES);
+voxQuiz($('#vq2'), VOX_BODIES, {views: ['s', 'd']});
+</script>

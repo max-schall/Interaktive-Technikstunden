@@ -1,0 +1,125 @@
+<!--
+title: Sonne, Biomasse und Erdwärme
+short: Sonne & Co.
+time: 2 Unterrichtsstunden
+q: Wie gewinnt man Energie aus Sonne, Biomasse und Erdwärme?
+facts: Photovoltaik: Solarzellen wandeln Licht direkt in elektrische Energie (Gleichstrom), Wechselrichter macht Wechselstrom | Ertrag hängt von Ausrichtung, Neigung, Tageszeit und Wetter ab | Solarthermie: Kollektoren erwärmen Wasser | Balkonkraftwerk: kleine PV-Anlage für die Steckdose | Biomasse (Holz, Biogas) und Geothermie liefern auch nachts Energie
+inter: PV-Simulator mit Uhrzeit und Ausrichtung · Photovoltaik oder Solarthermie · Balkonkraftwerk-Rechner · Erneuerbare zuordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Energieversorgung</p>
+      <h1>Sonne, Biomasse und Erdwärme</h1>
+      <p class="lead">Die Sonne schickt in einer Stunde mehr Energie zur Erde, als die ganze Menschheit in einem Jahr verbraucht. Auf immer mehr Dächern und Balkonen wird ein Teil davon zu Strom und Wärme.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Zählt auf dem Schulweg die Dächer mit Solaranlagen. Wohin zeigen sie meistens?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie gewinnt man Energie aus Sonne, Biomasse und Erdwärme?</p></div>
+      <div class="controls"><button class="btn primary" data-go="pv">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="pv" data-label="Photovoltaik" data-yr="Erarbeitung" data-title="Photovoltaik" data-sub="Licht wird Strom">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Photovoltaik</p>
+    <h2>Licht wird direkt zu Strom</h2>
+    <p class="lead"><b>Solarzellen</b> aus Silizium wandeln Licht direkt in elektrische Energie um – ganz ohne bewegliche Teile. Sie liefern Gleichstrom; ein <b>Wechselrichter</b> macht daraus Wechselstrom fürs Netz. Verändere Uhrzeit und Ausrichtung.</p>
+  </div>
+  <div class="cols-2">
+    <div class="tk-fig"><svg viewBox="0 0 400 240" id="pvs" role="img" aria-label="Solaranlage"></svg><div class="tk-row"><label>Uhrzeit <input type="range" min="5" max="21" step="0.5" value="12" id="pv-h"> <span class="tk-val" id="pv-hv"></span></label></div><div class="tk-row"><span id="pv-seg"></span><span id="pv-w"></span></div></div>
+    <div><div class="tk-readout" id="pv-ro"></div><div id="pv-pl"></div></div>
+  </div>
+</section>
+
+<section class="station" id="thermie" data-label="Solarthermie" data-yr="Erarbeitung" data-title="Photovoltaik oder Solarthermie?" data-sub="Strom oder Wärme">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Solarthermie</p>
+    <h2>Strom oder warmes Wasser?</h2>
+    <p class="lead"><b>Solarthermie</b>-Kollektoren sind dunkle Flächen mit Rohren. Die Sonne erwärmt eine Flüssigkeit, die ihre Wärme an den Warmwasserspeicher abgibt. Sortiere.</p>
+  </div>
+  <div id="sort"></div>
+</section>
+
+<section class="station" id="balkon" data-label="Balkonkraftwerk" data-yr="Übung" data-title="Lohnt sich ein Balkonkraftwerk?" data-sub="Rechnen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Balkonkraftwerk</p>
+    <h2>Lohnt sich ein Balkonkraftwerk?</h2>
+    <p class="lead">Ein <b>Balkonkraftwerk</b> mit zwei Modulen kostet etwa 400 € und erzeugt bei Südausrichtung rund 700 kWh im Jahr. Jede selbst verbrauchte kWh spart den Strompreis.</p>
+  </div>
+  <div class="cols-2">
+    <div><div class="tk-row"><label>Preis der Anlage <input type="range" min="200" max="800" step="50" value="400" id="bk-p"> <span class="tk-val" id="bk-pv"></span></label></div><div class="tk-row"><label>Ertrag pro Jahr <input type="range" min="300" max="900" step="50" value="700" id="bk-e"> <span class="tk-val" id="bk-ev"></span></label></div><div class="tk-row"><label>davon selbst genutzt <input type="range" min="30" max="100" step="5" value="70" id="bk-s"> <span class="tk-val" id="bk-sv"></span></label></div><div class="tk-row"><label>Strompreis <input type="range" min="20" max="50" step="1" value="35" id="bk-c"> <span class="tk-val" id="bk-cv"></span></label></div></div>
+    <div><div class="tk-readout" id="bk-ro"></div><p class="status" id="bk-st"></p></div>
+  </div>
+</section>
+
+<section class="station" id="weitere" data-label="M1 Biomasse & Erdwärme" data-yr="Material M1" data-title="Biomasse und Erdwärme" data-sub="Energie auch nachts">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Biomasse und Erdwärme</h2>
+    <p class="lead">Sonne und Wind schwanken. <b>Biomasse</b> (Holz, Biogas aus Gülle und Pflanzen) und <b>Geothermie</b> (Erdwärme) liefern dagegen auch nachts und bei Windstille Energie. Ordne zu.</p>
+  </div>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Sonne und Co.</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Sonne, Biomasse und Erdwärme</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Photovoltaik:</b> Solarzellen wandeln Licht direkt in elektrische Energie (Gleichstrom). Ein <b>Wechselrichter</b> wandelt in Wechselstrom um.</li>
+        <li data-step>Der Ertrag ist mittags und bei Südausrichtung am größten; nachts liefert die Anlage nichts.</li>
+        <li data-step><b>Solarthermie:</b> Kollektoren erwärmen Wasser für Dusche und Heizung.</li>
+        <li data-step><b>Biomasse</b> und <b>Geothermie</b> sind erneuerbar und liefern Energie unabhängig von Tageszeit und Wetter.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Messt die Spannung einer Solarzelle bei verschiedenen Neigungswinkeln zur Lampe oder zur Sonne. Bei welchem Winkel ist sie am größten?</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Solar-Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+let dir = 'sued', wet = 'sonnig';
+const DIRF = {sued: 1, ost: .78, west: .78, nord: .45}, WETF = {sonnig: 1, wolkig: .45, regen: .15};
+const shift = d => d === 'ost' ? -2.5 : d === 'west' ? 2.5 : 0;
+const pvP = (h, d, w) => { const sun = Math.max(0, Math.sin((h - 6) / 14 * Math.PI)), s2 = Math.max(0, Math.sin((h - 6 - shift(d) * .6) / 14 * Math.PI)); return 800 * (d === 'sued' ? sun : d === 'nord' ? sun * .45 : s2 * .85) * WETF[w]; };
+const pl = plot($('#pv-pl'), {x: [4, 22], y: [0, 900], xs: 2, ys: 200, xl: 'Uhrzeit', yl: 'Leistung in W (800-W-Anlage)', series: []});
+function pv() {
+  const h = +$('#pv-h').value, P = pvP(h, dir, wet), sun = Math.max(0, Math.sin((h - 6) / 14 * Math.PI)), sx = 30 + (h - 5) / 16 * 340, sy = 190 - sun * 160;
+  $('#pvs').innerHTML = `<rect x="0" y="0" width="400" height="240" fill="color-mix(in srgb,var(--e) ${sun * 30}%,var(--surface))"/>${sun > 0 ? `<circle cx="${sx}" cy="${sy}" r="18" fill="var(--lamp)"/>` : ''}${wet !== 'sonnig' ? `<ellipse cx="${sx + 10}" cy="${sy + 8}" rx="40" ry="16" fill="var(--line)" opacity=".9"/>` : ''}` +
+    `<path d="M110 200l60 -60h120l-60 60z" fill="#1E3A8A" stroke="var(--edge)" stroke-width="2"/><path d="M150 160h110M130 180h110M190 140l-60 60M230 140l-60 60" stroke="#93C5FD" stroke-width="1"/><rect x="0" y="200" width="400" height="40" fill="var(--wood-2)"/>` +
+    (P > 1 ? `<path d="M${sx} ${sy}L200 170" stroke="var(--lamp)" stroke-width="2" stroke-dasharray="4 4"/>` : '');
+  $('#pv-hv').textContent = numDE(h, 1).replace(',5', ':30').replace(/^(\d+)$/, '$1:00') + ' Uhr';
+  let E = 0; for (let t = 5; t <= 21; t += .25) E += pvP(t, dir, wet) * .25;
+  pl.set({series: [{pts: [...Array(69)].map((_, i) => [4 + i / 4, pvP(4 + i / 4, dir, wet)]), cls: 's0'}], vl: [{x: h, t: ''}], area: [...[...Array(69)].map((_, i) => [4 + i / 4, pvP(4 + i / 4, dir, wet)]), [21, 0], [4, 0]]});
+  readout($('#pv-ro'), [['Leistung jetzt', numDE(P, 0) + ' W'], ['Energie heute', numDE(E / 1000, 2) + ' kWh'], ['Ausrichtung', {sued: 'Süd', ost: 'Ost', west: 'West', nord: 'Nord'}[dir]]]);
+}
+seg($('#pv-seg'), [['sued', 'Süd'], ['ost', 'Ost'], ['west', 'West'], ['nord', 'Nord']], v => { dir = v; pv(); });
+seg($('#pv-w'), [['sonnig', 'sonnig'], ['wolkig', 'bewölkt'], ['regen', 'Regen']], v => { wet = v; pv(); });
+$('#pv-h').oninput = pv;
+sorter($('#sort'), [{id: 'p', name: 'Photovoltaik'}, {id: 't', name: 'Solarthermie'}], [
+  {t: 'liefert elektrische Energie', c: 'p'}, {t: 'erwärmt Wasser', c: 't'}, {t: 'braucht einen Wechselrichter', c: 'p'}, {t: 'Kollektor mit Rohren', c: 't'}, {t: 'Zellen aus Silizium', c: 'p'}, {t: 'unterstützt die Heizung', c: 't'}
+]);
+function bk() {
+  const P = +$('#bk-p').value, E = +$('#bk-e').value, s = +$('#bk-s').value / 100, c = +$('#bk-c').value / 100, save = E * s * c, yrs = P / save;
+  $('#bk-pv').textContent = P + ' €'; $('#bk-ev').textContent = E + ' kWh'; $('#bk-sv').textContent = Math.round(s * 100) + ' %'; $('#bk-cv').textContent = Math.round(c * 100) + ' ct';
+  readout($('#bk-ro'), [['Ersparnis pro Jahr', numDE(save, 2) + ' €'], ['bezahlt nach', numDE(yrs, 1) + ' Jahren'], ['CO₂ gespart pro Jahr ≈', numDE(E * .38, 0) + ' kg']]);
+  $('#bk-st').innerHTML = `${numDE(E * s, 0)} kWh werden selbst verbraucht und sparen je ${Math.round(c * 100)} ct. Nach etwa <b>${numDE(yrs, 1)} Jahren</b> hat sich die Anlage bezahlt gemacht – Module halten über 20 Jahre.`;
+}
+['p', 'e', 's', 'c'].forEach(k => $('#bk-' + k).oninput = bk); bk();
+matcher($('#match'), [['Pelletheizung', 'verbrennt Holzreste zu Wärme'], ['Biogasanlage', 'Bakterien zersetzen Gülle und Pflanzen zu Methan'], ['Erdwärmesonde', 'holt Wärme aus 100 m Tiefe für die Wärmepumpe'], ['Geothermiekraftwerk', 'heißes Tiefenwasser treibt eine Turbine an'], ['Biokraftstoff', 'Rapsöl oder Bioethanol als Treibstoff']]);
+mcQuiz($('#quiz'), [
+  {q: 'Was macht ein Wechselrichter?', a: ['Er wandelt Gleichstrom in Wechselstrom.', 'Er dreht die Module zur Sonne.', 'Er erwärmt Wasser.', 'Er speichert Strom.'], ok: 0},
+  {q: 'Wann liefert eine Südanlage am meisten Strom?', a: ['mittags', 'morgens', 'abends', 'nachts'], ok: 0},
+  {q: 'Was erzeugt Solarthermie?', a: ['Wärme', 'Strom', 'Wasserstoff', 'Biogas'], ok: 0},
+  {q: 'Welche erneuerbare Energie liefert auch nachts?', a: ['Erdwärme', 'Photovoltaik', 'Solarthermie', 'keine'], ok: 0},
+  {q: 'Woraus bestehen die meisten Solarzellen?', a: ['Silizium', 'Kupfer', 'Kunststoff', 'Glas allein'], ok: 0}
+]);
+pv();
+</script>
