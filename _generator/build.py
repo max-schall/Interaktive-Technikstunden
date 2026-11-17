@@ -253,7 +253,7 @@ GRADE_INFO = {'7': 'Technikraum und Sicherheit, der Werkstoff Holz mit Werkzeuge
 
 INDEX_CSS = '''.hero{position:relative;padding:1.4rem 1.6rem 1.2rem;border:1.5px solid var(--edge);background:var(--surface);margin-bottom:1.6rem}
 .hero::before{content:"";position:absolute;inset:6px;border:.5px solid var(--line);pointer-events:none}
-.hero h1{font-size:clamp(2.6rem,7vw,5rem);letter-spacing:.02em;margin:.1rem 0 .2rem}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4.2rem);letter-spacing:.01em;margin:.1rem 0 .6rem}
 .hero h1 small{font-size:.38em;letter-spacing:.08em;color:var(--accent);margin-left:.4rem;vertical-align:.5em;text-transform:uppercase}
 .kitap-sub{font-family:var(--f-mono);font-size:clamp(1rem,1.6vw,1.25rem);color:var(--ink-2);margin:0 0 1rem;letter-spacing:.02em}
 .hero .lead{max-width:70ch}
@@ -264,7 +264,8 @@ INDEX_CSS = '''.hero{position:relative;padding:1.4rem 1.6rem 1.2rem;border:1.5px
 .crumbs [aria-current]{color:var(--accent);font-weight:600;padding:.05rem .3rem}
 .crumbs .sep{opacity:.5}
 .vh{font-size:1.4rem;margin:0 0 1rem}
-.grades{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.2rem}
+.grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+@media (max-width:700px){.grades{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .grade{position:relative;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto 1fr auto;column-gap:.6rem;text-decoration:none;color:inherit;background:var(--surface);border:1.5px solid var(--edge);transition:transform .12s}
 .grade:hover,.grade:focus-visible{transform:translateY(-3px)}
 .grade:hover .g-num,.grade:focus-visible .g-num{background:var(--accent);color:var(--accent-ink)}
@@ -310,7 +311,7 @@ INDEX_JS = '''(() => {
       out += '<span class="sep">/</span>' + (i === parts.length - 1 ? `<span aria-current="page">${name}</span>` : `<a href="#${key}">${name}</a>`);
     });
     crumbs.innerHTML = out;
-    document.title = (h ? T[h] + ' – ' : '') + 'KITAP – Technik';
+    document.title = (h ? T[h] + ' – ' : '') + 'Interaktive Technikstunden';
   }
   addEventListener('hashchange', () => { show(); if (location.hash) crumbs.scrollIntoView({block: 'start', behavior: 'smooth'}); });
   show();
@@ -375,7 +376,7 @@ def build_index(css):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>KITAP – Technik</title>
+<title>Interaktive Technikstunden</title>
 <meta name="description" content="Interaktive Präsentationen mit Arbeitsblättern für den Technikunterricht der Klassen 7 bis 10.">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
@@ -384,13 +385,12 @@ def build_index(css):
 </head>
 <body>
 <div class="app">
-<header class="top"><div class="brand"><small>Fach</small><b>KITAP Technik</b><span>Klassen 7–10 · interaktiv</span></div><span style="flex:1"></span><a class="icon-btn" href="#" id="home" hidden>⌂ Klassen</a></header>
+<header class="top"><div class="brand"><small>Fach</small><b>Interaktive Technikstunden</b><span>Klassen 7–10 · interaktiv</span></div><span style="flex:1"></span><a class="icon-btn" href="#" id="home" hidden>⌂ Klassen</a></header>
 <main>
 <section class="ov">
   <div class="hero">
     <p class="eyebrow">Interaktive Präsentationen · Klassen 7–10</p>
-    <h1>KITAP<small>Technik</small></h1>
-    <p class="kitap-sub">Klassenfertige Inhalte – Thematisch Aufbereitet und Präsentationsbereit</p>
+    <h1>Interaktive Technikstunden</h1>
     <p class="lead">Präsentationen für den Technikunterricht: Werkstoffe und Werkzeuge, Zeichnen und Fertigen, Elektrotechnik und Elektronik, Maschinen, Bauen, Energie, Steuerung und Regelung. Jede Stunde mit Stationen, Simulationen, Hefteintrag, Übungen und Arbeitsblatt mit QR-Code. Wähle zuerst die Klassenstufe, dann die Reihe.</p>
   </div>
   <nav class="crumbs" aria-label="Navigation" id="crumbs"><span aria-current="page">Klassen</span></nav>
@@ -401,7 +401,7 @@ def build_index(css):
     </div>
   </section>
 {chr(10).join(views)}
-  <footer class="site-foot">KITAP · freie Unterrichtsmaterialien · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></footer>
+  <footer class="site-foot">Interaktive Technikstunden · freie Unterrichtsmaterialien · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></footer>
 </section>
 </main>
 </div>
