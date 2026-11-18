@@ -1,0 +1,98 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Werkzeuggruppen, Hammer/Zange/Schraubendreher, sicher an Maschinen | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Werkzeuge sortieren · Zangen zuordnen · Maschinenregeln richtig/falsch · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Werkzeuge und Maschinen</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Werkzeuggruppen, Hammer, Zange und Schraubendreher, Dekupiersäge, Stichsäge, Tellerschleifmaschine und der Maschinenführerschein: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Gruppen" data-yr="Trainer" data-title="T1 Werkzeuggruppen" data-sub="Messen, Trennen, Fügen, Umformen">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Werkzeuggruppen</h2></div>
+  <div id="t1-sort"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Handwerkzeug" data-yr="Trainer" data-title="T2 Handwerkzeuge" data-sub="Zangen und Schraubendreher">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Zangen und Schraubendreher</h2></div>
+  <div id="t2-match"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Maschinen" data-yr="Trainer" data-title="T3 Sicher an Maschinen" data-sub="Richtig oder falsch?">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Sicher an Maschinen</h2></div>
+  <div id="t3-tf"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Trennen', 'Material wird abgetrennt, oft entstehen Späne'], ['Fügen', 'Teile werden miteinander verbunden'], ['Umformen', 'die Form ändert sich, Material bleibt erhalten'], ['Spannen', 'Werkstück festhalten, z. B. im Schraubstock'],
+  ['Torx', 'Schraubenantrieb in Sternform'], ['Finne', 'keilförmiges Ende des Hammerkopfs'], ['Rundzange', 'biegt Drahtösen'], ['Seitenschneider', 'trennt Drähte und Kabel'],
+  ['Niederhalter', 'hält das Werkstück an der Dekupiersäge auf dem Tisch'], ['Pendelhub', 'sorgt bei der Stichsäge für schnelle Schnitte'], ['Tellerschleifmaschine', 'schleift Rundungen und Stirnseiten'], ['Maschinenführerschein', 'Nachweis, eine Maschine sicher bedienen zu können']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+sorter($('#t1-sort'), [{id: 'm', name: 'Messen/Anreißen'}, {id: 't', name: 'Trennen'}, {id: 'f', name: 'Fügen'}, {id: 'u', name: 'Umformen'}], [
+  {t: 'Anschlagwinkel', c: 'm'}, {t: 'Reißnadel', c: 'm'}, {t: 'Laubsäge', c: 't'}, {t: 'Raspel', c: 't'}, {t: 'Blechschere', c: 't'},
+  {t: 'Schraubendreher', c: 'f'}, {t: 'Hammer und Nagel', c: 'f'}, {t: 'Rundzange (Öse biegen)', c: 'u'}, {t: 'Blech im Schraubstock biegen', c: 'u'}
+]);
+matcher($('#t2-match'), [['Kombizange', 'halten, biegen und abkneifen'], ['Beißzange', 'Nägel herausziehen'], ['Flachzange', 'kleine Teile halten'], ['Schlitz-Schraubendreher', 'flache Klinge'], ['Kreuzschlitz PH', 'Kreuz mit runden Flanken'], ['Innensechskant', 'Sechskantschlüssel']]);
+trueFalse($('#t3-tf'), [
+  {t: 'Das Werkstück an der Bohrmaschine wird mit der Hand festgehalten.', ok: false, why: 'Es wird im Maschinenschraubstock gespannt.'},
+  {t: 'Vor dem Einschalten wird der Bohrfutterschlüssel abgezogen.', ok: true},
+  {t: 'An der Tellerschleifmaschine schleift man an der aufwärts laufenden Seite.', ok: false, why: 'Nur an der abwärts laufenden Seite.'},
+  {t: 'Die Stichsäge wird eingeschaltet, wenn die Fußplatte aufliegt.', ok: true},
+  {t: 'Beim Schleifen wird die Absaugung eingeschaltet.', ok: true},
+  {t: 'Mit dem Führerschein darf man jederzeit an jede Maschine.', ok: false, why: 'Er gilt für eine bestimmte Maschine, und man braucht die Erlaubnis der Lehrkraft.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Zu welcher Gruppe gehört der Bohrer?', a: ['Trennen', 'Fügen', 'Umformen', 'Spannen'], ok: 0},
+  {q: 'Was passiert beim Umformen?', a: ['Die Form ändert sich, Material bleibt erhalten.', 'Material wird abgetrennt.', 'Teile werden verbunden.', 'Es wird gemessen.'], ok: 0},
+  {q: 'Welches Werkzeug sägt Kurven in dünnem Holz?', a: ['Laubsäge', 'Bügelsäge', 'Feinsäge', 'Blechschere'], ok: 0},
+  {q: 'Was hält den Hammerkopf auf dem Stiel?', a: ['der Keil', 'die Finne', 'die Bahn', 'Klebstoff'], ok: 0},
+  {q: 'Warum muss die Schraubendreherklinge genau passen?', a: ['Sonst rutscht sie ab.', 'Sonst rostet die Schraube.', 'Damit es schön aussieht.', 'Das ist egal.'], ok: 0},
+  {q: 'Wozu dient der Niederhalter an der Dekupiersäge?', a: ['Er verhindert, dass das Werkstück hochschlägt.', 'Er spannt das Sägeblatt.', 'Er kühlt das Blatt.', 'Er misst die Dicke.'], ok: 0},
+  {q: 'Was tust du vor dem Sägeblattwechsel?', a: ['Netzstecker ziehen', 'Drehzahl erhöhen', 'Handschuhe anziehen', 'Absaugung abbauen'], ok: 0},
+  {q: 'Wie entfernst du Späne an der Maschine?', a: ['mit dem Handfeger nach dem Stillstand', 'durch Pusten', 'mit der Hand während der Arbeit', 'gar nicht'], ok: 0},
+  {q: 'Welche Zange trennt Kabel?', a: ['Seitenschneider', 'Rundzange', 'Flachzange', 'Wasserpumpenzange'], ok: 0},
+  {q: 'Was zeigt ein Maschinenführerschein?', a: ['dass man eine Maschine sicher bedienen kann', 'dass man ein Moped fahren darf', 'dass die Maschine neu ist', 'dass man Werkzeug kaufen darf'], ok: 0},
+  {q: 'Was gehört nicht an eine laufende Bohrmaschine?', a: ['Handschuhe', 'Schutzbrille', 'zusammengebundene Haare', 'gespanntes Werkstück'], ok: 0},
+  {q: 'Wofür nutzt man eine Bügelsäge?', a: ['zum Ablängen von Metallrohren', 'für Kurven in Sperrholz', 'zum Schleifen', 'zum Biegen'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann Werkzeuge nach ihrer Aufgabe ordnen (Messen, Spannen, Trennen, Fügen, Umformen).', href: '01_Werkzeuge_ordnen.html#gruppen'},
+  {t: 'Ich kann für eine Aufgabe das passende Trennwerkzeug wählen.', href: '01_Werkzeuge_ordnen.html#auswahl'},
+  {t: 'Ich kann den passenden Schraubendreher auswählen.', href: '02_Fuegen_Umformen.html#schraube'},
+  {t: 'Ich kann die Teile des Hammers benennen und ihn richtig halten.', href: '02_Fuegen_Umformen.html#hammer'},
+  {t: 'Ich kann Zangen nach ihrem Einsatz unterscheiden.', href: '02_Fuegen_Umformen.html#zangen'},
+  {t: 'Ich kann die Bedienteile der Dekupiersäge benennen.', href: '03_Maschinen.html#deku'},
+  {t: 'Ich weiß, an welcher Seite der Tellerschleifmaschine ich schleifen darf.', href: '03_Maschinen.html#teller'},
+  {t: 'Ich kenne die Checkliste vor, während und nach der Arbeit an einer Maschine.', href: '04_Fuehrerschein.html#check'}
+]);
+</script>

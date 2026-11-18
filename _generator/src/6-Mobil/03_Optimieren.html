@@ -1,0 +1,171 @@
+<!--
+title: Das bewegte Objekt optimieren
+short: Optimieren
+time: 2–3 Unterrichtsstunden
+q: Wie finde ich heraus, was meinen Flitzer schneller und weiter fahren lässt?
+facts: Fairer Versuch: immer nur eine Größe ändern, alles andere bleibt gleich | Mehrere Fahrten messen und den Mittelwert bilden | Einflussgrößen: Gummiband, Umdrehungen, Raddurchmesser, Masse, Reibung in den Lagern, Haftung der Räder, Luftwiderstand | Drehen die Räder durch, geht Energie verloren – Gummiring auf den Rädern oder mehr Gewicht auf der Antriebsachse | Weniger Reibung in den Lagern (schleifen, Wachs, Strohhalm) bringt am meisten
+inter: Faire und unfaire Versuche sortieren · Flitzer-Simulator mit Messprotokoll · Mittelwerte berechnen · Probleme und Lösungen zuordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Mobil sein – das bewegte Objekt</p>
+      <h1>Das bewegte Objekt optimieren</h1>
+      <p class="lead">Dein Flitzer fährt – aber geht es noch weiter? Ingenieurinnen und Ingenieure verbessern ihre Produkte mit <b>Versuchen</b>. Damit die Ergebnisse etwas aussagen, müssen die Versuche <b>fair</b> sein.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Lea tauscht das Gummiband und die Räder gleichzeitig. Der Flitzer fährt weiter. Was hat geholfen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie finde ich heraus, was meinen Flitzer schneller und weiter fahren lässt?</p></div>
+      <div class="controls"><button class="btn primary" data-go="fair">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="fair" data-label="Fair testen" data-yr="Erarbeitung" data-title="Fair testen" data-sub="Nur eine Größe ändern">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Fairer Versuch</p>
+    <h2>Immer nur eine Sache ändern</h2>
+    <p class="lead">Ein Versuch ist <b>fair</b>, wenn du nur <b>eine</b> Größe änderst und alle anderen gleich lässt. Dann weißt du genau, was die Wirkung hatte. Sortiere.</p>
+  </div>
+  <div id="sort-f"></div>
+</section>
+
+<section class="station" id="sim" data-label="Simulator" data-yr="Experiment" data-title="Flitzer-Simulator" data-sub="Ändern, fahren, messen">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Simulator</p>
+    <h2>Der Flitzer-Simulator</h2>
+    <p class="lead">Stelle deinen Flitzer ein und lass ihn fahren. Jede Fahrt wird ins <b>Messprotokoll</b> eingetragen. Wie weit kommst du – mit fairen Versuchen?</p>
+  </div>
+  <div class="tk-fig"><svg viewBox="0 0 900 130" id="track" role="img" aria-label="Fahrstrecke"></svg></div>
+  <div class="tk-row">
+    <span class="tk-cap">Gummiband</span><span id="o-band"></span>
+    <span class="tk-cap">Räder Ø</span><span id="o-rad"></span>
+    <span class="tk-cap">Lauffläche</span><span id="o-lauf"></span>
+  </div>
+  <div class="tk-row">
+    <span class="tk-cap">Lager</span><span id="o-lager"></span>
+    <span class="tk-cap">Nase</span><span id="o-nase"></span>
+  </div>
+  <div class="tk-row">
+    <label>Umdrehungen <input type="range" id="o-turns" min="2" max="12" step="1" value="8"> <span class="tk-val" id="o-tv"></span></label>
+    <label>Zusatzgewicht <input type="range" id="o-mass" min="0" max="200" step="25" value="0"> <span class="tk-val" id="o-mv"></span></label>
+  </div>
+  <div class="controls"><button class="btn primary" id="o-go">Fahren lassen</button><button class="btn" id="o-clear">Protokoll leeren</button><span class="status" id="o-st" aria-live="polite"></span></div>
+  <div class="table-wrap"><table class="cmp" id="o-tab"><thead><tr><th>Nr.</th><th>Band</th><th>Umdr.</th><th>Rad</th><th>Lauffläche</th><th>Lager</th><th>Gewicht</th><th>Nase</th><th>Strecke</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section class="station" id="mittel" data-label="Mittelwert" data-yr="Übung" data-title="Mittelwerte bilden" data-sub="Drei Fahrten – ein Ergebnis">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Auswerten</p>
+    <h2>Drei Fahrten – ein Ergebnis</h2>
+    <p class="lead">Kein Flitzer fährt zweimal genau gleich weit. Darum misst man <b>drei Fahrten</b> und bildet den <b>Mittelwert</b>: alle Werte addieren und durch die Anzahl teilen. Runde auf zwei Nachkommastellen.</p>
+  </div>
+  <div id="ts-m"></div>
+</section>
+
+<section class="station" id="ideen" data-label="Ideen" data-yr="Übung" data-title="Probleme lösen" data-sub="Was hilft wogegen?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Verbesserungen</p>
+    <h2>Problem erkannt – Lösung gefunden</h2>
+    <p class="lead">Bei Probefahrten zeigen sich oft typische Probleme. Ordne jedem Problem eine Verbesserung zu.</p>
+  </div>
+  <div id="match-i"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Optimieren</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Das bewegte Objekt optimieren</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Fairer Versuch:</b> Nur eine Größe ändern, alle anderen gleich lassen. Jede Fahrt im Messprotokoll notieren.</li>
+        <li data-step>Mehrere Fahrten messen und den <b>Mittelwert</b> bilden: Summe ÷ Anzahl.</li>
+        <li data-step><b>Weniger Reibung</b> in den Lagern bringt viel: Achsen und Bohrungen glätten, Wachs, Strohhalm als Lager.</li>
+        <li data-step>Drehen die Räder durch, geht Energie verloren: <b>Gummiring</b> auf die Antriebsräder oder mehr Gewicht auf die Antriebsachse.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Hinweis</span><p>Der Simulator ist ein vereinfachtes Modell. Prüfe deine Ideen auch am echten Flitzer – auf demselben Boden und mit demselben Start.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-f'), [{id: 'f', name: 'fairer Versuch'}, {id: 'u', name: 'nicht fair'}], [
+  {t: 'Nur das Gummiband wird getauscht, alles andere bleibt gleich.', c: 'f'},
+  {t: 'Neue Räder und ein neues Gummiband gleichzeitig.', c: 'u', why: 'Man weiß nicht, was gewirkt hat.'},
+  {t: 'Alle Fahrten starten auf demselben Flur an derselben Linie.', c: 'f'},
+  {t: 'Eine Fahrt auf Teppich, die nächste auf Fliesen.', c: 'u', why: 'Der Boden ändert die Reibung.'},
+  {t: 'Jeder Flitzer wird immer 8 Umdrehungen aufgezogen.', c: 'f'},
+  {t: 'Mal 5, mal 10 Umdrehungen – je nach Lust.', c: 'u'},
+  {t: 'Drei Fahrten pro Einstellung, dann den Mittelwert bilden.', c: 'f'},
+  {t: 'Nur die beste Fahrt zählt, die anderen werden weggelassen.', c: 'u', why: 'So wird das Ergebnis geschönt.'}
+]);
+(() => {
+  const BAND = {d: ['dünn', 0.010], k: ['dick', 0.016], z: ['2 × dünn', 0.020]};
+  const LAGER = {r: ['rau', 0.09], g: ['geschliffen', 0.05], s: ['Strohhalm + Wachs', 0.03]};
+  const LAUF = {h: ['Holz', 0.5], g: ['Gummiring', 0.9]};
+  const st = {band: 'd', rad: 40, lauf: 'h', lager: 'g', nase: 'o'};
+  const turns = $('#o-turns'), mass = $('#o-mass'), track = $('#track'), status = $('#o-st'), tb = $('#o-tab tbody');
+  let n = 0, pos = 0, anim = null;
+  const X0 = 80, PX = 80;   // 80 px pro Meter, Strecke 0–10 m
+  function model() {
+    const T0 = BAND[st.band][1], T = +turns.value, d = st.rad / 1000, m = 0.12 + (+mass.value) / 1000, g = 9.81;
+    const Fr = LAGER[st.lager][1] * m * g, Fd = T0 / (d / 2), grip = LAUF[st.lauf][1] * m * 0.5 * g;
+    let E = 0.5 * T0 * T * 2 * Math.PI, note = '';
+    if (Fd < 1.2 * Fr) return {s: 0, note: '<b class="bad">Der Flitzer fährt nicht an.</b> Die Antriebskraft ist kleiner als die Reibung.'};
+    if (Fd > grip) { const lost = Math.min(0.6, (Fd - grip) / Fd); E *= 1 - lost; note = `<b class="bad">Die Räder drehen durch</b> – etwa ${numDE(lost * 100, 0)} % der Energie gehen verloren.`; }
+    const sp = T * Math.PI * d, W = Fr * sp;
+    let s = E <= W ? E / Fr : sp + (E - W) / Fr;
+    s *= st.nase === 'm' ? 0.97 : 0.9;
+    s *= 1 + (Math.random() - 0.5) * 0.08;
+    return {s: Math.min(s, 10), note};
+  }
+  function drawTrack(x) {
+    let g = `<path d="M${X0} 100H${X0 + 10 * PX}" stroke="var(--edge)" stroke-width="2"/>`;
+    for (let k = 0; k <= 10; k++) g += `<path d="M${X0 + k * PX} 100v${k % 5 ? 6 : 12}" stroke="var(--edge)" stroke-width="1.6"/><text x="${X0 + k * PX}" y="126" text-anchor="middle" style="font-family:var(--f-mono);font-size:12px;fill:var(--ink-2)">${k} m</text>`;
+    const r = st.rad / 4, cx = X0 + x * PX;
+    g += `<g transform="translate(${cx} 0)"><rect x="-70" y="${100 - 2 * r - 10}" width="70" height="8" fill="var(--wood)" stroke="var(--edge)" stroke-width="1.6"/>`;
+    if (st.nase === 'm') g += `<path d="M0 ${100 - 2 * r - 10}l18 4-18 4z" fill="var(--accent)" stroke="var(--edge)"/>`;
+    g += `<circle cx="-60" cy="${100 - r}" r="${r}" fill="var(--steel-2)" stroke="${st.lauf === 'g' ? '#222' : 'var(--edge)'}" stroke-width="${st.lauf === 'g' ? 3 : 1.6}"/><circle cx="-10" cy="${100 - r}" r="${r}" fill="var(--steel-2)" stroke="${st.lauf === 'g' ? '#222' : 'var(--edge)'}" stroke-width="${st.lauf === 'g' ? 3 : 1.6}"/></g>`;
+    track.innerHTML = g;
+  }
+  function vals() { $('#o-tv').textContent = turns.value; $('#o-mv').textContent = mass.value + ' g'; if (!anim) { pos = 0; drawTrack(0); } }
+  seg($('#o-band'), Object.entries(BAND).map(([k, v]) => [k, v[0]]), v => { st.band = v; vals(); });
+  seg($('#o-rad'), [['30', '30 mm'], ['40', '40 mm'], ['60', '60 mm']], v => { st.rad = +v; vals(); }, '40');
+  seg($('#o-lauf'), Object.entries(LAUF).map(([k, v]) => [k, v[0]]), v => { st.lauf = v; vals(); });
+  seg($('#o-lager'), Object.entries(LAGER).map(([k, v]) => [k, v[0]]), v => { st.lager = v; vals(); }, 'g');
+  seg($('#o-nase'), [['o', 'ohne'], ['m', 'mit Nase']], v => { st.nase = v; vals(); });
+  turns.addEventListener('input', vals); mass.addEventListener('input', vals);
+  $('#o-go').addEventListener('click', () => {
+    if (anim) return;
+    const r = model(); n++;
+    tb.insertAdjacentHTML('afterbegin', `<tr><td>${n}</td><td>${BAND[st.band][0]}</td><td>${turns.value}</td><td>${st.rad} mm</td><td>${LAUF[st.lauf][0]}</td><td>${LAGER[st.lager][0]}</td><td>${mass.value} g</td><td>${st.nase === 'm' ? 'mit' : 'ohne'}</td><td><b>${numDE(r.s, 2)} m</b></td></tr>`);
+    const done = () => { anim = null; drawTrack(r.s); status.innerHTML = `Fahrt ${n}: <b>${numDE(r.s, 2)} m</b>${r.note ? ' · ' + r.note : ''}`; };
+    if (RM.matches || r.s === 0) return done();
+    const t0 = performance.now(), dur = 600 + r.s * 250;
+    const step = t => { const k = Math.min(1, (t - t0) / dur), e = 1 - (1 - k) * (1 - k); drawTrack(r.s * e); if (k < 1) anim = requestAnimationFrame(step); else done(); };
+    status.textContent = 'Der Flitzer fährt …';
+    anim = requestAnimationFrame(step);
+  });
+  $('#o-clear').addEventListener('click', () => { tb.innerHTML = ''; n = 0; status.textContent = ''; });
+  vals();
+})();
+taskSet($('#ts-m'), () => {
+  const base = randInt(20, 55) / 10, v = [0, 1, 2].map(() => Math.round((base + (Math.random() - 0.5) * 0.6) * 10) / 10);
+  const mean = Math.round(v.reduce((a, b) => a + b, 0) / 3 * 100) / 100;
+  return {q: `Fahrt 1: <b>${numDE(v[0], 1)} m</b> · Fahrt 2: <b>${numDE(v[1], 1)} m</b> · Fahrt 3: <b>${numDE(v[2], 1)} m</b>`, fields: [{l: 'Mittelwert', a: mean, unit: 'm', tol: 0.011}], hint: `Addiere: ${v.map(x => numDE(x, 1)).join(' + ')} = ${numDE(v[0] + v[1] + v[2], 1)} m. Teile dann durch 3.`, key: v.join()};
+}, {n: 4});
+matcher($('#match-i'), [['Räder schleifen an der Grundplatte', 'Unterlegscheiben als Abstandshalter'], ['Flitzer fährt im Kreis', 'Lagerbohrungen parallel bohren'], ['Räder drehen beim Start durch', 'Gummiring auf die Antriebsräder'], ['Achse dreht sich schwer', 'Bohrung glätten und Wachs auftragen'], ['Flitzer fährt nicht an', 'kräftigeres Gummiband oder kleinere Räder'], ['Flitzer kippt in Kurven', 'Schwerpunkt tiefer legen']]);
+mcQuiz($('#quiz'), [
+  {q: 'Wann ist ein Versuch fair?', a: ['wenn nur eine Größe geändert wird', 'wenn alles gleichzeitig geändert wird', 'wenn nur die beste Fahrt zählt', 'wenn jeder einen anderen Boden nimmt'], ok: 0},
+  {q: 'Wie berechnest du den Mittelwert von 3,0 m, 3,4 m und 3,2 m?', a: ['(3,0 + 3,4 + 3,2) : 3 = 3,2 m', '3,4 − 3,0 = 0,4 m', '3,0 · 3,4 · 3,2', '3,4 m, weil das die beste Fahrt ist'], ok: 0},
+  {q: 'Was hilft, wenn die Räder durchdrehen?', a: ['Gummiring auf die Antriebsräder', 'noch stärkeres Gummiband', 'kleinere Räder', 'Wachs auf die Räder'], ok: 0},
+  {q: 'Warum fährt der Flitzer mit Strohhalm-Lagern weiter?', a: ['Die Reibung in den Lagern ist kleiner.', 'Er wird schwerer.', 'Das Gummiband wird länger.', 'Die Räder werden größer.'], ok: 0},
+  {q: 'Was macht eine „Nase“ vorn am Flitzer?', a: ['Sie verringert den Luftwiderstand.', 'Sie macht ihn schwerer.', 'Sie verhindert das Durchdrehen.', 'Sie hält das Gummiband.'], ok: 0},
+  {q: 'Warum misst man mehrere Fahrten?', a: ['Weil jede Fahrt etwas anders ausfällt.', 'Weil es mehr Spaß macht.', 'Weil das Gummiband sonst reißt.', 'Weil eine Fahrt verboten ist.'], ok: 0}
+]);
+</script>

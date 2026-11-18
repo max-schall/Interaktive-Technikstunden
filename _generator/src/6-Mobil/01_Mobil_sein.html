@@ -1,0 +1,157 @@
+<!--
+title: Mobil sein
+short: Mobil sein
+time: 1–2 Unterrichtsstunden
+q: Was braucht ein Fahrzeug, damit es sich gut bewegt?
+facts: Mobilität ist ein Grundbedürfnis: Personen und Waren müssen von Ort zu Ort | Antriebe: Muskelkraft, Wind, Verbrennungsmotor, Elektromotor, gespeicherte Energie (Feder, Gummiband) | Rollen statt Schieben: Rollreibung ist viel kleiner als Gleitreibung | Bauteile eines Fahrzeugs: Fahrgestell, Achse, Rad, Lager, Antrieb | Achse und Lager: Die Achse muss sich leicht im Lager drehen; das Lager ist etwas größer als die Achse
+inter: Fahrzeuge nach Antrieb sortieren · Schieben oder Rollen (Kraftvergleich) · Fahrzeug erkunden und Teile finden · Lückentext Achse und Lager · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Mobil sein – das bewegte Objekt</p>
+      <h1>Mobil sein</h1>
+      <p class="lead">Mit dem Rad zur Schule, mit dem Bus in die Stadt, mit dem Lkw kommt das Essen in den Supermarkt. Ohne Fahrzeuge stünde unser Alltag still. In dieser Reihe baust du dein <b>eigenes Fahrzeug</b>.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum hat fast jedes Fahrzeug an Land Räder?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Was braucht ein Fahrzeug, damit es sich gut bewegt?</p></div>
+      <div class="controls"><button class="btn primary" data-go="antrieb">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="antrieb" data-label="Antriebe" data-yr="Einstieg" data-title="Was treibt an?" data-sub="Antriebe von Fahrzeugen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Antriebe</p>
+    <h2>Was treibt das Fahrzeug an?</h2>
+    <p class="lead">Jedes Fahrzeug braucht <b>Energie</b>, um sich zu bewegen. Sie kommt aus den Muskeln, vom Wind, aus Kraftstoff, aus einem Akku – oder aus einer gespannten Feder oder einem Gummiband. Sortiere.</p>
+  </div>
+  <div id="sort-a"></div>
+</section>
+
+<section class="station" id="rollen" data-label="Rollen" data-yr="Erarbeitung" data-title="Schieben oder rollen?" data-sub="Gleitreibung und Rollreibung">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Reibung</p>
+    <h2>Schieben oder rollen?</h2>
+    <p class="lead">Eine Kiste über den Boden zu <b>schieben</b> ist mühsam: Die <b>Gleitreibung</b> bremst. Auf Rädern <b>rollt</b> sie fast von allein – die <b>Rollreibung</b> ist viel kleiner. Vergleiche die Kräfte.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 440 260" id="rsvg" role="img" aria-label="Kiste schieben und rollen"></svg></div>
+    <div>
+      <div class="tk-row"><span id="r-mode"></span></div>
+      <div class="tk-row"><label>Masse der Kiste <input type="range" id="r-m" min="2" max="40" step="1" value="10"> <span class="tk-val" id="r-mv"></span></label></div>
+      <div class="tk-readout" id="r-out"></div>
+      <p class="status" id="r-st"></p>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="teile" data-label="Bauteile" data-yr="Erarbeitung" data-title="Bauteile eines Fahrzeugs" data-sub="Fahrgestell, Achse, Rad, Lager">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Bauteile</p>
+    <h2>Woraus besteht ein Fahrzeug?</h2>
+    <p class="lead">So sieht das Fahrzeug aus, das du in dieser Reihe baust – ein <b>Gummiflitzer</b>. Tippe die Bauteile an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 460 260" id="fsvg" role="img" aria-label="Gummiflitzer von der Seite und von oben">
+      <text x="10" y="18" style="font-family:var(--f-mono);font-size:12px;font-weight:600;fill:var(--ink-2)">DRAUFSICHT</text>
+      <g data-part="platte"><rect x="80" y="40" width="300" height="90" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="lager"><rect x="94" y="30" width="16" height="110" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="1.6"/><rect x="350" y="30" width="16" height="110" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="1.6"/></g>
+      <g data-part="achse"><rect x="98" y="18" width="8" height="134" fill="#E7C99A" stroke="var(--edge)" stroke-width="1.6"/><rect x="354" y="18" width="8" height="134" fill="#E7C99A" stroke="var(--edge)" stroke-width="1.6"/></g>
+      <g data-part="rad"><rect x="84" y="6" width="36" height="12" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="1.6"/><rect x="84" y="152" width="36" height="12" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="1.6"/><rect x="340" y="6" width="36" height="12" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="1.6"/><rect x="340" y="152" width="36" height="12" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="1.6"/></g>
+      <g data-part="haken"><path d="M240 76h16v18h-16z" fill="var(--steel)" stroke="var(--edge)" stroke-width="1.6"/></g>
+      <g data-part="gummi"><path d="M248 85L106 80M248 85L106 92" fill="none" stroke="var(--accent)" stroke-width="3"/></g>
+      <text x="10" y="200" style="font-family:var(--f-mono);font-size:12px;font-weight:600;fill:var(--ink-2)">SEITENANSICHT</text>
+      <rect x="80" y="206" width="300" height="10" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/>
+      <circle cx="102" cy="226" r="22" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><circle cx="358" cy="226" r="22" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/>
+      <circle cx="102" cy="226" r="4" fill="#E7C99A" stroke="var(--edge)"/><circle cx="358" cy="226" r="4" fill="#E7C99A" stroke="var(--edge)"/>
+      <path d="M20 249H440" stroke="var(--edge)" stroke-width="1.6"/>
+    </svg></div>
+    <div><div class="tk-row"><span id="f-mode"></span></div><div class="box" id="f-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="lager" data-label="Lager" data-yr="Übung" data-title="Achse und Lager" data-sub="Leichtgängig, aber nicht wackelig">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Achse und Lager</p>
+    <h2>Die Achse muss sich leicht drehen</h2>
+    <p class="lead">Beim Gummiflitzer sitzen die Räder fest auf der Achse. Die Achse dreht sich in einer <b>Bohrung</b> – dem <b>Lager</b>. Ist die Bohrung zu eng, klemmt die Achse; ist sie viel zu groß, wackelt sie.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 180" role="img" aria-label="Achse im Lager: zu eng, passend, zu weit">
+      <g style="font-family:var(--f-mono);font-size:13px;font-weight:600;fill:var(--ink)" text-anchor="middle">
+        <rect x="20" y="30" width="110" height="110" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/><circle cx="75" cy="85" r="26" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><circle cx="75" cy="85" r="28" fill="#E7C99A" stroke="var(--bad)" stroke-width="3"/><text x="75" y="165">zu eng: klemmt</text>
+        <rect x="155" y="30" width="110" height="110" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/><circle cx="210" cy="85" r="29" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><circle cx="210" cy="85" r="26" fill="#E7C99A" stroke="var(--good)" stroke-width="3"/><text x="210" y="165">passend</text>
+        <rect x="290" y="30" width="110" height="110" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/><circle cx="345" cy="85" r="42" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><circle cx="345" cy="111" r="26" fill="#E7C99A" stroke="var(--bad)" stroke-width="3"/><text x="345" y="165">zu weit: wackelt</text>
+      </g>
+    </svg></div>
+    <div><div id="cloze-l"></div></div>
+  </div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Mobil sein</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Mobil sein</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Fahrzeuge befördern <b>Personen</b> und <b>Waren</b>. Sie brauchen einen <b>Antrieb</b>: Muskelkraft, Wind, Motor oder gespeicherte Energie (Feder, Gummiband).</li>
+        <li data-step><b>Rollen statt Schieben:</b> Die Rollreibung ist viel kleiner als die Gleitreibung. Darum haben Fahrzeuge Räder.</li>
+        <li data-step>Bauteile: <b>Fahrgestell</b> (Grundplatte), <b>Achsen</b>, <b>Räder</b>, <b>Lager</b> und <b>Antrieb</b>.</li>
+        <li data-step>Die Bohrung für das Lager ist etwas <b>größer</b> als die Achse – so dreht sich die Achse leicht, ohne zu wackeln.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Ziehe ein Buch mit einem Gummiband über den Tisch. Lege es dann auf runde Stifte und ziehe erneut. Beobachte, wie stark sich das Gummiband dehnt.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-a'), [{id: 'm', name: 'Muskelkraft'}, {id: 'w', name: 'Wind'}, {id: 'k', name: 'Kraftstoff'}, {id: 'e', name: 'Strom (Akku/Netz)'}, {id: 's', name: 'gespeichert (Feder/Gummi)'}], [
+  {t: 'Fahrrad', c: 'm'}, {t: 'Ruderboot', c: 'm'}, {t: 'Tretroller', c: 'm'}, {t: 'Segelboot', c: 'w'}, {t: 'Strandsegler', c: 'w'},
+  {t: 'Lkw mit Dieselmotor', c: 'k'}, {t: 'Linienflugzeug', c: 'k'}, {t: 'E-Scooter', c: 'e'}, {t: 'Straßenbahn', c: 'e'},
+  {t: 'Aufziehauto', c: 's', why: 'Eine gespannte Feder treibt es an.'}, {t: 'Gummiflitzer', c: 's'}
+]);
+(() => {
+  const svg = $('#rsvg'), out = $('#r-out'), st = $('#r-st'), inp = $('#r-m');
+  let mode = 'g';
+  function draw() {
+    const m = +inp.value, mu = mode === 'g' ? 0.45 : 0.02, F = mu * m * 9.81, Fg = 0.45 * m * 9.81;
+    $('#r-mv').textContent = m + ' kg';
+    const len = Math.min(260, 20 + F * 0.9);
+    let g = `<path d="M10 200H430" stroke="var(--edge)" stroke-width="2"/>`;
+    if (mode === 'g') g += `<path d="M10 200H430" stroke="var(--edge)" stroke-width="1" stroke-dasharray="2 6" transform="translate(0 6)"/><rect x="250" y="120" width="110" height="80" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/>`;
+    else g += `<rect x="250" y="110" width="110" height="68" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/><circle cx="275" cy="188" r="12" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><circle cx="335" cy="188" r="12" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/>`;
+    g += `<path d="M250 150H${250 - len}" stroke="var(--accent)" stroke-width="6"/><path d="M${250 - len - 2} 150l14 -10v20z" fill="var(--accent)"/>`;
+    g += `<text x="${250 - len / 2}" y="138" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;font-size:15px;fill:var(--accent)">${numDE(F, 1)} N</text>`;
+    g += `<text x="305" y="${mode === 'g' ? 165 : 150}" text-anchor="middle" style="font-family:var(--f-mono);font-weight:700;font-size:15px;fill:var(--ink)">${m} kg</text>`;
+    svg.innerHTML = g;
+    readout(out, [['Reibungsart', mode === 'g' ? 'Gleiten' : 'Rollen'], ['nötige Zugkraft', numDE(F, 1) + ' N'], ['Rollen spart', numDE((1 - 0.02 / 0.45) * 100, 0) + ' %']]);
+    st.innerHTML = mode === 'g' ? 'Beim Schieben reiben die Flächen aneinander. Du brauchst viel Kraft.' : `Auf Rädern brauchst du nur etwa <b>ein Zwanzigstel</b> der Kraft (statt ${numDE(Fg, 0)} N nur ${numDE(F, 1)} N).`;
+  }
+  seg($('#r-mode'), [['g', 'Schieben (Gleiten)'], ['r', 'Rollen (Räder)']], v => { mode = v; draw(); });
+  inp.addEventListener('input', draw);
+})();
+explorer($('#fsvg'), $('#f-panel'), [
+  {id: 'platte', n: 'Grundplatte (Fahrgestell)', t: 'Trägt alle anderen Teile. Beim Gummiflitzer aus Sperrholz, ca. 200 × 80 mm.'},
+  {id: 'achse', n: 'Achse', t: 'Rundstab, auf dem die Räder fest sitzen. Die hintere Achse wird vom Gummiband gedreht – sie ist die Antriebsachse.'},
+  {id: 'rad', n: 'Rad', t: 'Überträgt die Drehung auf den Boden. Runde, glatte Räder rollen leichter.'},
+  {id: 'lager', n: 'Lager', t: 'Bohrung in einer Leiste (oder ein Strohhalm), in der sich die Achse dreht.'},
+  {id: 'gummi', n: 'Gummiband (Antrieb)', t: 'Wird um die Hinterachse gewickelt und speichert dabei Energie. Beim Loslassen dreht es die Achse.'},
+  {id: 'haken', n: 'Haken', t: 'Hier wird das Gummiband vorn eingehängt.'}
+], {modeRoot: $('#f-mode'), label: 'Bauteil', intro: 'Tippe ein Bauteil des Gummiflitzers an.'});
+cloze($('#cloze-l'), 'Die Achse dreht sich im {Lager|Rad|Haken}. Die Bohrung muss etwas {größer|kleiner|länger} sein als die Achse. Ist sie zu eng, {klemmt|wackelt|bricht} die Achse. Ist sie viel zu weit, {wackelt|klemmt|glänzt} das Rad, und das Fahrzeug fährt nicht geradeaus. Ein Tropfen Wachs oder ein Strohhalm als Lager verringert die {Reibung|Masse|Geschwindigkeit}.');
+mcQuiz($('#quiz'), [
+  {q: 'Warum haben Fahrzeuge Räder?', a: ['Die Rollreibung ist viel kleiner als die Gleitreibung.', 'Räder sehen schöner aus.', 'Räder machen das Fahrzeug schwerer.', 'Ohne Räder gibt es keinen Motor.'], ok: 0},
+  {q: 'Welcher Antrieb nutzt gespeicherte Energie?', a: ['Gummiband im Gummiflitzer', 'Segel', 'Pedale', 'Dieselmotor'], ok: 0},
+  {q: 'Was ist das Lager beim Gummiflitzer?', a: ['die Bohrung, in der sich die Achse dreht', 'die Grundplatte', 'das Gummiband', 'der Haken'], ok: 0},
+  {q: 'Wie groß sollte die Lagerbohrung sein?', a: ['etwas größer als die Achse', 'genau so groß wie die Achse', 'kleiner als die Achse', 'doppelt so groß'], ok: 0},
+  {q: 'Welche Achse treibt den Gummiflitzer an?', a: ['die Achse, um die das Gummiband gewickelt ist', 'beide Achsen gleichzeitig', 'keine Achse', 'die vordere Achse immer'], ok: 0},
+  {q: 'Wofür braucht man Mobilität?', a: ['um Personen und Waren zu befördern', 'nur für Urlaub', 'nur für Rennen', 'gar nicht'], ok: 0}
+]);
+</script>

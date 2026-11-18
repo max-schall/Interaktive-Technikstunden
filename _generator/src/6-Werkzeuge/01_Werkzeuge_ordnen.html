@@ -1,0 +1,130 @@
+<!--
+title: Werkzeuge nach ihrer Aufgabe ordnen
+short: Werkzeuge ordnen
+time: 1–2 Unterrichtsstunden
+q: Wie lassen sich die vielen Werkzeuge der Werkstatt sinnvoll ordnen?
+facts: Werkzeuge nach ihrer Aufgabe ordnen: Messen und Anreißen, Spannen, Trennen, Fügen, Umformen | Trennen: Teile werden abgetrennt oder Späne abgehoben (Säge, Feile, Bohrer, Schere) | Fügen: Teile werden verbunden (Hammer und Nagel, Schraubendreher, Schraubzwinge beim Leimen) | Umformen: Form wird verändert, ohne dass Material entfernt wird (Biegen mit Zange oder im Schraubstock) | Für jede Aufgabe und jeden Werkstoff das passende Werkzeug wählen
+inter: Werkzeuge nach Aufgabe sortieren · Trennwerkzeuge und Einsatz zuordnen · Welches Werkzeug passt? (Situationen) · Lückentext · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Werkzeuge und Maschinen</p>
+      <h1>Werkzeuge nach ihrer Aufgabe ordnen</h1>
+      <p class="lead">Im Werkzeugschrank hängen Sägen, Feilen, Zangen, Hämmer und vieles mehr. Wer weiß, <b>wofür</b> ein Werkzeug gedacht ist, findet schnell das richtige – und arbeitet sicherer.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Du willst ein Brett kürzen, zwei Teile verbinden und einen Draht zu einem Haken biegen. Welche Werkzeuge holst du dir?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie lassen sich die vielen Werkzeuge der Werkstatt sinnvoll ordnen?</p></div>
+      <div class="controls"><button class="btn primary" data-go="gruppen">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="gruppen" data-label="Gruppen" data-yr="Erarbeitung" data-title="Werkzeuge ordnen" data-sub="Nach ihrer Aufgabe">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Werkzeuggruppen</p>
+    <h2>Was macht das Werkzeug mit dem Werkstück?</h2>
+    <p class="lead">Werkzeuge ordnet man nach ihrer <b>Aufgabe</b>: <b>Messen und Anreißen</b> bereitet die Arbeit vor, beim <b>Trennen</b> wird Material abgetrennt, beim <b>Fügen</b> werden Teile verbunden, beim <b>Umformen</b> wird die Form verändert, ohne dass Material verloren geht.</p>
+  </div>
+  <div id="sort-g"></div>
+</section>
+
+<section class="station" id="trennen" data-label="Trennen" data-yr="Erarbeitung" data-title="Werkzeuge zum Trennen" data-sub="Sägen, Feilen, Bohren, Schneiden">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Trennen</p>
+    <h2>Werkzeuge zum Trennen</h2>
+    <p class="lead">Trennwerkzeuge haben eine <b>Schneide</b>. Sägen, Feilen und Bohrer heben dabei <b>Späne</b> ab (Zerspanen). Scheren und Seitenschneider trennen ohne Späne. Finde zu jedem Werkzeug seinen Einsatz.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 300" role="img" aria-label="Trennwerkzeuge: Feinsäge, Laubsäge, Feile, Bohrer, Blechschere">
+      <g stroke="var(--edge)" stroke-width="2">
+        <rect x="20" y="30" width="180" height="34" fill="var(--steel)"/><path d="M20 64l6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8" fill="none"/>
+        <rect x="200" y="22" width="16" height="50" fill="var(--steel-2)"/><path d="M216 30h46a10 10 0 0 1 10 10v16a10 10 0 0 1-10 10h-46z" fill="var(--wood)"/>
+        <path d="M262 92H392V212H262" fill="none" stroke-width="4"/><path d="M262 92V212" stroke-width="1.4"/><rect x="252" y="212" width="20" height="50" fill="var(--wood)"/>
+        <rect x="30" y="130" width="150" height="16" fill="var(--steel)"/><path d="M40 130l6 16M54 130l6 16M68 130l6 16M82 130l6 16M96 130l6 16M110 130l6 16M124 130l6 16M138 130l6 16M152 130l6 16" stroke-width="1"/><path d="M180 134h20v8h-20z" fill="var(--steel-2)"/><rect x="200" y="128" width="40" height="20" fill="var(--wood)"/>
+        <path d="M30 210h110l14 6-14 6H30z" fill="var(--steel)"/><path d="M50 210l10 12M70 210l10 12M90 210l10 12M110 210l10 12" stroke-width="1"/>
+        <path d="M190 230l60-25 6 10-58 22zM190 230l60 25 6-10-58-22z" fill="var(--steel)"/><path d="M190 230l-40-40h-14l42 46M190 230l-40 40h-14l42-46" fill="var(--accent)" stroke-width="1.6"/>
+      </g>
+      <g style="font-family:var(--f-mono);font-weight:600;font-size:15px;fill:var(--ink)">
+        <text x="20" y="20">Feinsäge</text><text x="290" y="82">Laubsäge</text><text x="30" y="170">Feile</text><text x="30" y="245">Bohrer</text><text x="150" y="290">Blechschere</text>
+      </g>
+    </svg></div>
+    <div><div id="match-t"></div></div>
+  </div>
+</section>
+
+<section class="station" id="auswahl" data-label="Auswahl" data-yr="Übung" data-title="Welches Werkzeug passt?" data-sub="Aufgaben aus der Werkstatt">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Werkzeug wählen</p>
+    <h2>Welches Werkzeug passt?</h2>
+    <p class="lead">Jede Aufgabe braucht das passende Werkzeug – und es muss zum <b>Werkstoff</b> passen. Eine Holzsäge wird in Metall schnell stumpf.</p>
+  </div>
+  <div id="quiz-a"></div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Kiste" data-yr="Material M1" data-title="Unsere Werkzeugkiste" data-sub="Echte Werkzeuge ordnen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Unsere Werkzeugkiste</h2>
+    <p class="lead">Arbeitet zu zweit mit der Werkzeugkiste des Technikraums.</p>
+  </div>
+  <div class="cols-3">
+    <div class="box"><span class="tag info">Schritt 1</span><p>Legt fünf Felder aus Papier aus: <b>Messen und Anreißen</b>, <b>Spannen</b>, <b>Trennen</b>, <b>Fügen</b>, <b>Umformen</b>. Ordnet jedes Werkzeug einem Feld zu.</p></div>
+    <div class="box"><span class="tag info">Schritt 2</span><p>Manche Werkzeuge passen in zwei Felder, z. B. die <b>Kombizange</b> (biegen und abkneifen). Legt sie auf die Grenze und begründet.</p></div>
+    <div class="box"><span class="tag info">Schritt 3</span><p>Erstellt eine Werkzeugliste mit Namen, Gruppe und einem Beispiel für den Einsatz. Hängt sie an den Werkzeugschrank.</p></div>
+  </div>
+  <div class="box mt"><span class="tag lim">Sicherheit</span><p>Werkzeuge mit Schneiden immer mit der Spitze nach unten tragen und nie in die Hosentasche stecken. Beschädigtes Werkzeug sofort melden.</p></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Werkzeuge ordnen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Werkzeuge nach ihrer Aufgabe</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Messen und Anreißen:</b> Maße bestimmen und auf das Werkstück übertragen (Maßstab, Anschlagwinkel, Bleistift, Reißnadel).</li>
+        <li data-step><b>Spannen:</b> Werkstück festhalten (Schraubstock, Bankzange, Schraubzwinge).</li>
+        <li data-step><b>Trennen:</b> Material abtrennen, oft mit Spänen (Säge, Feile, Bohrer, Schere, Seitenschneider).</li>
+        <li data-step><b>Fügen:</b> Teile verbinden (Hammer und Nagel, Schraubendreher, Schraubzwinge beim Leimen).</li>
+        <li data-step><b>Umformen:</b> Form ändern, ohne Material zu entfernen (Draht biegen mit der Zange, Blech im Schraubstock biegen).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Merke</span><p>Das Werkzeug muss zur <b>Aufgabe</b> und zum <b>Werkstoff</b> passen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Lückentext und Quiz</h2></div>
+  <div id="cloze-u"></div>
+  <h3 class="mt">Quiz</h3>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-g'), [{id: 'm', name: 'Messen/Anreißen'}, {id: 's', name: 'Spannen'}, {id: 't', name: 'Trennen'}, {id: 'f', name: 'Fügen'}, {id: 'u', name: 'Umformen'}], [
+  {t: 'Stahlmaßstab', c: 'm'}, {t: 'Anschlagwinkel', c: 'm'}, {t: 'Reißnadel', c: 'm', why: 'Damit werden Linien auf Metall angerissen.'},
+  {t: 'Schraubstock', c: 's'}, {t: 'Schraubzwinge', c: 's', why: 'Sie hält Teile fest – z. B. beim Leimen oder auf dem Tisch.'},
+  {t: 'Feinsäge', c: 't'}, {t: 'Feile', c: 't'}, {t: 'Bohrer', c: 't', why: 'Er hebt Späne ab – also Trennen.'}, {t: 'Seitenschneider', c: 't'},
+  {t: 'Hammer und Nagel', c: 'f'}, {t: 'Schraubendreher', c: 'f'}, {t: 'Leimflasche', c: 'f'},
+  {t: 'Rundzange', c: 'u', why: 'Mit ihr biegt man Drahtösen.'}, {t: 'Biegevorrichtung', c: 'u'}
+]);
+matcher($('#match-t'), [['Feinsäge', 'gerade Schnitte in Holzleisten'], ['Laubsäge', 'Kurven und Innenausschnitte in dünnem Holz'], ['Bügelsäge', 'Metallrohre und Profile ablängen'], ['Feile', 'Kanten glätten und Maß genau abtragen'], ['Bohrer', 'runde Löcher herstellen'], ['Blechschere', 'dünnes Blech schneiden']]);
+mcQuiz($('#quiz-a'), [
+  {q: 'Du willst ein Rundholz auf 120 mm kürzen.', a: ['Feinsäge', 'Laubsäge', 'Rundzange', 'Schraubendreher'], ok: 0, why: 'Die Feinsäge schneidet gerade und sauber.'},
+  {q: 'Aus einem Sperrholzbrett soll ein Stern ausgesägt werden.', a: ['Laubsäge', 'Fuchsschwanz', 'Bügelsäge', 'Blechschere'], ok: 0, why: 'Die Laubsäge kann enge Kurven sägen.'},
+  {q: 'Ein Draht soll zu einer Öse gebogen werden.', a: ['Rundzange', 'Seitenschneider', 'Feile', 'Hammer'], ok: 0, why: 'Die runden Backen formen die Öse – das ist Umformen.'},
+  {q: 'Zwei Holzteile werden verleimt. Was hält sie, bis der Leim trocken ist?', a: ['Schraubzwinge', 'Anschlagwinkel', 'Feile', 'Reißnadel'], ok: 0},
+  {q: 'Auf einer Aluminiumplatte soll eine Linie angerissen werden.', a: ['Reißnadel', 'Filzstift', 'Kreide', 'Bleistift'], ok: 0, why: 'Die Reißnadel ritzt eine feine, haltbare Linie in Metall.'},
+  {q: 'Ein Metallrohr soll gekürzt werden.', a: ['Bügelsäge', 'Laubsäge mit Holzblatt', 'Feinsäge', 'Rundzange'], ok: 0, why: 'Die Bügelsäge hat feine Zähne für Metall.'}
+]);
+cloze($('#cloze-u'), 'Werkzeuge ordnet man nach ihrer {Aufgabe|Farbe|Größe}. Beim {Trennen|Fügen|Umformen} wird Material abgetrennt, oft entstehen dabei {Späne|Funken|Tropfen}. Beim {Fügen|Trennen|Messen} werden Teile verbunden. Beim {Umformen|Trennen|Anreißen} ändert sich die Form, ohne dass Material {entfernt|hinzugefügt|gefärbt} wird.');
+mcQuiz($('#quiz'), [
+  {q: 'Zu welcher Gruppe gehört die Feile?', a: ['Trennen', 'Fügen', 'Umformen', 'Spannen'], ok: 0},
+  {q: 'Was passiert beim Umformen?', a: ['Die Form ändert sich, Material bleibt erhalten.', 'Material wird abgetrennt.', 'Teile werden verleimt.', 'Ein Maß wird übertragen.'], ok: 0},
+  {q: 'Welches Werkzeug dient zum Fügen?', a: ['Schraubendreher', 'Feinsäge', 'Anschlagwinkel', 'Raspel'], ok: 0},
+  {q: 'Warum passt eine Holzsäge nicht für Metall?', a: ['Ihre Zähne sind zu grob und werden schnell stumpf.', 'Sie ist zu leicht.', 'Sie ist zu kurz.', 'Sie hat keinen Griff.'], ok: 0},
+  {q: 'Was haben Säge, Feile und Bohrer gemeinsam?', a: ['Sie heben Späne ab.', 'Sie verbinden Teile.', 'Sie biegen Material.', 'Sie messen Längen.'], ok: 0},
+  {q: 'Wie trägt man ein Werkzeug mit Schneide?', a: ['Spitze nach unten, nicht in der Hosentasche', 'in der Hosentasche', 'Spitze nach oben', 'zwischen den Zähnen'], ok: 0}
+]);
+</script>

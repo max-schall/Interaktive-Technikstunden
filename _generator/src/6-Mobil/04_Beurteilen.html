@@ -1,0 +1,115 @@
+<!--
+title: Ergebnisse vorstellen und beurteilen
+short: Vorstellen und beurteilen
+time: 2 Unterrichtsstunden
+q: Wie stelle ich mein Fahrzeug vor, und wie beurteile ich es gerecht?
+facts: Beurteilungskriterien: Funktion, Verarbeitung, Gestaltung, Arbeitsweise | Beurteilungsbogen: Kriterien vorher festlegen, Punkte vergeben, Selbst- und Fremdeinschätzung vergleichen | Wettbewerb auswerten: Mittelwert aus drei Fahrten, Rangliste | Informationen austauschen: kurze Präsentation mit Ziel, Bau, Verbesserungen und Ergebnis | Feedback: freundlich, konkret, mit Verbesserungsvorschlag
+inter: Kriterien sortieren · Beurteilungsbogen ausfüllen · Rennen auswerten · Präsentation ordnen · Feedback richtig/falsch · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Mobil sein – das bewegte Objekt</p>
+      <h1>Ergebnisse vorstellen und beurteilen</h1>
+      <p class="lead">Die Flitzer sind fertig. Jetzt zählt nicht nur, wer am weitesten fährt: Ist das Fahrzeug sauber gebaut? Habt ihr gut geplant und sicher gearbeitet? Und könnt ihr anderen erklären, <b>was</b> ihr verbessert habt?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Ein Flitzer fährt am weitesten, hat aber scharfe Kanten und schiefe Räder. Ist er der beste?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie stelle ich mein Fahrzeug vor, und wie beurteile ich es gerecht?</p></div>
+      <div class="controls"><button class="btn primary" data-go="kriterien">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="kriterien" data-label="Kriterien" data-yr="Erarbeitung" data-title="Kriterien festlegen" data-sub="Woran erkennt man ein gutes Werkstück?">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Kriterien</p>
+    <h2>Woran erkennt man ein gutes Werkstück?</h2>
+    <p class="lead">Gerecht beurteilen kann man nur mit <b>Kriterien</b>, die vorher feststehen. Sie lassen sich vier Bereichen zuordnen. Sortiere.</p>
+  </div>
+  <div id="sort-k"></div>
+</section>
+
+<section class="station" id="bogen" data-label="Bogen" data-yr="Übung" data-title="Der Beurteilungsbogen" data-sub="Selbst- und Fremdeinschätzung">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Beurteilungsbogen</p>
+    <h2>Der Beurteilungsbogen</h2>
+    <p class="lead">Bewerte deinen Flitzer selbst und lass ihn von einer Partnerin oder einem Partner bewerten: 1 Punkt = trifft kaum zu, 5 Punkte = trifft voll zu. Wo weichen eure Einschätzungen ab? Sprecht darüber.</p>
+  </div>
+  <div id="rate"></div>
+</section>
+
+<section class="station" id="rennen" data-label="Rennen" data-yr="Übung" data-title="Das Rennen auswerten" data-sub="Mittelwert und Rangliste">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Wettbewerb</p>
+    <h2>Das Rennen auswerten</h2>
+    <p class="lead">Jeder Flitzer ist dreimal gefahren. Berechne die Mittelwerte und bestimme die Platzierung.</p>
+  </div>
+  <div class="table-wrap"><table class="cmp"><thead><tr><th>Team</th><th>Fahrt 1</th><th>Fahrt 2</th><th>Fahrt 3</th></tr></thead><tbody>
+    <tr><td>Blitz</td><td>4,2 m</td><td>4,5 m</td><td>4,2 m</td></tr>
+    <tr><td>Rakete</td><td>5,1 m</td><td>3,0 m</td><td>4,8 m</td></tr>
+    <tr><td>Schnecke</td><td>4,4 m</td><td>4,6 m</td><td>4,5 m</td></tr>
+  </tbody></table></div>
+  <div id="ts-r" class="mt"></div>
+</section>
+
+<section class="station" id="praesent" data-label="Präsentieren" data-yr="Erarbeitung" data-title="Informationen austauschen" data-sub="Das Fahrzeug vorstellen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Präsentieren</p>
+    <h2>Stellt euer Fahrzeug vor</h2>
+    <p class="lead">In zwei Minuten sollen alle verstehen, was ihr gebaut und herausgefunden habt. Ordnet die Teile einer kurzen Präsentation. Darunter: Wie gibt man gutes Feedback?</p>
+  </div>
+  <div id="order-p"></div>
+  <h3 class="mt">Gutes Feedback?</h3>
+  <div id="tf-f"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Beurteilen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Ein Werkstück beurteilen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Kriterien vorher festlegen: <b>Funktion</b>, <b>Verarbeitung</b>, <b>Gestaltung</b>, <b>Arbeitsweise</b>.</li>
+        <li data-step>Im <b>Beurteilungsbogen</b> Punkte vergeben; Selbst- und Fremdeinschätzung vergleichen.</li>
+        <li data-step>Beim Wettbewerb zählt der <b>Mittelwert</b> mehrerer Fahrten.</li>
+        <li data-step>Präsentation: Ziel – Bau – Verbesserungen – Ergebnis – Ausblick. Feedback ist freundlich, konkret und enthält einen Vorschlag.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Tipp</span><p>Feedback-Regel „Lob – Frage – Vorschlag“: Was ist gelungen? Was ist mir unklar? Was würde ich noch ausprobieren?</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+sorter($('#sort-k'), [{id: 'f', name: 'Funktion'}, {id: 'v', name: 'Verarbeitung'}, {id: 'g', name: 'Gestaltung'}, {id: 'a', name: 'Arbeitsweise'}], [
+  {t: 'fährt geradeaus', c: 'f'}, {t: 'erreicht eine große Strecke', c: 'f'}, {t: 'Kanten sind entgratet und geschliffen', c: 'v'}, {t: 'Bohrungen sitzen genau', c: 'v'}, {t: 'Leimstellen sind sauber', c: 'v'},
+  {t: 'Form und Farbe sind ansprechend', c: 'g'}, {t: 'eigene Idee erkennbar', c: 'g'}, {t: 'Zeitplan eingehalten', c: 'a'}, {t: 'sicher und ordentlich gearbeitet', c: 'a'}, {t: 'Messprotokoll vollständig', c: 'a'}
+]);
+rating($('#rate'), ['Der Flitzer fährt geradeaus.', 'Er fährt eine große Strecke.', 'Kanten und Flächen sind sauber geschliffen.', 'Die Räder laufen rund und leicht.', 'Der Flitzer ist ansprechend gestaltet.', 'Ich habe sicher und ordentlich gearbeitet.', 'Ich habe meine Verbesserungen fair getestet.'], ['Ich selbst', 'Partner/in'], {head: 'Kriterium'});
+taskSet($('#ts-r'), i => [
+  {q: 'Mittelwert von Team <b>Blitz</b> (4,2 m · 4,5 m · 4,2 m)?', fields: [{l: 'Mittelwert', a: 4.3, unit: 'm', tol: 0.01}], hint: '4,2 + 4,5 + 4,2 = 12,9; 12,9 : 3 = …'},
+  {q: 'Mittelwert von Team <b>Rakete</b> (5,1 m · 3,0 m · 4,8 m)?', fields: [{l: 'Mittelwert', a: 4.3, unit: 'm', tol: 0.01}], hint: '5,1 + 3,0 + 4,8 = 12,9; 12,9 : 3 = …'},
+  {q: 'Mittelwert von Team <b>Schnecke</b> (4,4 m · 4,6 m · 4,5 m)?', fields: [{l: 'Mittelwert', a: 4.5, unit: 'm', tol: 0.01}], hint: '4,4 + 4,6 + 4,5 = 13,5; 13,5 : 3 = …'},
+  {q: 'Welches Team gewinnt nach Mittelwert? Rakete hatte die weiteste Einzelfahrt.', fields: [{l: 'Sieger', a: ['Schnecke', 'Team Schnecke']}], hint: 'Vergleiche die Mittelwerte, nicht die beste Fahrt.', good: 'Richtig! Die Schnecke fährt am gleichmäßigsten und im Mittel am weitesten.'}
+][i], {n: 4, fixed: true});
+orderSteps($('#order-p'), ['Begrüßung und Ziel: Was sollte unser Flitzer können?', 'Bau: Werkstoffe, Werkzeuge und Arbeitsschritte', 'Verbesserungen: Was haben wir fair getestet?', 'Ergebnis: Strecke (Mittelwert) und Vorführung', 'Ausblick: Was würden wir noch ändern?', 'Fragen der Zuhörenden beantworten'], {label: 'Ablauf der Präsentation'});
+trueFalse($('#tf-f'), [
+  {t: '„Euer Flitzer ist doof.“', ok: false, why: 'Das verletzt und hilft nicht weiter.'},
+  {t: '„Die Räder laufen super rund. Habt ihr die Achsen gewachst?“', ok: true, why: 'Lob und eine konkrete Frage.'},
+  {t: '„Vielleicht fährt er gerader, wenn ihr die Lagerbohrungen nachmesst.“', ok: true, why: 'Ein freundlicher, konkreter Vorschlag.'},
+  {t: '„Alles schlecht.“', ok: false, why: 'Feedback muss konkret sein.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Warum legt man Kriterien vor der Beurteilung fest?', a: ['damit alle nach denselben Maßstäben beurteilt werden', 'damit es schneller geht', 'damit nur der Schnellste gewinnt', 'das ist nicht nötig'], ok: 0},
+  {q: 'Zu welchem Bereich gehört „Kanten sind entgratet“?', a: ['Verarbeitung', 'Funktion', 'Gestaltung', 'Arbeitsweise'], ok: 0},
+  {q: 'Ein Flitzer fährt 3,9 m, 4,2 m und 4,5 m. Wie groß ist der Mittelwert?', a: ['4,2 m', '4,5 m', '12,6 m', '3,9 m'], ok: 0},
+  {q: 'Was gehört in eine kurze Präsentation?', a: ['Ziel, Bau, Verbesserungen, Ergebnis', 'nur die Strecke', 'nur die Farbe', 'eine Liste aller Fehler der anderen'], ok: 0},
+  {q: 'Was ist gutes Feedback?', a: ['freundlich, konkret, mit Vorschlag', 'kurz und hart', 'nur Lob', 'nur Kritik'], ok: 0},
+  {q: 'Wozu vergleicht man Selbst- und Fremdeinschätzung?', a: ['um die eigene Arbeit realistisch zu sehen', 'um zu streiten', 'um Punkte zu sammeln', 'das ist sinnlos'], ok: 0}
+]);
+</script>

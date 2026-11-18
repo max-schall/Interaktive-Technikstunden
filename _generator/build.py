@@ -246,8 +246,9 @@ def build_overview(series, lessons, outdir, css):
     (outdir / '00_Uebersicht.html').write_text(page, encoding='utf-8')
 
 
-GRADE_INFO = {'7': 'Technikraum und Sicherheit, der Werkstoff Holz mit Werkzeugen und Bohrmaschine, Skizzen und technische Zeichnungen.',
-              '8': 'Metall und Kunststoff, Fertigungsverfahren und Werkstoffprüfung, der elektrische Stromkreis mit dem ohmschen Gesetz.',
+GRADE_INFO = {'6': 'Technikraum und Sicherheit, Werkzeuge und Maschinen mit Maschinenführerschein, ein bewegtes Objekt bauen und verbessern.',
+              '7': 'Der Werkstoff Holz mit Werkzeugen und Bohrmaschine, Skizzen und technische Zeichnungen, der Werkstoff Metall mit Gewindeschneiden.',
+              '8': 'Kunststoffe und Fertigungsverfahren, der elektrische Stromkreis mit dem ohmschen Gesetz, Elektromagnet und Hausinstallation.',
               '9': 'Elektronik mit Sensoren und Transistor, CAD, Lasercutter und Serienfertigung, Maschinen, Getriebe und Mobilität.',
               '10': 'Bautechnik und Haustechnik, Energieversorgung mit erneuerbaren Energien, Steuerung, Regelung und Mikrocontroller.'}
 
@@ -264,13 +265,14 @@ INDEX_CSS = '''.hero{position:relative;padding:1.4rem 1.6rem 1.2rem;border:1.5px
 .crumbs [aria-current]{color:var(--accent);font-weight:600;padding:.05rem .3rem}
 .crumbs .sep{opacity:.5}
 .vh{font-size:1.4rem;margin:0 0 1rem}
-.grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-@media (max-width:700px){.grades{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.grades{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem}
+@media (max-width:1000px){.grades{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.grades{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .grade{position:relative;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto 1fr auto;column-gap:.6rem;text-decoration:none;color:inherit;background:var(--surface);border:1.5px solid var(--edge);transition:transform .12s}
 .grade:hover,.grade:focus-visible{transform:translateY(-3px)}
 .grade:hover .g-num,.grade:focus-visible .g-num{background:var(--accent);color:var(--accent-ink)}
 .g-lbl{grid-column:1;padding:.5rem .8rem 0;font-family:var(--f-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2)}
-.g-num{grid-column:2;grid-row:1/3;display:grid;place-items:center;min-width:5.2rem;padding:.4rem .8rem;border-left:1.5px solid var(--edge);border-bottom:1.5px solid var(--edge);font-family:var(--f-mono);font-weight:700;font-size:clamp(2.6rem,6vw,3.6rem);line-height:1;color:var(--accent);transition:background .12s,color .12s}
+.g-num{grid-column:2;grid-row:1/3;display:grid;place-items:center;min-width:4rem;padding:.4rem .6rem;border-left:1.5px solid var(--edge);border-bottom:1.5px solid var(--edge);font-family:var(--f-mono);font-weight:700;font-size:clamp(2.4rem,5vw,3.2rem);line-height:1;color:var(--accent);transition:background .12s,color .12s}
 .g-meta{grid-column:1;padding:0 .8rem;font-family:var(--f-mono);font-size:1.05rem;font-weight:600}
 .g-txt{grid-column:1/-1;padding:.7rem .8rem .2rem;font-size:.9rem;color:var(--ink-2)}
 .g-leds{grid-column:1/-1;display:flex;gap:0;border-top:1.5px solid var(--edge);margin-top:.6rem}
@@ -377,7 +379,7 @@ def build_index(css):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Interaktive Technikstunden</title>
-<meta name="description" content="Interaktive Präsentationen mit Arbeitsblättern für den Technikunterricht der Klassen 7 bis 10.">
+<meta name="description" content="Interaktive Präsentationen mit Arbeitsblättern für den Technikunterricht der Klassen 6 bis 10.">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 {palette_css()}{css}
@@ -385,11 +387,11 @@ def build_index(css):
 </head>
 <body>
 <div class="app">
-<header class="top"><div class="brand"><small>Fach</small><b>Interaktive Technikstunden</b><span>Klassen 7–10 · interaktiv</span></div><span style="flex:1"></span><a class="icon-btn" href="#" id="home" hidden>⌂ Klassen</a></header>
+<header class="top"><div class="brand"><small>Fach</small><b>Interaktive Technikstunden</b><span>Klassen 6–10 · interaktiv</span></div><span style="flex:1"></span><a class="icon-btn" href="#" id="home" hidden>⌂ Klassen</a></header>
 <main>
 <section class="ov">
   <div class="hero">
-    <p class="eyebrow">Interaktive Präsentationen · Klassen 7–10</p>
+    <p class="eyebrow">Interaktive Präsentationen · Klassen 6–10</p>
     <h1>Interaktive Technikstunden</h1>
     <p class="lead">Präsentationen für den Technikunterricht: Werkstoffe und Werkzeuge, Zeichnen und Fertigen, Elektrotechnik und Elektronik, Maschinen, Bauen, Energie, Steuerung und Regelung. Jede Stunde mit Stationen, Simulationen, Hefteintrag, Übungen und Arbeitsblatt mit QR-Code. Wähle zuerst die Klassenstufe, dann die Reihe.</p>
   </div>

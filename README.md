@@ -1,6 +1,6 @@
 # Interaktive Technikstunden
 
-Interaktive HTML-Präsentationen mit Arbeitsblättern für den Technikunterricht der Klassen 7–10 – gleicher methodischer Aufbau wie die Chemie- und IT-Präsentationen, eigenes Design.
+Interaktive HTML-Präsentationen mit Arbeitsblättern für den Technikunterricht der Klassen 6–10 – gleicher methodischer Aufbau wie die Chemie- und IT-Präsentationen, eigenes Design.
 
 - `index.html` – Startseite: Klassenstufe → Reihe → Stunde
 - `<Klasse>-<Reihe>/00_Uebersicht.html` – Übersicht der Reihe mit Hinweisen für Lehrkräfte
@@ -13,12 +13,13 @@ Interaktive HTML-Präsentationen mit Arbeitsblättern für den Technikunterricht
 
 | Klasse | Kapitel 1 | Kapitel 2 | Kapitel 3 |
 |---|---|---|---|
-| 7 | Arbeiten im Technikraum (5) | Der Werkstoff Holz (7) | Skizzen und technische Zeichnungen (5) |
-| 8 | Der Werkstoff Metall (6) | Kunststoffe und Fertigungsverfahren (6) | Der elektrische Stromkreis (6) |
+| 6 | Arbeiten im Technikraum (5) | Werkzeuge und Maschinen (5) | Mobil sein – das bewegte Objekt (5) |
+| 7 | Der Werkstoff Holz (7) | Skizzen und technische Zeichnungen (5) | Der Werkstoff Metall (6) |
+| 8 | Kunststoffe und Fertigungsverfahren (6) | Der elektrische Stromkreis (6) | Elektromagnet und Hausinstallation (6) |
 | 9 | Schalter, Sensoren und Schaltungen (7) | Von der Idee zum Serienprodukt (6) | Maschinen und Mobilität (7) |
 | 10 | Bauen und Wohnen (6) | Energieversorgung (6) | Steuerung und Regelung (6) |
 
-Die Abfolge ist spiralförmig angelegt: Holz → Metall/Kunststoff → Serienfertigung; Stromkreis → Elektronik → Steuerung und Regelung; Zeichnen (Kl. 7) → CAD/CAM (Kl. 9).
+Die Abfolge ist spiralförmig angelegt: Werkzeuge und Maschinenführerschein (Kl. 6) → Holz und Metall (Kl. 7) → Kunststoff und Serienfertigung; Stromkreis → Elektromagnet und Relais → Elektronik → Steuerung und Regelung; bewegtes Objekt (Kl. 6) → Maschinen und Mobilität (Kl. 9); Zeichnen (Kl. 7) → CAD/CAM (Kl. 9).
 Jede Reihe endet mit einer Stunde „Wiederholung und Selbsttest“ (Karteikarten, Trainer, Quiz, „Ich kann …“-Liste).
 
 ## Gestaltungsprinzip „Werkstattzeichnung“

@@ -1,0 +1,155 @@
+<!--
+title: Fehler suchen mit System
+short: Fehlersuche
+time: 2 Unterrichtsstunden
+q: Wie finde ich schnell heraus, warum eine Schaltung nicht funktioniert?
+facts: Typische Fehler: leere Batterie, defekte Lampe, Kabelbruch, Wackelkontakt, falsche Polung, Kurzschluss | Systematisch vorgehen: Sichtprüfung – Spannungsquelle prüfen – Bauteile und Leitungen einzeln prüfen – Fehler beheben – Funktion testen | Durchgangsprüfer: zeigt, ob ein Bauteil oder eine Leitung Strom leitet; nur an spannungsfreien Teilen benutzen | Spannung der Batterie mit dem Multimeter messen | Fehlersuche dokumentieren
+inter: Fehlerbild und Ursache zuordnen · Durchgangsprüfer Lückentext · Fehlersuche-Simulator mit verstecktem Fehler · Vorgehen ordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Elektromagnet und Hausinstallation</p>
+      <h1>Fehler suchen mit System</h1>
+      <p class="lead">Die Schaltung ist fertig aufgebaut – und nichts passiert. Wer jetzt wild an allen Kabeln wackelt, sucht lange. Wer <b>mit System</b> sucht, findet den Fehler in wenigen Schritten.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Die Taschenlampe geht nicht. Was prüfst du zuerst – und warum?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie finde ich schnell heraus, warum eine Schaltung nicht funktioniert?</p></div>
+      <div class="controls"><button class="btn primary" data-go="fehler">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="fehler" data-label="Fehlerbilder" data-yr="Einstieg" data-title="Typische Fehler" data-sub="Fehlerbild und Ursache">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Typische Fehler</p>
+    <h2>Was beobachtest du – was steckt dahinter?</h2>
+    <p class="lead">Das, was man sieht, heißt <b>Fehlerbild</b>. Dahinter steckt eine <b>Ursache</b>. Ordne zu.</p>
+  </div>
+  <div id="match-f"></div>
+</section>
+
+<section class="station" id="pruefer" data-label="Prüfer" data-yr="Erarbeitung" data-title="Der Durchgangsprüfer" data-sub="Leitet das Bauteil?">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Durchgangsprüfer</p>
+    <h2>Der Durchgangsprüfer</h2>
+    <p class="lead">Ein Durchgangsprüfer hat eine eigene kleine Batterie und einen Summer oder eine LED. Hältst du seine Prüfspitzen an ein Bauteil, zeigt er an, ob Strom hindurchfließen kann.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 400 200" class="sch" role="img" aria-label="Durchgangsprüfer an einem Draht">
+      <rect x="30" y="40" width="110" height="120" fill="var(--surface-2)" stroke="var(--wire)" stroke-width="2.2"/>
+      <circle cx="85" cy="80" r="14" fill="var(--good)" stroke="var(--wire)" stroke-width="2"/><text x="85" y="135" text-anchor="middle" class="sm">Durchgang</text>
+      <path class="w" d="M140 70C200 70 210 100 250 100M140 130C200 130 260 120 330 100"/>
+      <path class="w" stroke-width="5" d="M250 100H330" stroke="var(--cu)"/>
+      <circle cx="250" cy="100" r="5" class="fillw"/><circle cx="330" cy="100" r="5" class="fillw"/>
+      <text x="290" y="85" text-anchor="middle" class="sm">Prüfling: Draht</text>
+    </svg></div>
+    <div><div id="cloze-p"></div></div>
+  </div>
+</section>
+
+<section class="station" id="suche" data-label="Fehlersuche" data-yr="Experiment" data-title="Fehlersuche-Simulator" data-sub="Den versteckten Fehler finden">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Simulator</p>
+    <h2>Finde den versteckten Fehler</h2>
+    <p class="lead">Die Lampe leuchtet nicht, obwohl der Schalter geschlossen ist. Miss die Batteriespannung und prüfe Bauteile und Leitungen mit dem Durchgangsprüfer. Wenn du sicher bist, melde den Fehler. Je weniger Messungen, desto besser.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 520 300" id="fsvg" class="sch" role="img" aria-label="Schaltung mit verstecktem Fehler"></svg></div>
+    <div>
+      <div class="tk-row"><span class="tk-cap">Werkzeug</span><span id="f-mode"></span></div>
+      <div class="box" id="f-panel"></div>
+      <ol id="f-log" class="stack" style="padding-left:1.2rem;font-size:.95rem"></ol>
+      <div class="controls"><button class="btn" id="f-new">Neuer Fehler</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="vorgehen" data-label="Vorgehen" data-yr="Übung" data-title="Systematisch vorgehen" data-sub="Schritt für Schritt">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Vorgehen</p>
+    <h2>Fehlersuche Schritt für Schritt</h2>
+    <p class="lead">Ordne die Schritte einer systematischen Fehlersuche.</p>
+  </div>
+  <div id="order-v"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Fehlersuche</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Fehler suchen mit System</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Typische Ursachen: leere Batterie, defekte Lampe, Kabelbruch, Wackelkontakt, falsche Polung, Kurzschluss.</li>
+        <li data-step>Vorgehen: <b>Sichtprüfung</b> → <b>Spannungsquelle</b> messen → Bauteile und Leitungen <b>einzeln</b> prüfen → Fehler beheben → <b>Funktion testen</b>.</li>
+        <li data-step>Der <b>Durchgangsprüfer</b> zeigt, ob ein Bauteil Strom leitet. Er wird nur an <b>ausgebauten</b> oder spannungsfreien Teilen benutzt.</li>
+        <li data-step>Jede Messung notieren – so wird die Suche nachvollziehbar.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Tipp</span><p>Halbiere die Schaltung: Prüfe zuerst in der Mitte. Ist der Fehler in der einen Hälfte, musst du die andere nicht mehr untersuchen.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match-f'), [['Lampe bleibt dunkel, Glühdraht ist gerissen', 'Lampe defekt'], ['Lampe flackert, wenn man am Kabel wackelt', 'Wackelkontakt'], ['Lampe leuchtet nur ganz schwach', 'Batterie fast leer'], ['LED bleibt dunkel, ist aber neu', 'LED falsch gepolt'], ['Kabel wird heiß, Lampe aus', 'Kurzschluss'], ['Kein Durchgang in einer Leitung', 'Kabelbruch']]);
+cloze($('#cloze-p'), 'Der Durchgangsprüfer hat eine eigene {Batterie|Lampe|Sicherung}. Leuchtet die Anzeige, hat das Bauteil {Durchgang|keinen Durchgang|Kurzschluss}: Strom kann fließen. Ein gerissener Draht zeigt {keinen Durchgang|Durchgang|Spannung}. Prüfen darf man nur Teile, an denen {keine Spannung|Netzspannung|eine Batterie} anliegt.');
+(() => {
+  const PARTS = {bat: 'Batterie', sw: 'Schalter', lamp: 'Lampe', w1: 'Leitung 1', w2: 'Leitung 2', w3: 'Leitung 3', w4: 'Leitung 4'};
+  const FAULTS = ['bat', 'lamp', 'w1', 'w2', 'w3', 'w4', 'sw'];
+  const svg = $('#fsvg'), panel = $('#f-panel'), log = $('#f-log');
+  let fault, mode = 'u', n = 0, solved = false;
+  function draw(sel) {
+    const hl = id => id === sel ? ' style="stroke:var(--accent);stroke-width:4"' : '';
+    let g = '';
+    g += `<g class="click" data-p="w1" tabindex="0" role="button" aria-label="Leitung 1"><rect x="50" y="30" width="220" height="30" fill="var(--surface)" opacity=".01"/><path class="w" d="M60 120V45H260"${hl('w1')}/><text x="150" y="38" class="sm">Leitung 1</text></g>`;
+    g += `<g class="click" data-p="sw" tabindex="0" role="button" aria-label="Schalter">${SY.sw(290, 45, true, 'x')}<text x="290" y="80" text-anchor="middle" class="sm">Schalter</text></g>`;
+    g += `<g class="click" data-p="w2" tabindex="0" role="button" aria-label="Leitung 2"><rect x="310" y="30" width="170" height="30" fill="var(--surface)" opacity=".01"/><path class="w" d="M308 45H460V110"${hl('w2')}/><text x="380" y="38" class="sm">Leitung 2</text></g>`;
+    g += `<g class="click" data-p="lamp" tabindex="0" role="button" aria-label="Lampe">${SY.lamp(460, 140, 0)}<text x="480" y="145" class="sm">Lampe</text></g>`;
+    g += `<g class="click" data-p="w3" tabindex="0" role="button" aria-label="Leitung 3"><rect x="440" y="160" width="40" height="100" fill="var(--surface)" opacity=".01"/><path class="w" d="M460 155V255H300"${hl('w3')}/><text x="380" y="275" class="sm">Leitung 3</text></g>`;
+    g += `<g class="click" data-p="w4" tabindex="0" role="button" aria-label="Leitung 4"><rect x="50" y="240" width="250" height="30" fill="var(--surface)" opacity=".01"/><path class="w" d="M300 255H60V180"${hl('w4')}/><text x="150" y="275" class="sm">Leitung 4</text></g>`;
+    g += `<g class="click" data-p="bat" tabindex="0" role="button" aria-label="Batterie"><rect x="20" y="120" width="80" height="60" fill="var(--surface)" opacity=".01"/>${SY.bat(60, 150)}<text x="95" y="155" class="sm">4,5 V</text></g>`;
+    g += `<path class="w" d="M60 156V180M60 120V144"/>`;
+    svg.innerHTML = g;
+  }
+  function newFault() { fault = pick(FAULTS); n = 0; solved = false; log.innerHTML = ''; draw(); intro(); }
+  function intro() { panel.innerHTML = mode === 'u' ? '<p><b>Multimeter:</b> Tippe die Batterie an, um ihre Spannung zu messen.</p>' : mode === 'd' ? '<p><b>Durchgangsprüfer:</b> Die Schaltung ist abgeklemmt. Tippe ein Bauteil oder eine Leitung an.</p>' : '<p><b>Fehler melden:</b> Tippe das Teil an, das du für defekt hältst.</p>'; }
+  function act(id) {
+    if (solved) return;
+    draw(id);
+    if (mode === 'u') {
+      if (id !== 'bat') { panel.innerHTML = '<p>Mit dem Multimeter misst du hier die Spannung der <b>Batterie</b>. Tippe sie an.</p>'; return; }
+      n++; const v = fault === 'bat' ? '0,4 V' : '4,6 V';
+      log.insertAdjacentHTML('beforeend', `<li>Spannung Batterie: <b>${v}</b></li>`);
+      panel.innerHTML = `<p>Gemessen: <b>${v}</b>. ${fault === 'bat' ? 'Die Batterie ist fast leer!' : 'Die Batterie ist in Ordnung.'}</p>`;
+    } else if (mode === 'd') {
+      if (id === 'bat') { panel.innerHTML = '<p>Eine Batterie prüft man nicht auf Durchgang, sondern misst ihre <b>Spannung</b>.</p>'; return; }
+      n++; const ok = id !== fault;
+      log.insertAdjacentHTML('beforeend', `<li>${PARTS[id]}: <b class="${ok ? 'good' : 'bad'}">${ok ? 'Durchgang' : 'kein Durchgang'}</b></li>`);
+      panel.innerHTML = `<p>${PARTS[id]}: <b>${ok ? 'Durchgang – in Ordnung.' : 'kein Durchgang!'}</b></p>`;
+    } else {
+      solved = id === fault;
+      panel.innerHTML = solved ? `<h3 class="good">Gefunden!</h3><p>${PARTS[fault]} war defekt. Du hast <b>${n}</b> Messung${n === 1 ? '' : 'en'} gebraucht.${n > 4 ? ' Tipp: Beginne mit der Batterie und halbiere dann die Schaltung.' : ''}</p>` : `<h3 class="bad">Noch nicht.</h3><p>${PARTS[id]} ist in Ordnung. Prüfe weiter, bevor du meldest.</p>`;
+    }
+  }
+  svg.addEventListener('click', e => { const p = e.target.closest('[data-p]'); if (p) act(p.dataset.p); });
+  svg.addEventListener('keydown', e => { const p = e.target.closest('[data-p]'); if (p && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); act(p.dataset.p); } });
+  seg($('#f-mode'), [['u', 'Multimeter'], ['d', 'Durchgangsprüfer'], ['m', 'Fehler melden']], v => { mode = v; if (!solved) { draw(); intro(); } });
+  $('#f-new').onclick = newFault;
+  newFault();
+})();
+orderSteps($('#order-v'), ['Sichtprüfung: Sind alle Kabel angeschlossen, alle Bauteile richtig herum eingesetzt?', 'Spannung der Batterie mit dem Multimeter messen', 'Schaltung abklemmen', 'Bauteile und Leitungen einzeln mit dem Durchgangsprüfer prüfen', 'Defektes Teil austauschen', 'Schaltung wieder anschließen und Funktion testen'], {label: 'Vorgehen'});
+mcQuiz($('#quiz'), [
+  {q: 'Was prüfst du bei einer Schaltung meist zuerst?', a: ['die Spannungsquelle', 'die Farbe der Kabel', 'das teuerste Bauteil', 'gar nichts'], ok: 0},
+  {q: 'Was zeigt ein Durchgangsprüfer an?', a: ['ob ein Bauteil Strom leitet', 'wie hoch die Spannung ist', 'wie warm ein Kabel ist', 'wie viel Strom verbraucht wird'], ok: 0},
+  {q: 'Eine neue LED leuchtet nicht. Was ist die wahrscheinlichste Ursache?', a: ['falsche Polung', 'zu kurze Kabel', 'zu viel Licht im Raum', 'die Farbe der LED'], ok: 0},
+  {q: 'Warum soll man jede Messung notieren?', a: ['Damit die Suche nachvollziehbar ist und nichts doppelt geprüft wird.', 'Weil es die Lehrkraft verlangt.', 'Damit die Batterie hält.', 'Das ist unnötig.'], ok: 0},
+  {q: 'Was bedeutet „kein Durchgang“ bei einer Leitung?', a: ['Die Leitung ist unterbrochen.', 'Die Leitung ist in Ordnung.', 'Es gibt einen Kurzschluss.', 'Die Batterie ist voll.'], ok: 0},
+  {q: 'Was tust du nach dem Austausch des defekten Teils?', a: ['Funktion testen', 'die Schaltung wegwerfen', 'nichts mehr', 'alle Teile tauschen'], ok: 0}
+]);
+</script>

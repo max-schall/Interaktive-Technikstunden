@@ -1,0 +1,91 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Antriebe und Bauteile, Gummiband-Antrieb, fair testen und Mittelwert | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Bauteile zuordnen · Energieumwandlung ordnen · Mittelwert-Trainer · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Mobil sein – das bewegte Objekt</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Antriebe und Reibung, Bauteile des Fahrzeugs, der Gummiband-Antrieb, faire Versuche und Beurteilen: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Bauteile" data-yr="Trainer" data-title="T1 Bauteile" data-sub="Fahrgestell, Achse, Rad, Lager">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Bauteile und ihre Aufgabe</h2></div>
+  <div id="t1-match"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Antrieb" data-yr="Trainer" data-title="T2 Gummiband-Antrieb" data-sub="Energie Schritt für Schritt">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Der Gummiband-Antrieb</h2></div>
+  <div id="t2-order"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Mittelwert" data-yr="Trainer" data-title="T3 Fair testen" data-sub="Mittelwerte berechnen">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Mittelwerte berechnen</h2></div>
+  <div id="t3-ts"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Mobilität', 'Personen und Waren von Ort zu Ort bringen'], ['Gleitreibung', 'bremst beim Schieben, ist groß'], ['Rollreibung', 'bremst beim Rollen, ist klein'], ['Achse', 'Rundstab, auf dem die Räder sitzen'],
+  ['Lager', 'Bohrung, in der sich die Achse dreht'], ['Spannenergie', 'im gedehnten Gummiband gespeichert'], ['Bewegungsenergie', 'Energie des fahrenden Flitzers'], ['Stückliste', 'Pos., Menge, Benennung, Werkstoff, Maße'],
+  ['fairer Versuch', 'nur eine Größe ändern'], ['Mittelwert', 'Summe aller Werte geteilt durch die Anzahl'], ['Beurteilungsbogen', 'Kriterien mit Punkten bewerten'], ['Feedback', 'freundlich, konkret, mit Vorschlag']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+matcher($('#t1-match'), [['Grundplatte', 'trägt alle Teile'], ['Antriebsachse', 'wird vom Gummiband gedreht'], ['Lager', 'Bohrung, etwas größer als die Achse'], ['Gummiring auf dem Rad', 'verhindert Durchdrehen'], ['Haken', 'hält das Gummiband vorn'], ['Strohhalm mit Wachs', 'verringert die Reibung im Lager']]);
+orderSteps($('#t2-order'), ['Gummiband vorn am Haken und hinten an der Achse einhängen', 'Fahrzeug rückwärts rollen – das Band wickelt sich auf', 'Spannenergie ist gespeichert', 'Loslassen – das Band dreht die Achse', 'Spannenergie wird zu Bewegungsenergie', 'Band abgewickelt – der Flitzer rollt aus'], {label: 'Ablauf'});
+taskSet($('#t3-ts'), () => {
+  const v = [0, 1, 2].map(() => randInt(25, 60) / 10), mean = Math.round((v[0] + v[1] + v[2]) / 3 * 100) / 100;
+  return {q: `Fahrten: <b>${v.map(x => numDE(x, 1) + ' m').join(' · ')}</b>`, fields: [{l: 'Mittelwert', a: mean, unit: 'm', tol: 0.011}], hint: 'Summe der drei Werte durch 3 teilen, auf zwei Nachkommastellen runden.', key: v.join()};
+}, {n: 4});
+mcQuiz($('#quiz'), [
+  {q: 'Warum haben Fahrzeuge Räder?', a: ['Rollreibung ist kleiner als Gleitreibung.', 'Räder sind leichter als Kisten.', 'Räder speichern Energie.', 'Räder bremsen besser.'], ok: 0},
+  {q: 'Welches Fahrzeug nutzt gespeicherte Energie?', a: ['Aufziehauto', 'Segelboot', 'Fahrrad', 'Straßenbahn'], ok: 0},
+  {q: 'Wie groß sollte die Lagerbohrung sein?', a: ['etwas größer als die Achse', 'kleiner als die Achse', 'genau gleich groß', 'doppelt so groß'], ok: 0},
+  {q: 'Was speichert das aufgewickelte Gummiband?', a: ['Spannenergie', 'elektrische Energie', 'Wärme', 'Licht'], ok: 0},
+  {q: 'Warum fährt ein Flitzer im Kreis?', a: ['Die Lagerbohrungen sind nicht parallel.', 'Das Gummiband ist zu dünn.', 'Die Räder sind zu groß.', 'Er ist zu leicht.'], ok: 0},
+  {q: 'Wann ist ein Versuch fair?', a: ['wenn nur eine Größe verändert wird', 'wenn alles gleichzeitig verändert wird', 'wenn nur die beste Fahrt zählt', 'wenn der Boden wechselt'], ok: 0},
+  {q: 'Mittelwert von 2 m, 3 m und 4 m?', a: ['3 m', '9 m', '4 m', '2 m'], ok: 0},
+  {q: 'Was hilft gegen durchdrehende Räder?', a: ['Gummiring auf die Antriebsräder', 'stärkeres Gummiband', 'Wachs auf die Räder', 'kleinere Räder'], ok: 0},
+  {q: 'Zu welchem Bereich gehört „fährt geradeaus“?', a: ['Funktion', 'Gestaltung', 'Arbeitsweise', 'Verarbeitung'], ok: 0},
+  {q: 'Was steht nicht in einer Stückliste?', a: ['die Fahrstrecke', 'die Menge', 'der Werkstoff', 'die Maße'], ok: 0},
+  {q: 'Was ist gutes Feedback?', a: ['„Die Räder laufen rund – habt ihr gewachst?“', '„Doof.“', '„Alles schlecht.“', '„Meiner ist besser.“'], ok: 0},
+  {q: 'Was bremst den Flitzer nach dem Abwickeln?', a: ['Reibung', 'das Gummiband', 'die Schwerkraft nach vorn', 'nichts'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann Fahrzeuge nach ihrem Antrieb ordnen.', href: '01_Mobil_sein.html#antrieb'},
+  {t: 'Ich kann erklären, warum Rollen leichter ist als Schieben.', href: '01_Mobil_sein.html#rollen'},
+  {t: 'Ich kann die Bauteile eines Fahrzeugs benennen.', href: '01_Mobil_sein.html#teile'},
+  {t: 'Ich kann den Gummiband-Antrieb mit Energieumwandlung erklären.', href: '02_Gummiflitzer.html#antrieb'},
+  {t: 'Ich kann eine Stückliste lesen und ergänzen.', href: '02_Gummiflitzer.html#stueck'},
+  {t: 'Ich kann einen fairen Versuch planen.', href: '03_Optimieren.html#fair'},
+  {t: 'Ich kann einen Mittelwert berechnen.', href: '03_Optimieren.html#mittel'},
+  {t: 'Ich kann ein Werkstück mit einem Beurteilungsbogen beurteilen.', href: '04_Beurteilen.html#bogen'}
+]);
+</script>

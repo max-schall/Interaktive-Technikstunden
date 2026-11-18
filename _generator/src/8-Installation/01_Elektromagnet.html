@@ -1,0 +1,152 @@
+<!--
+title: Der Elektromagnet
+short: Elektromagnet
+time: 2 Unterrichtsstunden
+q: Wie wird aus Strom ein Magnet, und wovon hängt seine Stärke ab?
+facts: Jeder stromdurchflossene Leiter ist von einem Magnetfeld umgeben (Kompassnadel wird abgelenkt) | Spule: aufgewickelter Draht verstärkt das Magnetfeld | Elektromagnet = Spule mit Eisenkern; schaltbar, Stärke einstellbar | Stärke steigt mit der Windungszahl, der Stromstärke und durch einen Eisenkern | Anwendungen: Klingel, Relais, Türöffner, Schrottkran, Lautsprecher
+inter: Leiter mit Kompassnadel · Elektromagnet-Simulator (Windungen, Stromstärke, Eisenkern) · Anwendungen zuordnen · Dauer- und Elektromagnet vergleichen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Elektromagnet und Hausinstallation</p>
+      <h1>Der Elektromagnet</h1>
+      <p class="lead">Auf dem Schrottplatz hebt ein Kran tonnenschweres Eisen – ganz ohne Haken. Ein Knopfdruck, und das Eisen fällt wieder herunter. Das schafft kein gewöhnlicher Magnet.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Was hat ein Schrottkran mit einer Türklingel gemeinsam?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie wird aus Strom ein Magnet, und wovon hängt seine Stärke ab?</p></div>
+      <div class="controls"><button class="btn primary" data-go="leiter">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="leiter" data-label="Leiter" data-yr="Einstieg" data-title="Strom macht Magnetfeld" data-sub="Der Versuch mit der Kompassnadel">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Versuch</p>
+    <h2>Strom lenkt die Kompassnadel ab</h2>
+    <p class="lead">Unter einem Draht liegt eine Kompassnadel. Schalte den Strom ein und kehre die Stromrichtung um. Was beobachtest du?</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 240" id="ksvg" class="sch" role="img" aria-label="Draht über Kompassnadel"></svg></div>
+    <div>
+      <div class="controls"><button class="btn primary" id="k-on">Strom ein</button><button class="btn" id="k-dir">Stromrichtung umkehren</button></div>
+      <p class="status" id="k-st"></p>
+      <div class="box"><span class="tag info">Merke</span><p>Um jeden Draht, durch den Strom fließt, entsteht ein <b>Magnetfeld</b>. Es ist unsichtbar, lenkt aber Kompassnadeln ab.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="spule" data-label="Spule" data-yr="Experiment" data-title="Elektromagnet-Simulator" data-sub="Windungen, Stromstärke, Eisenkern">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Simulator</p>
+    <h2>Wie stark ist der Elektromagnet?</h2>
+    <p class="lead">Wickelt man den Draht zu einer <b>Spule</b>, addieren sich die Magnetfelder der Windungen. Ein <b>Eisenkern</b> verstärkt das Feld noch einmal stark. Wie viele Büroklammern hält dein Magnet?</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 400 300" id="esvg" role="img" aria-label="Elektromagnet mit Büroklammern"></svg></div>
+    <div>
+      <div class="tk-row"><span class="tk-cap">Windungen</span><span id="e-n"></span></div>
+      <div class="tk-row"><span class="tk-cap">Kern</span><span id="e-k"></span></div>
+      <div class="tk-row"><label>Stromstärke <input type="range" id="e-i" min="0" max="1" step="0.1" value="0.5"> <span class="tk-val" id="e-iv"></span></label></div>
+      <div class="tk-readout" id="e-out"></div>
+      <p class="status" id="e-st"></p>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="anwend" data-label="Anwendungen" data-yr="Erarbeitung" data-title="Elektromagnete im Alltag" data-sub="Wo steckt ein Elektromagnet?">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Anwendungen</p>
+    <h2>Elektromagnete im Alltag</h2>
+    <p class="lead">Elektromagnete lassen sich <b>ein- und ausschalten</b>. Das nutzt man in vielen Geräten. Ordne zu.</p>
+  </div>
+  <div id="match-a"></div>
+</section>
+
+<section class="station" id="vergleich" data-label="Vergleich" data-yr="Übung" data-title="Dauer- oder Elektromagnet?" data-sub="Eigenschaften vergleichen">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Vergleich</p>
+    <h2>Dauermagnet oder Elektromagnet?</h2>
+    <p class="lead">Ein <b>Dauermagnet</b> wirkt immer, ein <b>Elektromagnet</b> nur, solange Strom fließt. Sortiere die Eigenschaften.</p>
+  </div>
+  <div id="sort-v"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Elektromagnet</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Der Elektromagnet</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step>Um einen stromdurchflossenen Leiter entsteht ein <b>Magnetfeld</b>.</li>
+        <li data-step>Ein <b>Elektromagnet</b> besteht aus einer <b>Spule</b> und einem <b>Eisenkern</b>. Er wirkt nur, solange Strom fließt.</li>
+        <li data-step>Er wird stärker mit mehr <b>Windungen</b>, größerer <b>Stromstärke</b> und mit <b>Eisenkern</b>.</li>
+        <li data-step>Anwendungen: Klingel, Relais, Türöffner, Schrottkran, Lautsprecher.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Versuch</span><p>Wickle isolierten Draht 20-, 40- und 60-mal um einen Eisennagel. Schließe eine Flachbatterie kurz an und zähle die angehobenen Büroklammern. Nicht lange eingeschaltet lassen – der Draht wird warm.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+(() => {
+  let on = false, dir = 1;
+  const svg = $('#ksvg'), st = $('#k-st');
+  function draw() {
+    const ang = on ? 90 - dir * 70 : 90;
+    let g = SY.wire([[30, 70], [390, 70]]) + `<text x="30" y="55" class="sm">Draht</text>`;
+    if (on) g += `<path class="flow" d="${dir > 0 ? 'M30 70H390' : 'M390 70H30'}"/><path d="${dir > 0 ? 'M360 58l14 12-14 12' : 'M60 58l-14 12 14 12'}" fill="none" stroke="var(--accent)" stroke-width="3"/>`;
+    g += `<circle cx="210" cy="160" r="58" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><text x="276" y="165" class="sm">N</text>`;
+    g += `<g transform="rotate(${ang} 210 160)" style="transition:transform .5s"><path d="M210 112l10 48h-20z" fill="var(--verbot)" stroke="var(--edge)"/><path d="M210 208l10-48h-20z" fill="var(--surface-2)" stroke="var(--edge)"/></g><circle cx="210" cy="160" r="4" class="fillw"/>`;
+    svg.innerHTML = g;
+    st.innerHTML = !on ? 'Kein Strom: Die Nadel zeigt nach Norden – parallel zum Draht.' : `Strom fließt: Die Nadel dreht sich <b>quer zum Draht</b>, ${dir > 0 ? 'gegen den' : 'im'} Uhrzeigersinn. ${dir < 0 ? 'Mit der Stromrichtung kehrt sich auch das Magnetfeld um.' : ''}`;
+    $('#k-on').textContent = on ? 'Strom aus' : 'Strom ein';
+  }
+  $('#k-on').onclick = () => { on = !on; draw(); };
+  $('#k-dir').onclick = () => { dir = -dir; draw(); };
+  draw();
+})();
+(() => {
+  let N = 400, core = true;
+  const svg = $('#esvg'), iIn = $('#e-i');
+  function draw() {
+    const I = +iIn.value, F = N * I * (core ? 1 : 0.08), clips = Math.min(20, Math.floor(F / 40));
+    $('#e-iv').textContent = numDE(I, 1) + ' A';
+    let g = '';
+    if (core) g += `<rect x="150" y="20" width="100" height="150" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/>`;
+    const w = N === 200 ? 6 : N === 400 ? 11 : 20;
+    g += `<rect x="130" y="40" width="140" height="110" fill="${core ? 'none' : 'var(--surface)'}" stroke="var(--edge)" stroke-width="2"/>`;
+    for (let k = 0; k < w; k++) { const y = 44 + k * (102 / w); g += `<path d="M130 ${y}h140" stroke="var(--cu)" stroke-width="${Math.max(2, 7 - w / 4)}"/>`; }
+    g += `<path d="M130 50H70V20M270 140h60v-120" stroke="var(--wire)" stroke-width="2.2" fill="none"/><text x="60" y="15" style="font-family:var(--f-mono);font-size:12px;fill:var(--ink-2)">+</text><text x="326" y="15" style="font-family:var(--f-mono);font-size:12px;fill:var(--ink-2)">−</text>`;
+    for (let k = 0; k < clips; k++) { const col = k % 4, row = Math.floor(k / 4), x = 160 + col * 22, y = 176 + row * 22; g += `<rect x="${x}" y="${y}" width="9" height="20" rx="4" fill="none" stroke="var(--steel-2)" stroke-width="2.4"/>`; }
+    const fallen = 20 - clips;
+    for (let k = 0; k < Math.min(fallen, 12); k++) g += `<rect x="${40 + k * 28}" y="282" width="20" height="9" rx="4" fill="none" stroke="var(--steel-2)" stroke-width="2.4"/>`;
+    g += `<path d="M20 294H380" stroke="var(--edge)" stroke-width="1.6"/>`;
+    svg.innerHTML = g;
+    readout($('#e-out'), [['Windungen', N], ['Stromstärke', numDE(I, 1) + ' A'], ['Kern', core ? 'Eisen' : 'Luft'], ['Büroklammern', clips]]);
+    $('#e-st').innerHTML = I === 0 ? 'Kein Strom – kein Magnet. Alle Klammern fallen herunter.' : !core ? 'Ohne Eisenkern ist der Magnet sehr schwach.' : clips >= 20 ? 'Sehr starker Elektromagnet!' : 'Verändere immer nur eine Größe und vergleiche.';
+  }
+  seg($('#e-n'), [['200', '200'], ['400', '400'], ['800', '800']], v => { N = +v; draw(); }, '400');
+  seg($('#e-k'), [['1', 'mit Eisenkern'], ['0', 'ohne Kern']], v => { core = v === '1'; draw(); });
+  iIn.addEventListener('input', draw);
+})();
+matcher($('#match-a'), [['Schrottkran', 'hebt Eisenschrott und lässt ihn per Knopfdruck fallen'], ['Türöffner', 'zieht den Riegel zurück, wenn jemand den Knopf drückt'], ['Klingel', 'ein Anker schlägt immer wieder gegen eine Glocke'], ['Relais', 'ein kleiner Strom schaltet einen großen Strom'], ['Lautsprecher', 'eine Spule bewegt eine Membran im Takt der Musik'], ['Magnetschwebebahn', 'starke Magnetfelder lassen den Zug schweben']]);
+sorter($('#sort-v'), [{id: 'd', name: 'Dauermagnet'}, {id: 'e', name: 'Elektromagnet'}, {id: 'b', name: 'beide'}], [
+  {t: 'wirkt ohne Strom', c: 'd'}, {t: 'lässt sich ein- und ausschalten', c: 'e'}, {t: 'Stärke lässt sich verändern', c: 'e'}, {t: 'zieht Eisen an', c: 'b'},
+  {t: 'hat einen Nord- und einen Südpol', c: 'b'}, {t: 'Kühlschrankmagnet', c: 'd'}, {t: 'braucht eine Spule', c: 'e'}, {t: 'Pole lassen sich durch Umpolen tauschen', c: 'e'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Was entsteht um einen Draht, durch den Strom fließt?', a: ['ein Magnetfeld', 'ein Lichtstrahl', 'nichts', 'eine Spannung'], ok: 0},
+  {q: 'Woraus besteht ein Elektromagnet?', a: ['Spule mit Eisenkern', 'Kupferplatte mit Batterie', 'Dauermagnet mit Draht', 'Lampe mit Schalter'], ok: 0},
+  {q: 'Wie wird ein Elektromagnet stärker?', a: ['mehr Windungen, mehr Strom, Eisenkern', 'weniger Windungen', 'ohne Kern', 'mit Holzkern'], ok: 0},
+  {q: 'Was passiert, wenn der Strom ausgeschaltet wird?', a: ['Der Elektromagnet verliert seine Wirkung.', 'Er wird stärker.', 'Er wird zum Dauermagneten.', 'Er wird heiß.'], ok: 0},
+  {q: 'Was geschieht, wenn man die Stromrichtung umkehrt?', a: ['Die Pole tauschen.', 'Der Magnet wird stärker.', 'Nichts.', 'Der Magnet wird zum Dauermagneten.'], ok: 0},
+  {q: 'Warum nutzt der Schrottkran einen Elektromagneten?', a: ['Er kann das Eisen per Knopfdruck loslassen.', 'Er ist billiger als ein Haken.', 'Er braucht keinen Strom.', 'Er zieht auch Holz an.'], ok: 0}
+]);
+</script>

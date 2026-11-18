@@ -1,0 +1,129 @@
+<!--
+title: Hammer, Zange und Schraubendreher
+short: Fügen und Umformen
+time: 2 Unterrichtsstunden
+q: Wie benutze ich Werkzeuge zum Fügen und Umformen richtig?
+facts: Schraubenantriebe: Schlitz, Kreuzschlitz (PH, PZ), Innensechskant, Torx – die Klinge muss genau passen | Schlosserhammer: Bahn, Finne, Kopf, Keil, Stiel – am Stielende greifen | Zangen: Kombizange, Flachzange, Rundzange, Seitenschneider, Beißzange | Umformen: Biegen von Draht und Blech, das Material bleibt erhalten | Blech im Schraubstock mit Schutzbacken und Holzklotz biegen
+inter: Schraubenköpfe und Klingen zuordnen · Hammer erkunden und Teile finden · Zangen zuordnen · Blech biegen in Schritten ordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Werkzeuge und Maschinen</p>
+      <h1>Hammer, Zange und Schraubendreher</h1>
+      <p class="lead">Ein abgerutschter Schraubendreher, ein krummer Nagel, ein Draht, der nicht hält – oft liegt es nicht am Werkstück, sondern am <b>falschen Werkzeug</b> oder am falschen Griff.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Warum dreht ein Schraubendreher manchmal durch und beschädigt die Schraube?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie benutze ich Werkzeuge zum Fügen und Umformen richtig?</p></div>
+      <div class="controls"><button class="btn primary" data-go="schraube">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="schraube" data-label="Schraubendreher" data-yr="Erarbeitung" data-title="Der passende Schraubendreher" data-sub="Schraubenantriebe">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Schraubendreher</p>
+    <h2>Die Klinge muss genau passen</h2>
+    <p class="lead">Schrauben haben verschiedene <b>Antriebe</b> im Kopf. Passt die Klinge nicht genau in Form und Größe, rutscht sie ab – der Schraubenkopf wird beschädigt, und du kannst dich verletzen.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 440 150" role="img" aria-label="Schraubenköpfe: Schlitz, Kreuzschlitz, Pozidriv, Innensechskant, Torx">
+      <g stroke="var(--edge)" stroke-width="2" fill="var(--steel)">
+        <circle cx="50" cy="60" r="34"/><circle cx="135" cy="60" r="34"/><circle cx="220" cy="60" r="34"/><circle cx="305" cy="60" r="34"/><circle cx="390" cy="60" r="34"/>
+      </g>
+      <g fill="var(--surface)" stroke="var(--edge)" stroke-width="1.6">
+        <rect x="20" y="55" width="60" height="10"/>
+        <path d="M130 34h10v21h21v10h-21v21h-10v-21h-21v-10h21z"/>
+        <path d="M215 34h10v21h21v10h-21v21h-10v-21h-21v-10h21z"/><path d="M206 46l28 28M234 46l-28 28" stroke-width="1"/>
+        <path d="M305 44l14 8v16l-14 8-14-8v-16z"/>
+        <path d="M390 40l6 10 12 0-6 10 6 10-12 0-6 10-6-10-12 0 6-10-6-10 12 0z"/>
+      </g>
+      <g style="font-family:var(--f-mono);font-weight:600;font-size:14px;fill:var(--ink)" text-anchor="middle">
+        <text x="50" y="118">Schlitz</text><text x="135" y="118">Kreuz (PH)</text><text x="220" y="118">Pozidriv (PZ)</text><text x="305" y="118">Innen-6-kant</text><text x="390" y="118">Torx (TX)</text>
+      </g>
+    </svg></div>
+    <div><div id="match-s"></div></div>
+  </div>
+</section>
+
+<section class="station" id="hammer" data-label="Hammer" data-yr="Erarbeitung" data-title="Der Schlosserhammer" data-sub="Teile und richtiger Griff">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Hammer</p>
+    <h2>Der Schlosserhammer</h2>
+    <p class="lead">Tippe die Teile des Hammers an. Im Modus „Finden“ wird ein Begriff genannt.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 300" id="hsvg" role="img" aria-label="Schlosserhammer">
+      <g data-part="stiel"><path d="M196 92h28l10 190h-48z" fill="var(--wood)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="ende"><path d="M188 230h44l2 52h-48z" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="kopf"><rect x="110" y="40" width="200" height="52" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="bahn"><rect x="70" y="34" width="40" height="64" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="finne"><path d="M310 40h50l28 22v4l-28 26h-50z" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="keil"><path d="M204 40l6-14h8l6 14z" fill="var(--accent)" stroke="var(--edge)" stroke-width="2"/></g>
+    </svg></div>
+    <div><div class="tk-row"><span id="h-mode"></span></div><div class="box" id="h-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="zangen" data-label="Zangen" data-yr="Erarbeitung" data-title="Zangen" data-sub="Halten, biegen, trennen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Zangen</p>
+    <h2>Für jede Aufgabe die richtige Zange</h2>
+    <p class="lead">Zangen halten, biegen oder trennen. Die Form der <b>Backen</b> verrät, wofür eine Zange gemacht ist. Ordne zu.</p>
+  </div>
+  <div id="match-z"></div>
+</section>
+
+<section class="station" id="biegen" data-label="Umformen" data-yr="Übung" data-title="Blech biegen" data-sub="Umformen ohne Späne">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Umformen</p>
+    <h2>Ein Blechstreifen wird gebogen</h2>
+    <p class="lead">Beim <b>Umformen</b> bleibt das ganze Material erhalten – es ändert nur seine Form. Ordne die Arbeitsschritte, um einen Blechwinkel im Schraubstock zu biegen.</p>
+  </div>
+  <div id="order-b"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Fügen und Umformen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Hammer, Zange, Schraubendreher</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Schraubendreher:</b> Die Klinge muss in Form (Schlitz, PH, PZ, Torx) und Größe genau zum Schraubenkopf passen.</li>
+        <li data-step><b>Hammer:</b> am Stielende greifen; Bahn zum Schlagen, Finne zum Anschlagen kleiner Nägel. Der Keil hält den Kopf fest.</li>
+        <li data-step><b>Zangen:</b> Flach- und Rundzange halten und biegen, Seitenschneider und Beißzange trennen, die Kombizange kann beides.</li>
+        <li data-step><b>Umformen:</b> Material wird gebogen, ohne dass Späne entstehen.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Sicherheit</span><p>Vor dem Arbeiten prüfen: Sitzt der Hammerkopf fest? Ist die Klinge unbeschädigt? Lockere oder beschädigte Werkzeuge sofort melden.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+matcher($('#match-s'), [['Schlitz', 'flache Klinge, rutscht leicht seitlich heraus'], ['Kreuzschlitz (PH)', 'Kreuz mit abgerundeten Flanken'], ['Pozidriv (PZ)', 'Kreuz mit zusätzlichen feinen Kerben'], ['Innensechskant', 'Sechskantschlüssel (Inbus)'], ['Torx (TX)', 'Stern mit sechs runden Spitzen']]);
+explorer($('#hsvg'), $('#h-panel'), [
+  {id: 'bahn', n: 'Bahn', t: 'Die flache Schlagfläche. Mit ihr schlägst du Nägel ein.'},
+  {id: 'finne', n: 'Finne', t: 'Das keilförmige Ende. Damit setzt man kleine Nägel an, ohne die Finger zu treffen, und treibt Blech aus.'},
+  {id: 'kopf', n: 'Hammerkopf', t: 'Aus gehärtetem Stahl. Sein Gewicht (z. B. 200 g oder 300 g) steht auf dem Kopf.'},
+  {id: 'keil', n: 'Keil', t: 'Er spreizt den Stiel im Auge des Kopfes und verhindert, dass der Kopf abfliegt.'},
+  {id: 'stiel', n: 'Stiel', t: 'Meist aus zähem Eschen- oder Hickoryholz. Er federt die Schläge ab.'},
+  {id: 'ende', n: 'Stielende', t: 'Hier greifst du zu. Je weiter hinten, desto kräftiger und gezielter der Schlag.'}
+], {modeRoot: $('#h-mode'), label: 'Teil des Hammers', intro: 'Tippe ein Teil des Hammers an.'});
+matcher($('#match-z'), [['Kombizange', 'halten, biegen und dünnen Draht abkneifen'], ['Flachzange', 'kleine Teile halten, Blechkanten umbiegen'], ['Rundzange', 'Drahtösen und Rundungen biegen'], ['Seitenschneider', 'Drähte und Kabel abschneiden'], ['Beißzange', 'Nägel herausziehen'], ['Wasserpumpenzange', 'Rohre und große Muttern greifen']]);
+orderSteps($('#order-b'), ['Biegelinie mit Reißnadel und Anschlagwinkel anreißen.', 'Blech mit Schutzbacken so in den Schraubstock spannen, dass die Biegelinie genau an der Backenkante liegt.', 'Mit der flachen Hand oder einem Holzklotz das Blech vorbiegen.', 'Mit dem Kunststoffhammer über einen Holzklotz nachschlagen, bis der Winkel 90° hat.', 'Winkel mit dem Anschlagwinkel prüfen und Kanten entgraten.'], {label: 'Arbeitsschritte'});
+mcQuiz($('#quiz'), [
+  {q: 'Warum muss die Klinge genau in den Schraubenkopf passen?', a: ['Sonst rutscht sie ab und beschädigt den Kopf.', 'Damit die Schraube schöner aussieht.', 'Damit sie schneller rostet.', 'Das ist egal.'], ok: 0},
+  {q: 'Wo greifst du den Hammer?', a: ['am Stielende', 'direkt am Kopf', 'in der Mitte des Kopfes', 'an der Finne'], ok: 0},
+  {q: 'Wofür ist der Keil im Hammerkopf da?', a: ['Er hält den Kopf fest auf dem Stiel.', 'Er macht den Hammer schwerer.', 'Er dient zum Nägelziehen.', 'Er ist nur Verzierung.'], ok: 0},
+  {q: 'Mit welcher Zange biegst du eine Drahtöse?', a: ['Rundzange', 'Beißzange', 'Seitenschneider', 'Wasserpumpenzange'], ok: 0},
+  {q: 'Welche Zange trennt Kabel?', a: ['Seitenschneider', 'Flachzange', 'Rundzange', 'Schraubzwinge'], ok: 0},
+  {q: 'Was kennzeichnet das Umformen?', a: ['Das Material wird gebogen, es entstehen keine Späne.', 'Material wird abgesägt.', 'Teile werden geklebt.', 'Es wird nur gemessen.'], ok: 0},
+  {q: 'Warum nutzt man beim Blechbiegen einen Holzklotz oder Kunststoffhammer?', a: ['Damit keine Dellen im Blech entstehen.', 'Damit es lauter ist.', 'Damit das Blech rostet.', 'Damit es schneller geht.'], ok: 0}
+]);
+</script>

@@ -1,0 +1,136 @@
+<!--
+title: Schaltungen im Haus
+short: Hausschaltungen
+time: 2 Unterrichtsstunden
+q: Wie schaltet man Licht von einer, zwei oder mehr Stellen aus?
+facts: Ausschaltung: ein Schalter schaltet eine Leuchte | Serienschaltung: zwei Wippen in einem Schalter schalten zwei Leuchtengruppen getrennt (z. B. Kronleuchter) | Wechselschaltung: zwei Wechselschalter schalten eine Leuchte von zwei Stellen (Flur, Treppe) | Kreuzschaltung: für drei und mehr Stellen kommen Kreuzschalter zwischen die Wechselschalter | Im Haus arbeitet nur die Elektrofachkraft, im Unterricht wird mit Schutzkleinspannung im Modell gebaut
+inter: Serienschaltung schalten · Wechselschaltung mit Wahrheitstabelle · Kreuzschalter ergänzen · Räume und Schaltungen zuordnen · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Elektromagnet und Hausinstallation</p>
+      <h1>Schaltungen im Haus</h1>
+      <p class="lead">Du kommst abends die Treppe hoch, schaltest unten das Licht ein – und oben wieder aus. Mit einem gewöhnlichen Schalter geht das nicht. Welche Schaltung steckt dahinter?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wie kann man eine Lampe von zwei Stellen aus schalten, egal wie der andere Schalter steht?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie schaltet man Licht von einer, zwei oder mehr Stellen aus?</p></div>
+      <div class="controls"><button class="btn primary" data-go="serie">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="serie" data-label="Serienschaltung" data-yr="Erarbeitung" data-title="Aus- und Serienschaltung" data-sub="Ein Schalter, zwei Wippen">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Aus- und Serienschaltung</p>
+    <h2>Ein Schalter – eine oder zwei Lampengruppen</h2>
+    <p class="lead">Bei der <b>Ausschaltung</b> schaltet ein Schalter eine Leuchte. Die <b>Serienschaltung</b> hat zwei Wippen in einem Gehäuse: Sie schalten zwei Lampengruppen <b>getrennt</b>, z. B. beim Kronleuchter oder Deckenlicht und Spiegelleuchte im Bad. Tippe S1 und S2 an.</p>
+  </div>
+  <div id="circ-s"></div>
+</section>
+
+<section class="station" id="wechsel" data-label="Wechselschaltung" data-yr="Experiment" data-title="Die Wechselschaltung" data-sub="Von zwei Stellen schalten">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Wechselschaltung</p>
+    <h2>Die Wechselschaltung</h2>
+    <p class="lead">Ein <b>Wechselschalter</b> verbindet seinen Mittelanschluss entweder mit der oberen oder der unteren Leitung. Tippe die Schalter an. Mit dem <b>Kreuzschalter</b> in der Mitte kommt eine dritte Schaltstelle hinzu.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 560 280" id="wsvg" class="sch" role="img" aria-label="Wechselschaltung"></svg></div>
+    <div>
+      <div class="tk-row"><span class="tk-cap">Schaltung</span><span id="w-mode"></span></div>
+      <div class="table-wrap"><table class="cmp" id="w-tab"></table></div>
+      <p class="status" id="w-st"></p>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="raum" data-label="Planen" data-yr="Übung" data-title="Welche Schaltung wohin?" data-sub="Räume planen">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Planen</p>
+    <h2>Welche Schaltung passt in welchen Raum?</h2>
+    <p class="lead">Elektrofachkräfte planen für jeden Raum die passende Schaltung. Ordne zu.</p>
+  </div>
+  <div id="match-r"></div>
+</section>
+
+<section class="station" id="modell" data-label="M1 Modell" data-yr="Material M1" data-title="Installation im Modell" data-sub="Ein Puppenhaus verdrahten">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Elektroinstallation im Modell</h2>
+    <p class="lead">Plant zu zweit die Beleuchtung für ein Modellhaus aus Karton – mit 4,5-V-Batterie, Lämpchen und Schaltern aus dem Baukasten.</p>
+  </div>
+  <div class="cols-3">
+    <div class="box"><span class="tag info">Flur</span><p>Licht vom Eingang und von der Zimmertür schaltbar: <b>Wechselschaltung</b>.</p></div>
+    <div class="box"><span class="tag info">Wohnzimmer</span><p>Deckenlicht und Leselampe getrennt schaltbar: <b>Serienschaltung</b>.</p></div>
+    <div class="box"><span class="tag info">Abstellraum</span><p>Ein Schalter an der Tür: <b>Ausschaltung</b>.</p></div>
+  </div>
+  <div class="box mt"><span class="tag lim">Sicherheit</span><p>Nur mit Schutzkleinspannung arbeiten. An der echten Hausinstallation mit 230 V arbeitet ausschließlich die Elektrofachkraft.</p></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Schaltungen im Haus</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Schaltungen im Haus</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Ausschaltung:</b> ein Schalter – eine Leuchte (Abstellraum).</li>
+        <li data-step><b>Serienschaltung:</b> zwei Wippen schalten zwei Leuchten(gruppen) getrennt (Kronleuchter, Bad).</li>
+        <li data-step><b>Wechselschaltung:</b> zwei Wechselschalter schalten eine Leuchte von zwei Stellen (Flur, Treppe). Jeder Schalter kann den Zustand umkehren.</li>
+        <li data-step><b>Kreuzschaltung:</b> Für jede weitere Schaltstelle kommt ein Kreuzschalter zwischen die Wechselschalter (Treppenhaus über mehrere Etagen).</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Merke</span><p>Bei der Wechselschaltung leuchtet die Lampe, wenn beide Schalter <b>gleich</b> stehen (beide oben oder beide unten).</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+circuit($('#circ-s'), {mode: 'parallel', loads: [{t: 'lamp', R: 15, name: 'Decke'}, {t: 'lamp', R: 15, name: 'Spiegel'}], U: 4.5, branchSw: true, show: ['I1', 'I2', 'I'], burn: false,
+  note: (s) => s.Ii.every(x => x > 0) ? 'Beide Wippen geschlossen: Beide Lampen leuchten.' : s.Ii.some(x => x > 0) ? 'Nur eine Wippe geschlossen: Eine Lampengruppe leuchtet – die andere bleibt aus.' : 'Beide Wippen offen.'});
+(() => {
+  const svg = $('#wsvg'); let a = 0, b = 0, k = 0, kreuz = false;
+  const lit = () => (a === b) !== (kreuz && k === 1);
+  function swW(x, pos, id, mirror) {
+    const cx = mirror ? x + 30 : x - 30, ty = pos ? 70 : 150;
+    return `<g class="click" data-w="${id}" tabindex="0" role="button" aria-label="Wechselschalter ${id}"><rect x="${Math.min(x, cx) - 10}" y="55" width="${Math.abs(cx - x) + 20}" height="110" fill="var(--surface)" opacity=".01"/><circle class="sym" cx="${x}" cy="110" r="4"/><circle class="sym" cx="${cx}" cy="70" r="4"/><circle class="sym" cx="${cx}" cy="150" r="4"/><path class="w" d="M${x} 110L${cx} ${ty}"/></g>`;
+  }
+  function draw() {
+    const on = lit(), xA = 140, xB = kreuz ? 420 : 300;
+    let g = SY.wire([[40, 200], [40, 110], [xA, 110]]) + SY.bat(40, 225) + SY.wire([[40, 240], [40, 260], [510, 260], [510, 190]]);
+    g += SY.wire([[xA + 30, 70], [kreuz ? 240 : xB - 30, 70]]) + SY.wire([[xA + 30, 150], [kreuz ? 240 : xB - 30, 150]]);
+    if (kreuz) {
+      g += SY.wire([[300, 70], [xB - 30, 70]]) + SY.wire([[300, 150], [xB - 30, 150]]);
+      g += `<g class="click" data-w="k" tabindex="0" role="button" aria-label="Kreuzschalter"><rect x="230" y="55" width="80" height="110" fill="var(--surface)" opacity=".01"/>${[240, 300].map(x => `<circle class="sym" cx="${x}" cy="70" r="4"/><circle class="sym" cx="${x}" cy="150" r="4"/>`).join('')}`;
+      g += k ? `<path class="w" d="M240 70L300 150M240 150L300 70"/>` : `<path class="w" d="M240 70H300M240 150H300"/>`;
+      g += `<rect x="228" y="60" width="84" height="100" fill="none" stroke="var(--wire)" stroke-dasharray="5 5" stroke-width="1.2"/></g><text x="270" y="185" text-anchor="middle" class="sm">Kreuzschalter K</text>`;
+    }
+    g += swW(xA, a, 'a', true) + swW(xB, b, 'b', false);
+    g += SY.wire([[xB, 110], [510, 110], [510, 160]]) + SY.lamp(510, 175, on ? 1 : 0);
+    g += `<text x="${xA + 15}" y="45" text-anchor="middle" class="sm">S1 (unten an der Treppe)</text><text x="${xB - 15}" y="45" text-anchor="middle" class="sm">S2 (oben)</text>`;
+    svg.innerHTML = g;
+    const pos = v => v ? 'oben' : 'unten';
+    const rows = kreuz ? [[0, 0, 0], [0, 1, 0], [1, 0, 0], [1, 1, 0], [0, 0, 1], [0, 1, 1], [1, 0, 1], [1, 1, 1]] : [[0, 0, 0], [0, 1, 0], [1, 0, 0], [1, 1, 0]];
+    $('#w-tab').innerHTML = `<thead><tr><th>S1</th>${kreuz ? '<th>K</th>' : ''}<th>S2</th><th>Lampe</th></tr></thead><tbody>${rows.map(([x, y, z]) => { const l = (x === y) !== (kreuz && z === 1), cur = x === a && y === b && (!kreuz || z === k); return `<tr${cur ? ' style="outline:3px solid var(--accent);outline-offset:-3px"' : ''}><td>${pos(x)}</td>${kreuz ? `<td>${z ? 'gekreuzt' : 'gerade'}</td>` : ''}<td>${pos(y)}</td><td><b>${l ? 'an' : 'aus'}</b></td></tr>`; }).join('')}</tbody>`;
+    $('#w-st').innerHTML = on ? 'Die Lampe <b>leuchtet</b>. Jeder Schalter kann sie jetzt ausschalten.' : 'Die Lampe ist <b>aus</b>. Jeder Schalter kann sie jetzt einschalten.';
+  }
+  const flip = id => { if (id === 'a') a = 1 - a; else if (id === 'b') b = 1 - b; else k = 1 - k; draw(); };
+  svg.addEventListener('click', e => { const s = e.target.closest('[data-w]'); if (s) flip(s.dataset.w); });
+  svg.addEventListener('keydown', e => { const s = e.target.closest('[data-w]'); if (s && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); flip(s.dataset.w); } });
+  seg($('#w-mode'), [['w', 'Wechselschaltung'], ['k', 'mit Kreuzschalter']], v => { kreuz = v === 'k'; k = 0; draw(); });
+})();
+matcher($('#match-r'), [['Abstellraum mit einer Tür', 'Ausschaltung'], ['Flur mit zwei Türen', 'Wechselschaltung'], ['Treppenhaus über drei Etagen', 'Wechselschaltung mit Kreuzschalter'], ['Wohnzimmer mit Kronleuchter in zwei Gruppen', 'Serienschaltung'], ['Schlafzimmer: Tür und Bett', 'Wechselschaltung']]);
+mcQuiz($('#quiz'), [
+  {q: 'Welche Schaltung brauchst du, um eine Lampe von zwei Stellen zu schalten?', a: ['Wechselschaltung', 'Ausschaltung', 'Serienschaltung', 'Reihenschaltung von Lampen'], ok: 0},
+  {q: 'Wann leuchtet die Lampe in der Wechselschaltung?', a: ['wenn beide Schalter gleich stehen', 'nur wenn beide oben stehen', 'wenn die Schalter verschieden stehen', 'immer'], ok: 0},
+  {q: 'Was macht ein Serienschalter?', a: ['Er schaltet zwei Lampengruppen getrennt.', 'Er schaltet eine Lampe von zwei Stellen.', 'Er dimmt die Lampe.', 'Er schützt vor Kurzschluss.'], ok: 0},
+  {q: 'Was braucht man für eine dritte Schaltstelle?', a: ['einen Kreuzschalter zwischen den Wechselschaltern', 'einen dritten Wechselschalter am Ende', 'einen Serienschalter', 'eine zweite Lampe'], ok: 0},
+  {q: 'Wer darf an der Hausinstallation mit 230 V arbeiten?', a: ['nur eine Elektrofachkraft', 'jeder mit Handschuhen', 'Schülerinnen und Schüler mit Erlaubnis', 'jeder, wenn die Sicherung drin ist'], ok: 0},
+  {q: 'Wie viele Leitungen verbinden zwei Wechselschalter?', a: ['zwei', 'eine', 'drei', 'vier'], ok: 0}
+]);
+</script>

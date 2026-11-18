@@ -1,0 +1,167 @@
+<!--
+title: Klingel und Relais
+short: Klingel und Relais
+time: 2 Unterrichtsstunden
+q: Wie nutzen Klingel und Relais den Elektromagneten?
+facts: Klingel: Elektromagnet zieht den Anker an, der Klöppel schlägt gegen die Glocke, der Unterbrecherkontakt öffnet, die Feder zieht den Anker zurück – das wiederholt sich (Selbstunterbrecher) | Relais: elektromagnetischer Schalter; Steuerstromkreis mit Spule, Arbeitsstromkreis mit Kontakt | Schließer schließt bei Strom in der Spule, Öffner öffnet | Vorteil: Ein kleiner Steuerstrom schaltet einen großen Arbeitsstrom; die Stromkreise sind getrennt
+inter: Klingel in Zeitlupe · Relais schalten (Schließer und Öffner) · Aussagen zum Relais · Lückentext · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Elektromagnet und Hausinstallation</p>
+      <h1>Klingel und Relais</h1>
+      <p class="lead">Ein kurzer Druck auf den Klingelknopf – und es scheppert, solange du drückst. Dabei fließt nur Gleichstrom aus einer Batterie. Wie wird daraus ein schnelles Hin und Her?</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wie kann ein Magnet, der nur anzieht, einen Hammer hin und her schlagen lassen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie nutzen Klingel und Relais den Elektromagneten?</p></div>
+      <div class="controls"><button class="btn primary" data-go="klingel">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="klingel" data-label="Klingel" data-yr="Erarbeitung" data-title="Die elektrische Klingel" data-sub="Der Selbstunterbrecher">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Klingel</p>
+    <h2>Die elektrische Klingel</h2>
+    <p class="lead">Halte den Taster gedrückt (Schalter umschalten) und beobachte in Zeitlupe, wie Anker, Kontakt und Glocke zusammenspielen.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 420 280" id="bsvg" class="sch" role="img" aria-label="Elektrische Klingel"></svg></div>
+    <div>
+      <div class="controls"><button class="btn primary" id="b-press">Taster drücken</button><span id="b-speed"></span></div>
+      <ol class="stack" id="b-steps" style="padding-left:1.2rem">
+        <li>Strom fließt durch die Spule – der <b>Elektromagnet</b> wird magnetisch.</li>
+        <li>Er zieht den <b>Anker</b> an, der <b>Klöppel</b> schlägt gegen die Glocke.</li>
+        <li>Dabei öffnet der <b>Unterbrecherkontakt</b> – der Strom ist unterbrochen.</li>
+        <li>Die <b>Feder</b> zieht den Anker zurück, der Kontakt schließt wieder – alles beginnt von vorn.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="relais" data-label="Relais" data-yr="Experiment" data-title="Das Relais" data-sub="Ein Schalter mit Elektromagnet">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Relais</p>
+    <h2>Das Relais – ein Schalter mit Elektromagnet</h2>
+    <p class="lead">Links der <b>Steuerstromkreis</b> mit kleiner Spannung, rechts der <b>Arbeitsstromkreis</b> mit dem Motor. Schalte den Taster und wechsle zwischen Schließer und Öffner.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 520 280" id="rsvg" class="sch" role="img" aria-label="Relaisschaltung"></svg></div>
+    <div>
+      <div class="tk-row"><span class="tk-cap">Kontakt</span><span id="r-k"></span></div>
+      <div class="tk-readout" id="r-out"></div>
+      <p class="status" id="r-st"></p>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="vorteile" data-label="Vorteile" data-yr="Übung" data-title="Wozu ein Relais?" data-sub="Richtig oder falsch?">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Vorteile</p>
+    <h2>Wozu braucht man ein Relais?</h2>
+    <p class="lead">Mit einem Relais schaltet ein <b>kleiner</b> Strom einen <b>großen</b> Strom – und beide Stromkreise bleiben elektrisch getrennt. Stimmt die Aussage?</p>
+  </div>
+  <div id="tf-r"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Klingel und Relais</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Klingel und Relais</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Klingel:</b> Der Elektromagnet zieht den Anker an, der Klöppel schlägt an die Glocke, der Unterbrecherkontakt öffnet, die Feder zieht den Anker zurück – das wiederholt sich (<b>Selbstunterbrecher</b>).</li>
+        <li data-step>Ein <b>Relais</b> ist ein Schalter, der von einem Elektromagneten betätigt wird.</li>
+        <li data-step><b>Steuerstromkreis</b> mit Spule, <b>Arbeitsstromkreis</b> mit Kontakt. Ein <b>Schließer</b> schließt, ein <b>Öffner</b> öffnet, wenn Strom durch die Spule fließt.</li>
+        <li data-step>Vorteil: kleiner Steuerstrom schaltet großen Arbeitsstrom; die Stromkreise sind getrennt.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Ausblick</span><p>In Klasse 9 steuert ein Transistor das Relais – zum Beispiel, wenn es dunkel wird.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Lückentext und Quiz</h2></div>
+  <div id="cloze-u"></div>
+  <h3 class="mt">Quiz</h3>
+  <div id="quiz"></div>
+</section>
+
+<script>
+(() => {
+  const svg = $('#bsvg'); let pressed = false, pulled = false, timer = null, slow = 700;
+  function draw() {
+    const cur = pressed && !pulled, rot = pulled ? -12 : 0;
+    let g = '';
+    g += SY.wire([[40, 230], [40, 250], [300, 250], [300, 180], [262, 180]]) + SY.wire([[40, 200], [40, 120], [110, 120]]) + SY.wire([[240, 250], [240, 220]]);
+    g += SY.bat(40, 215) + `<text x="10" y="190" class="sm">4,5 V</text>`;
+    g += SY.sw(75, 120, pressed, 'taster') + `<text x="75" y="100" text-anchor="middle" class="sm">Taster</text>`;
+    g += `<path class="w" d="M110 120H140"/><rect x="140" y="100" width="66" height="54" fill="var(--steel)" stroke="var(--wire)" stroke-width="2"/>`;
+    for (let k = 0; k < 8; k++) g += `<path d="M${146 + k * 8} 102v50" stroke="var(--cu)" stroke-width="4"/>`;
+    g += `<path class="w" d="M206 140h10v80h24"/>`;
+    if (cur) g += `<path class="flow" d="M40 200V120H140M206 140h10v80h24v30H300V180H262M40 250V232"/>`;
+    g += `<text x="173" y="172" text-anchor="middle" class="sm">Elektromagnet</text>`;
+    g += `<circle cx="178" cy="50" r="24" fill="var(--warn)" stroke="var(--wire)" stroke-width="2"/><text x="140" y="24" class="sm">Glocke</text>`;
+    g += `<g style="transition:transform .12s" transform="rotate(${rot} 236 220)"><rect x="230" y="60" width="12" height="160" fill="var(--steel-2)" stroke="var(--wire)" stroke-width="2"/><circle cx="236" cy="55" r="8" fill="var(--steel)" stroke="var(--wire)" stroke-width="2"/><path d="M242 180h14" stroke="var(--wire)" stroke-width="3"/></g>`;
+    g += `<text x="250" y="50" class="sm">Klöppel</text><text x="252" y="110" class="sm">Anker</text>`;
+    g += `<rect x="262" y="172" width="18" height="16" fill="var(--steel)" stroke="var(--wire)" stroke-width="2"/><text x="285" y="168" class="sm">Kontakt ${pulled ? 'offen' : 'zu'}</text>`;
+    g += `<path d="M236 224q-12 8 0 14q12 8 0 14" fill="none" stroke="var(--wire)" stroke-width="2"/><text x="190" y="240" class="sm">Feder</text>`;
+    if (pulled) g += `<path d="M150 40l-14-8M150 56l-16 2M158 70l-12 10" stroke="var(--accent)" stroke-width="3"/>`;
+    svg.innerHTML = g;
+    $$('#b-steps li').forEach((li, k) => li.style.fontWeight = !pressed ? '' : (pulled ? (k === 1 || k === 2) : (k === 0 || k === 3)) ? '700' : '');
+  }
+  function tick() { pulled = !pulled; draw(); }
+  function setPressed(p) { pressed = p; clearInterval(timer); pulled = false; if (p) timer = setInterval(tick, slow); $('#b-press').textContent = p ? 'Taster loslassen' : 'Taster drücken'; draw(); }
+  $('#b-press').onclick = () => setPressed(!pressed);
+  svg.addEventListener('click', e => { if (e.target.closest('[data-sw]')) setPressed(!pressed); });
+  seg($('#b-speed'), [['700', 'Zeitlupe'], ['90', 'Echtzeit']], v => { slow = +v; if (pressed) setPressed(true); });
+  draw();
+})();
+(() => {
+  const svg = $('#rsvg'); let on = false, typ = 's';
+  function draw() {
+    const closed = typ === 's' ? on : !on;
+    let g = '';
+    g += SY.wire([[40, 60], [40, 30], [170, 30], [170, 90]]) + SY.wire([[40, 90], [40, 250], [170, 250], [170, 170]]);
+    g += SY.bat(40, 75) + `<text x="8" y="120" class="sm">4,5 V</text>` + SY.sw(105, 250, on, 'st') + `<text x="105" y="232" text-anchor="middle" class="sm">Taster</text>`;
+    g += `<rect x="150" y="90" width="40" height="80" fill="var(--surface)" stroke="var(--wire)" stroke-width="2.2"/><path d="M150 170L190 90" class="thin"/><text x="130" y="135" text-anchor="end" class="sm">Spule</text>`;
+    if (on) g += `<path class="flow" d="M40 60V30H170V90M170 170V250H40V92"/>`;
+    g += `<path d="M190 130H330" stroke="var(--wire)" stroke-width="1.6" stroke-dasharray="8 6"/>`;
+    g += SY.wire([[480, 60], [480, 30], [330, 30], [330, 110]]) + SY.wire([[480, 90], [480, 250], [330, 250], [330, 210]]) + SY.wire([[330, 150], [330, 170]]);
+    g += `<rect x="455" y="70" width="50" height="10" fill="var(--surface)"/><path class="w" d="M455 69H505"/><path class="w" stroke-width="7" d="M468 82H492"/><text x="508" y="120" class="sm" text-anchor="end">12 V</text>`;
+    g += `<circle cx="330" cy="110" r="3.5" class="sym"/><circle cx="330" cy="150" r="3.5" class="sym"/>`;
+    g += closed ? `<path class="w" d="M330 110V150"/>` : `<path class="w" d="M330 150L314 116"/>`;
+    g += `<text x="345" y="135" class="sm">${typ === 's' ? 'Schließer' : 'Öffner'}</text>`;
+    const spin = closed;
+    g += `<circle cx="330" cy="190" r="18" class="sym"/><text x="330" y="196" text-anchor="middle">M</text>`;
+    if (spin) g += `<path class="flow" d="M480 60V30H330V250H480V92"/><path d="M352 178a22 22 0 0 1 0 24" fill="none" stroke="var(--accent)" stroke-width="3"/>`;
+    g += `<text x="105" y="290" text-anchor="middle" class="sm">Steuerstromkreis</text><text x="405" y="290" text-anchor="middle" class="sm">Arbeitsstromkreis</text>`;
+    svg.setAttribute('viewBox', '0 0 520 300');
+    svg.innerHTML = g;
+    readout($('#r-out'), [['Taster', on ? 'gedrückt' : 'offen'], ['Spule', on ? 'magnetisch' : 'aus'], ['Motor', spin ? 'läuft' : 'steht']]);
+    $('#r-st').innerHTML = typ === 's' ? (on ? 'Die Spule zieht den Kontakt an: Der <b>Schließer</b> schließt, der Motor läuft.' : 'Kein Strom in der Spule: Der Schließer ist offen.') : (on ? 'Die Spule zieht den Kontakt an: Der <b>Öffner</b> öffnet, der Motor bleibt stehen.' : 'Ohne Strom in der Spule ist der Öffner geschlossen – der Motor läuft.');
+  }
+  svg.addEventListener('click', e => { if (e.target.closest('[data-sw]')) { on = !on; draw(); } });
+  svg.addEventListener('keydown', e => { if (e.target.closest('[data-sw]') && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); on = !on; draw(); } });
+  seg($('#r-k'), [['s', 'Schließer'], ['o', 'Öffner']], v => { typ = v; draw(); });
+})();
+trueFalse($('#tf-r'), [
+  {t: 'Mit einem Relais kann ein kleiner Strom einen großen Strom schalten.', ok: true},
+  {t: 'Steuer- und Arbeitsstromkreis sind elektrisch miteinander verbunden.', ok: false, why: 'Sie sind getrennt – nur das Magnetfeld verbindet sie.'},
+  {t: 'Ein Öffner ist geschlossen, solange kein Strom durch die Spule fließt.', ok: true},
+  {t: 'Ein Relais funktioniert ohne Elektromagnet.', ok: false, why: 'Die Spule mit Eisenkern betätigt den Kontakt.'},
+  {t: 'Mit einem Relais kann man einen 12-V-Motor über einen Taster mit 4,5 V schalten.', ok: true},
+  {t: 'Die Klingel braucht einen Wechselschalter, um hin und her zu schlagen.', ok: false, why: 'Der Unterbrecherkontakt unterbricht den Strom von selbst.'}
+]);
+cloze($('#cloze-u'), 'Bei der Klingel zieht der {Elektromagnet|Dauermagnet|Taster} den Anker an. Der Klöppel schlägt gegen die {Glocke|Batterie|Spule}. Gleichzeitig öffnet der {Unterbrecherkontakt|Taster|Schließer}, der Strom ist unterbrochen. Die {Feder|Spule|Glocke} zieht den Anker zurück. Ein Relais hat einen {Steuerstromkreis|Glockenkreis|Kurzschluss} und einen {Arbeitsstromkreis|Lichtkreis|Magnetkreis}.');
+mcQuiz($('#quiz'), [
+  {q: 'Warum schlägt der Klöppel der Klingel immer wieder?', a: ['Der Unterbrecherkontakt öffnet und schließt ständig.', 'Die Batterie wechselt die Richtung.', 'Der Taster wird schnell gedrückt.', 'Die Glocke ist magnetisch.'], ok: 0},
+  {q: 'Was ist ein Relais?', a: ['ein Schalter, der von einem Elektromagneten betätigt wird', 'eine besondere Batterie', 'eine Lampe', 'ein Widerstand'], ok: 0},
+  {q: 'Was macht ein Schließer, wenn Strom durch die Spule fließt?', a: ['Er schließt den Arbeitsstromkreis.', 'Er öffnet den Arbeitsstromkreis.', 'Er wird heiß.', 'Nichts.'], ok: 0},
+  {q: 'Welcher Stromkreis enthält die Relaisspule?', a: ['der Steuerstromkreis', 'der Arbeitsstromkreis', 'beide', 'keiner'], ok: 0},
+  {q: 'Was ist ein Vorteil des Relais?', a: ['Kleiner Strom schaltet großen Strom, Kreise getrennt.', 'Es spart die Batterie.', 'Es leuchtet.', 'Es braucht keinen Strom.'], ok: 0},
+  {q: 'Was zieht den Anker der Klingel zurück?', a: ['eine Feder', 'die Glocke', 'die Batterie', 'der Taster'], ok: 0}
+]);
+</script>

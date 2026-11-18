@@ -1,0 +1,191 @@
+<!--
+title: Alarmanlagen
+short: Alarmanlage
+time: 2–3 Unterrichtsstunden
+q: Wie funktioniert eine Alarmanlage, und welche ist schwerer zu überlisten?
+facts: Arbeitsstromprinzip: Schließer-Kontakte (Trittmatte, Fensterkontakt) liegen parallel; schließt einer, ertönt der Alarm; ein durchtrenntes Kabel bleibt unbemerkt | Ruhestromprinzip: Im Ruhezustand fließt ständig Strom durch Öffner-Kontakte und die Relaisspule; wird der Kreis unterbrochen (Fenster auf oder Kabel durchtrennt), fällt das Relais ab und sein Öffner schaltet den Alarm ein | Selbsthalteschaltung: Ein Haltekontakt des Relais überbrückt den Ein-Taster, der Alarm bleibt an, bis der Aus-Taster gedrückt wird | Sensoren: Reedkontakt mit Magnet, Trittmatte, Faden- oder Drahtkontakt
+inter: Arbeitsstrom-Anlage testen und sabotieren · Ruhestrom-Anlage testen und sabotieren · Selbsthalteschaltung schalten · Planungsaufgabe · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Elektromagnet und Hausinstallation</p>
+      <h1>Alarmanlagen</h1>
+      <p class="lead">Ein Fenster wird geöffnet – und sofort schrillt die Sirene. Aber was passiert, wenn ein Einbrecher vorher das Kabel durchschneidet? Es gibt zwei Bauweisen, und nur eine bemerkt die Sabotage.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Wie würdest du mit Batterie, Summer und Schaltern eine einfache Alarmanlage für deine Zimmertür bauen?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie funktioniert eine Alarmanlage, und welche ist schwerer zu überlisten?</p></div>
+      <div class="controls"><button class="btn primary" data-go="arbeit">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="arbeit" data-label="Arbeitsstrom" data-yr="Experiment" data-title="Arbeitsstromprinzip" data-sub="Kontakt schließt – Alarm">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Arbeitsstromprinzip</p>
+    <h2>Das Arbeitsstromprinzip</h2>
+    <p class="lead">Trittmatte und Fensterkontakt sind <b>Schließer</b> und liegen <b>parallel</b>. Schließt einer von ihnen, fließt Strom und der Summer ertönt. Teste beide – und schneide dann als Einbrecher die Leitung durch.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 520 290" id="asvg" class="sch" role="img" aria-label="Alarmanlage nach dem Arbeitsstromprinzip"></svg></div>
+    <div>
+      <div class="controls"><button class="btn" data-a="t">Auf die Trittmatte treten</button><button class="btn" data-a="f">Fenster öffnen</button><button class="btn" data-a="c">Leitung durchschneiden</button></div>
+      <p class="status" id="a-st"></p>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="ruhe" data-label="Ruhestrom" data-yr="Experiment" data-title="Ruhestromprinzip" data-sub="Kreis unterbrochen – Alarm">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Ruhestromprinzip</p>
+    <h2>Das Ruhestromprinzip</h2>
+    <p class="lead">Hier fließt <b>im Ruhezustand</b> ständig ein kleiner Strom durch den Fensterkontakt (geschlossen, solange das Fenster zu ist), den Alarmdraht und die Relaisspule. Das Relais hält seinen <b>Öffner</b> offen. Was passiert, wenn der Kreis unterbrochen wird?</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 560 290" id="rusvg" class="sch" role="img" aria-label="Alarmanlage nach dem Ruhestromprinzip"></svg></div>
+    <div>
+      <div class="controls"><button class="btn" data-r="f">Fenster öffnen</button><button class="btn" data-r="c">Alarmdraht durchschneiden</button></div>
+      <p class="status" id="r-st"></p>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="selbst" data-label="Selbsthaltung" data-yr="Experiment" data-title="Die Selbsthalteschaltung" data-sub="Der Alarm bleibt an">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Selbsthaltung</p>
+    <h2>Die Selbsthalteschaltung</h2>
+    <p class="lead">Ein kurzer Impuls soll den Alarm <b>dauerhaft</b> einschalten – auch wenn das Fenster sofort wieder geschlossen wird. Dazu überbrückt ein <b>Haltekontakt</b> des Relais den Ein-Taster. Nur der Aus-Taster beendet den Alarm. Probiere es aus.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 540 290" id="ssvg" class="sch" role="img" aria-label="Selbsthalteschaltung"></svg></div>
+    <div>
+      <div class="controls"><button class="btn primary" data-s="ein">Ein-Taster kurz drücken</button><button class="btn" data-s="aus">Aus-Taster kurz drücken</button></div>
+      <p class="status" id="s-st"></p>
+    </div>
+  </div>
+</section>
+
+<section class="station" id="m1" data-label="M1 Planen" data-yr="Material M1" data-title="Planungsaufgabe" data-sub="Eine Alarmanlage für dein Zimmer">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Material M1</p>
+    <h2>Planungsaufgabe: Alarm für dein Zimmer</h2>
+    <p class="lead">Plant zu zweit eine Alarmanlage im Modell und baut sie mit dem Baukasten auf.</p>
+  </div>
+  <div class="cols-3">
+    <div class="box"><span class="tag info">1 · Anforderungen</span><p>Was soll überwacht werden (Tür, Fenster, Schublade)? Soll Sabotage bemerkt werden? Soll der Alarm an bleiben?</p></div>
+    <div class="box"><span class="tag info">2 · Schaltplan</span><p>Zeichnet den Schaltplan mit Schaltzeichen. Wählt Arbeits- oder Ruhestromprinzip und begründet.</p></div>
+    <div class="box"><span class="tag info">3 · Aufbau und Test</span><p>Baut auf, testet alle Fälle (auslösen, sabotieren, zurücksetzen) und notiert die Ergebnisse in einer Tabelle.</p></div>
+  </div>
+  <div class="box mt"><span class="tag info">Sensoren</span><p><b>Reedkontakt:</b> Zwei Kontaktzungen in einem Glasröhrchen, die ein Magnet schließt – ideal für Türen und Fenster. <b>Trittmatte:</b> zwei Folien, die sich beim Drauftreten berühren. <b>Fadenkontakt:</b> Ein dünner Draht reißt, wenn jemand dagegenläuft.</p></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Alarmanlagen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Alarmanlagen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Arbeitsstromprinzip:</b> Schließer liegen parallel. Wird einer geschlossen, ertönt der Alarm. Ein durchtrenntes Kabel bleibt unbemerkt.</li>
+        <li data-step><b>Ruhestromprinzip:</b> Im Ruhezustand fließt Strom durch Öffner und Relaisspule. Wird der Kreis unterbrochen (Fenster auf, Kabel durch), fällt das Relais ab und schaltet den Alarm ein. Sabotage wird erkannt.</li>
+        <li data-step><b>Selbsthaltung:</b> Ein Haltekontakt des Relais überbrückt den Ein-Taster. Der Alarm bleibt an, bis der Aus-Taster gedrückt wird.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag info">Merke</span><p>Echte Alarmanlagen arbeiten nach dem <b>Ruhestromprinzip</b>, weil es Kabelbrüche und Sabotage meldet.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+const buzzer = (x, y, on) => `<rect x="${x - 22}" y="${y - 16}" width="44" height="32" class="sym"/><path class="thin" d="M${x - 12} ${y + 6}a12 12 0 0 1 24 0"/>${on ? `<path d="M${x + 28} ${y - 10}q8 10 0 20M${x + 36} ${y - 16}q12 16 0 32" fill="none" stroke="var(--bad)" stroke-width="3"/>` : ''}`;
+const cutMark = (x, y, cut, v) => cut ? (v ? `<rect x="${x - 8}" y="${y - 10}" width="16" height="20" fill="var(--surface)"/><path d="M${x - 8} ${y - 10}h16M${x - 8} ${y + 10}h16" class="w hot"/>` : `<rect x="${x - 10}" y="${y - 8}" width="20" height="16" fill="var(--surface)"/><path d="M${x - 10} ${y - 8}v16M${x + 10} ${y - 8}v16" class="w hot"/>`) : '';
+const coil = (x, y) => `<rect x="${x - 14}" y="${y - 30}" width="28" height="60" class="sym"/><path class="thin" d="M${x - 14} ${y + 30}L${x + 14} ${y - 30}"/>`;
+(() => {
+  const svg = $('#asvg'); let t = 0, f = 0, cut = 0;
+  function draw() {
+    const on = !cut && (t || f);
+    let g = SY.wire([[60, 140], [60, 50], [160, 50]]) + SY.wire([[160, 50], [160, 130], [200, 130]]) + SY.wire([[160, 50], [200, 50]]);
+    g += SY.wire([[260, 50], [300, 50], [300, 130], [260, 130]]) + SY.wire([[300, 90], [420, 90], [420, 150]]) + SY.wire([[420, 200], [420, 250], [60, 250], [60, 166]]);
+    g += SY.bat(60, 155) + `<text x="20" y="200" class="sm">4,5 V</text>`;
+    g += SY.sw(230, 50, !!t, 't') + `<text x="230" y="28" text-anchor="middle" class="sm">Trittmatte (Schließer)</text>`;
+    g += SY.sw(230, 130, !!f, 'f') + `<text x="230" y="165" text-anchor="middle" class="sm">Fensterkontakt (Schließer)</text>`;
+    g += cutMark(360, 90, cut) + `<text x="360" y="78" text-anchor="middle" class="sm">Leitung</text>`;
+    g += buzzer(420, 175, on) + `<text x="455" y="215" class="sm">Summer</text>`;
+    if (on) g += `<path class="flow" d="M60 140V50H160${t ? 'H260' : 'V130H260'}V${t ? 50 : 130}H300V90H420V250H60V166"/>`;
+    svg.innerHTML = g;
+    $('#a-st').innerHTML = cut ? (t || f ? '<b class="bad">Die Leitung ist durchtrennt – der Summer bleibt stumm!</b> Der Einbrecher kommt unbemerkt herein.' : 'Die Leitung ist durchtrennt. Niemand bemerkt etwas – das ist die Schwäche des Arbeitsstromprinzips.') : on ? '<b class="bad">Alarm!</b> Ein Kontakt ist geschlossen, der Stromkreis über den Summer ist zu.' : 'Ruhezustand: Beide Kontakte sind offen, es fließt <b>kein</b> Strom.';
+    $('[data-a="t"]').textContent = t ? 'Von der Trittmatte gehen' : 'Auf die Trittmatte treten';
+    $('[data-a="f"]').textContent = f ? 'Fenster schließen' : 'Fenster öffnen';
+    $('[data-a="c"]').textContent = cut ? 'Leitung reparieren' : 'Leitung durchschneiden';
+  }
+  const tog = k => { if (k === 't') t = 1 - t; else if (k === 'f') f = 1 - f; else cut = 1 - cut; draw(); };
+  $$('[data-a]').forEach(b => b.onclick = () => tog(b.dataset.a));
+  svg.addEventListener('click', e => { const s = e.target.closest('[data-sw]'); if (s) tog(s.dataset.sw); });
+  draw();
+})();
+(() => {
+  const svg = $('#rusvg'); let open = 0, cut = 0;
+  function draw() {
+    const loop = !open && !cut, alarm = !loop;
+    let g = SY.wire([[50, 140], [50, 50], [120, 50]]) + SY.wire([[160, 50], [280, 50], [280, 110]]) + SY.wire([[280, 170], [280, 250], [50, 250], [50, 166]]);
+    g += SY.bat(50, 155) + `<text x="10" y="200" class="sm">4,5 V</text>`;
+    g += SY.sw(140, 50, !open, 'f') + `<text x="140" y="28" text-anchor="middle" class="sm">Fensterkontakt (zu = geschlossen)</text>`;
+    g += cutMark(220, 50, cut) + `<text x="220" y="76" text-anchor="middle" class="sm">Alarmdraht</text>`;
+    g += coil(280, 140) + `<text x="240" y="144" text-anchor="end" class="sm">Relais</text>`;
+    if (loop) g += `<path class="flow" d="M50 140V50H280V110M280 170V250H50V166"/>`;
+    g += `<path d="M294 140H400" stroke="var(--wire)" stroke-width="1.6" stroke-dasharray="8 6"/>`;
+    g += SY.wire([[510, 140], [510, 50], [400, 50], [400, 110]]) + SY.wire([[400, 150], [400, 175]]) + SY.wire([[400, 225], [400, 250], [510, 250], [510, 166]]);
+    g += `<rect x="485" y="149" width="50" height="10" fill="var(--surface)"/><path class="w" d="M485 148H535"/><path class="w" stroke-width="7" d="M498 161H522"/>`;
+    g += `<circle cx="400" cy="110" r="3.5" class="sym"/><circle cx="400" cy="150" r="3.5" class="sym"/>` + (alarm ? `<path class="w" d="M400 110V150"/>` : `<path class="w" d="M400 150L384 116"/>`) + `<text x="415" y="134" class="sm">Öffner</text>`;
+    g += buzzer(400, 200, alarm) + `<text x="430" y="240" class="sm">Summer</text>`;
+    if (alarm) g += `<path class="flow" d="M510 140V50H400V250H510V166"/>`;
+    svg.innerHTML = g;
+    $('#r-st').innerHTML = loop ? 'Ruhezustand: Strom fließt durch die Relaisspule. Sie hält den <b>Öffner offen</b> – der Summer ist still.' : `<b class="bad">Alarm!</b> ${cut ? 'Der durchtrennte Draht' : 'Das offene Fenster'} unterbricht den Ruhestrom. Das Relais fällt ab, der Öffner schließt den Summerkreis.${cut ? ' Die Sabotage wird bemerkt!' : ''}`;
+    $('[data-r="f"]').textContent = open ? 'Fenster schließen' : 'Fenster öffnen';
+    $('[data-r="c"]').textContent = cut ? 'Alarmdraht reparieren' : 'Alarmdraht durchschneiden';
+  }
+  const tog = k => { if (k === 'f') open = 1 - open; else cut = 1 - cut; draw(); };
+  $$('[data-r]').forEach(b => b.onclick = () => tog(b.dataset.r));
+  svg.addEventListener('click', e => { if (e.target.closest('[data-sw]')) tog('f'); });
+  draw();
+})();
+(() => {
+  const svg = $('#ssvg'); let held = false, pEin = false, pAus = false;
+  function draw() {
+    let g = SY.wire([[50, 140], [50, 50], [133, 50]]) + SY.wire([[167, 50], [200, 50], [200, 170], [233, 170]]) + SY.wire([[200, 110], [233, 110]]);
+    g += SY.wire([[267, 110], [380, 110]]) + SY.wire([[267, 170], [300, 170], [300, 110]]) + SY.wire([[380, 170], [380, 250], [50, 250], [50, 166]]);
+    g += SY.bat(50, 155) + `<text x="10" y="200" class="sm">4,5 V</text>`;
+    g += SY.sw(150, 50, !pAus, 'aus') + `<text x="150" y="80" text-anchor="middle" class="sm">Aus-Taster</text>`;
+    g += SY.sw(250, 110, pEin, 'ein') + `<text x="250" y="90" text-anchor="middle" class="sm">Ein-Taster</text>`;
+    g += SY.sw(250, 170, held, 'k') + `<text x="250" y="205" text-anchor="middle" class="sm">Haltekontakt K1</text>`;
+    g += coil(380, 140) + `<text x="400" y="200" class="sm">Spule K1</text>`;
+    g += SY.wire([[50, 50], [50, 20], [480, 20], [480, 60]]) + `<circle cx="480" cy="60" r="3.5" class="sym"/><circle cx="480" cy="100" r="3.5" class="sym"/>` + (held ? `<path class="w" d="M480 60V100"/>` : `<path class="w" d="M480 100L464 66"/>`) + `<text x="494" y="84" class="sm">K1</text>`;
+    g += SY.wire([[480, 100], [480, 164]]) + buzzer(480, 180, held) + SY.wire([[480, 196], [480, 250], [380, 250]]);
+    g += `<path d="M394 140H430V80H470" fill="none" stroke="var(--wire)" stroke-width="1.6" stroke-dasharray="8 6"/>`;
+    if (held || (pEin && !pAus)) g += `<path class="flow" d="M50 140V50H200V${held && !pEin ? 170 : 110}H${held && !pEin ? '300V110H' : ''}380V250H50V166"/>`;
+    if (held) g += `<path class="flow" d="M50 140V20H480V250H380"/>`;
+    svg.innerHTML = g;
+    $('#s-st').innerHTML = held ? (pEin ? 'Ein-Taster gedrückt: Die Spule zieht an, der <b>Haltekontakt</b> schließt.' : '<b class="bad">Alarm bleibt an!</b> Der Ein-Taster ist wieder offen, aber der Strom fließt über den Haltekontakt – die Schaltung <b>hält sich selbst</b>.') : pAus ? 'Aus-Taster gedrückt: Der Stromkreis der Spule ist unterbrochen. Das Relais fällt ab, der Haltekontakt öffnet.' : 'Ruhezustand: Kein Strom in der Spule, der Summer ist still.';
+  }
+  function press(k) {
+    if (k === 'ein') { pEin = true; if (!pAus) held = true; draw(); setTimeout(() => { pEin = false; draw(); }, 900); }
+    else if (k === 'aus') { pAus = true; held = false; draw(); setTimeout(() => { pAus = false; draw(); }, 900); }
+  }
+  $$('[data-s]').forEach(b => b.onclick = () => press(b.dataset.s));
+  svg.addEventListener('click', e => { const s = e.target.closest('[data-sw]'); if (s && s.dataset.sw !== 'k') press(s.dataset.sw); });
+  draw();
+})();
+mcQuiz($('#quiz'), [
+  {q: 'Wie sind die Kontakte beim Arbeitsstromprinzip geschaltet?', a: ['Schließer parallel', 'Öffner in Reihe', 'Schließer in Reihe', 'gar nicht'], ok: 0},
+  {q: 'Was ist die Schwäche des Arbeitsstromprinzips?', a: ['Ein durchtrenntes Kabel wird nicht bemerkt.', 'Es braucht zu viel Strom.', 'Der Summer ist zu laut.', 'Es gibt keine Schwäche.'], ok: 0},
+  {q: 'Was fließt beim Ruhestromprinzip im Ruhezustand?', a: ['ein kleiner Strom durch die Relaisspule', 'kein Strom', 'Strom durch den Summer', 'Wechselstrom'], ok: 0},
+  {q: 'Was passiert beim Ruhestromprinzip, wenn das Kabel durchtrennt wird?', a: ['Das Relais fällt ab und der Alarm ertönt.', 'Nichts.', 'Die Batterie explodiert.', 'Der Summer geht aus.'], ok: 0},
+  {q: 'Wozu dient der Haltekontakt in der Selbsthalteschaltung?', a: ['Er überbrückt den Ein-Taster, damit das Relais angezogen bleibt.', 'Er schaltet die Batterie ab.', 'Er misst die Spannung.', 'Er ersetzt den Summer.'], ok: 0},
+  {q: 'Wie beendest du den Alarm in der Selbsthalteschaltung?', a: ['mit dem Aus-Taster', 'mit dem Ein-Taster', 'gar nicht', 'durch Schließen des Fensters'], ok: 0},
+  {q: 'Welcher Sensor wird durch einen Magneten geschaltet?', a: ['Reedkontakt', 'Trittmatte', 'Fadenkontakt', 'Summer'], ok: 0}
+]);
+</script>

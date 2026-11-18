@@ -1,0 +1,157 @@
+<!--
+title: Maschinen zum Sägen und Schleifen
+short: Sägen und Schleifen
+time: 2 Unterrichtsstunden
+q: Wie arbeite ich sicher an Dekupiersäge, Stichsäge und Tellerschleifmaschine?
+facts: Dekupiersäge: gerade Schnitte und exakte Kurven in Holz, Kunststoff und weichen Metallen; Zähne zeigen nach unten zum Tisch; Niederhalter auf Werkstückdicke einstellen | Stichsäge: handgeführt, Pendelhub für schnelle Schnitte; erst einschalten, wenn die Fußplatte aufliegt | Tellerschleifmaschine: Rundungen und Stirnseiten schleifen; nur an der abwärts laufenden Seite schleifen, Werkstück aufliegend | Sägeblattwechsel nur mit gezogenem Netzstecker | Staubabsaugung, Schutzbrille, Haare zusammenbinden
+inter: Dekupiersäge erkunden und Teile finden · Aussagen den Maschinen zuordnen · Tellerschleifmaschine: sichere Seite finden · Richtig oder falsch · Quiz
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Werkzeuge und Maschinen</p>
+      <h1>Maschinen zum Sägen und Schleifen</h1>
+      <p class="lead">Eine Kurve mit der Laubsäge dauert lange. An der <b>Dekupiersäge</b> geht das schneller und genauer. Maschinen erleichtern die Arbeit – aber sie verzeihen keine Fehler.</p>
+      <div class="teaser"><span class="tag info">Einstieg</span><p>Was ist bei einer Maschine gefährlicher als bei einem Handwerkzeug?</p></div>
+      <div class="teaser"><span class="tag info">Leitfrage</span><p>Wie arbeite ich sicher an Dekupiersäge, Stichsäge und Tellerschleifmaschine?</p></div>
+      <div class="controls"><button class="btn primary" data-go="deku">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="deku" data-label="Dekupiersäge" data-yr="Erarbeitung" data-title="Die Dekupiersäge" data-sub="Aufbau und Bedienteile">
+  <div class="section-head">
+    <p class="eyebrow">Station 1 · Dekupiersäge</p>
+    <h2>Die Dekupiersäge</h2>
+    <p class="lead">Ein dünnes Sägeblatt bewegt sich schnell auf und ab – wie eine Laubsäge mit Motor. Tippe die Teile an.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 460 320" id="dsvg" role="img" aria-label="Dekupiersäge">
+      <g data-part="arm"><path d="M60 70h260v30H120v110H60z" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/><path d="M60 250h60v-40h200v40" fill="none"/></g>
+      <g data-part="fuss"><path d="M40 250h340v40H40z" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/><path d="M60 210h60v40H60z" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="tisch"><path d="M150 196h260v14H150z" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="blatt"><path d="M300 100v150" stroke="var(--edge)" stroke-width="3"/><path d="M302 120l4 4-4 4M302 140l4 4-4 4M302 160l4 4-4 4M302 180l4 4-4 4" stroke="var(--edge)" fill="none" stroke-width="1.4"/></g>
+      <g data-part="nieder"><path d="M280 130h8v50h-20v8h44v-8h-16v-50h8" fill="var(--accent)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="spann"><circle cx="300" cy="58" r="12" fill="var(--wood-2)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="schalter"><rect x="70" y="262" width="34" height="18" fill="var(--verbot)" stroke="var(--edge)" stroke-width="2"/><rect x="112" y="262" width="20" height="18" fill="var(--rettung)" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="dreh"><circle cx="90" cy="150" r="14" fill="var(--surface)" stroke="var(--edge)" stroke-width="2"/><path d="M90 150l8-8" stroke="var(--edge)" stroke-width="2"/></g>
+      <g data-part="absaug"><path d="M380 250v-24h30v-14h20v38z" fill="var(--plastic)" stroke="var(--edge)" stroke-width="2"/></g>
+      <rect x="200" y="186" width="80" height="10" fill="var(--wood)" stroke="var(--edge)" stroke-width="1.4"/>
+    </svg></div>
+    <div><div class="tk-row"><span id="d-mode"></span></div><div class="box" id="d-panel"></div></div>
+  </div>
+</section>
+
+<section class="station" id="stich" data-label="Vergleich" data-yr="Erarbeitung" data-title="Drei Maschinen im Vergleich" data-sub="Dekupiersäge, Stichsäge, Tellerschleifmaschine">
+  <div class="section-head">
+    <p class="eyebrow">Station 2 · Vergleich</p>
+    <h2>Dekupiersäge, Stichsäge oder Tellerschleifmaschine?</h2>
+    <p class="lead">Bei der <b>Dekupiersäge</b> führst du das Werkstück zum Sägeblatt. Die <b>Stichsäge</b> führst du mit der Hand über das festgespannte Werkstück. An der <b>Tellerschleifmaschine</b> dreht sich ein Teller mit Schleifpapier. Ordne die Aussagen zu.</p>
+  </div>
+  <div id="sort-m"></div>
+</section>
+
+<section class="station" id="teller" data-label="Schleifen" data-yr="Übung" data-title="Die sichere Seite" data-sub="Tellerschleifmaschine">
+  <div class="section-head">
+    <p class="eyebrow">Station 3 · Tellerschleifmaschine</p>
+    <h2>Auf welcher Seite wird geschliffen?</h2>
+    <p class="lead">Der Schleifteller dreht sich. Auf der einen Seite läuft er <b>nach unten</b> zum Auflagetisch, auf der anderen <b>nach oben</b>. Tippe die Seite an, an der du schleifen darfst.</p>
+  </div>
+  <div class="model">
+    <div class="tk-fig"><svg viewBox="0 0 360 300" id="tsvg" role="img" aria-label="Tellerschleifmaschine von vorn">
+      <style>#tdisc{transform-origin:180px 130px;animation:tspin 1.6s linear infinite}@keyframes tspin{to{transform:rotate(-360deg)}}@media (prefers-reduced-motion: reduce){#tdisc{animation:none}}#tsvg .side{cursor:pointer;fill:transparent}#tsvg .side:hover,#tsvg .side:focus{fill:var(--accent);opacity:.15}#tsvg .side.ok{fill:var(--good);opacity:.3}#tsvg .side.err{fill:var(--bad);opacity:.3}</style>
+      <rect x="150" y="230" width="60" height="50" fill="var(--steel-2)" stroke="var(--edge)" stroke-width="2"/>
+      <g id="tdisc"><circle cx="180" cy="130" r="100" fill="#C9A86A" stroke="var(--edge)" stroke-width="2"/><path d="M180 30v40M180 190v40M80 130h40M240 130h40" stroke="#8A6B35" stroke-width="3"/></g>
+      <circle cx="180" cy="130" r="8" fill="var(--steel-2)"/>
+      <path d="M60 130h240v10H60z" fill="var(--steel)" stroke="var(--edge)" stroke-width="2"/>
+      <path d="M58 60a130 130 0 0 0 0 120" fill="none" stroke="var(--accent)" stroke-width="3"/><path d="M50 172l8 10 6-12" fill="none" stroke="var(--accent)" stroke-width="3"/>
+      <path d="M302 180a130 130 0 0 0 0-120" fill="none" stroke="var(--accent)" stroke-width="3"/><path d="M296 70l6-12 8 10" fill="none" stroke="var(--accent)" stroke-width="3"/>
+      <rect class="side" data-s="l" x="80" y="30" width="100" height="100" tabindex="0" role="button" aria-label="linke Seite: läuft nach unten"/>
+      <rect class="side" data-s="r" x="180" y="30" width="100" height="100" tabindex="0" role="button" aria-label="rechte Seite: läuft nach oben"/>
+      <text x="40" y="22" style="font-family:var(--f-mono);font-size:13px;font-weight:600;fill:var(--ink-2)">Drehrichtung</text>
+      <text x="180" y="160" text-anchor="middle" style="font-family:var(--f-mono);font-size:13px;font-weight:600;fill:var(--ink)">Auflagetisch</text>
+    </svg></div>
+    <div class="box" id="t-panel"><p><b>Tippe eine Hälfte des Schleiftellers oberhalb des Tisches an.</b></p></div>
+  </div>
+</section>
+
+<section class="station" id="regeln" data-label="Regeln" data-yr="Übung" data-title="Sicher an Maschinen" data-sub="Richtig oder falsch?">
+  <div class="section-head">
+    <p class="eyebrow">Station 4 · Sicherheitsregeln</p>
+    <h2>Sicher arbeiten an Maschinen</h2>
+    <p class="lead">An Maschinen darfst du nur nach <b>Einweisung</b>, mit <b>Erlaubnis</b> und unter Beachtung aller Regeln arbeiten. Stimmt die Aussage?</p>
+  </div>
+  <div id="tf-r"></div>
+</section>
+
+<section class="station" id="merke" data-label="Hefteintrag">
+  <div class="section-head"><p class="eyebrow">Sicherung</p><h2>Hefteintrag: Sägen und Schleifen</h2></div>
+  <div class="heft-grid">
+    <div class="heft">
+      <div class="heft-title"><h3>Maschinen zum Sägen und Schleifen</h3><span>Technik · Klasse {{K}}</span></div>
+      <ol>
+        <li data-step><b>Dekupiersäge:</b> gerade Schnitte und Kurven; Zähne zeigen nach unten; Niederhalter auf Werkstückdicke einstellen; Finger nie vor das Sägeblatt.</li>
+        <li data-step><b>Stichsäge:</b> handgeführt; Werkstück festspannen; erst einschalten, wenn die Fußplatte aufliegt.</li>
+        <li data-step><b>Tellerschleifmaschine:</b> Rundungen und Stirnseiten; nur an der <b>abwärts laufenden</b> Seite schleifen, Werkstück auf dem Tisch auflegen.</li>
+        <li data-step>Immer: Schutzbrille, Haare zusammenbinden, Absaugung an; Sägeblattwechsel nur mit gezogenem Netzstecker.</li>
+      </ol>
+      <div class="controls"><button class="btn primary" data-heft-next>Nächster Punkt</button><button class="btn" data-heft-all>Alles zeigen</button></div>
+    </div>
+    <div class="stack"><div class="box"><span class="tag lim">Wichtig</span><p>Welche Maschine du in welcher Klasse – und ob nur unter Aufsicht – benutzen darfst, legt deine Schule fest. Frage deine Lehrkraft.</p></div></div>
+  </div>
+</section>
+
+<section class="station" id="uebungen" data-label="Übungen">
+  <div class="section-head"><p class="eyebrow">Jetzt seid ihr dran</p><h2>Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<script>
+explorer($('#dsvg'), $('#d-panel'), [
+  {id: 'blatt', n: 'Sägeblatt', t: 'Dünnes Blatt, die Zähne zeigen nach unten zum Tisch. So wird das Werkstück auf den Tisch gedrückt.'},
+  {id: 'nieder', n: 'Niederhalter', t: 'Wird auf die Dicke des Werkstücks eingestellt. Er verhindert, dass das Werkstück hochschlägt, und schützt die Finger.'},
+  {id: 'tisch', n: 'Sägetisch', t: 'Darauf liegt das Werkstück beim Sägen immer flach auf. Bei manchen Sägen lässt er sich schräg stellen.'},
+  {id: 'arm', n: 'Sägearm', t: 'Hält das Sägeblatt oben und unten und bewegt es auf und ab.'},
+  {id: 'spann', n: 'Spannknopf', t: 'Spannt das Sägeblatt. Ein schlaff gespanntes Blatt verläuft oder reißt.'},
+  {id: 'schalter', n: 'Ein-/Aus-Schalter', t: 'Grüner Knopf: ein, roter Knopf: aus. Erst einschalten, wenn alles eingestellt ist.'},
+  {id: 'dreh', n: 'Drehzahlregler', t: 'Stellt die Hubzahl ein: für Holz schnell, für Kunststoff langsamer, damit er nicht schmilzt.'},
+  {id: 'absaug', n: 'Absauganschluss', t: 'Hier wird die Staubabsaugung angeschlossen.'},
+  {id: 'fuss', n: 'Maschinenfuß', t: 'Schwerer Fuß, oft am Tisch festgeschraubt, damit die Säge nicht wandert.'}
+], {modeRoot: $('#d-mode'), label: 'Teil der Dekupiersäge', intro: 'Tippe ein Teil der Dekupiersäge an.'});
+sorter($('#sort-m'), [{id: 'd', name: 'Dekupiersäge'}, {id: 's', name: 'Stichsäge'}, {id: 't', name: 'Tellerschleifmaschine'}], [
+  {t: 'Das Werkstück wird zum Sägeblatt geführt.', c: 'd'}, {t: 'Der Niederhalter wird auf die Werkstückdicke eingestellt.', c: 'd'},
+  {t: 'Man führt die Maschine über das Werkstück.', c: 's'}, {t: 'Ein Pendelhub sorgt für schnelle Schnitte.', c: 's'}, {t: 'Erst einschalten, wenn die Fußplatte aufliegt.', c: 's'},
+  {t: 'Gut für Rundungen und Stirnseiten.', c: 't'}, {t: 'Nur an der abwärts laufenden Seite arbeiten.', c: 't'}, {t: 'Kann ein Sägen nicht ersetzen – sie trägt nur wenig Material ab.', c: 't'}
+]);
+(() => {
+  const panel = $('#t-panel');
+  $$('#tsvg .side').forEach(el => {
+    const pickSide = () => {
+      $$('#tsvg .side').forEach(x => x.classList.remove('ok', 'err'));
+      const ok = el.dataset.s === 'l';
+      el.classList.add(ok ? 'ok' : 'err');
+      panel.innerHTML = ok ? '<span class="tag info">Richtig</span><h3 class="good">Die abwärts laufende Seite</h3><p>Der Teller drückt das Werkstück <b>auf den Tisch</b>. So bleibt es sicher liegen.</p>'
+        : '<span class="tag lim">Gefahr</span><h3 class="bad">Die aufwärts laufende Seite</h3><p>Hier würde der Teller das Werkstück <b>nach oben reißen</b> und wegschleudern – die Hand kann an den Teller geraten.</p>';
+    };
+    el.addEventListener('click', pickSide);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pickSide(); } });
+  });
+})();
+trueFalse($('#tf-r'), [
+  {t: 'Zum Sägeblattwechsel reicht es, die Maschine auszuschalten.', ok: false, why: 'Der Netzstecker muss gezogen sein – sonst kann die Maschine versehentlich anlaufen.'},
+  {t: 'Beim Schleifen wird die Staubabsaugung eingeschaltet.', ok: true},
+  {t: 'Sehr kleine Teile schleift man von Hand statt an der Maschine.', ok: true, why: 'Die Finger kämen sonst zu nah an den Schleifteller.'},
+  {t: 'Die Zähne des Sägeblatts der Dekupiersäge zeigen nach oben.', ok: false, why: 'Sie zeigen nach unten zum Tisch.'},
+  {t: 'An der Dekupiersäge kann man auch Kunststoff und weiche Metalle sägen.', ok: true, why: 'Mit dem passenden Sägeblatt und der richtigen Hubzahl.'},
+  {t: 'Wenn die Lehrkraft beschäftigt ist, darf man eine Maschine ausprobieren.', ok: false, why: 'Nur nach Einweisung und mit Erlaubnis.'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Wohin zeigen die Zähne des Dekupiersägeblatts?', a: ['nach unten zum Tisch', 'nach oben', 'zur Seite', 'zur Bedienperson'], ok: 0},
+  {q: 'Wozu dient der Niederhalter?', a: ['Er verhindert, dass das Werkstück hochschlägt.', 'Er kühlt das Sägeblatt.', 'Er saugt den Staub ab.', 'Er misst die Länge.'], ok: 0},
+  {q: 'Wann schaltest du die Stichsäge ein?', a: ['wenn die Fußplatte auf dem Werkstück aufliegt', 'wenn das Blatt schon im Holz steckt', 'bevor du den Stecker einsteckst', 'wenn das Werkstück lose ist'], ok: 0},
+  {q: 'An welcher Seite des Schleiftellers wird geschliffen?', a: ['an der abwärts laufenden Seite', 'an der aufwärts laufenden Seite', 'in der Mitte', 'an beiden Seiten gleich'], ok: 0},
+  {q: 'Was muss vor dem Sägeblattwechsel passieren?', a: ['Netzstecker ziehen', 'Drehzahl erhöhen', 'Absaugung ausbauen', 'Tisch schräg stellen'], ok: 0},
+  {q: 'Wofür eignet sich die Tellerschleifmaschine besonders?', a: ['Rundungen und Stirnseiten schleifen', 'Löcher bohren', 'Bleche biegen', 'lange gerade Schnitte'], ok: 0}
+]);
+</script>

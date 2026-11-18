@@ -1,46 +1,68 @@
-# Reihen des Technikunterrichts, Klassen 7–10.
+# Reihen des Technikunterrichts, Klassen 6–10.
 # accent = (hell auf Zeichenpapier, dunkel auf Blaupause); ral = Signalfarbe als Namensgeber der Reihe
 # Die Verweise auf die Nachbarreihen (← / →) erzeugt build.py automatisch innerhalb einer Klassenstufe.
 SERIES = [
-    # ================= Klasse 7: Werkstatt, Holz, Zeichnen =================
-    dict(folder='7-Technikraum', chapter=1, grade='7', accent=('#C2410C', '#FDBA74'), ral='RAL 2004 Reinorange',
+    # ================= Klasse 6: Technikraum, Werkzeuge, bewegtes Objekt =================
+    dict(folder='6-Technikraum', chapter=1, grade='6', accent=('#C2410C', '#FDBA74'), ral='RAL 2004 Reinorange',
          name='Arbeiten im Technikraum', h1='Sicher starten in der Werkstatt', ue='8', bp='Werkstatt',
          lead='Was ist eigentlich Technik? Die Reihe zeigt, wo uns Technik im Alltag begegnet und welche Bedürfnisse sie erfüllt, führt in die Regeln und Sicherheitszeichen des Technikraums ein, richtet einen sicheren Arbeitsplatz ein und schaut, wie Ingenieurinnen und Ingenieure von der Natur lernen.',
          notes=[('Material', 'info', 'Für Stunde 3 werden Schraubstock, Werkstück und die Werkzeuge des eigenen Technikraums gebraucht. Die Raumregeln sollten an die eigene Schule angepasst werden.'),
                 ('Sicherheit', 'lim', 'Die Präsentation ersetzt keine Sicherheitsunterweisung. Unterweisungen dokumentieren und von den Schülerinnen und Schülern unterschreiben lassen.'),
                 ('Nachbauten', 'info', 'Die Sicherheitszeichen sind vereinfacht nachgezeichnet und orientieren sich an Form und Farbe nach DIN EN ISO 7010.')]),
-    dict(folder='7-Holz', chapter=2, grade='7', accent=('#A16207', '#FCD34D'), ral='RAL 1011 Braunbeige',
+    dict(folder='6-Werkzeuge', chapter=2, grade='6', accent=('#1E5F8C', '#8FC3E8'), ral='RAL 5009 Azurblau',
+         name='Werkzeuge und Maschinen', h1='Das richtige Werkzeug für jede Aufgabe', ue='12', bp='Werkzeuge',
+         lead='Wer ein Werkstück bauen will, muss seine Werkzeuge kennen. Die Reihe ordnet Werkzeuge nach ihrer Aufgabe – Messen und Anreißen, Trennen, Fügen und Umformen –, zeigt den richtigen Umgang mit Hammer, Zange und Schraubendreher, stellt Dekupiersäge, Stichsäge und Tellerschleifmaschine vor und bereitet auf den Maschinenführerschein vor.',
+         notes=[('Material', 'info', 'Für Stunde 1 und 2 eine Werkzeugkiste mit Hammer, Zangen, Schraubendrehern (Schlitz, Kreuz, Torx), Schraubzwinge und Feile bereitlegen. Die Lernenden ordnen die echten Werkzeuge zu.'),
+                ('Sicherheit', 'lim', 'Welche Maschinen ab welcher Klassenstufe und ob nur unter Aufsicht benutzt werden dürfen, regeln die Sicherheitsvorschriften des Landes und der Schule. Die Angaben in Stunde 4 sind Beispiele und müssen angepasst werden.'),
+                ('Maschinenführerschein', 'info', 'Der Theorieteil kann mit der Präsentation geübt werden. Die praktische Prüfung und die Einweisung an jeder Maschine übernimmt die Lehrkraft und dokumentiert sie.')]),
+    dict(folder='6-Mobil', chapter=3, grade='6', accent=('#047857', '#6EE7B7'), ral='RAL 6029 Minzgrün',
+         name='Mobil sein – das bewegte Objekt', h1='Ein Fahrzeug bauen und verbessern', ue='14', bp='Mobil',
+         lead='Fahrzeuge bringen Menschen und Waren von Ort zu Ort. Die Reihe fragt, was ein Fahrzeug braucht, erklärt Rad, Achse, Lager und Reibung, baut einen Gummiflitzer mit Gummiband-Antrieb, verbessert ihn mit fairen Versuchen und stellt die Ergebnisse vor – mit Beurteilungsbogen und Rennen.',
+         notes=[('Material', 'info', 'Pro Fahrzeug: Grundplatte aus Sperrholz (ca. 200 × 80 × 6 mm), Rundstäbe Ø 6 mm als Achsen, vier Holzräder, Gummibänder, ggf. Strohhalme als Lager. Werkzeuge: Laubsäge, Tischbohrmaschine, Schleifpapier, Holzleim.'),
+                ('Wettbewerb', 'info', 'Für das Rennen in Stunde 4 eignet sich ein glatter Flur mit Maßband. Jedes Fahrzeug fährt dreimal, gewertet wird der Mittelwert.'),
+                ('Vereinfachungen', 'info', 'Der Flitzer-Simulator in Stunde 3 rechnet mit einem einfachen Modell aus gespeicherter Energie, Rollreibung und Luftwiderstand. Die Werte sind Richtwerte und sollen nur Tendenzen zeigen.')]),
+
+    # ================= Klasse 7: Holz, Zeichnen, Metall =================
+    dict(folder='7-Holz', chapter=1, grade='7', accent=('#A16207', '#FCD34D'), ral='RAL 1011 Braunbeige',
          name='Der Werkstoff Holz', h1='Vom Baum zum Werkstück', ue='20', bp='Holz',
          lead='Holz ist der erste Werkstoff in der Werkstatt. Die Reihe zeigt den Aufbau des Baumstamms und die Handelsformen von Holz und Holzwerkstoffen, erklärt Sägen, Raspeln und Feilen, übt Messen und Anreißen mit Stahlmaß und Messschieber, führt in die Tischbohrmaschine ein und verbindet und beschichtet Holzteile.',
          notes=[('Material', 'info', 'Ein Werkstück aus Holz (z. B. Schlüsselbrett, Kreisel, Laubsägearbeit) begleitet die Reihe. Die Stunden liefern die Grundlagen für die Fertigung.'),
                 ('Maschinenführerschein', 'lim', 'Vor der ersten Arbeit an der Tischbohrmaschine ist eine praktische Einweisung durch die Lehrkraft nötig.'),
                 ('Vereinfachungen', 'info', 'Der Messschieber wird mit einem Nonius für 1/10 mm gezeigt. Die Drehzahlen für Bohrer sind Richtwerte.')]),
-    dict(folder='7-Zeichnen', chapter=3, grade='7', accent=('#1D4ED8', '#93C5FD'), ral='RAL 5005 Signalblau',
+    dict(folder='7-Zeichnen', chapter=2, grade='7', accent=('#1D4ED8', '#93C5FD'), ral='RAL 5005 Signalblau',
          name='Skizzen und technische Zeichnungen', h1='Ohne Zeichnung kein Werkstück', ue='12', bp='Zeichnen',
          lead='Bevor gefertigt wird, wird geplant und gezeichnet. Die Reihe führt von der Idee über Anforderungsliste und Arbeitsplan zu Linienarten und Bemaßung, zeigt das Dreitafelbild mit drei Ansichten und stellt Werkstücke räumlich in Kabinettprojektion und Isometrie dar.',
          notes=[('Material', 'info', 'Für die Zeichenphasen werden Bleistift (HB/2H), Geodreieck und kariertes Papier oder Isometriepapier benötigt.'),
                 ('Raumvorstellung', 'info', 'Der Würfelbaukasten in den Präsentationen zeigt Körper drehbar mit ihren drei Ansichten. Holzwürfel zum Nachbauen helfen besonders schwächeren Lernenden.'),
                 ('Vereinfachungen', 'info', 'Die Linienarten und Bemaßungsregeln sind auf das Nötigste für Schülerzeichnungen beschränkt (orientiert an DIN EN ISO 128 und DIN 406).')]),
 
-    # ================= Klasse 8: Metall, Kunststoff, Stromkreis =================
-    dict(folder='8-Metall', chapter=1, grade='8', accent=('#3F5A73', '#B6C8DA'), ral='RAL 5014 Taubenblau',
+    dict(folder='7-Metall', chapter=3, grade='7', accent=('#3F5A73', '#B6C8DA'), ral='RAL 5014 Taubenblau',
          name='Der Werkstoff Metall', h1='Eisen, Stahl und Buntmetall', ue='16', bp='Metall',
          lead='Metalle sind hart, fest und leiten Strom. Die Reihe unterscheidet Eisen- und Nichteisenmetalle, verfolgt den Weg vom Erz zum Stahl, zeigt Anreißen, Sägen, Feilen und Bohren in Metall, schneidet Gewinde und verbindet und formt Metallteile.',
          notes=[('Material', 'info', 'Ein Werkstück aus Metall (z. B. Flaschenöffner, Handyhalter aus Blech) eignet sich als begleitendes Projekt.'),
                 ('Sicherheit', 'lim', 'Beim Bohren in Metall Werkstück immer im Maschinenschraubstock spannen. Späne nie mit der Hand oder durch Pusten entfernen.'),
                 ('Vereinfachungen', 'info', 'Kernloch = Nenndurchmesser − Steigung gilt für metrische Regelgewinde; Tabellenwerte können um 0,1 mm abweichen.')]),
-    dict(folder='8-Kunststoff', chapter=2, grade='8', accent=('#9D174D', '#F9A8D4'), ral='RAL 4006 Verkehrspurpur',
+
+    # ================= Klasse 8: Kunststoff, Stromkreis, Hausinstallation =================
+    dict(folder='8-Kunststoff', chapter=1, grade='8', accent=('#9D174D', '#F9A8D4'), ral='RAL 4006 Verkehrspurpur',
          name='Kunststoffe und Fertigungsverfahren', h1='Werkstoffe gezielt auswählen', ue='14', bp='Fertigung',
          lead='Kunststoffe sind überall. Die Reihe zeigt, wie sie aus langen Molekülketten aufgebaut sind, unterscheidet Thermoplaste, Duroplaste und Elastomere, bearbeitet Acrylglas, fragt nach Recycling, ordnet alle Fertigungsverfahren in sechs Hauptgruppen und untersucht Werkstoffeigenschaften mit technischen Experimenten.',
          notes=[('Sicherheit', 'lim', 'Kunststoffe nicht offen verbrennen (giftige Dämpfe). Beim Warmbiegen von Acrylglas Handschuhe tragen.'),
                 ('Experimente', 'info', 'Für Stunde 5 eignen sich Holz-, Metall- und Kunststoffstreifen gleicher Größe, Gewichte, Batterie mit Lämpchen und ein Magnet.'),
                 ('Vereinfachungen', 'info', 'Die Fertigungsverfahren orientieren sich an den sechs Hauptgruppen nach DIN 8580; Untergruppen werden nur beispielhaft genannt.')]),
-    dict(folder='8-Stromkreis', chapter=3, grade='8', accent=('#B91C1C', '#FCA5A5'), ral='RAL 3020 Verkehrsrot',
+    dict(folder='8-Stromkreis', chapter=2, grade='8', accent=('#B91C1C', '#FCA5A5'), ral='RAL 3020 Verkehrsrot',
          name='Der elektrische Stromkreis', h1='Spannung, Strom und Widerstand', ue='16', bp='Elektro',
          lead='Ohne Stromkreis leuchtet keine Lampe. Die Reihe baut Stromkreise mit Schaltzeichen auf, misst Spannung und Stromstärke mit dem Multimeter, erklärt den Widerstand und das ohmsche Gesetz, vergleicht Reihen- und Parallelschaltung und zeigt, wie man sicher mit elektrischer Energie umgeht.',
          notes=[('Material', 'info', 'Für die Versuche werden Schülerbaukästen mit Batterie oder Netzgerät (max. 12 V), Lämpchen, Widerständen und Multimetern benötigt. Die Präsentation enthält einen Stromkreis-Simulator.'),
                 ('Sicherheit', 'lim', 'Niemals mit Netzspannung (230 V) experimentieren. Versuche nur mit Schutzkleinspannung.'),
                 ('Vereinfachungen', 'info', 'Lampen werden im Simulator als ohmsche Widerstände gerechnet; Messgeräte gelten als ideal.')]),
+    dict(folder='8-Installation', chapter=3, grade='8', accent=('#9A4A1E', '#F0A97A'), ral='RAL 8004 Kupferbraun',
+         name='Elektromagnet und Hausinstallation', h1='Schalten, klingeln, sichern', ue='14', bp='Installation',
+         lead='Elektrischer Strom kann mehr als Lampen leuchten lassen. Die Reihe baut einen Elektromagneten, erklärt Klingel und Relais, plant Ausschaltung, Serien- und Wechselschaltung wie im Treppenhaus, sucht Fehler in Schaltungen mit System und baut Alarmanlagen nach dem Arbeits- und dem Ruhestromprinzip.',
+         notes=[('Material', 'info', 'Schülerbaukästen mit Spulen (200/400/800 Windungen), Eisenkern, Büroklammern, Wechselschaltern, Relais, Summer, Reedkontakt mit Magnet und Durchgangsprüfer. Ein Klingelmodell zum Öffnen hilft in Stunde 2.'),
+                ('Sicherheit', 'lim', 'Alle Versuche nur mit Schutzkleinspannung. Installationen in Gebäuden (230 V) dürfen nur Elektrofachkräfte ausführen – die Schaltungen werden im Modell aufgebaut.'),
+                ('Vorwissen', 'info', 'Stromkreis, Schaltzeichen sowie Reihen- und Parallelschaltung aus der vorigen Reihe werden vorausgesetzt. Das Relais wird in Klasse 9 (Schalter, Sensoren und Schaltungen) vertieft.')]),
+
 
     # ================= Klasse 9: Elektronik, Produktion, Maschinen =================
     dict(folder='9-Elektronik', chapter=1, grade='9', accent=('#15803D', '#86EFAC'), ral='RAL 6018 Gelbgrün',

@@ -1,0 +1,98 @@
+<!--
+title: Wiederholung und Selbsttest
+short: Selbsttest
+time: 1 Unterrichtsstunde
+q: Was kann ich, und was sollte ich noch üben?
+facts: Fachbegriffe als Karteikarten | Trainer T1–T3: Elektromagnet und Relais, Hausschaltungen, Fehlersuche und Alarmanlagen | Großes Quiz und „Ich kann …“-Liste mit Links zurück in die Stunden
+inter: Karteikarten · Paare finden · Elektromagnet richtig/falsch · Schaltungen zuordnen · Arbeits- und Ruhestrom sortieren · Quiz · Selbsteinschätzung
+-->
+<section class="station" id="start" data-label="Start">
+  <div class="start">
+    <div class="txt">
+      <p class="eyebrow">Stunde {{N}} · Elektromagnet und Hausinstallation</p>
+      <h1>Wiederholung und Selbsttest</h1>
+      <p class="lead">Elektromagnet, Klingel und Relais, Schaltungen im Haus, Fehlersuche und Alarmanlagen: Prüfe, was du sicher kannst.</p>
+      <div class="controls"><button class="btn primary" data-go="begriffe">Los geht's →</button></div>
+    </div>
+<!--PREVIEW-->
+  </div>
+</section>
+
+<section class="station" id="begriffe" data-label="Begriffe" data-yr="Wiederholen" data-title="Zusammenfassung" data-sub="Fachbegriffe als Karteikarten">
+  <div class="section-head"><p class="eyebrow">Station 1 · Zusammenfassung</p><h2>Fachbegriffe</h2></div>
+  <div id="flip"></div>
+  <h3 class="mt">Paare finden</h3>
+  <div id="match"></div>
+</section>
+
+<section class="station" id="t1" data-label="T1 Magnet" data-yr="Trainer" data-title="T1 Elektromagnet und Relais" data-sub="Richtig oder falsch?">
+  <div class="section-head"><p class="eyebrow">Station 2 · Trainer T1</p><h2>Elektromagnet und Relais</h2></div>
+  <div id="t1-tf"></div>
+</section>
+
+<section class="station" id="t2" data-label="T2 Haus" data-yr="Trainer" data-title="T2 Schaltungen im Haus" data-sub="Welche Schaltung passt?">
+  <div class="section-head"><p class="eyebrow">Station 3 · Trainer T2</p><h2>Schaltungen im Haus</h2></div>
+  <div id="t2-match"></div>
+</section>
+
+<section class="station" id="t3" data-label="T3 Alarm" data-yr="Trainer" data-title="T3 Alarmanlagen" data-sub="Arbeits- oder Ruhestrom?">
+  <div class="section-head"><p class="eyebrow">Station 4 · Trainer T3</p><h2>Arbeitsstrom oder Ruhestrom?</h2></div>
+  <div id="t3-sort"></div>
+</section>
+
+<section class="station" id="quiz-st" data-label="Quiz" data-yr="Testen" data-title="Großes Quiz" data-sub="10 zufällige Fragen">
+  <div class="section-head"><p class="eyebrow">Station 5 · Quiz</p><h2>Großes Quiz</h2></div>
+  <div id="quiz"></div>
+</section>
+
+<section class="station" id="uebungen" data-label="Ich kann …">
+  <div class="section-head"><p class="eyebrow">Selbsteinschätzung</p><h2>Ich kann …</h2></div>
+  <ol id="sc"></ol>
+</section>
+
+<script>
+const BEGRIFFE = [
+  ['Elektromagnet', 'Spule mit Eisenkern, wirkt nur mit Strom'], ['Spule', 'aufgewickelter Draht'], ['Anker', 'Eisenteil, das vom Elektromagneten angezogen wird'], ['Selbstunterbrecher', 'Kontakt, der die Klingel immer wieder unterbricht'],
+  ['Relais', 'Schalter, der von einem Elektromagneten betätigt wird'], ['Schließer', 'schließt, wenn die Spule Strom bekommt'], ['Öffner', 'öffnet, wenn die Spule Strom bekommt'], ['Wechselschaltung', 'eine Lampe von zwei Stellen schalten'],
+  ['Serienschaltung', 'zwei Lampengruppen getrennt schalten'], ['Durchgangsprüfer', 'zeigt, ob ein Bauteil Strom leitet'], ['Ruhestromprinzip', 'Unterbrechung des Ruhestroms löst Alarm aus'], ['Haltekontakt', 'hält das Relais nach dem Einschalten angezogen']
+];
+flipCards($('#flip'), BEGRIFFE);
+matcher($('#match'), shuffle(BEGRIFFE.slice()).slice(0, 6));
+trueFalse($('#t1-tf'), [
+  {t: 'Ein Elektromagnet wird mit mehr Windungen stärker.', ok: true},
+  {t: 'Ohne Eisenkern ist der Elektromagnet stärker.', ok: false, why: 'Der Eisenkern verstärkt das Magnetfeld.'},
+  {t: 'Kehrt man die Stromrichtung um, tauschen die Pole.', ok: true},
+  {t: 'Beim Relais sind Steuer- und Arbeitsstromkreis elektrisch verbunden.', ok: false, why: 'Sie sind getrennt.'},
+  {t: 'Ein Öffner ist ohne Strom in der Spule geschlossen.', ok: true},
+  {t: 'Die Feder zieht den Anker der Klingel zurück.', ok: true}
+]);
+matcher($('#t2-match'), [['Abstellraum', 'Ausschaltung'], ['Flur mit zwei Türen', 'Wechselschaltung'], ['Treppenhaus über drei Etagen', 'Wechselschaltung mit Kreuzschalter'], ['Kronleuchter mit zwei Gruppen', 'Serienschaltung']]);
+sorter($('#t3-sort'), [{id: 'a', name: 'Arbeitsstromprinzip'}, {id: 'r', name: 'Ruhestromprinzip'}], [
+  {t: 'Schließer liegen parallel.', c: 'a'}, {t: 'Im Ruhezustand fließt kein Strom.', c: 'a'}, {t: 'Ein durchtrenntes Kabel bleibt unbemerkt.', c: 'a'},
+  {t: 'Im Ruhezustand fließt ständig Strom.', c: 'r'}, {t: 'Öffner liegen in Reihe mit der Relaisspule.', c: 'r'}, {t: 'Sabotage löst Alarm aus.', c: 'r'}
+]);
+mcQuiz($('#quiz'), [
+  {q: 'Woraus besteht ein Elektromagnet?', a: ['Spule und Eisenkern', 'Batterie und Lampe', 'Dauermagnet und Draht', 'Kupferplatte'], ok: 0},
+  {q: 'Wie wird ein Elektromagnet stärker?', a: ['mehr Windungen und mehr Strom', 'weniger Windungen', 'Holzkern statt Eisenkern', 'kürzere Kabel'], ok: 0},
+  {q: 'Warum schlägt der Klöppel der Klingel immer wieder?', a: ['Der Unterbrecherkontakt öffnet und schließt ständig.', 'Die Batterie wechselt die Richtung.', 'Der Taster wird schnell gedrückt.', 'Die Glocke ist magnetisch.'], ok: 0},
+  {q: 'Welchen Vorteil hat ein Relais?', a: ['Kleiner Strom schaltet großen Strom.', 'Es spart Kabel.', 'Es leuchtet.', 'Es braucht keine Spule.'], ok: 0},
+  {q: 'Wann leuchtet die Lampe in der Wechselschaltung?', a: ['wenn beide Schalter gleich stehen', 'nur wenn beide oben sind', 'wenn sie verschieden stehen', 'immer'], ok: 0},
+  {q: 'Was braucht man für eine dritte Schaltstelle?', a: ['einen Kreuzschalter', 'einen Serienschalter', 'eine zweite Batterie', 'ein Relais'], ok: 0},
+  {q: 'Was prüft man bei einer Fehlersuche meist zuerst?', a: ['die Spannungsquelle', 'die Lampe', 'die Farbe der Kabel', 'nichts'], ok: 0},
+  {q: 'Was bedeutet „kein Durchgang“?', a: ['Das Teil ist unterbrochen.', 'Das Teil ist in Ordnung.', 'Kurzschluss.', 'Die Batterie ist voll.'], ok: 0},
+  {q: 'Welche Alarmanlage bemerkt ein durchtrenntes Kabel?', a: ['Ruhestromprinzip', 'Arbeitsstromprinzip', 'beide', 'keine'], ok: 0},
+  {q: 'Wie beendet man den Alarm einer Selbsthalteschaltung?', a: ['mit dem Aus-Taster', 'mit dem Ein-Taster', 'Fenster schließen', 'gar nicht'], ok: 0},
+  {q: 'Wer darf an der 230-V-Hausinstallation arbeiten?', a: ['nur die Elektrofachkraft', 'jeder mit Erlaubnis', 'Schüler mit Handschuhen', 'jeder'], ok: 0},
+  {q: 'Was schaltet ein Reedkontakt?', a: ['ein Magnet', 'Licht', 'Wärme', 'Schall'], ok: 0}
+], {pick: 10});
+selfCheck($('#sc'), [
+  {t: 'Ich kann erklären, wie ein Elektromagnet aufgebaut ist und wovon seine Stärke abhängt.', href: '01_Elektromagnet.html#spule'},
+  {t: 'Ich kann Anwendungen des Elektromagneten nennen.', href: '01_Elektromagnet.html#anwend'},
+  {t: 'Ich kann die Funktion der Klingel erklären.', href: '02_Klingel_Relais.html#klingel'},
+  {t: 'Ich kann Steuer- und Arbeitsstromkreis eines Relais unterscheiden.', href: '02_Klingel_Relais.html#relais'},
+  {t: 'Ich kann Aus-, Serien-, Wechsel- und Kreuzschaltung unterscheiden.', href: '03_Hausschaltungen.html#wechsel'},
+  {t: 'Ich kann systematisch einen Fehler in einer Schaltung suchen.', href: '04_Fehlersuche.html#suche'},
+  {t: 'Ich kann Arbeits- und Ruhestromprinzip vergleichen.', href: '05_Alarmanlage.html#ruhe'},
+  {t: 'Ich kann die Selbsthalteschaltung erklären.', href: '05_Alarmanlage.html#selbst'}
+]);
+</script>
